@@ -5,3 +5,4 @@ That I think might be relevant to this project since it has some truth to it
 - [Black Mirror - Playthings](https://www.imdb.com/title/tt31215636)
 - [Buffalo](https://www.youtube.com/watch?v=ejgyHIClRoU)
 - [Sherlock Holmes: A Game of Shadows](https://www.imdb.com/title/tt1515091/)
+- [Dirk Gently's Holistic Detective Agency](https://www.imdb.com/title/tt4047038/?ref_=nv_sr_srsg_1_tt_5_nm_3_in_0_q_Dirk%20Gently)
