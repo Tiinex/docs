@@ -2,9 +2,10 @@
 
 - Envelope Schema: [tiinex.continuation.v1](../../.schemas/tiinex.continuation.v1.md)
 - Parent
+  - Parent Schema: [tiinex.topic.v1](../../.schemas/tiinex.topic.v1.md)
   - Trace: [001.trace.md](001.trace.md)
 - Current
-  - Current Schema: [tiinex.continuation.v1](../../.schemas/tiinex.continuation.v1.md)
+  - Current Schema: [tiinex.topic.v1](../../.schemas/tiinex.topic.v1.md)
   - Created At: 2026-05-28 03:32:41
   - Summary: Title: Topic Start Format for Trace-Carried Work
   - Type: markdown
