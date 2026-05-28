@@ -1,0 +1,130 @@
+# Continuity Context
+
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Current
+  - Current Schema: [tiinex.schema.v1](tiinex.schema.v1.md)
+  - Created At: 2026-05-28 18:11:47
+  - Summary: Shared schema-definition contract for Tiinex schema notes.
+
+---
+
+# tiinex.schema.v1
+
+- Status: provisional shared schema note
+- Origin:
+  - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
+  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
+  - [browse + git](https://github.com/Tiinex/ai-provenance/blob/aa33725304f5bef2fbfb9ed0b46bb6c1fe71fa01/.topics/trace-format/001.trace.md)
+
+## Summary
+
+This schema id defines how shared human-readable Tiinex schema artifacts should
+be written.
+
+It exists to stop schema notes from becoming too generic, too improvisational,
+or too vague about expected fields and interpretation rules.
+
+## Required Structure
+
+Artifacts using `tiinex.schema.v1` should include:
+
+- a title naming the schema id being defined
+- `Status`
+- `Origin`
+- `Summary`
+- one or more sections that make the schema operational rather than only
+  descriptive
+
+## Required Sections
+
+- `## Summary`
+- at least one contract-bearing section such as:
+  - `## Required Structure`
+  - `## Required Fields`
+  - `## Required Body Expectations`
+  - `## Envelope Expectations`
+
+## Recommended Sections
+
+- `## Recommended Fields`
+- `## Optional Fields`
+- `## Interpretation Notes`
+- `## Minimal Example`
+- `## What This Schema Is For`
+- `## What This Schema Is Not For`
+
+## Required Semantics
+
+Schema artifacts should make it clear:
+
+- what the schema names
+- what fields or structures are expected
+- what is required versus recommended versus optional
+- what the schema is not intended to cover
+
+The goal is to reduce improvisation by giving a reader enough structure to say
+whether an artifact plausibly follows the schema.
+
+## Origin Rules
+
+Schema artifacts should keep an `Origin` block so the reader can follow the
+design lineage back to the topic or artifact that currently grounds the schema
+note.
+
+Origin candidates may be rendered as a compact list and may use composite
+labels such as `browse + git`.
+
+## File Naming Conventions
+
+Schema artifacts should normally use the schema id itself as the filename stem.
+
+Recommended shared form:
+
+- `<schema-id>.md`
+
+Examples:
+
+- `tiinex.schema.v1.md`
+- `tiinex.continuation.v1.md`
+- `tiinex.topic.v1.md`
+
+This keeps the filename directly aligned with the schema identity a reader sees
+inside the document.
+
+Avoid introducing extra decorative prefixes or slugs unless a separate schema
+explicitly requires them.
+
+## Minimal Example
+
+```md
+# tiinex.example.v1
+
+- Status: provisional shared schema note
+- Origin:
+  - [relative](../trace-format/001.trace.md)
+  - [browse + git](https://example.invalid/repo/blob/commit/.topics/trace-format/001.trace.md)
+
+## Summary
+
+This schema id names an example schema used for demonstration.
+
+## Required Structure
+
+Artifacts using `tiinex.example.v1` should include A, B, and C.
+
+## Recommended Fields
+
+- X
+- Y
+
+## Interpretation Notes
+
+- readers should treat this as an example-only schema
+```
+
+## Non-Goals
+
+This schema does not attempt to define every possible schema-authoring style.
+
+It defines a practical shared best practice for schema artifacts in the current
+`.topics` schema space.
