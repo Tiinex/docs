@@ -1,11 +1,15 @@
 # Continuity Context
 
-- Parent Trace: [001-1-draft.trace.md](001-1-draft.trace.md)
-- Type: markdown
-- Schema: tiinex.continuation.v1
+- Envelope Schema: tiinex.continuation.v1
+- Parent
+  - Trace: [001-1-draft.trace.md](001-1-draft.trace.md)
+- Current
+  - Current Schema: tiinex.continuation.v1
+  - Created At: 2026-05-28 16:46:58
+  - Summary: Title: Human-Readable Continuity Envelopes for Recoverable Trace Artifacts
+  - Type: markdown
 
 ---
-
 # Consolidated RFC Envelope Draft
 
 Title: Human-Readable Continuity Envelopes for Recoverable Trace Artifacts

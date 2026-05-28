@@ -1,11 +1,15 @@
 # Continuity Context
 
-- Parent Trace: [001.trace.md](001.trace.md)
-- Type: markdown
-- Schema: tiinex.continuation.v1
+- Envelope Schema: tiinex.continuation.v1
+- Parent
+  - Trace: [001.trace.md](001.trace.md)
+- Current
+  - Current Schema: tiinex.continuation.v1
+  - Created At: 2026-05-28 03:32:41
+  - Summary: Title: Topic Start Format for Trace-Carried Work
+  - Type: markdown
 
 ---
-
 # Consolidated Draft
 
 Title: Topic Start Format for Trace-Carried Work
