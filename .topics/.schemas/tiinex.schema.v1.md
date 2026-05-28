@@ -65,6 +65,12 @@ Schema artifacts should make it clear:
 The goal is to reduce improvisation by giving a reader enough structure to say
 whether an artifact plausibly follows the schema.
 
+When information is intentionally withheld, schema-bearing artifacts should not
+silently omit or blur that fact.
+
+Redacted values or redacted information should be marked as `[Redacted]` and
+should include a valid reason when that reason can be disclosed safely.
+
 ## Origin Rules
 
 Schema artifacts should keep an `Origin` block so the reader can follow the

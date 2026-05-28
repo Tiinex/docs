@@ -91,6 +91,28 @@ when the corresponding signal is known.
   locator string.
 - Origin candidate labels may be composite forms such as `browse + git`.
 - Parent and current timestamps should use the same UTC time shape.
+- Artifacts should not intentionally discard known ancestry or present a false
+  parent chain when the real continuity relation is still available.
+- Artifacts should also not use the continuity envelope to mislead a reader
+  about where the current artifact came from, even when the schema note is not
+  acting as a full policy layer.
+
+## Ancestry Conduct
+
+The continuity envelope should prefer preserving ancestry over cosmetically
+simplifying it.
+
+Current Tiinex practice should favor:
+
+- keeping the real parent relation when it is known
+- carrying enough origin or trace information that a reader can follow the
+  lineage backward
+- avoiding deliberate breaks, rewrites, or substitutions that make the lineage
+  look cleaner at the cost of true ancestry
+
+If lineage must be interrupted, simplified, or partially withheld, that should
+be made explicit rather than presented as if the artifact had a different
+history.
 
 ## Current Block Rules
 
