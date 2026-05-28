@@ -146,4 +146,6 @@ The current implementation still stores parent trace links primarily as paths.
 
 # Continuity Integrity
 
-- Parent-Integrity: vZdifqBAG6a7ygc1VKXShlwjoN2cuypSFCxHNrNfIRY
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
+  - Value: 71BZgmf23EtN-4UpRKtEJs8xXudE0puyXiPYtkEEQig

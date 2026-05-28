@@ -103,10 +103,40 @@ Artifacts using this envelope should allow a relation-oriented footer.
 
 The current baseline expects:
 
-- `Parent-Integrity` when a parent trace exists
+- a method-labeled validation entry when a parent trace exists
 
 Footer integrity is relation-first. The baseline does not require a default
 self-hash for every artifact.
+
+Preferred for new artifacts:
+
+- use the validation method itself as the left-hand label
+- let the method decide which companion rows belong under that validation entry
+- make the validated relation explicit inside the entry rather than hiding it in
+  a fused field name
+
+Recommended method-labeled form:
+
+- `sha256-base64url-c14n-v1`
+  - `Towards: [001.trace.md](https://example.invalid/repo/blob/commit/001.trace.md)`
+  - `Value: <digest>`
+
+For `sha256-base64url-c14n-v1`, the method means:
+
+- hash the trace markdown referenced by `Towards`
+- normalize newlines to `\n`
+- trim trailing whitespace per line
+- trim trailing blank lines at the end of the source
+- exclude the final integrity line before hashing
+- encode the `sha256` digest as `base64url`
+
+When the validated trace has a usable browseable origin-backed target, `Towards`
+should prefer a markdown link whose label is the trace filename.
+
+Legacy compatibility:
+
+- `Parent-Integrity` remains valid as a shorthand for the parent-directed
+  integrity relation when older tooling or existing artifacts still use it
 
 ## File Naming Conventions
 
@@ -155,7 +185,9 @@ Rules:
 
 # Continuity Integrity
 
-- Parent-Integrity: sha256:...
+- sha256-base64url-c14n-v1
+  - Towards: [001.trace.md](https://example.invalid/repo/blob/commit/001.trace.md)
+  - Value: vF9zj0ShDAmh2mFYW3aMFwywQI4EYimCeMnI-O_MdC0
 ```
 
 ## Non-Goals
@@ -169,4 +201,6 @@ It only defines how the continuity envelope should be shaped and interpreted.
 
 # Continuity Integrity
 
-- Parent-Integrity: vF9zj0ShDAmh2mFYW3aMFwywQI4EYimCeMnI-O_MdC0
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
+  - Value: ygq9rg0obMaDwGA5JgUV9LZUYNbLM8Ys-zGWe3PUXMI

@@ -38,4 +38,6 @@ expected.
 
 # Continuity Integrity
 
-- Parent-Integrity: vZdifqBAG6a7ygc1VKXShlwjoN2cuypSFCxHNrNfIRY
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
+  - Value: 0Kdci4DwB8p2-eOE8ORcD4hayg0Pf5tmIqzG2g425t0
