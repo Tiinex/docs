@@ -56,6 +56,11 @@ The envelope should support this discrimination-first structure:
 - `Current -> Created At` records artifact creation time in
   `YYYY-MM-DD hh:mm:ss` without milliseconds.
 
+When `Envelope Schema`, `Parent Schema`, or `Current Schema` points to a schema
+artifact in another repository, and a usable git origin-backed target exists,
+the reference should use that origin-backed URL rather than only a local
+relative or absolute path.
+
 ## Recommended Fields
 
 - `Parent -> Parent Schema`

@@ -74,6 +74,33 @@ note.
 Origin candidates may be rendered as a compact list and may use composite
 labels such as `browse + git`.
 
+If the grounding artifact or primary schema home lives in another repository,
+the `Origin` block should include at least one committed cross-repo candidate
+that a remote reader can resolve without access to the local filesystem.
+
+For current Tiinex practice, that normally means a `browse + git` candidate.
+
+Cross-repo origin should not rely only on a local absolute path or a same-host
+relative path, because those do not travel well across repositories or
+machines.
+
+## Schema Reference Rules
+
+If a schema-bearing field points to a schema artifact in another repository,
+and the current branch has a usable git origin for that target repository,
+the reference should use an origin-backed URL rather than only a local
+relative or absolute path.
+
+This applies to fields such as:
+
+- `Envelope Schema`
+- `Parent Schema`
+- `Current Schema`
+- `Schema Definition`
+
+Local relative or absolute schema paths are acceptable when the target schema
+is in the same repository, or when no usable git origin-backed target exists.
+
 ## File Naming Conventions
 
 Schema artifacts should normally use the schema id itself as the filename stem.
