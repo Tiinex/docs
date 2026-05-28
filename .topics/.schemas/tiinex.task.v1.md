@@ -17,9 +17,9 @@
 - Status: provisional shared schema note
 - Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
 - Origin:
-  - [relative](../../../ai-provenance/.topics/trace-format/tools/001-3-task-schema-direction.trace.md)
-  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/tools/001-3-task-schema-direction.trace.md)
-  - [browse + git](https://github.com/Tiinex/ai-provenance/blob/cc5f281e287a999a2beff4a3a6f01e93fb54a2f3/.topics/trace-format/001.trace.md)
+  - [relative](../../../ai-provenance/.topics/trace-format/tools/001.trace.md)
+  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/tools/001.trace.md)
+  - [browse + git](https://github.com/Tiinex/ai-provenance/blob/2b82ee6538836765463c7a5524c2120aa3aa4983/.topics/trace-format/tools/001.trace.md)
 
 ## Summary
 
@@ -187,4 +187,4 @@ Upgrade stale parent links to the intended committed browseable targets.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: II1FuX7ge0E0rSj7XswUQcoM3n6a-6N5VfCarD9t1oI
+  - Value: HbyTe_YpuDPJM3ZWqVE5pI2P9fYs7XrOnomfNUAiPOc

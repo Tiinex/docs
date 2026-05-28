@@ -6,13 +6,13 @@
   - Created At: 2026-05-28 18:11:47
   - Trace: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
 - Current
-  - Current Schema: [tiinex.wrong-type-of-continuation.v1](tiinex.wrong-type-of-continuation.v1.md)
+  - Current Schema: [tiinex.broken.v1](tiinex.broken.v1.md)
   - Created At: 2026-05-28 18:11:57
-  - Summary: Intentional mismatch schema used to make wrong-type discrimination explicit.
+  - Summary: Intentional broken placeholder schema used to make mismatch or invalid-continuation discrimination explicit.
 
 ---
 
-# tiinex.wrong-type-of-continuation.v1
+# tiinex.broken.v1
 
 - Status: intentional mismatch placeholder
 - Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
@@ -23,16 +23,17 @@
 
 ## Summary
 
-This schema id is a deliberate mismatch placeholder used to show how a reader
-can quickly discriminate that a parent may not be the kind of artifact they
-expected.
+This schema id is a deliberate broken placeholder used to show how a reader can
+quickly discriminate that a continuation edge or artifact classification is not
+currently valid.
 
 ## Interpretation Notes
 
 - this file exists to keep the schema link chain intact even when the schema id
-  is intentionally wrong for testing or demonstration
-- readers should treat the mismatch as meaningful signal rather than as a valid
-  expected schema for the referenced RFC parent
+  is intentionally broken for testing, demonstration, or explicit mismatch
+  handling
+- readers should treat the broken state as meaningful signal rather than as a
+  valid expected schema for the referenced parent or artifact
 
 ---
 
@@ -40,4 +41,4 @@ expected.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: 0Kdci4DwB8p2-eOE8ORcD4hayg0Pf5tmIqzG2g425t0
+  - Value: PBGuV1lUWssARgzlZ1OYmFySbopMR6m7XMTJUG58ESk
