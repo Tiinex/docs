@@ -146,4 +146,4 @@ The current implementation still stores parent trace links primarily as paths.
 
 # Continuity Integrity
 
-- Parent-Integrity: Bg0cMi1l-IyDzpqv3XNOvkgCpL6_azhPl9t7rd0ho-E
+- Parent-Integrity: vZdifqBAG6a7ygc1VKXShlwjoN2cuypSFCxHNrNfIRY
