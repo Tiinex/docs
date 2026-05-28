@@ -101,6 +101,31 @@ This applies to fields such as:
 Local relative or absolute schema paths are acceptable when the target schema
 is in the same repository, or when no usable git origin-backed target exists.
 
+## Timestamp Rules
+
+When schema artifacts describe or exemplify `Created At` fields carried through
+the continuity envelope, they should use the UTC timestamp shape inherited from
+`tiinex.continuation.v1`.
+
+That means `YYYY-MM-DD hh:mm:ss` with UTC implied, and without timezone
+suffixes, local zone names, or numeric offsets.
+
+Later schema notes do not need to restate that rule in full unless they add a
+genuine local specialization.
+
+## Schema Lineage Validation Rules
+
+An artifact should not be treated as validated only because its immediate
+schema id looks plausible in isolation.
+
+Validation should read the schema lineage backward through the relevant schema
+links until the chain reaches its root schema note, or until the next step is
+no longer a schema artifact and the validator intentionally stops there.
+
+For current Tiinex practice, that usually means checking inherited constraints
+from earlier schema notes such as the continuity envelope contract rather than
+requiring every later schema note to restate those rules verbatim.
+
 ## File Naming Conventions
 
 Schema artifacts should normally use the schema id itself as the filename stem.

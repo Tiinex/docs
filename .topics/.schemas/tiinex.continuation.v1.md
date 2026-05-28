@@ -54,7 +54,10 @@ The envelope should support this discrimination-first structure:
 - `Current -> Current Schema` identifies the current artifact schema carried by
   the envelope.
 - `Current -> Created At` records artifact creation time in
-  `YYYY-MM-DD hh:mm:ss` without milliseconds.
+  `YYYY-MM-DD hh:mm:ss` UTC without milliseconds.
+
+Timestamp-bearing envelope fields should not add timezone suffixes, local zone
+names, or numeric offsets. UTC is the implied time basis for this shape.
 
 When `Envelope Schema`, `Parent Schema`, or `Current Schema` points to a schema
 artifact in another repository, and a usable git origin-backed target exists,
@@ -87,7 +90,7 @@ when the corresponding signal is known.
 - `Origin` should be treated as an ordered candidate list rather than one flat
   locator string.
 - Origin candidate labels may be composite forms such as `browse + git`.
-- Parent and current timestamps should use the same time shape.
+- Parent and current timestamps should use the same UTC time shape.
 
 ## Current Block Rules
 
@@ -203,4 +206,4 @@ It only defines how the continuity envelope should be shaped and interpreted.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: ygq9rg0obMaDwGA5JgUV9LZUYNbLM8Ys-zGWe3PUXMI
+  - Value: HKCc-k75_x3nR2iDtL8hpZairVQltNf5-sGSg7zPl1g
