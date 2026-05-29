@@ -51,6 +51,7 @@ The exact section names may vary, but evidence documents should usually provide
 some combination of:
 
 - provenance or source
+- origin block for concrete artifact or file references when one is available
 - evidence material
 - representation method
 - claim or question supported
@@ -83,6 +84,24 @@ Evidence artifacts using `tiinex.evidence.v1` should make it clear:
   excerpt, screenshot description, transcript extract, or summary
 - what provenance is available for the evidence
 
+When the evidence depends on a concrete file, trace, schema, or other durable
+artifact, the artifact should prefer an explicit `Origin` block over a lone
+path mention when that stronger provenance is available.
+
+When an `Origin` block is available, it should prefer the same top-first order
+used elsewhere in continuity envelopes, with `relative` and `absolute` first
+when they are available, followed by `browse` or `browse + git` when a truthful
+public or commit-pinned target exists.
+
+An evidence artifact may still be valid when only a URL, a weaker prose
+provenance note, or another partial source signal is honestly available. The
+schema should prefer stronger recoverable origin when possible without
+pretending that every evidence source can always be reduced to the same link
+shape.
+
+Evidence artifacts should not pretend that a weak relative pointer is the full
+provenance story when stronger origin-backed recovery is already available.
+
 If the underlying evidence is partial, redacted, transformed, or summarized,
 the artifact should say so explicitly rather than letting a reader infer full
 fidelity.
@@ -95,6 +114,7 @@ value is the preserved supporting material itself.
 - `Current -> Why`
 - `Current -> Summary`
 - explicit provenance or source reference
+- explicit `Origin` block for concrete artifact references when available
 - explicit representation method
 - explicit supported claim, question, or artifact
 - explicit limitations when the evidence is partial, transformed, or missing
@@ -163,6 +183,10 @@ It is not primarily for:
 ## Provenance
 
 - Source: local test run
+- Origin:
+  - relative: ./logs/example.txt
+  - absolute: C:/example/logs/example.txt
+  - browse: https://example.test/logs/example.txt
 - Representation: excerpt
 
 ## Evidence Material
@@ -189,4 +213,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: OWoEjW7AgorVhTMg-ISlh4fIiwq9uuo0ThULe6aoQ8M
+  - Value: Mtyw2IAh-l2EFVoMQkzFWnuE5mrw_Jtcffbwa12tt30

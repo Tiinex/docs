@@ -49,6 +49,8 @@ some combination of:
 - objective or requested work
 - done criteria or acceptance criteria
 - scope and non-goals
+- origin block for concrete targets, dependencies, or referenced artifacts when
+  one is available
 - dependencies or blockers
 - subtasks
 - risks or open questions
@@ -77,6 +79,23 @@ Task artifacts using `tiinex.task.v1` should make it clear:
 - what constraints, non-goals, or boundaries still apply
 - whether the task depends on other tasks, artifacts, or repositories
 
+When a task depends on or targets a concrete file, trace, schema, or other
+durable artifact, the task should prefer an explicit `Origin` block over a
+lone path mention when that stronger provenance is available.
+
+When an `Origin` block is available, it should prefer the same top-first order
+used elsewhere in continuity envelopes, with `relative` and `absolute` first
+when they are available, followed by `browse` or `browse + git` when a truthful
+public or commit-pinned target exists.
+
+A task artifact may still be valid when only a URL, a weaker provenance note,
+or another partial source signal is honestly available. The schema should
+prefer stronger recoverable origin when possible without pretending that every
+target or dependency can always be expressed through the same link shape.
+
+Task artifacts should not pretend that a weak relative pointer is enough when
+the task depends on being able to recover or verify a more specific target.
+
 Task artifacts may contain subtasks, and those subtasks may themselves contain
 further subtasks recursively.
 
@@ -95,6 +114,7 @@ If subtasks are present, the artifact should make clear whether they are:
 - `Current -> Summary`
 - explicit done criteria
 - explicit scope or non-goals
+- explicit `Origin` block for concrete targets or dependencies when available
 - explicit subtask listing when the task branches
 
 ## File Naming Conventions
@@ -160,6 +180,18 @@ It is not primarily for:
 
 Upgrade stale parent links to the intended committed browseable targets.
 
+## Target
+
+- Origin:
+  - relative: ./docs/.topics/example/001.trace.md
+  - absolute: C:/Users/example/Documents/Repos/Tiinex/docs/.topics/example/001.trace.md
+  - browse + git: https://github.com/Tiinex/docs/blob/<commit>/.topics/example/001.trace.md
+
+Alternative weaker case:
+
+- Origin:
+  - browse: https://example.test/spec
+
 ## Done Criteria
 
 - target files point to the intended committed parent traces
@@ -187,4 +219,4 @@ Upgrade stale parent links to the intended committed browseable targets.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: HbyTe_YpuDPJM3ZWqVE5pI2P9fYs7XrOnomfNUAiPOc
+  - Value: IH3uulmAAqW6Yru7tbK_b4iQTPJvRExqLLOVz6C-09U
