@@ -110,6 +110,27 @@ Current Tiinex practice should favor:
 - avoiding deliberate breaks, rewrites, or substitutions that make the lineage
   look cleaner at the cost of true ancestry
 
+Continuity should also preserve a practical stability gradient across the
+lineage.
+
+Current Tiinex practice should prefer:
+
+- treating the latest leaf as the most changeable part of the chain
+- treating earlier parents as progressively more stable as the lineage extends
+  backward
+- adding a new leaf to carry new reasoning, decisions, or operational work
+  rather than casually rewriting an older parent that already grounded later
+  artifacts
+
+This does not mean parent artifacts become immutable.
+
+It means parent mutation should be rarer, more justified, and more obviously
+recoverable than ordinary leaf evolution.
+
+When an older parent must change, the reason should usually be continuity
+repair, false ancestry correction, schema correction, or another bounded fix
+rather than routine forward progress.
+
 If lineage must be interrupted, simplified, or partially withheld, that should
 be made explicit rather than presented as if the artifact had a different
 history.
@@ -228,4 +249,4 @@ It only defines how the continuity envelope should be shaped and interpreted.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: HKCc-k75_x3nR2iDtL8hpZairVQltNf5-sGSg7zPl1g
+  - Value: vuCFvZNUizBV22Xbop_9x9Lrn5HEreFTm7Jf42oQSpw
