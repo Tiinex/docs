@@ -1,11 +1,11 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](../../.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.continuation.v1.md)
 - Parent
-  - Parent Schema: [tiinex.topic.v1](../../.schemas/tiinex.topic.v1.md)
+  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.topic.v1.md)
   - Trace: [001-1-draft.trace.md](001-1-draft.trace.md)
 - Current
-  - Current Schema: [tiinex.topic.v1](../../.schemas/tiinex.topic.v1.md)
+  - Current Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.topic.v1.md)
   - Created At: 2026-05-28 16:46:58
   - Summary: Title: Human-Readable Continuity Envelopes for Recoverable Trace Artifacts
   - Type: markdown
