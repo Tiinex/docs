@@ -47,6 +47,7 @@ Artifacts using `tiinex.schema.v1` should include:
 ## Recommended Sections
 
 - `## Recommended Fields`
+- `## Conditional Fields`
 - `## Optional Fields`
 - `## Interpretation Notes`
 - `## Minimal Example`
@@ -68,8 +69,34 @@ whether an artifact plausibly follows the schema.
 When information is intentionally withheld, schema-bearing artifacts should not
 silently omit or blur that fact.
 
-Redacted values or redacted information should be marked as `[Redacted]` and
+Redacted values or redacted information should be marked as `[REDACTED]` and
 should include a valid reason when that reason can be disclosed safely.
+
+Schema-bearing artifacts should keep structural field names in English even
+when example values, explanatory prose, or carried payload values are in some
+other language.
+
+If early envelope values such as `Summary`, or later payload values, are
+materially written in a language other than English, the artifact should make
+the reading language explicit rather than relying on the reader to infer it
+from mixed-language context alone.
+
+## Conditional Fields
+
+- `Language`
+  - Required when field values, example values, explanatory prose, or payload
+    values are materially written in a language other than English.
+  - Expected meaning: the default reading language for artifact prose and
+    payload values unless a more local override is declared.
+- `Locale`
+  - Required only when a regional or locale-specific variant materially affects
+    interpretation.
+  - Expected meaning: the locale-qualified reading context that specializes the
+    declared `Language`.
+
+For current Tiinex practice, `Language` should usually be enough on its own.
+`Locale` should not be added mechanically when regional precision does not
+change the intended reading.
 
 ## Origin Rules
 
@@ -175,6 +202,12 @@ Artifacts using `tiinex.example.v1` should include A, B, and C.
 - X
 - Y
 
+## Conditional Fields
+
+- `Language` when the schema note or its carried example values are materially
+  non-English
+- `Locale` when regional interpretation matters beyond the language alone
+
 ## Interpretation Notes
 
 - readers should treat this as an example-only schema
@@ -186,3 +219,11 @@ This schema does not attempt to define every possible schema-authoring style.
 
 It defines a practical shared best practice for schema artifacts in the current
 `.topics` schema space.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
+  - Value: _z7eNRk3ukSuDZwhMUMVq49eC-6CJlT447VMd-say5w
