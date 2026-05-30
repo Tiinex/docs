@@ -64,6 +64,7 @@ identifies at least:
 - `Envelope Schema`
 - `Current -> Current Schema: tiinex.decision.v1`
 - `Current -> Created At`
+- `Current -> Authors`
 
 Recommended envelope-side companions are:
 
@@ -77,6 +78,7 @@ Decision artifacts using `tiinex.decision.v1` should make it clear:
 
 - what was decided
 - what the decision state currently is
+- who made or carries the decision
 - what artifact, task, topic, or question the decision applies to
 - what a later reader may now treat as the operative direction
 
@@ -84,17 +86,24 @@ If a decision is provisional, reversible, or pending later review, the artifact
 should say so explicitly rather than letting a reader infer finality from terse
 wording.
 
+If a decision is what authorizes a lineage to move into runtime or any other
+operational mode, the artifact should say that transition explicitly rather than
+leaving a reader or agent to infer that `Why` alone was enough to trigger
+execution.
+
 Decision artifacts should not pretend to be generic discussion notes when the
 main value is the landed outcome itself.
 
 ## Recommended Fields
 
+- `Current -> Authors`
 - `Current -> Why`
 - `Current -> Summary`
 - explicit decision state
 - explicit subject or affected scope
 - explicit rationale or decision basis
 - explicit consequence or carry-forward impact
+- explicit operational effect when the decision authorizes execution or runtime
 - explicit superseded-by or review conditions when those are known
 
 ## File Naming Conventions
@@ -151,6 +160,7 @@ It is not primarily for:
 - Current
   - Current Schema: tiinex.decision.v1
   - Created At: 2026-05-28 22:50:17
+  - Authors: Anchor
   - Summary: Decision to keep task recursion instead of adding a separate node schema.
 
 ---
@@ -175,6 +185,11 @@ It is not primarily for:
 
 - a decision artifact should optimize for what now governs, not for replaying
   every branch of prior discussion
+- `Current -> Authors` is required here because a decision is not fully
+  decision-bearing unless the deciding actor or actors are explicit
+- `Current -> Why` can explain rationale, but it should not stand in for the
+  actor-bearing decision signal itself when an agent might otherwise infer
+  authorization too loosely
 - if the artifact remains mostly unsettled reasoning, a topic schema may be the
   better fit
 - if the artifact is mostly about work to be done after the decision, a task
@@ -186,4 +201,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: B3v5vJQ-G4dnOt9WPHdzNiBbU77wWJQNokGKqLrjgxY
+  - Value: Otx-rP4ZdkWa8510Kqd2fD6KYBL2rIWYp_YQ3rVyuv0
