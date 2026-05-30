@@ -24,8 +24,8 @@
 
 - Source: user-provided meme image created in Cloud ChatGPT and then placed into the local educational tree
 - Origin:
-  - [relative](local-lineage-vs-cloud-reliance-meme.png)
-  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/local-lineage-vs-cloud-reliance-meme.png)
+  - [relative](001-2-cloud-gpt-generation.png)
+  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-cloud-gpt-generation.png)
 - Representation: direct local image asset with summarized on-image text and scene details
 
 ## Evidence Material
@@ -55,4 +55,4 @@
 
 - sha256-base64url-c14n-v1
   - Towards: [001.trace.md](001.trace.md)
-  - Value: UgWJZxIwF74Cu3-uTs5esbp-_3ntYQnzoDvIz14QcJA
+  - Value: DMPBC2Ar9Ysgoo-QlVxtZ1xdkGwG0rPNegiDkLIMnu0
