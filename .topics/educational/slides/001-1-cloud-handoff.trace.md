@@ -39,6 +39,14 @@ The current task is not to declare the generated image good by default.
   - Origin:
     - [relative](../../.schemas/README.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/.schemas/README.md)
+- Committed Schema Pattern
+  - Origin:
+    - [browse + git](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.continuation.v1.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.task.v1.md)
+- Committed Trace Pattern
+  - Origin:
+    - [browse + git](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/rfc/001.trace.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/riksarkivet/001.trace.md)
 
 ## Requested Work
 
@@ -89,4 +97,4 @@ The current task is not to declare the generated image good by default.
 
 - sha256-base64url-c14n-v1
   - Towards: [001.trace.md](001.trace.md)
-  - Value: 1DlMpuTBRExCkVBPpcTG6nLw4NZh9o64LaCdzkI3DpM
+  - Value: x8DIH5maw7WfiPj0Ric9TIHwa1Ua4UGtwgQDQ7cyTTQ
