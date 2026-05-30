@@ -24,8 +24,8 @@
 
 - Source: user-provided Magic-framed meme image created for this leaf and placed in the local docs tree
 - Origin:
-  - [relative](magic-the-gather-meme-1.png)
-  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/magic-the-gathering/magic-the-gather-meme-1.png)
+  - [relative](001-2-cloud-chatgpt-dalle.png)
+  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/magic-the-gathering/001-2-cloud-chatgpt-dalle.png)
 - Representation: direct local image asset with summarized on-image text and compositional reading
 
 ## Evidence Material
@@ -55,4 +55,4 @@
 
 - sha256-base64url-c14n-v1
   - Towards: [001.trace.md](001.trace.md)
-  - Value: wsH0LyUpfgrKpC5gwaXWxy5TnpwGzFu3Xk202MzByTo
+  - Value: fXP8pFCqKuykC1keaJjhhEENOcThjNuhBQSuZwyxkFs
