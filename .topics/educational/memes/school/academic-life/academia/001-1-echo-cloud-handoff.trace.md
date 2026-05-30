@@ -8,6 +8,7 @@
   - Origin:
     - [relative](001.trace.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/school/academic-life/academia/001.trace.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/291c00f4aaba1e1ba5a0c3479c078070a83c060e/.topics/educational/memes/school/academic-life/academia/001.trace.md)
 - Current
   - Current Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.task.v1.md)
   - Created At: 2026-05-30 15:26:07
@@ -34,23 +35,27 @@ Prepare one bounded first-pass handoff for the Echo role in Cloud ChatGPT for th
   - Origin:
     - [relative](../../../../../../README.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/README.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/291c00f4aaba1e1ba5a0c3479c078070a83c060e/README.md)
 - Local Memes Root Topic
   - Origin:
     - [relative](../../../001.trace.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/001.trace.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/291c00f4aaba1e1ba5a0c3479c078070a83c060e/.topics/educational/memes/001.trace.md)
 - Exact Leaf Topic
   - Origin:
     - [relative](001.trace.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/school/academic-life/academia/001.trace.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/291c00f4aaba1e1ba5a0c3479c078070a83c060e/.topics/educational/memes/school/academic-life/academia/001.trace.md)
 - Local Schema Front Door
   - Origin:
     - [relative](../../../../../.schemas/README.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/.schemas/README.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/291c00f4aaba1e1ba5a0c3479c078070a83c060e/.topics/.schemas/README.md)
 - Task Schema
   - Origin:
     - [relative](../../../../../.schemas/tiinex.task.v1.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/.schemas/tiinex.task.v1.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.task.v1.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/291c00f4aaba1e1ba5a0c3479c078070a83c060e/.topics/.schemas/tiinex.task.v1.md)
 
 ## Echo Cloud Handoff Contract
 
@@ -63,11 +68,11 @@ Prepare one bounded first-pass handoff for the Echo role in Cloud ChatGPT for th
 
 - read the exact leaf topic first and use the parent lineage only to recover shared constraints
 - do not widen to sibling leaves, adjacent branches, or a broader audience just because they look easier
-- if the Cloud session cannot browse these local uncommitted traces through GitHub yet, use the uploaded or pasted trace contents as the source packet instead of inventing missing source
+- if the Cloud session is not actually grounded on these commit-pinned GitHub origins yet, use the uploaded or pasted trace contents as the source packet instead of inventing missing source
 - keep the root format default unless the provided lineage explicitly overrides it
 - make assumptions explicit instead of hiding them
 - ask direct clarification questions only if the provided sources materially conflict or a required source is missing
-- if this leaf still carries a populated `.gitkeep`, treat that placeholder as a live source hint rather than deleting or ignoring it during the handoff
+- if the leaf topic carries a Current External Anchor section, treat that anchor as a live source hint rather than inventing a different external source
 
 ## Required Output
 
@@ -91,7 +96,7 @@ The packet should include:
 
 - do not treat the first Echo pass as auto-approved canon
 - do not silently broaden the task to a neighboring leaf or branch
-- do not pretend uncommitted local traces were visible through GitHub if the handoff actually depended on manual upload or pasted source
+- do not pretend a Cloud run was GitHub-grounded when it actually depended on manual upload or pasted source
 
 ---
 
@@ -99,4 +104,4 @@ The packet should include:
 
 - sha256-base64url-c14n-v1
   - Towards: [001.trace.md](001.trace.md)
-  - Value: SIYPC2-UuKDZ2wQ3GwPNuY5MBcyXOId34BDnBbO7wuU
+  - Value: 5WB-ABwpnjtKVL8EM8GfVRzM4iR1f8Yb-3_K34G8MIQ
