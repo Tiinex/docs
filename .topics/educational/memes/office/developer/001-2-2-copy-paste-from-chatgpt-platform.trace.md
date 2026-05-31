@@ -12,8 +12,8 @@
 - Current
   - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.evidence.v1.md)
   - Created At: 2026-05-31 14:07:47
-  - Why: Preserves the raw ChatGPT-platform copy-paste so the conversation nodes stay attached even though the share view strips source payloads.
-  - Summary: Raw text dump of the shared ChatGPT conversation about LINEAGE_POLICY.md and the decentralized context layer.
+  - Why: Preserves the raw ChatGPT-platform copy-paste and keeps the associated local image assets attached to the same evidence chain.
+  - Summary: English transcript evidence for the shared ChatGPT conversation, with related local image assets for the Matrix Printer and Tiinex device/app follow-ups.
 
 ---
 
@@ -53,17 +53,30 @@
 - The visible transcript is preserved in the companion `.txt` file for verbatim fidelity.
 - This `.trace.md` file keeps the evidence readable in English while retaining the local filename chain and the original share URL.
 
+## Related Visual Assets
+
+- [001-2-2-image-1.png](001-2-2-image-1.png) - the Matrix Printer + Scanner meme image that matches the transcript's printer-and-lineage follow-up.
+- [001-2-2-image-2.png](001-2-2-image-2.png) - the six-device collage showing the printable lineage workflow extended across devices.
+- [001-2-2-image-3.png](001-2-2-image-3.png) - the six-apps collage showing the software-side Tiinex workflow extensions.
+
+## Asset Linkage Notes
+
+- These PNGs are the concrete visual outputs associated with the same developer-lineage branch.
+- Keeping them linked here prevents the image evidence from becoming detached from the transcript evidence that led to them.
+- The transcript remains the provenance base; the images are related evidence artifacts in the same local leaf.
+
 ## Supports
 
 - Claim: the shared ChatGPT conversation is recoverable as local evidence even when the share page does not expose the underlying attachments
 - Claim: the transcript contains the visible prompt/response chain that led into LINEAGE_POLICY.md, Golden Rule Lineage, and the decentralized context-layer framing
 - Claim: the raw paste is the missing attachment anchor for the local developer leaf chain
+- Claim: the three PNG assets are the corresponding visual outputs and should stay attached to the same evidence chain
 
 ## Interpretation Notes and Limits
 
 - This is an English evidence summary of a raw human copy-paste, not a browser-perfect export
 - Attachment contents are not included; only the visible transcript and file labels are preserved
-- If a later leaf needs exact image payloads, those should come from the local PNG assets, not this transcript alone
+- If a later leaf needs exact image payloads, those should come from the local PNG assets, which are now linked as related artifacts here
 
 ---
 
@@ -71,4 +84,4 @@
 
 - sha256-base64url-c14n-v1
   - Towards: [001-2-local-lineage-vs-cloud-reliance-meme.trace.md](001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
-  - Value: FUceQQQ6pziL8BAD96r2Zoap1ji3NmH4JkU4fCPGv04
+  - Value: HqnOShiPqXneV2Mh73L85k_TbOWWvAQI497uL3slVwU
