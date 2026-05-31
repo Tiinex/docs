@@ -71,4 +71,4 @@
 
 - sha256-base64url-c14n-v1
   - Towards: [001-2-local-lineage-vs-cloud-reliance-meme.trace.md](001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
-  - Value: 5KvNmwjrEkWg6mGicPBenCYga993TO1euHZUpf17uvA
+  - Value: FUceQQQ6pziL8BAD96r2Zoap1ji3NmH4JkU4fCPGv04
