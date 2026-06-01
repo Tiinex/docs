@@ -1,6 +1,8 @@
 ## Shared ChatGPT Transcript Extraction
 
 - Source: https://chatgpt.com/share/6a1dab53-ec20-83eb-b204-aba582f4d8b6
+- Origin:
+	- [browse](https://chatgpt.com/share/6a1dab53-ec20-83eb-b204-aba582f4d8b6)
 - Capture method: recovered via `run_playwright_code` from the shared ChatGPT page DOM
 - Page title: `Hälsning och vidare konversation`
 - Recovery note: the page initially showed a login scaffold, but the shared conversation text was still present in the DOM and could be extracted
