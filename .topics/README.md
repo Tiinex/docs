@@ -38,6 +38,7 @@ That structure helps a reader separate:
 - [kickstarter](kickstarter)
 - [rfc](rfc)
 - [riksarkivet](riksarkivet)
+- [proof](proof)
 - [task-origins](task-origins)
 
 ## Why `.trace.md`
