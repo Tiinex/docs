@@ -35,6 +35,8 @@ The schema notes exist to reduce that ambiguity.
   source, target, and disposition
 - [tiinex.decision.v1.md](tiinex.decision.v1.md): landed decisions and what now
   governs
+- [tiinex.bounty.v1.md](tiinex.bounty.v1.md): bounty, prize, and reward claims
+  with traceable eligibility, submission, settlement, and payment evidence
 - [tiinex.pointer.v1.md](tiinex.pointer.v1.md): thin continuity redirects toward
   an upstream trace or origin
 
