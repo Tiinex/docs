@@ -134,6 +134,15 @@ This topic captures the current design direction for the work.
 The current implementation still stores parent trace links primarily as paths.
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - the topic body should remain readable to humans without special tooling
@@ -148,4 +157,4 @@ The current implementation still stores parent trace links primarily as paths.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: 71BZgmf23EtN-4UpRKtEJs8xXudE0puyXiPYtkEEQig
+  - Value: fns9HoIf2hTSglbsIN44mbclDHlqh_AxevA63pshyjI

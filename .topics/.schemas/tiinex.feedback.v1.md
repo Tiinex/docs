@@ -100,6 +100,32 @@ Feedback artifacts also should not collapse all externally gathered signal into
 feedback when the interaction relation is weak or absent; in those cases,
 `tiinex.signal.v1` is usually the better fit.
 
+## Validation-Friendly Shape
+
+Keep feedback artifacts in a stable order so humans and validators can scan
+them the same way.
+
+Preferred order:
+
+1. title
+2. source surface or channel
+3. feedback signal
+4. interaction target or subject
+5. response or disposition
+6. linked evidence or external references
+
+Preferred anchors:
+
+- `Source`
+- `Feedback Signal`
+- `Relevance`
+- `Response`
+- `Disposition`
+
+If a section is omitted, leave it out cleanly rather than renaming it for a
+one-off use. Use close equivalents only when the artifact genuinely needs a
+different label, and keep the meaning obvious in the first line.
+
 ## Recommended Fields
 
 - `Current -> Why`
@@ -212,4 +238,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.signal.v1.md](tiinex.signal.v1.md)
-  - Value: KWqVOE5yYaX8D4Se1AsZKcs8wNAl1X0EGhxTKA5Gjw4
+  - Value: 9Jki6oB-WdgbxilF6XPjRl6aNMpA-JlqehPh9_VgMRI

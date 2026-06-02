@@ -27,6 +27,15 @@ This schema id is a deliberate broken placeholder used to show how a reader can
 quickly discriminate that a continuation edge or artifact classification is not
 currently valid.
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - this file exists to keep the schema link chain intact even when the schema id
@@ -41,4 +50,4 @@ currently valid.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: PBGuV1lUWssARgzlZ1OYmFySbopMR6m7XMTJUG58ESk
+  - Value: g1FgFUTWiq5FD5l16K38s13BQWYyAxLbQwgpIHxm3jo

@@ -204,6 +204,15 @@ Alternative weaker case:
 - refresh footer integrity values
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - a task artifact should stay concrete enough that a reader can tell what work
@@ -219,4 +228,4 @@ Alternative weaker case:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: IH3uulmAAqW6Yru7tbK_b4iQTPJvRExqLLOVz6C-09U
+  - Value: UcPhEuqpAJ274RxXNJj12e8UklwM7ZChKz8HJm5PHlg

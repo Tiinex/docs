@@ -109,6 +109,34 @@ fidelity.
 Evidence artifacts should not pretend to be mere signal capture when the main
 value is the preserved supporting material itself.
 
+## Validation-Friendly Shape
+
+Keep evidence artifacts in a stable order so humans and validators can scan
+them the same way.
+
+Preferred order:
+
+1. title
+2. Provenance
+3. Origin
+4. Representation
+5. Evidence Material
+6. Supports
+7. Interpretation Notes
+8. linked artifacts or references
+
+Preferred anchors:
+
+- `Provenance`
+- `Origin`
+- `Representation`
+- `Evidence Material`
+- `Supports`
+
+If a section is omitted, leave it out cleanly rather than renaming it for a
+one-off use. Use close equivalents only when the artifact genuinely needs a
+different label, and keep the meaning obvious in the first line.
+
 ## Recommended Fields
 
 - `Current -> Why`
@@ -213,4 +241,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: Mtyw2IAh-l2EFVoMQkzFWnuE5mrw_Jtcffbwa12tt30
+  - Value: 26nLn85OPT_hKak0ULAMmLTmbRkxhnN17gpkfA0R6gI

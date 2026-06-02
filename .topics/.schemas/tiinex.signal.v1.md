@@ -90,6 +90,32 @@ later changes, disappears, or becomes inconvenient to access.
 Signal artifacts should not pretend to be mere forwarding pointers when the
 main value is actually the preserved signal itself.
 
+## Validation-Friendly Shape
+
+Keep signal artifacts in a stable order so humans and validators can scan them
+the same way.
+
+Preferred order:
+
+1. title
+2. source surface or channel
+3. signal
+4. interpretation or relevance
+5. disposition or follow-up relevance
+6. linked evidence or external references
+
+Preferred anchors:
+
+- `Source`
+- `Signal`
+- `Relevance`
+- `Disposition`
+- `Follow-up`
+
+If a section is omitted, leave it out cleanly rather than renaming it for a
+one-off use. Use close equivalents only when the artifact genuinely needs a
+different label, and keep the meaning obvious in the first line.
+
 ## Recommended Fields
 
 - `Current -> Why`
@@ -198,4 +224,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: BdruB8iQG69XXQ3VDIdUcxZN5FAL5lBzNjUeYgjWEaE
+  - Value: twK-G8reLTXXluGsFS1dHu7qDCO9o4tbV58BaBhFlhA

@@ -137,6 +137,15 @@ It is not primarily for:
 This artifact anchors the local topic space to the latest upstream trace.
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - a pointer artifact may carry very little body beyond its envelope and one
@@ -152,4 +161,4 @@ This artifact anchors the local topic space to the latest upstream trace.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: 67unCs2XppbUJp18tzEMOurYKpaAjhOdjz7fw7f6ANc
+  - Value: vDk5fGFGqrH5ffKACjV1VbWONhyjmntwwQo1oSQIUkY

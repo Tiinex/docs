@@ -149,6 +149,15 @@ It is not primarily for:
 - Encryption: age recipient-set v1
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - this schema is meant to keep the outer shell readable even when the payload
@@ -165,4 +174,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: H4CC5Y0fWyoVEYl7bXhDWzPFWL04VxfuG1j_EIVhKNc
+  - Value: F8D4eP-aamQRMIUd9QzdaDO0YJgEpwg1EwX-YW0Km9o

@@ -1,7 +1,7 @@
 # Tiinex Schemas
 
 This folder contains the human-readable schema notes that define how Tiinex
-artifacts should be interpreted.
+artifacts and declared support surfaces should be interpreted.
 
 These schemas are designed to make provenance, lineage, continuity, and
 artifact role legible without requiring custom binary formats or opaque hidden
@@ -44,6 +44,8 @@ The schema notes exist to reduce that ambiguity.
   themselves
 - [tiinex.signal.v1.md](tiinex.signal.v1.md): signal-bearing artifacts where
   interaction semantics are weaker than feedback
+- [tiinex.capability.v1.md](tiinex.capability.v1.md): capability manifests for
+  runtimes, viewers, validators, and related support surfaces
 - [tiinex.runtime.v1.md](tiinex.runtime.v1.md)
 - [tiinex.ai.runtime.v1.md](tiinex.ai.runtime.v1.md)
 - [tiinex.machine.runtime.v1.md](tiinex.machine.runtime.v1.md)
@@ -68,6 +70,7 @@ separate:
 
 - `Parent Trace`
 - `Origin`
+- declared capability metadata
 - current schema identity
 - current artifact summary
 - integrity relation

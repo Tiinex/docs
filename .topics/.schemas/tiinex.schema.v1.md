@@ -208,6 +208,15 @@ Artifacts using `tiinex.example.v1` should include A, B, and C.
   non-English
 - `Locale` when regional interpretation matters beyond the language alone
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - readers should treat this as an example-only schema
@@ -226,4 +235,4 @@ It defines a practical shared best practice for schema artifacts in the current
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: _z7eNRk3ukSuDZwhMUMVq49eC-6CJlT447VMd-say5w
+  - Value: mXixtZ5Of3VbBD7aFBN9VPul6raNGOq4_9Z8-V3lgGM

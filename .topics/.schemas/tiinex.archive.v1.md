@@ -153,6 +153,15 @@ It is not primarily for:
 - Carrier Path: 001-1-1.trace.zip
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - archive carriers may preserve continuity directly, or through a companion
@@ -167,4 +176,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: WcAEUIro1AsH95HzgIPMft3ummPcXhCgiivSOi4_cVA
+  - Value: 51DUGWAMzwlCvw1CwMGE-7mnfOzuYQVDPqQ85y_hY3k

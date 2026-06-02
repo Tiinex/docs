@@ -151,6 +151,15 @@ It is not primarily for:
 - Companion Metadata: 001-1-1.trace.md remains readable outside the payload
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - zip carriers may keep readable continuity outside the payload, inside the
@@ -166,4 +175,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.archive.v1.md](tiinex.archive.v1.md)
-  - Value: 81T-Vc_5D5lU4A4WJrUj0J28wxsMnLwvDHu4BJP5EeQ
+  - Value: g178eEaceYI7YYj2etg4b9DrVfKr_eEPmJ5lf_0kRQc

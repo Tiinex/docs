@@ -184,6 +184,15 @@ Legacy compatibility:
 - `Parent-Integrity` remains valid as a shorthand for the parent-directed
   integrity relation when older tooling or existing artifacts still use it
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## File Naming Conventions
 
 Artifacts using `tiinex.continuation.v1` should normally use lineage-first
@@ -249,4 +258,4 @@ It only defines how the continuity envelope should be shaped and interpreted.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: vuCFvZNUizBV22Xbop_9x9Lrn5HEreFTm7Jf42oQSpw
+  - Value: Tx-dk2o9Y_K-b0PIRrvwgbIlc5LPW8AlHjqhH5s17_A

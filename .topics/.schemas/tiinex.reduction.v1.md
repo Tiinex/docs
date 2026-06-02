@@ -190,6 +190,15 @@ It is not primarily for:
   full original branch first
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - a reduction artifact should be judged by the truthfulness of its preservation
@@ -204,4 +213,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: uFePM5Jn05xQM7RCsuWLm7nYwYzrc6LTvWUvySBJQ58
+  - Value: 2HSk_ZltMk5t_xrywDwl6ZCqkj_i7WCvh3SuBBYC2zs

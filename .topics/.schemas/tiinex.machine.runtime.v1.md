@@ -111,6 +111,15 @@ It is not primarily for:
 - free prose without runtime state
 - AI-specific runtime semantics when a narrower child schema exists
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - machine runtime should stay broad enough for non-AI execution surfaces
@@ -147,4 +156,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.runtime.v1.md](tiinex.runtime.v1.md)
-  - Value: nV7-ryxE0ql_dbjxIgNf-EMIk6TdO3EGzhi7nMa81dc
+  - Value: OJoT4_HvDySGrnWRlrIjsXgsIpc91zQAMbcpFWlxG4w

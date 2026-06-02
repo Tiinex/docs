@@ -136,6 +136,17 @@ It is not primarily for:
 
 ## Interpretation Notes
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
+## Interpretation Notes
+
 - runtime does not mean every event over time
 - runtime here means one bounded observed run, session, or process artifact
 - child schemas may specialize this contract for human or machine runtime
@@ -173,4 +184,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: vn_2yYmkY1ePZ-U_9oLGuA83l2zcOBI8qZP4Z4gbXcg
+  - Value: swJJkYllycnTi8OsW1Jb_7opY6gmM4A7q6dGIprQlEA

@@ -181,6 +181,15 @@ It is not primarily for:
 - future task artifacts may carry subtasks recursively
 ```
 
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document: contract or
+expectation sections first, then schema-specific semantics and supporting
+fields, then naming conventions, then interpretation notes and examples.
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
 ## Interpretation Notes
 
 - a decision artifact should optimize for what now governs, not for replaying
@@ -190,8 +199,8 @@ It is not primarily for:
 - `Current -> Why` can explain rationale, but it should not stand in for the
   actor-bearing decision signal itself when an agent might otherwise infer
   authorization too loosely
-- if the artifact remains mostly unsettled reasoning, a topic schema may be the
-  better fit
+- if the artifact remains mostly unsettled reasoning, a topic schema may be
+  the better fit
 - if the artifact is mostly about work to be done after the decision, a task
   schema may be the better fit for that follow-on work
 
@@ -201,4 +210,4 @@ It is not primarily for:
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: Otx-rP4ZdkWa8510Kqd2fD6KYBL2rIWYp_YQ3rVyuv0
+  - Value: 2rgMmSpu9p_aXCaC8NRuGFa7pFBcnJwRysOQEWzI43g
