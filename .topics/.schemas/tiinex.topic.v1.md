@@ -140,6 +140,10 @@ Prefer the existing section order already used in this document: contract or
 expectation sections first, then schema-specific semantics and supporting
 fields, then naming conventions, then interpretation notes and examples.
 
+Sections such as `next artifacts` or `next steps` are forward-looking body
+content. They describe where the topic is heading, but they are not a
+substitute for the continuity envelope's ancestry relation.
+
 Keep the headings stable so human readers and validators can scan the same
 shape the same way.
 

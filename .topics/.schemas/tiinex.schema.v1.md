@@ -24,6 +24,10 @@ be written.
 It exists to stop schema notes from becoming too generic, too improvisational,
 or too vague about expected fields and interpretation rules.
 
+It also carries the shared root machine-validation contract for schema notes,
+so later schemas can reuse one stable reading model instead of inventing a new
+one per file.
+
 ## Required Structure
 
 Artifacts using `tiinex.schema.v1` should include:
@@ -43,6 +47,7 @@ Artifacts using `tiinex.schema.v1` should include:
   - `## Required Fields`
   - `## Required Body Expectations`
   - `## Envelope Expectations`
+- `## Validation-Friendly Shape`
 
 ## Recommended Sections
 
@@ -159,6 +164,43 @@ For current Tiinex practice, that usually means checking inherited constraints
 from earlier schema notes such as the continuity envelope contract rather than
 requiring every later schema note to restate those rules verbatim.
 
+## Self Validation
+
+This schema note is the shared root contract for `.topics` schema notes. It is
+allowed to point its continuity envelope back at itself as a canonical
+self-rooting anchor rather than a lineage error.
+
+The note should remain readable to humans, but the machine-facing contract
+appendix at the end is the stable read surface for validators.
+
+## Validation-Friendly Shape
+
+Prefer the existing section order already used in this document:
+
+1. Summary
+2. Required Structure
+3. Required Sections
+4. Recommended Sections
+5. Required Semantics
+6. Conditional Fields
+7. Origin Rules
+8. Schema Reference Rules
+9. Timestamp Rules
+10. Schema Lineage Validation Rules
+11. Self Validation
+12. Validation-Friendly Shape
+13. File Naming Conventions
+14. Minimal Example
+15. Non-Goals
+16. Machine Validation Contract
+
+Keep the headings stable so human readers and validators can scan the same
+shape the same way.
+
+For the root schema note, the self-rooting continuity link is part of the
+contract shape, not a cycle to report. The machine-facing appendix lives after
+the main human-readable sections so it does not interrupt the reading flow.
+
 ## File Naming Conventions
 
 Schema artifacts should normally use the schema id itself as the filename stem.
@@ -229,10 +271,57 @@ This schema does not attempt to define every possible schema-authoring style.
 It defines a practical shared best practice for schema artifacts in the current
 `.topics` schema space.
 
+## Machine Validation Contract
+
+```json
+{
+  "schemaId": "tiinex.schema.v1",
+  "schemaKind": "schema-definition-root",
+  "selfRootingLink": true,
+  "requiredHeadings": [
+    "Summary",
+    "Required Structure",
+    "Required Sections",
+    "Recommended Sections",
+    "Required Semantics",
+    "Conditional Fields",
+    "Origin Rules",
+    "Schema Reference Rules",
+    "Timestamp Rules",
+    "Schema Lineage Validation Rules",
+    "Self Validation",
+    "Validation-Friendly Shape",
+    "File Naming Conventions",
+    "Minimal Example",
+    "Non-Goals",
+    "Machine Validation Contract"
+  ],
+  "validatorFamilies": [
+    {
+      "name": "schema-note-core",
+      "scope": "shared schema notes",
+      "checks": [
+        "summary-present",
+        "contract-bearing-section-present",
+        "validation-friendly-shape-present"
+      ]
+    },
+    {
+      "name": "schema-root-self-validation",
+      "scope": "tiinex.schema.v1",
+      "checks": [
+        "self-root-link-is-canonical",
+        "machine-validation-contract-present"
+      ]
+    }
+  ]
+}
+```
+
 ---
 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: mXixtZ5Of3VbBD7aFBN9VPul6raNGOq4_9Z8-V3lgGM
+  - Value: 4f_fRIPnNOoftRmmrsWZs6nba6MVhcpFixAIhKgxDa8

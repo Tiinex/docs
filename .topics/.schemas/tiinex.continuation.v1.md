@@ -87,6 +87,11 @@ when the corresponding signal is known.
 - Omit the entire `Parent` block when no parent signal exists.
 - If the `Parent` block exists, `Trace` should remain the direct continuity
   relation.
+- The `Parent` block is backward-only. It may name the immediate ancestor chain
+  for the current artifact, but it should not point to child artifacts, planned
+  descendants, or next steps.
+- If a forward reference matters, keep it in the body of the current artifact
+  instead of encoding it as ancestry in `Parent`.
 - `Origin` should be treated as an ordered candidate list rather than one flat
   locator string.
 - Origin candidate labels may be composite forms such as `browse + git`.
@@ -134,6 +139,10 @@ rather than routine forward progress.
 If lineage must be interrupted, simplified, or partially withheld, that should
 be made explicit rather than presented as if the artifact had a different
 history.
+
+Forward-looking material is allowed, but it should live in body sections or in
+explicit child artifacts. The envelope's ancestry fields are for the past of
+the current artifact, not for its descendants.
 
 ## Current Block Rules
 
