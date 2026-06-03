@@ -23,37 +23,37 @@ The schema notes exist to reduce that ambiguity.
 
 ## Key Schemas
 
-- [tiinex.continuation.v1.md](tiinex.continuation.v1.md): continuity envelope
+- [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md): continuity envelope
   above the main artifact body
-- [tiinex.topic.v1.md](tiinex.topic.v1.md): working topic and design-thread
+- [tiinex.topic.v1.schema.md](tiinex.topic.v1.schema.md): working topic and design-thread
   artifacts
-- [tiinex.task.v1.md](tiinex.task.v1.md): bounded work items with constraints,
+- [tiinex.task.v1.schema.md](tiinex.task.v1.schema.md): bounded work items with constraints,
   done criteria, and optional subtasks
-- [tiinex.evidence.v1.md](tiinex.evidence.v1.md): preserved supporting material
+- [tiinex.evidence.v1.schema.md](tiinex.evidence.v1.schema.md): preserved supporting material
   with provenance and fidelity limits
-- [tiinex.feedback.v1.md](tiinex.feedback.v1.md): interaction-shaped signal with
+- [tiinex.feedback.v1.schema.md](tiinex.feedback.v1.schema.md): interaction-shaped signal with
   source, target, and disposition
-- [tiinex.decision.v1.md](tiinex.decision.v1.md): landed decisions and what now
+- [tiinex.decision.v1.schema.md](tiinex.decision.v1.schema.md): landed decisions and what now
   governs
-- [tiinex.pointer.v1.md](tiinex.pointer.v1.md): thin continuity redirects toward
+- [tiinex.pointer.v1.schema.md](tiinex.pointer.v1.schema.md): thin continuity redirects toward
   an upstream trace or origin
 
 ## Supporting Schemas
 
-- [tiinex.schema.v1.md](tiinex.schema.v1.md): shared contract for schema notes
+- [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md): shared contract for schema notes
   themselves
-- [tiinex.signal.v1.md](tiinex.signal.v1.md): signal-bearing artifacts where
+- [tiinex.signal.v1.schema.md](tiinex.signal.v1.schema.md): signal-bearing artifacts where
   interaction semantics are weaker than feedback
-- [tiinex.capability.v1.md](tiinex.capability.v1.md): capability manifests for
+- [tiinex.capability.v1.schema.md](tiinex.capability.v1.schema.md): capability manifests for
   runtimes, viewers, validators, and related support surfaces
-- [tiinex.runtime.v1.md](tiinex.runtime.v1.md)
-- [tiinex.ai.runtime.v1.md](tiinex.ai.runtime.v1.md)
-- [tiinex.machine.runtime.v1.md](tiinex.machine.runtime.v1.md)
-- [tiinex.reduction.v1.md](tiinex.reduction.v1.md)
-- [tiinex.archive.v1.md](tiinex.archive.v1.md)
-- [tiinex.zip.v1.md](tiinex.zip.v1.md)
-- [tiinex.encrypted.v1.md](tiinex.encrypted.v1.md)
-- [tiinex.broken.v1.md](tiinex.broken.v1.md)
+- [tiinex.runtime.v1.schema.md](tiinex.runtime.v1.schema.md)
+- [tiinex.ai.runtime.v1.schema.md](tiinex.ai.runtime.v1.schema.md)
+- [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
+- [tiinex.reduction.v1.schema.md](tiinex.reduction.v1.schema.md)
+- [tiinex.archive.v1.schema.md](tiinex.archive.v1.schema.md)
+- [tiinex.zip.v1.schema.md](tiinex.zip.v1.schema.md)
+- [tiinex.encrypted.v1.schema.md](tiinex.encrypted.v1.schema.md)
+- [tiinex.broken.v1.schema.md](tiinex.broken.v1.schema.md)
 
 ## Reading Guidance
 

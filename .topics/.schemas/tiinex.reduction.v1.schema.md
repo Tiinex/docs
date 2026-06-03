@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.md)
+  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.schema.v1.md](tiinex.schema.v1.md)
+  - Trace: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.reduction.v1](tiinex.reduction.v1.md)
+  - Current Schema: [tiinex.reduction.v1](tiinex.reduction.v1.schema.md)
   - Created At: 2026-05-28 22:47:43
   - Summary: Shared schema for reduced lineage artifacts that preserve carry-forward signal after a controlled compaction or summary reduction.
 
@@ -15,7 +15,7 @@
 # tiinex.reduction.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -212,5 +212,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: 2HSk_ZltMk5t_xrywDwl6ZCqkj_i7WCvh3SuBBYC2zs
+  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Value: n3PKGGcakDm5eujOUPv2qRtaqmUOHBo5XzgR4kOg5ak

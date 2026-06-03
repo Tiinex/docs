@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+  - Parent Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
+  - Trace: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.broken.v1](tiinex.broken.v1.md)
+  - Current Schema: [tiinex.broken.v1](tiinex.broken.v1.schema.md)
   - Created At: 2026-05-28 18:11:57
   - Summary: Intentional broken placeholder schema used to make mismatch or invalid-continuation discrimination explicit.
 
@@ -15,7 +15,7 @@
 # tiinex.broken.v1
 
 - Status: intentional mismatch placeholder
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -49,5 +49,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: g1FgFUTWiq5FD5l16K38s13BQWYyAxLbQwgpIHxm3jo
+  - Towards: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
+  - Value: KiaJSsFEFM6ccXO2nRAz4e-E7gRdSXcCybJwZ3vjUhA

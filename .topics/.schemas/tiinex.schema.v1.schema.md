@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.schema.v1](tiinex.schema.v1.md)
+  - Current Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
   - Summary: Shared schema-definition contract for Tiinex schema notes.
 
@@ -211,9 +211,9 @@ Recommended shared form:
 
 Examples:
 
-- `tiinex.schema.v1.md`
-- `tiinex.continuation.v1.md`
-- `tiinex.topic.v1.md`
+- `tiinex.schema.v1.schema.md`
+- `tiinex.continuation.v1.schema.md`
+- `tiinex.topic.v1.schema.md`
 
 This keeps the filename directly aligned with the schema identity a reader sees
 inside the document.
@@ -271,6 +271,26 @@ This schema does not attempt to define every possible schema-authoring style.
 It defines a practical shared best practice for schema artifacts in the current
 `.topics` schema space.
 
+## Interoperability and Decomposition
+
+This schema should stay friendly to other lineage and provenance formats that
+want to export into `.trace.md` or embed Tiinex without collapsing their data
+into one opaque blob.
+
+Prefer machine shapes that can be decomposed into stable parts such as:
+
+- entities
+- relations
+- facets or facet-like metadata
+- provenance and origin pointers
+
+When an external format can already expose those pieces separately, the Tiinex
+mapping should preserve that separation instead of forcing a single undifferentiated
+payload block.
+
+If a source format can only provide a blob, the blob may still be accepted, but
+only as a lower-fidelity fallback rather than the preferred interchange shape.
+
 ## Machine Validation Contract
 
 ```json
@@ -278,6 +298,17 @@ It defines a practical shared best practice for schema artifacts in the current
   "schemaId": "tiinex.schema.v1",
   "schemaKind": "schema-definition-root",
   "selfRootingLink": true,
+  "interopMode": "decomposition-first",
+  "preferredMachineShape": [
+    "entities",
+    "relations",
+    "facets",
+    "origin"
+  ],
+  "blobPolicy": {
+    "allowedAsFallback": true,
+    "preferredOnlyWhenNoDecompositionExists": true
+  },
   "requiredHeadings": [
     "Summary",
     "Required Structure",
@@ -291,6 +322,7 @@ It defines a practical shared best practice for schema artifacts in the current
     "Schema Lineage Validation Rules",
     "Self Validation",
     "Validation-Friendly Shape",
+    "Interoperability and Decomposition",
     "File Naming Conventions",
     "Minimal Example",
     "Non-Goals",
@@ -323,5 +355,5 @@ It defines a practical shared best practice for schema artifacts in the current
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: 4f_fRIPnNOoftRmmrsWZs6nba6MVhcpFixAIhKgxDa8
+  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Value: 4iw3svKrv749f-bWu6hy5vs7YC9UKSUsP92MRAZgnuY

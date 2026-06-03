@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.machine.runtime.v1](tiinex.machine.runtime.v1.md)
+  - Parent Schema: [tiinex.machine.runtime.v1](tiinex.machine.runtime.v1.schema.md)
   - Created At: 2026-05-29 23:21:06
-  - Trace: [tiinex.machine.runtime.v1.md](tiinex.machine.runtime.v1.md)
+  - Trace: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.ai.runtime.v1](tiinex.ai.runtime.v1.md)
+  - Current Schema: [tiinex.ai.runtime.v1](tiinex.ai.runtime.v1.schema.md)
   - Created At: 2026-05-29 23:21:06
   - Summary: Shared schema for AI-oriented runtime artifacts layered on top of the broader machine runtime contract.
 
@@ -15,7 +15,7 @@
 # tiinex.ai.runtime.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -159,5 +159,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.machine.runtime.v1.md](tiinex.machine.runtime.v1.md)
-  - Value: FDocOBL7fRhDABZoW6c5q-KVHKFb6gi50_gYn9_n5Wg
+  - Towards: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
+  - Value: DA05k4rYCXYCh2c06MFB845xEYEYdY4T4-fMkolA49A

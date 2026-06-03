@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.md)
+  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.schema.v1.md](tiinex.schema.v1.md)
+  - Trace: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.decision.v1](tiinex.decision.v1.md)
+  - Current Schema: [tiinex.decision.v1](tiinex.decision.v1.schema.md)
   - Created At: 2026-05-28 22:50:17
   - Summary: Shared schema for decision-bearing artifacts that state what has been decided, on what basis, and what now follows.
 
@@ -15,7 +15,7 @@
 # tiinex.decision.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -209,5 +209,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: 2rgMmSpu9p_aXCaC8NRuGFa7pFBcnJwRysOQEWzI43g
+  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Value: nAuHFq86wz0CQ4YZypE3yIMHPZ9HY6CJnBrceQAxXSw

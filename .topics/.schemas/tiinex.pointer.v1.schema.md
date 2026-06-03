@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+  - Parent Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
+  - Trace: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.pointer.v1](tiinex.pointer.v1.md)
+  - Current Schema: [tiinex.pointer.v1](tiinex.pointer.v1.schema.md)
   - Created At: 2026-05-28 20:37:20
   - Summary: Shared schema for pointer artifacts that redirect a reader toward a parent trace, origin target, or other continuity anchor.
 
@@ -15,7 +15,7 @@
 # tiinex.pointer.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../rfc/rfc-editor-friendly/001-2-rfc-envelope.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/rfc/rfc-editor-friendly/001-2-rfc-envelope.trace.md)
@@ -160,5 +160,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: vDk5fGFGqrH5ffKACjV1VbWONhyjmntwwQo1oSQIUkY
+  - Towards: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
+  - Value: F1mRc_BaHSlJHDKDGkrsoLNGoXtQMwAhNSvCE6w4UrA

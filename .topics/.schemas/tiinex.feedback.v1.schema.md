@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.signal.v1](tiinex.signal.v1.md)
+  - Parent Schema: [tiinex.signal.v1](tiinex.signal.v1.schema.md)
   - Created At: 2026-05-28 22:30:03
-  - Trace: [tiinex.signal.v1.md](tiinex.signal.v1.md)
+  - Trace: [tiinex.signal.v1.schema.md](tiinex.signal.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.feedback.v1](tiinex.feedback.v1.md)
+  - Current Schema: [tiinex.feedback.v1](tiinex.feedback.v1.schema.md)
   - Created At: 2026-05-28 22:30:03
   - Summary: Shared schema for interaction-oriented feedback artifacts that specialize preserved signal with response and dialog semantics.
 
@@ -15,7 +15,7 @@
 # tiinex.feedback.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.signal.v1](tiinex.signal.v1.md)
+- Schema Definition: [tiinex.signal.v1](tiinex.signal.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -195,7 +195,7 @@ It is not primarily for:
 - Parent
   - Parent Schema: tiinex.signal.v1
   - Created At: 2026-05-28 22:30:03
-  - Trace: tiinex.signal.v1.md
+  - Trace: tiinex.signal.v1.schema.md
 - Current
   - Current Schema: tiinex.feedback.v1
   - Created At: 2026-05-28 22:30:03
@@ -237,5 +237,5 @@ It is not primarily for:
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.signal.v1.md](tiinex.signal.v1.md)
-  - Value: 9Jki6oB-WdgbxilF6XPjRl6aNMpA-JlqehPh9_VgMRI
+  - Towards: [tiinex.signal.v1.schema.md](tiinex.signal.v1.schema.md)
+  - Value: ifzwAvxAdxiIWEcbWsnnYBtVCOhCrEynx83b71sIpcc

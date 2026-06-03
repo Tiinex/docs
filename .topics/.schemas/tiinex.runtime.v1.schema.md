@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.md)
+  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.schema.v1.md](tiinex.schema.v1.md)
+  - Trace: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.runtime.v1](tiinex.runtime.v1.md)
+  - Current Schema: [tiinex.runtime.v1](tiinex.runtime.v1.schema.md)
   - Created At: 2026-05-29 23:21:06
   - Summary: Shared schema for bounded runtime artifacts that preserve observed runs, sessions, or process state in a readable form.
 
@@ -15,7 +15,7 @@
 # tiinex.runtime.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -183,5 +183,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: swJJkYllycnTi8OsW1Jb_7opY6gmM4A7q6dGIprQlEA
+  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Value: W3aM5aZXbTcav1vTplJz2eW7X_C0DzB0fJ494BpGGw4

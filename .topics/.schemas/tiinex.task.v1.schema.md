@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.md)
+  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.schema.v1.md](tiinex.schema.v1.md)
+  - Trace: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.task.v1](tiinex.task.v1.md)
+  - Current Schema: [tiinex.task.v1](tiinex.task.v1.schema.md)
   - Created At: 2026-05-28 22:02:47
   - Summary: Shared schema for bounded task artifacts that can carry recursive subtasks without requiring a separate container schema.
 
@@ -15,7 +15,7 @@
 # tiinex.task.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/tools/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/tools/001.trace.md)
@@ -227,5 +227,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.md](tiinex.schema.v1.md)
-  - Value: UcPhEuqpAJ274RxXNJj12e8UklwM7ZChKz8HJm5PHlg
+  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Value: dOUX-wquV9SqwGi-vmv39CGI_1z5d5cOPkEKzmGpI1g

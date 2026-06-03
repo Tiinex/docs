@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+  - Parent Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
+  - Trace: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.encrypted.v1](tiinex.encrypted.v1.md)
+  - Current Schema: [tiinex.encrypted.v1](tiinex.encrypted.v1.schema.md)
   - Created At: 2026-05-30 00:00:00
   - Summary: Shared base schema for readable continuity shells that describe an encrypted or otherwise directly unreadable payload.
 
@@ -15,7 +15,7 @@
 # tiinex.encrypted.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/tools/validator/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/tools/validator/001.trace.md)
@@ -173,5 +173,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.continuation.v1.md](tiinex.continuation.v1.md)
-  - Value: F8D4eP-aamQRMIUd9QzdaDO0YJgEpwg1EwX-YW0Km9o
+  - Towards: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
+  - Value: PnrETNDMEDVWoBuub1zyIEayeFdNlOrLY6GNk8pTsOc

@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.archive.v1](tiinex.archive.v1.md)
+  - Parent Schema: [tiinex.archive.v1](tiinex.archive.v1.schema.md)
   - Created At: 2026-05-28 20:32:58
-  - Trace: [tiinex.archive.v1.md](tiinex.archive.v1.md)
+  - Trace: [tiinex.archive.v1.schema.md](tiinex.archive.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.zip.v1](tiinex.zip.v1.md)
+  - Current Schema: [tiinex.zip.v1](tiinex.zip.v1.schema.md)
   - Created At: 2026-05-28 20:33:35
   - Summary: Shared schema for zip-based archive carriers that preserve minimum traceable continuity semantics.
 
@@ -15,7 +15,7 @@
 # tiinex.zip.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.md)
+- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -174,5 +174,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.archive.v1.md](tiinex.archive.v1.md)
-  - Value: g178eEaceYI7YYj2etg4b9DrVfKr_eEPmJ5lf_0kRQc
+  - Towards: [tiinex.archive.v1.schema.md](tiinex.archive.v1.schema.md)
+  - Value: JDE32nLLWMWamVnOmN8JKIwSbQyhjwqaCoSXDuy6qZw
