@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
   - Origin:
     - [relative](tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/51f90f12392bb5b742fb4dd9fa3a1741a92bca83/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/4a64e25b9d4dc657104bee51877d140ee93f4bc2/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.topic.v1](tiinex.topic.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
@@ -189,5 +189,5 @@ Rules
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/51f90f12392bb5b742fb4dd9fa3a1741a92bca83/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/4a64e25b9d4dc657104bee51877d140ee93f4bc2/.topics/.schemas/tiinex.root.v1.schema.md)
   - Value: oBZV4eG3M5kMrGsqGycQJNmDSP66A-vLbNwL0-ipa9Q
