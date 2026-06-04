@@ -2,9 +2,9 @@
 
 - Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+  - Parent Schema: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Trace: [tiinex.definition.v1.schema.md](tiinex.definition.v1.schema.md)
 - Current
   - Current Schema: [tiinex.decision.v1](tiinex.decision.v1.schema.md)
   - Created At: 2026-05-28 22:50:17
@@ -15,7 +15,7 @@
 # tiinex.decision.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+- Schema Definition: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -209,5 +209,5 @@ shape the same way.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
-  - Value: nAuHFq86wz0CQ4YZypE3yIMHPZ9HY6CJnBrceQAxXSw
+  - Towards: [tiinex.definition.v1.schema.md](tiinex.definition.v1.schema.md)
+  - Value: EVLAOiT33HBcw-AE1Ik6aJ4VvF_g38LOPBQJkgHIXUw

@@ -40,7 +40,7 @@ The schema notes exist to reduce that ambiguity.
 
 ## Supporting Schemas
 
-- [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md): shared contract for schema notes
+- [tiinex.definition.v1.schema.md](tiinex.definition.v1.schema.md): shared definition root for schema notes
   themselves
 - [tiinex.signal.v1.schema.md](tiinex.signal.v1.schema.md): signal-bearing artifacts where
   interaction semantics are weaker than feedback

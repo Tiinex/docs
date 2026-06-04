@@ -2,9 +2,9 @@
 
 - Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+  - Parent Schema: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Trace: [tiinex.definition.v1.schema.md](tiinex.definition.v1.schema.md)
 - Current
   - Current Schema: [tiinex.task.v1](tiinex.task.v1.schema.md)
   - Created At: 2026-05-28 22:02:47
@@ -15,7 +15,7 @@
 # tiinex.task.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+- Schema Definition: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/tools/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/tools/001.trace.md)
@@ -222,10 +222,43 @@ shape the same way.
 - if the artifact becomes mostly design rationale rather than bounded work, a
   topic schema may be the better fit
 
+## Machine Create Template
+
+This trailing machine section exists so create tooling can read a schema-owned
+template without mixing it into the main human-reading flow.
+
+```traceable-create-template
+---
+version: 1
+createTitle: Create Task
+summaryPrompt: Enter a short title for the task
+summaryPlaceholder: What concrete work needs to be done?
+whyPrompt: Optional: capture why this task exists
+whyPlaceholder: Why does this task matter right now?
+---
+# {{summary}}
+
+## Objective
+
+Describe the concrete work being asked for.
+
+## Done Criteria
+
+- Define what completion means for this task.
+
+## Scope
+
+- Capture boundaries, constraints, and non-goals.
+
+## Dependencies
+
+- List dependencies, blockers, or required artifacts when they exist.
+```
+
 ---
 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
-  - Value: dOUX-wquV9SqwGi-vmv39CGI_1z5d5cOPkEKzmGpI1g
+  - Towards: [tiinex.definition.v1.schema.md](tiinex.definition.v1.schema.md)
+  - Value: xkyM3EyQF_Y_XIuEOBjmPodlyK5n7Nc_eobNvmd1PdI

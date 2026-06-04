@@ -2,9 +2,9 @@
 
 - Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+  - Parent Schema: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Trace: [tiinex.definition.v1.schema.md](tiinex.definition.v1.schema.md)
 - Current
   - Current Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
@@ -15,7 +15,7 @@
 # tiinex.continuation.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+- Schema Definition: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -251,7 +251,7 @@ Rules:
 
 - sha256-base64url-c14n-v1
   - Towards: [001.trace.md](https://example.invalid/repo/blob/commit/001.trace.md)
-  - Value: A9e_64Ixcp5DAFIbi9FXuVMhIhLg2wi8u7SdsBUfgZ8
+  - Value: bjFEUCMaNITbyCVFSoJ6EVVsOLMfYIq6NDXSD9nreXw
 ```
 
 ## Non-Goals
@@ -266,5 +266,5 @@ It only defines how the continuity envelope should be shaped and interpreted.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.v1.schema.md](tiinex.schema.v1.schema.md)
+  - Towards: [tiinex.definition.v1.schema.md](tiinex.definition.v1.schema.md)
   - Value: Tx-dk2o9Y_K-b0PIRrvwgbIlc5LPW8AlHjqhH5s17_A

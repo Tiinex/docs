@@ -15,7 +15,7 @@
 # tiinex.pointer.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+- Schema Definition: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
 - Origin:
   - [relative](../rfc/rfc-editor-friendly/001-2-rfc-envelope.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/rfc/rfc-editor-friendly/001-2-rfc-envelope.trace.md)
@@ -161,4 +161,4 @@ shape the same way.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
-  - Value: F1mRc_BaHSlJHDKDGkrsoLNGoXtQMwAhNSvCE6w4UrA
+  - Value: c5AchvU5_Maq0zgFMrjHSzVYcQYrZCgy3ZK3DYRmPbc

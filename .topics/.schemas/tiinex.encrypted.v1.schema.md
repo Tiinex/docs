@@ -15,7 +15,7 @@
 # tiinex.encrypted.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+- Schema Definition: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/tools/validator/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/tools/validator/001.trace.md)
@@ -174,4 +174,4 @@ shape the same way.
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
-  - Value: PnrETNDMEDVWoBuub1zyIEayeFdNlOrLY6GNk8pTsOc
+  - Value: 6tYI9AgHNvqBShG8OWM-kgNjvOdSHI01Km4lcXXBReM

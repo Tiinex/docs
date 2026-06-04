@@ -15,7 +15,7 @@
 # tiinex.topic.v1
 
 - Status: provisional shared schema note
-- Schema Definition: [tiinex.schema.v1](tiinex.schema.v1.schema.md)
+- Schema Definition: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
 - Origin:
   - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
   - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
@@ -155,10 +155,41 @@ shape the same way.
 - the body should preserve the design or implementation thread rather than only
   repeating envelope metadata
 
+## Machine Create Template
+
+This trailing machine section exists so create tooling can read a schema-owned
+template without mixing it into the main human-reading flow.
+
+```traceable-create-template
+---
+version: 1
+createTitle: Create Topic
+summaryPrompt: Enter a short title for the topic
+summaryPlaceholder: What is this topic about?
+whyPrompt: Optional: capture why this topic exists
+whyPlaceholder: Why does this topic matter right now?
+---
+# {{summary}}
+
+{{summarySentence}}
+
+## Current Read
+
+Describe the current topic state, what is already known, and what this topic is trying to advance.
+
+## Design Direction
+
+Describe the direction this topic should take next.
+
+## Next Artifacts
+
+- Add the next concrete child topic, proof, task, or decision artifact.
+```
+
 ---
 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
-  - Value: Xrlrj-awAI36WLjsjLMZXEr05pEWFlvkdFmt4FzhHv4
+  - Value: rbfkffH9ipO2U1sbrX1fD8JlK-_UDTdp3c_27a5C-eM
