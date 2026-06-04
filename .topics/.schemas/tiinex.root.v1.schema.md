@@ -1,0 +1,475 @@
+# Continuity Context
+
+- Envelope Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
+- Current
+  - Current Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
+  - Created At: 2026-06-04 13:47:57
+  - Summary: Root schema for Tiinex lineage artifacts.
+
+---
+
+# tiinex.root.v1
+
+## Summary
+
+Defines the minimum shared contract for Tiinex lineage artifacts.
+
+A Tiinex artifact must be identifiable, traversable, and verifiable before any descendant schema adds body-specific meaning.
+
+## Root Semantics
+
+Root requires:
+
+- schema identity
+- creation time
+- continuity position
+- integrity footer
+
+If `Parent` exists, the artifact continues a declared parent artifact.
+
+If `Parent` is absent, the artifact is the root of its local lineage.
+
+Parent absence does not erase origin or provenance. It only means no parent edge is declared.
+
+## Contract Reading Model
+
+The `Schema Validation Contract` section is the machine-readable validation surface for this schema.
+
+Validators should not infer additional required fields, sections, or rules from prose outside the `Schema Validation Contract`.
+
+Descendant schema contracts are additive unless they explicitly define an override.
+
+## Inheritance
+
+Descendant schemas may add:
+
+- sections
+- fields
+- semantics
+- validation requirements
+- derived concepts
+- envelope fields
+
+Descendant schemas should not restate inherited requirements unless local readability requires it.
+
+## Extension
+
+Any descendant-defined extension should declare:
+
+- Name
+- Base Concept
+- Interpretation
+
+Envelope extensions should also declare the envelope block they extend.
+
+---
+
+## Schema Validation Contract
+
+### Machine Authority Surfaces
+
+Validation Authority
+
+- Schema Validation Contract
+
+Generation Authority
+
+- Artifact Creation Contract
+
+Integrity Authority
+
+- Continuity Integrity
+
+Non-Authoritative For Validation
+
+- Summary
+- Root Semantics
+- Contract Reading Model
+- Inheritance
+- Extension
+- Artifact Creation Contract
+
+Rules
+
+- Validators must read `Schema Validation Contract` as the validation surface.
+- Validators must not infer extra required fields from non-authoritative prose sections.
+- `Artifact Creation Contract` defines generation when present.
+- `Artifact Creation Contract` must not override `Schema Validation Contract`.
+- `Continuity Integrity` defines the integrity footer.
+- Descendant schema contracts are additive unless they explicitly define an override.
+
+### Contract Syntax
+
+Group Shape
+
+- Third-Level Heading
+
+Category Shape
+
+- Category Label
+- Hyphen List Items
+
+List Marker
+
+- hyphen
+
+Known Category Labels
+
+- Allowed Labels
+- Allowed Shapes
+- Allowed Target Blocks
+- Applies To
+- Category Shape
+- Declaration Fields
+- Entry Shape
+- Fields
+- Footer Sections
+- Generation Authority
+- Group Shape
+- Header Sections
+- Integrity Authority
+- Known Category Labels
+- List Marker
+- Non-Authoritative For Validation
+- Optional Fields
+- Optional Sections
+- Ordering
+- Required Entries
+- Required Fields
+- Required Heading
+- Required Shape
+- Required When
+- Rules
+- Towards Allowed Shapes
+- Validation Authority
+
+Rules
+
+- A contract group begins at a third-level heading.
+- A category label is a plain text line from the known category label set.
+- A category label applies to the first hyphen list after the label.
+- Blank lines between a category label and its list are allowed.
+- Machine contract list items use hyphen bullets.
+- Envelope list items use hyphen bullets.
+- Footer method entries use hyphen bullets.
+- Star bullets are not part of the root machine contract shape.
+- List item order is not significant unless the category label is `Ordering`.
+- `Rules` list items are normative.
+- Only third-level headings, category labels, and hyphen list items are part of the machine contract.
+- Other prose inside `Schema Validation Contract` is not part of the machine contract.
+- Descendant schemas may introduce new category labels only through `Contract Category Extension`.
+- `Artifact Creation Contract`, when present, uses the same contract syntax.
+
+### Named Declaration
+
+Entry Shape
+
+- First-Level Hyphen List Item
+
+Declaration Fields
+
+- Base Concept
+- Interpretation
+
+Rules
+
+- Each named declaration is represented as one first-level hyphen list item.
+- The first-level list item text is the declaration name.
+- Declaration fields are represented as nested hyphen list items under the declaration entry.
+- Declaration names must be unique within the same contract group.
+- Duplicate declaration names are invalid unless a descendant schema explicitly defines override semantics.
+
+### Contract Category Extension
+
+Required When
+
+- A descendant schema introduces a contract category label.
+
+Entry Shape
+
+- Named Declaration
+
+Declaration Fields
+
+- Base Concept
+- Interpretation
+
+Rules
+
+- Each contract category extension uses the `Named Declaration` shape.
+- The declaration name is the new contract category label.
+- A descendant schema must declare a new category label in `Contract Category Extension` before using it in its own contract.
+- Declared category labels extend the known category label set for that schema and its descendants.
+- Validators that do not understand a declared category label should preserve it and may warn.
+- Strict validators may fail on undeclared category labels when the full schema lineage is available.
+
+### Document Layout
+
+Header Sections
+
+- Continuity Context
+
+Footer Sections
+
+- Continuity Integrity
+
+Rules
+
+- `Continuity Context` must appear before the artifact body.
+- `Continuity Integrity` must appear after the artifact body and machine-readable contract sections.
+- `Continuity Integrity` is a footer section even though it is represented by a markdown heading.
+- `Continuity Integrity` should be the final top-level section of the artifact.
+
+### Continuity Context
+
+Required Fields
+
+- Envelope Schema
+- Current
+
+Optional Fields
+
+- Parent
+
+Rules
+
+- `Envelope Schema` identifies the envelope-reading schema.
+- `Current` identifies the current artifact.
+- `Parent` identifies the direct continuity parent when one is declared.
+- Parent present means the artifact continues a declared parent.
+- Parent absent means the artifact is the root of its local lineage.
+- Parent absence does not erase origin or provenance.
+
+### Parent
+
+Required When
+
+- Parent exists
+
+Required Fields
+
+- Parent Schema
+- Trace
+
+Optional Fields
+
+- Created At
+- Origin
+
+Rules
+
+- `Trace` defines the direct continuity relation.
+- `Parent` describes ancestry only.
+- `Parent` must not point to child artifacts.
+- `Parent` must not point to planned descendants.
+
+### Parent Origin
+
+Required When
+
+- Parent contains Origin
+
+Allowed Labels
+
+- relative
+- absolute
+- browse + git
+
+Entry Shape
+
+- Markdown Link
+
+Ordering
+
+- relative
+- absolute
+- browse + git
+
+Rules
+
+- `Origin` supports recovery.
+- `Origin` must not replace `Trace`.
+- Every origin candidate should identify the same parent artifact.
+- Origin candidates must not mix alternate parents.
+- `browse + git` should be commit-pinned when available.
+- `absolute` paths are local recovery hints, not portable authority.
+- Additional origin labels may be introduced by descendant schemas as envelope extensions.
+
+### Current
+
+Required Fields
+
+- Current Schema
+- Created At
+
+Optional Fields
+
+- Summary
+
+Rules
+
+- `Current Schema` identifies the schema governing the current artifact.
+- `Created At` records artifact creation time.
+- `Summary` is a compact fallback description.
+
+### Schema Reference Fields
+
+Fields
+
+- Envelope Schema
+- Parent Schema
+- Current Schema
+
+Allowed Shapes
+
+- Markdown Link
+- Plain Schema Id
+
+Rules
+
+- Markdown Link is preferred when a schema artifact target is available.
+- Plain Schema Id is allowed when no useful target is available or when local context already resolves the schema id.
+
+### Trace Field
+
+Allowed Shapes
+
+- Markdown Link
+- Relative Path
+
+Rules
+
+- Markdown Link is preferred when a target is available.
+- Relative Path is allowed when the parent trace is local and directly recoverable.
+
+### Created At
+
+Required Shape
+
+- YYYY-MM-DD hh:mm:ss
+
+Rules
+
+- UTC is implied.
+- Time precision is seconds.
+- Timezone suffixes are not part of the root timestamp shape.
+- Local zone names are not part of the root timestamp shape.
+- Numeric offsets are not part of the root timestamp shape.
+- Milliseconds are not part of the root timestamp shape.
+
+### Envelope Extension
+
+Required When
+
+- A descendant schema adds envelope fields.
+
+Entry Shape
+
+- Named Declaration
+
+Declaration Fields
+
+- Target Block
+- Base Concept
+- Interpretation
+
+Allowed Target Blocks
+
+- Continuity Context
+- Parent
+- Parent Origin
+- Current
+- Continuity Integrity
+
+Rules
+
+- Each envelope extension uses the `Named Declaration` shape.
+- The declaration name is the added envelope field name.
+- Declaration fields are represented as nested hyphen list items under the declaration entry.
+- Descendant schemas may add machine-readable envelope fields.
+- Added envelope fields must declare which envelope block they extend.
+- Root validators should preserve unknown envelope fields even when they cannot validate them.
+- Strict validators may warn or fail on undeclared envelope fields when the full schema lineage is available.
+
+### Continuity Integrity Footer
+
+Required Heading
+
+- Continuity Integrity
+
+Required Entries
+
+- Method Entry
+
+Rules
+
+- `Continuity Integrity` is a footer surface.
+- `Continuity Integrity` verifies relation or artifact integrity according to the named method.
+- The footer should be the final top-level section of the artifact.
+
+### Method Entry
+
+Entry Shape
+
+- First-Level Hyphen List Item
+
+Required Fields
+
+- Towards
+- Value
+
+Towards Allowed Shapes
+
+- Markdown Link
+- self
+
+Rules
+
+- `Method Entry` is represented by a first-level hyphen list item under `Continuity Integrity`.
+- The `Method Entry` label names the integrity method.
+- `Towards` identifies the validated target.
+- `Value` carries the method output.
+- `self` is allowed only when the method validates the current artifact itself.
+
+### Extension
+
+Required When
+
+- A descendant schema introduces an extension.
+
+Entry Shape
+
+- Named Declaration
+
+Declaration Fields
+
+- Base Concept
+- Interpretation
+
+Rules
+
+- Each extension uses the `Named Declaration` shape.
+- The declaration name is the extension name.
+- Declaration fields are represented as nested hyphen list items under the declaration entry.
+- Root defines how extensions are introduced.
+- Root does not define all future extensions.
+
+### Optional Machine Sections
+
+Optional Sections
+
+- Artifact Creation Contract
+
+Rules
+
+- `Artifact Creation Contract` is present only when the schema supports direct artifact generation.
+- `Artifact Creation Contract` uses the same contract syntax as `Schema Validation Contract`.
+- Absence of `Artifact Creation Contract` means artifact generation is not declared by this schema.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: self
+  - Value: kdTVJbOqrSHa4_hhizRCektAQNi2L5bveiTnjJ_LFwM
