@@ -363,11 +363,11 @@ Required Fields
 
 - Parent Schema
 - Trace
+- Origin
 
 Optional Fields
 
 - Created At
-- Origin
 
 Rules
 
@@ -380,7 +380,11 @@ Rules
 
 Required When
 
-- Parent contains Origin
+- Parent exists
+
+Required Fields
+
+- browse + git
 
 Allowed Labels
 
@@ -404,6 +408,7 @@ Rules
 - `Origin` must not replace `Trace`.
 - Every origin candidate should identify the same parent artifact.
 - Origin candidates must not mix alternate parents.
+- `browse + git` gives the portable archive permalink for the parent artifact.
 - `browse + git` should be commit-pinned when available.
 - `absolute` paths are local recovery hints, not portable authority.
 - Additional origin labels may be introduced by descendant schemas as envelope extensions.
@@ -543,6 +548,7 @@ Rules
 - `Towards` identifies the validated target.
 - `Value` carries the method output.
 - `self` is allowed only when the method validates the current artifact itself.
+- When a maintained schema artifact has an available commit-pinned `browse + git` permalink for its validated target, `Towards` should use that permalink instead of a relative local path.
 
 ### Extension
 
@@ -585,4 +591,4 @@ Rules
 
 - sha256-base64url-c14n-v1
   - Towards: self
-  - Value: RyhlanXFg6PyTmFrGdlYxVKWrNNBGZW8TpwZu77ZELU
+  - Value: oBZV4eG3M5kMrGsqGycQJNmDSP66A-vLbNwL0-ipa9Q
