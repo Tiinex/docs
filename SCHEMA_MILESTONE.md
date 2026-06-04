@@ -79,6 +79,7 @@
 - [x] A first schema compatibility fixture layer now exercises key root/topic policy cases outside the inline unit tests.
 - [x] Compatibility fixtures now cover valid, invalid, warning, and preserve-only policy cases.
 - [x] Compatibility fixtures now also cover one exact-match normalization case and one contract-cardinality case.
+- [x] Topic schema lineage now requires Parent Origin and a commit-pinned `browse + git` permalink when a parent is declared.
 - [x] Topic schemas can now declare additional contract category labels through Contract Category Extension.
 - [x] Topic schemas now fail if they redeclare inherited contract category labels without explicit override semantics.
 - [x] Topic schemas can now redeclare inherited contract category labels only when they also declare explicit `Contract Category Override` semantics.
