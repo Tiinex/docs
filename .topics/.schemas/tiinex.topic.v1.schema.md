@@ -2,113 +2,102 @@
 
 - Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
+  - Parent Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Trace: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
+  - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.topic.v1](tiinex.topic.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Summary: Shared topic-body schema layered on top of the continuity envelope schema.
+  - Summary: Schema for bounded topic-oriented lineage artifacts.
 
 ---
 
-# tiinex.topic.v1
+# Topic
 
-- Status: provisional shared schema note
-- Schema Definition: [tiinex.definition.v1](tiinex.definition.v1.schema.md)
-- Origin:
-  - [relative](../../../ai-provenance/.topics/trace-format/001.trace.md)
-  - [absolute](C:/Users/micro/Documents/Repos/Tiinex/ai-provenance/.topics/trace-format/001.trace.md)
-  - [browse + git](https://github.com/Tiinex/ai-provenance/blob/aa33725304f5bef2fbfb9ed0b46bb6c1fe71fa01/.topics/trace-format/001.trace.md)
+- Status: maintained schema note
+- Schema Definition: [tiinex.root.v1](tiinex.root.v1.schema.md)
 
 ## Summary
 
-This schema id names a topic-oriented artifact body carried inside the broader
-continuity envelope.
+This schema defines artifacts whose main job is to carry one bounded working
+topic forward.
 
-It is intended for documents whose main role is to advance a focused working
-topic, design direction, or implementation thread.
+It is for live design and implementation threads where the reader should be
+able to tell what question, direction, or work slice is currently in motion.
 
-## Required Body Expectations
+## Schema Validation Contract
 
-Artifacts using `tiinex.topic.v1` should contain a readable body after the
-continuity envelope.
+### Topic Scope
 
-The body should include, at minimum:
+Applies To
 
-- a document title or equivalent leading heading
-- prose that advances one concrete topic, design thread, or implementation
-  question
+- artifacts whose `Current -> Current Schema` is `tiinex.topic.v1`
 
-## Recommended Body Sections
+Rules
 
-The exact section names may vary, but topic documents should usually provide
-some combination of:
+- `tiinex.topic.v1` identifies artifacts centered on one active topic thread.
+- The body should make the current topic legible without requiring special tooling.
+- The topic should stay bounded enough that a reader can tell what is being advanced.
+- Prose outside `Schema Validation Contract` may explain the schema, but it does not add required validation rules.
 
-- current read
-- design direction
-- risks or open questions
-- next artifacts or next steps
+### Topic Body
 
-## Envelope Expectations
+Required Shape
 
-When this body schema is used, it is expected to sit inside an envelope that
-identifies at least:
+- first body heading after the continuity envelope
+- readable prose that advances one bounded topic thread
 
-- `Envelope Schema`
-- `Current -> Current Schema: tiinex.topic.v1`
-- `Current -> Created At`
+Optional Sections
 
-Recommended envelope-side companions are:
+- Current Read
+- Design Direction
+- Risks
+- Open Questions
+- Next Artifacts
+- Next Steps
+
+Rules
+
+- A topic artifact should begin with a human-readable title.
+- A topic artifact should contain enough prose to explain the present topic state.
+- Section names inside topic artifacts may vary when the artifact still reads as one coherent thread.
+- Forward-looking sections must not replace the continuity envelope's parent relation.
+
+### Topic Envelope Companions
+
+Optional Fields
 
 - `Current -> Why`
 - `Current -> Summary`
 - `Current -> Authors`
-- parent signal when the topic continues another artifact
 
-## File Naming Conventions
+Rules
 
-Artifacts using `tiinex.topic.v1` should also follow lineage-first trace
-filenames because they usually live inside a continuity chain rather than as
-free-floating markdown notes.
+- Topic artifacts may carry light current-side metadata when it helps a reader orient quickly.
+- Topic artifacts should declare parent signal when they continue an earlier topic artifact.
+- Topic artifacts should avoid turning envelope metadata into the main body content.
 
-Recommended form:
+### File Naming
+
+Allowed Shapes
 
 - `<lineage>.trace.md`
 - `<lineage>-<topic-slug>.trace.md`
 
-Examples:
+Rules
 
-- `001.trace.md`
-- `001-trace-format.trace.md`
-- `001-2-validation-pass.trace.md`
+- Topic artifacts should keep the lineage label first.
+- The optional slug should describe the active topic thread.
+- Topic artifacts should prefer short human-readable slugs.
+- Topic artifacts should keep the `.trace.md` suffix stable.
 
-Rules:
+### Interpretation Boundaries
 
-- keep the lineage label first
-- let the optional slug describe the working topic or transition
-- prefer short, human-readable slugs over ontology-heavy names
-- keep the `.trace.md` suffix stable
+Rules
 
-## What This Schema Is For
-
-Use `tiinex.topic.v1` when the artifact is primarily trying to:
-
-- drive a working topic forward
-- capture implementation direction
-- preserve design reasoning
-- hold a bounded thread that may later turn into code, docs, or RFC text
-
-## What This Schema Is Not For
-
-Do not use this schema as a lazy catch-all for every markdown file.
-
-It is not primarily for:
-
-- raw pointer-only artifacts
-- schema definitions
-- opaque runtime dump files
-- finalized universal specs whose main purpose is normative interchange
+- Use `tiinex.topic.v1` when the artifact is mainly preserving or advancing a working topic.
+- Do not use `tiinex.topic.v1` for schema notes, opaque dumps, or generic holding files.
+- If the artifact's main job is to make a decision rather than hold a topic thread, another schema should own it.
 
 ## Minimal Example
 
@@ -118,78 +107,85 @@ It is not primarily for:
 - Envelope Schema: tiinex.continuation.v1
 - Current
   - Current Schema: tiinex.topic.v1
-  - Created At: 2026-05-28 16:54:32
-  - Authors: Sigma, Anchor
-  - Why: Captures the current implementation direction.
-  - Summary: Topic root for the trace-format redesign.
+  - Created At: 2026-06-04 00:00:00
+  - Summary: Topic root for the validation tightening pass.
 
 ---
 
-# Trace Format Redesign Root
+# Validation Tightening
 
-This topic captures the current design direction for the work.
+This topic captures the current direction for the work.
 
 ## Current Read
 
-The current implementation still stores parent trace links primarily as paths.
+The schema validator now owns both machine contract shape and maintained body structure.
 ```
 
 ## Validation-Friendly Shape
 
-Prefer the existing section order already used in this document: contract or
-expectation sections first, then schema-specific semantics and supporting
-fields, then naming conventions, then interpretation notes and examples.
+Keep this maintained schema note in the exact section order already used here:
+`Summary`, `Schema Validation Contract`, `Minimal Example`,
+`Validation-Friendly Shape`, `Interpretation Notes`, and
+`Artifact Creation Contract`.
 
-Sections such as `next artifacts` or `next steps` are forward-looking body
-content. They describe where the topic is heading, but they are not a
-substitute for the continuity envelope's ancestry relation.
-
-Keep the headings stable so human readers and validators can scan the same
-shape the same way.
+Maintain the section headings exactly in this schema note. Free markdown inside
+those sections is allowed, but adding undeclared new section headings should be
+treated as schema drift.
 
 ## Interpretation Notes
 
-- the topic body should remain readable to humans without special tooling
-- the envelope still carries continuity, origin, and integrity hints
-- topic documents may carry why, summary, authors, and other light metadata
-- the body should preserve the design or implementation thread rather than only
-  repeating envelope metadata
+- topic artifacts should remain readable to humans without special tooling
+- the envelope still carries continuity and integrity metadata
+- free markdown inside owned sections is fine when the thread remains legible
+- the validator should own the maintained schema shape rather than relying on convention alone
 
-## Machine Create Template
+## Artifact Creation Contract
 
-This trailing machine section exists so create tooling can read a schema-owned
-template without mixing it into the main human-reading flow.
+### Prompt Fields
 
-```traceable-create-template
----
-version: 1
-createTitle: Create Topic
-summaryPrompt: Enter a short title for the topic
-summaryPlaceholder: What is this topic about?
-whyPrompt: Optional: capture why this topic exists
-whyPlaceholder: Why does this topic matter right now?
----
-# {{summary}}
+Required Fields
 
-{{summarySentence}}
+- version
+- createTitle
+- summaryPrompt
+- summaryPlaceholder
 
-## Current Read
+Optional Fields
 
-Describe the current topic state, what is already known, and what this topic is trying to advance.
+- whyPrompt
+- whyPlaceholder
 
-## Design Direction
+Rules
 
-Describe the direction this topic should take next.
+- The current topic create surface uses version `1`.
+- `createTitle` should label the create action as `Create Topic`.
+- `summaryPrompt` should ask for the topic title.
+- `summaryPlaceholder` should guide the user toward the active topic.
+- `whyPrompt` and `whyPlaceholder` may be omitted when create flow does not ask for a why field.
 
-## Next Artifacts
+### Template Body
 
-- Add the next concrete child topic, proof, task, or decision artifact.
-```
+Required Shape
+
+- first heading uses `# {{summary}}`
+- summary sentence placeholder below the title
+- `## Current Read` section
+- `## Design Direction` section
+- `## Next Artifacts` section
+
+Rules
+
+- Generated topic artifacts should begin with the topic title as the first body heading.
+- The generated body should include one orienting sentence before the first named section.
+- `Current Read` should explain the present topic state.
+- `Design Direction` should state where the topic should move next.
+- `Next Artifacts` should leave room for concrete follow-up artifacts.
+- Tools should preserve the same generated body shape even when they use a maintained built-in template.
 
 ---
 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md)
+  - Towards: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
   - Value: rbfkffH9ipO2U1sbrX1fD8JlK-_UDTdp3c_27a5C-eM

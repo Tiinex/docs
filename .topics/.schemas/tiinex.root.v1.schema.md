@@ -8,7 +8,7 @@
 
 ---
 
-# tiinex.root.v1
+# Root
 
 ## Summary
 
@@ -140,6 +140,7 @@ Known Category Labels
 - Required Shape
 - Required When
 - Rules
+- Severity Levels
 - Towards Allowed Shapes
 - Validation Authority
 
@@ -159,6 +160,95 @@ Rules
 - Other prose inside `Schema Validation Contract` is not part of the machine contract.
 - Descendant schemas may introduce new category labels only through `Contract Category Extension`.
 - `Artifact Creation Contract`, when present, uses the same contract syntax.
+
+### Validator Response Policy
+
+Severity Levels
+
+- error
+- warning
+- info
+- preserve
+
+Rules
+
+- `error` means the artifact does not satisfy the active contract.
+- `warning` means the artifact remains readable but is degraded, ambiguous, or not fully portable.
+- `info` means the validator may surface non-blocking state without changing validity.
+- `preserve` means the validator must retain the signal without claiming to understand or normalize it.
+- Validators must not silently downgrade `error` conditions.
+- Validators must not silently upgrade `preserve` conditions into `warning` or `error` without contract authority.
+
+### Unknown Handling
+
+Applies To
+
+- contract category labels
+- envelope fields
+- extension declarations
+
+Rules
+
+- Declared but unsupported contract category labels are `preserve` and may also be `warning`.
+- Undeclared contract category labels are `error` when full schema lineage is available.
+- Undeclared contract category labels are `warning` when full schema lineage is unavailable.
+- Unknown envelope fields are `preserve` by default.
+- Unknown envelope fields may become `warning` or `error` only when full schema lineage proves they are undeclared.
+- Unknown extension declarations must be preserved unless the active schema contract explicitly forbids them.
+
+### Matching And Normalization
+
+Applies To
+
+- heading text
+- category labels
+- field names
+- line endings
+- blank lines between category labels and lists
+- bullet markers in machine-authoritative surfaces
+
+Rules
+
+- Heading text is exact after trimming leading and trailing whitespace.
+- Category labels are exact after trimming leading and trailing whitespace.
+- Field names are exact after trimming leading and trailing whitespace.
+- Matching is case-sensitive unless a descendant schema explicitly defines a local exception.
+- Blank lines between a category label and its list are ignored.
+- Line endings may be normalized before parsing.
+- Bullet marker normalization is not allowed in machine-authoritative surfaces.
+
+### Inheritance And Override
+
+Rules
+
+- Descendant schema contracts are additive by default.
+- Descendant schemas may add groups, categories, declarations, fields, and stricter local rules.
+- Descendant schemas must not weaken root identity, continuity, or integrity requirements.
+- Descendant schemas must not remove inherited requirements unless they explicitly define override semantics.
+- Override semantics must identify which inherited requirement is being replaced and how the replacement is interpreted.
+- Validators must not guess override behavior when a descendant schema does not define it.
+- A descendant extension must not silently redeclare an inherited contract category label as if it were new.
+
+### Contract Cardinality
+
+Applies To
+
+- contract groups
+- category labels within a contract group
+- named declarations within a contract group
+- required groups
+- optional groups
+
+Rules
+
+- Contract groups are identified by third-level heading text.
+- Contract group names should be unique within the same machine-readable contract section.
+- Category labels may appear at most once within the same contract group unless a descendant schema explicitly declares repeat semantics.
+- Named declarations must be unique within the same contract group.
+- Duplicate named declarations are invalid unless a descendant schema explicitly defines override semantics.
+- Missing required groups are `error`.
+- Missing optional groups are valid.
+- Duplicate handling must not be silently guessed.
 
 ### Named Declaration
 
@@ -198,10 +288,33 @@ Rules
 
 - Each contract category extension uses the `Named Declaration` shape.
 - The declaration name is the new contract category label.
+- A descendant schema must not redeclare an already inherited category label here unless it explicitly defines override semantics.
 - A descendant schema must declare a new category label in `Contract Category Extension` before using it in its own contract.
 - Declared category labels extend the known category label set for that schema and its descendants.
 - Validators that do not understand a declared category label should preserve it and may warn.
 - Strict validators may fail on undeclared category labels when the full schema lineage is available.
+
+### Contract Category Override
+
+Required When
+
+- A descendant schema replaces the interpretation of an inherited contract category label.
+
+Entry Shape
+
+- Named Declaration
+
+Declaration Fields
+
+- Replacement Interpretation
+
+Rules
+
+- Each contract category override uses the `Named Declaration` shape.
+- The declaration name identifies the inherited contract category label being replaced.
+- `Replacement Interpretation` describes how the descendant schema now interprets that inherited label.
+- A descendant schema must not rely on an override unless it declares it here.
+- Validators must not guess contract category overrides that are not declared here.
 
 ### Document Layout
 
@@ -472,4 +585,4 @@ Rules
 
 - sha256-base64url-c14n-v1
   - Towards: self
-  - Value: kdTVJbOqrSHa4_hhizRCektAQNi2L5bveiTnjJ_LFwM
+  - Value: RyhlanXFg6PyTmFrGdlYxVKWrNNBGZW8TpwZu77ZELU
