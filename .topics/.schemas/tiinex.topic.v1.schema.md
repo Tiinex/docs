@@ -1,10 +1,13 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](tiinex.continuation.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
-  - Created At: 2026-05-28 18:11:47
+  - Created At: 2026-06-04 13:47:57
   - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
+  - Origin:
+    - [relative](tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/d6e043d32a7beeffa3a62bf721f77dae29c06c54/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.topic.v1](tiinex.topic.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
@@ -15,7 +18,6 @@
 # Topic
 
 - Status: maintained schema note
-- Schema Definition: [tiinex.root.v1](tiinex.root.v1.schema.md)
 
 ## Summary
 
@@ -104,7 +106,7 @@ Rules
 ```md
 # Continuity Context
 
-- Envelope Schema: tiinex.continuation.v1
+- Envelope Schema: tiinex.root.v1
 - Current
   - Current Schema: tiinex.topic.v1
   - Created At: 2026-06-04 00:00:00
@@ -187,5 +189,5 @@ Rules
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
-  - Value: FI16BXYxfPXSU_E2KSsx1OQwe9z8SBFtRNf_iv4yfr0
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/d6e043d32a7beeffa3a62bf721f77dae29c06c54/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: oBZV4eG3M5kMrGsqGycQJNmDSP66A-vLbNwL0-ipa9Q
