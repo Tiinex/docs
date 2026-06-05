@@ -23,7 +23,7 @@ The schema notes exist to reduce that ambiguity.
 
 ## Key Schemas
 
-- [tiinex.continuation.v1.schema.md](tiinex.continuation.v1.schema.md): continuity envelope
+- [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md): continuity envelope
   above the main artifact body
 - [tiinex.topic.v1.schema.md](tiinex.topic.v1.schema.md): working topic and design-thread
   artifacts

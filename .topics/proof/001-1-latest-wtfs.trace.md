@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/08624ce6bfccfaa4d2c3a45d20652e0ae0e3e0bf/.topics/.schemas/tiinex.continuation.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/1b7514e9db81a46c319e9aff6ca4c4449bda7f0d/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
-	- Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/08624ce6bfccfaa4d2c3a45d20652e0ae0e3e0bf/.topics/.schemas/tiinex.topic.v1.schema.md)
+	- Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/1b7514e9db81a46c319e9aff6ca4c4449bda7f0d/.topics/.schemas/tiinex.topic.v1.schema.md)
 	- Created At: 2026-06-01 03:15:00
-	- Trace: [001.trace.md](../001.trace.md)
+	- Trace: [001.trace.md](001.trace.md)
 	- Origin:
 		- [relative](../001.trace.md)
 		- [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/proof/001.trace.md)
 - Current
-	- Current Schema: [tiinex.pointer.v1](https://github.com/Tiinex/docs/blob/08624ce6bfccfaa4d2c3a45d20652e0ae0e3e0bf/.topics/.schemas/tiinex.pointer.v1.schema.md)
+	- Current Schema: [tiinex.pointer.v1](https://github.com/Tiinex/docs/blob/1b7514e9db81a46c319e9aff6ca4c4449bda7f0d/.topics/.schemas/tiinex.pointer.v1.schema.md)
 	- Created At: 2026-06-01 16:15:17
 	- Summary: Evidence pointer to the latest proof evidence trace in each populated subdirectory.
 	- Type: markdown
