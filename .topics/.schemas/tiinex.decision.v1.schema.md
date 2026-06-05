@@ -219,4 +219,4 @@ Rules
 
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/0e6d169685d56c913cb890ba568a96b366ebd4bf/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: oBZV4eG3M5kMrGsqGycQJNmDSP66A-vLbNwL0-ipa9Q
+  - Value: jIvC9iQXvwteop-FPzq7t6ES5WYMrX-P2K9-7mvsIuk

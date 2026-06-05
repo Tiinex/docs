@@ -547,6 +547,8 @@ Rules
 - The `Method Entry` label names the integrity method.
 - `Towards` identifies the validated target.
 - `Value` carries the method output.
+- For hash-based continuity methods, the validated target is hashed without the `# Continuity Integrity` section and everything after it.
+- When `Towards` is not `self`, `Value` must be computed from the validated target identified by `Towards`, not from the current artifact body.
 - `self` is allowed only when the method validates the current artifact itself.
 - When a maintained schema artifact has an available commit-pinned `browse + git` permalink for its validated target, `Towards` should use that permalink instead of a relative local path.
 
@@ -591,4 +593,4 @@ Rules
 
 - sha256-base64url-c14n-v1
   - Towards: self
-  - Value: oBZV4eG3M5kMrGsqGycQJNmDSP66A-vLbNwL0-ipa9Q
+  - Value: r1gvU-1RDqYR6CZVsOnBO06ldS8cqhmKPxVp0pKhF2M
