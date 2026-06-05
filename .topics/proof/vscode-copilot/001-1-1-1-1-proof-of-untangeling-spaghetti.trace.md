@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](../../.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](../../.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.feedback.v1](../../.schemas/tiinex.feedback.v1.md)
+  - Parent Schema: [tiinex.feedback.v1](../../.schemas/tiinex.feedback.v1.schema.md)
   - Created At: 2026-06-02 22:38:22
   - Trace: [001-1-1-1.trace.md](001-1-1-1.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](../../.schemas/tiinex.evidence.v1.md)
+  - Current Schema: [tiinex.evidence.v1](../../.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-06-03 02:15:50
   - Why: Preserves the untangling-spaghetti progress snapshot so the screenshot is registered as its own evidence slice.
   - Summary: Evidence slice for the "Untangling the spaghetti" screenshot and progress-state label.

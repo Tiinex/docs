@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/91006b375a6af721bf41e829773dd44378863e78/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/91006b375a6af721bf41e829773dd44378863e78/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/91006b375a6af721bf41e829773dd44378863e78/.topics/.schemas/tiinex.topic.v1.md)
+  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/91006b375a6af721bf41e829773dd44378863e78/.topics/.schemas/tiinex.topic.v1.schema.md)
   - Created At: 2026-05-30 17:18:00
   - Trace: [001.trace.md](001.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/magic-the-gathering/001.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/91006b375a6af721bf41e829773dd44378863e78/.topics/educational/memes/magic-the-gathering/001.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/91006b375a6af721bf41e829773dd44378863e78/.topics/.schemas/tiinex.evidence.v1.md)
+  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/91006b375a6af721bf41e829773dd44378863e78/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-30 17:34:00
   - Authors: Anchor
   - Why: Preserves the first concrete Magic-framed image artifact for this leaf so later prompts, feedback, and decision traces can attach to an actual rendered meme rather than only to the abstract handoff.

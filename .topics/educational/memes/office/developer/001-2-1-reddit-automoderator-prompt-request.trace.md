@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.evidence.v1.md)
+  - Parent Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-30 16:20:00
   - Trace: [001-2-local-lineage-vs-cloud-reliance-meme.trace.md](001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/educational/memes/office/developer/001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
 - Current
-  - Current Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.feedback.v1.md)
+  - Current Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.feedback.v1.schema.md)
   - Created At: 2026-05-30 17:48:00
   - Authors: Anchor
   - Why: Preserves the first real platform feedback on the local-lineage meme so follow-up work can answer the prompt request directly without letting Cloud ChatGPT author repo lineage on its own.

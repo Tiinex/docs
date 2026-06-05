@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.feedback.v1.md)
+  - Parent Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.feedback.v1.schema.md)
   - Created At: 2026-05-30 17:48:00
   - Trace: [001-2-1-reddit-automoderator-prompt-request.trace.md](001-2-1-reddit-automoderator-prompt-request.trace.md)
   - Origin:
     - [relative](001-2-1-reddit-automoderator-prompt-request.trace.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-1-reddit-automoderator-prompt-request.trace.md)
 - Current
-  - Current Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.task.v1.md)
+  - Current Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.task.v1.schema.md)
   - Created At: 2026-05-30 17:52:00
   - Authors: Anchor
   - Why: Converts the moderator feedback into a one-shot Cloud ChatGPT handoff that only asks for a new image-generation pass and prompt-side disclosure material, leaving evidence mapping and trace authoring to Anchor afterward.

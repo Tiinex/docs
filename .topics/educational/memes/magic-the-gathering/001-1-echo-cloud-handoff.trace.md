@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.topic.v1.md)
+  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.topic.v1.schema.md)
   - Created At: 2026-05-30 17:18:00
   - Trace: [001.trace.md](001.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/magic-the-gathering/001.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/educational/memes/magic-the-gathering/001.trace.md)
 - Current
-  - Current Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.task.v1.md)
+  - Current Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.task.v1.schema.md)
   - Created At: 2026-05-30 17:21:00
   - Authors: Anchor
   - Why: Defines the first Echo handoff task for this exact memes leaf so Cloud ChatGPT can generate bounded Magic-framed lineage memes without widening into generic fantasy or trading-card parody.
@@ -53,9 +53,9 @@ Prepare one bounded first-pass handoff for the Echo role in Cloud ChatGPT for th
     - [browse + git](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/README.md)
 - Task Schema
   - Origin:
-    - [relative](../../.schemas/tiinex.task.v1.md)
-    - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/.schemas/tiinex.task.v1.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.task.v1.md)
+    - [relative](../../.schemas/tiinex.task.v1.schema.md)
+    - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/.schemas/tiinex.task.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/d73cb77fd58e87ef4d925424517f6935934ffef2/.topics/.schemas/tiinex.task.v1.schema.md)
 
 ## Echo Cloud Handoff Contract
 

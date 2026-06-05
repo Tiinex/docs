@@ -49,13 +49,13 @@ Tiinex explores a markdown-first alternative where a reader can still inspect:
 If you are trying to understand Tiinex provenance or lineage thinking, start
 here:
 
-- [.topics/.schemas/tiinex.continuation.v1.md](.topics/.schemas/tiinex.continuation.v1.md)
-- [.topics/.schemas/tiinex.topic.v1.md](.topics/.schemas/tiinex.topic.v1.md)
-- [.topics/.schemas/tiinex.task.v1.md](.topics/.schemas/tiinex.task.v1.md)
-- [.topics/.schemas/tiinex.evidence.v1.md](.topics/.schemas/tiinex.evidence.v1.md)
-- [.topics/.schemas/tiinex.decision.v1.md](.topics/.schemas/tiinex.decision.v1.md)
-- [.topics/.schemas/tiinex.feedback.v1.md](.topics/.schemas/tiinex.feedback.v1.md)
-- [.topics/.schemas/tiinex.pointer.v1.md](.topics/.schemas/tiinex.pointer.v1.md)
+- [.topics/.schemas/tiinex.continuation.v1.schema.md](.topics/.schemas/tiinex.continuation.v1.schema.md)
+- [.topics/.schemas/tiinex.topic.v1.schema.md](.topics/.schemas/tiinex.topic.v1.schema.md)
+- [.topics/.schemas/tiinex.task.v1.schema.md](.topics/.schemas/tiinex.task.v1.schema.md)
+- [.topics/.schemas/tiinex.evidence.v1.schema.md](.topics/.schemas/tiinex.evidence.v1.schema.md)
+- [.topics/.schemas/tiinex.decision.v1.schema.md](.topics/.schemas/tiinex.decision.v1.schema.md)
+- [.topics/.schemas/tiinex.feedback.v1.schema.md](.topics/.schemas/tiinex.feedback.v1.schema.md)
+- [.topics/.schemas/tiinex.pointer.v1.schema.md](.topics/.schemas/tiinex.pointer.v1.schema.md)
 
 ## Current Topic Spaces
 

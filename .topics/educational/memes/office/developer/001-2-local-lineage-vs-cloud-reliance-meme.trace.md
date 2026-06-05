@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/7cd013b0b5cbec0d5d8b64cc8b4e8fd48d7e5f01/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/7cd013b0b5cbec0d5d8b64cc8b4e8fd48d7e5f01/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/7cd013b0b5cbec0d5d8b64cc8b4e8fd48d7e5f01/.topics/.schemas/tiinex.topic.v1.md)
+  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/7cd013b0b5cbec0d5d8b64cc8b4e8fd48d7e5f01/.topics/.schemas/tiinex.topic.v1.schema.md)
   - Created At: 2026-05-30 15:12:37
   - Trace: [001.trace.md](001.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/291c00f4aaba1e1ba5a0c3479c078070a83c060e/.topics/educational/memes/office/developer/001.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/7cd013b0b5cbec0d5d8b64cc8b4e8fd48d7e5f01/.topics/.schemas/tiinex.evidence.v1.md)
+  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/7cd013b0b5cbec0d5d8b64cc8b4e8fd48d7e5f01/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-30 16:20:00
   - Authors: Anchor
   - Why: Preserves a concrete meme artifact whose joke depends on developer-facing trace, continuity, and local-first durability language rather than on a specific publishing destination.

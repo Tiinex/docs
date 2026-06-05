@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.evidence.v1.md)
+  - Parent Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-31 20:47:30
   - Trace: [001-2-1-1-1-cloud-chatgpt-dalle-generation.trace.md](001-2-1-1-1-cloud-chatgpt-dalle-generation.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-1-1-1-cloud-chatgpt-dalle-generation.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/educational/memes/office/developer/001-2-1-1-1-cloud-chatgpt-dalle-generation.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.evidence.v1.md)
+  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/1ef3a742d1403c13ce66a586abb9435d24a09774/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-31 20:47:30
   - Why: Preserves the Reddit moderation reply screenshot so the dispute over AI-generated content and provenance stays attached to the same local developer lineage.
   - Summary: Reddit moderator screenshot where the poster challenges an AI-content ban and points back to the GitHub trace link as provenance evidence.

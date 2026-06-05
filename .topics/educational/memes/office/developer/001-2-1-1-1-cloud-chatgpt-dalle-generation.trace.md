@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/a2404bf4e1fab8d2618d88d914ea58c48b8fdb64/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/a2404bf4e1fab8d2618d88d914ea58c48b8fdb64/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/a2404bf4e1fab8d2618d88d914ea58c48b8fdb64/.topics/.schemas/tiinex.task.v1.md)
+  - Parent Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/a2404bf4e1fab8d2618d88d914ea58c48b8fdb64/.topics/.schemas/tiinex.task.v1.schema.md)
   - Created At: 2026-05-30 17:52:00
   - Trace: [001-2-1-1-cloud-image-only-reply-handoff.trace.md](001-2-1-1-cloud-image-only-reply-handoff.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-1-1-cloud-image-only-reply-handoff.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/711982c61d2951b3a1464df83bbbe5c0e4e48bcb/.topics/educational/memes/office/developer/001-2-1-1-cloud-image-only-reply-handoff.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/a2404bf4e1fab8d2618d88d914ea58c48b8fdb64/.topics/.schemas/tiinex.evidence.v1.md)
+  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/a2404bf4e1fab8d2618d88d914ea58c48b8fdb64/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-30 18:10:00
   - Authors: Anchor
   - Why: Preserves the concrete image returned from the one-shot Cloud ChatGPT handoff so later feedback, decision, or publication traces can attach to the actual generated output instead of only to the task packet.

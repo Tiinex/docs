@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.evidence.v1.md)
+  - Parent Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-31 14:07:47
   - Trace: [001-2-local-lineage-vs-cloud-reliance-meme.trace.md](001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/educational/memes/office/developer/001-2-local-lineage-vs-cloud-reliance-meme.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.evidence.v1.md)
+  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-31 14:07:47
   - Why: Preserves the raw ChatGPT-platform copy-paste and keeps the associated local image assets attached to the same evidence chain.
   - Summary: English transcript evidence for the shared ChatGPT conversation, with related local image assets for the Matrix Printer and Tiinex device/app follow-ups.

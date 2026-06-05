@@ -1,8 +1,8 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.continuation.v1.md)
+- Envelope Schema: [tiinex.continuation.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.continuation.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.task.v1.md)
+  - Parent Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.task.v1.schema.md)
   - Created At: 2026-05-30 17:52:00
   - Trace: [001-2-1-1-cloud-image-only-reply-handoff.trace.md](001-2-1-1-cloud-image-only-reply-handoff.trace.md)
   - Origin:
@@ -10,7 +10,7 @@
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-1-1-cloud-image-only-reply-handoff.trace.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/educational/memes/office/developer/001-2-1-1-cloud-image-only-reply-handoff.trace.md)
 - Current
-  - Current Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.feedback.v1.md)
+  - Current Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.feedback.v1.schema.md)
   - Created At: 2026-05-31 21:52:23
   - Authors: Linus
   - Why: Preserves a short Reddit-side reaction so the next image leaf stays attached to the actual audience signal rather than only to local interpretation.
