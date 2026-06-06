@@ -1,12 +1,12 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/0e6d169685d56c913cb890ba568a96b366ebd4bf/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/5aa2aca5197a90f62f31d08abf6c001c2bb2fa69/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.topic.v1.schema.md)
+  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/5aa2aca5197a90f62f31d08abf6c001c2bb2fa69/.topics/.schemas/tiinex.topic.v1.schema.md)
   - Created At: 2026-05-28 03:32:41
   - Trace: [001-1-draft.trace.md](001-1-draft.trace.md)
 - Current
-  - Current Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.topic.v1.schema.md)
+  - Current Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/5aa2aca5197a90f62f31d08abf6c001c2bb2fa69/.topics/.schemas/tiinex.topic.v1.schema.md)
   - Created At: 2026-05-28 16:46:58
   - Summary: Title: Human-Readable Continuity Envelopes for Recoverable Trace Artifacts
   - Type: markdown
@@ -343,4 +343,6 @@ surfaces.
 
 # Continuity Integrity
 
-- Parent-Integrity: sha256:b8e487b4e4ee4bd74c8961e5c4ec22b49d8aaeecdc5781b90e785b9ac29b48d4
+- sha256-base64url-c14n-v1
+  - Towards: [001-1-draft.trace.md](001-1-draft.trace.md)
+  - Value: 9ZJ8xq8Z8f5XQmJFhKdi3SAS70aFeNBrInqY_vNkRSU
