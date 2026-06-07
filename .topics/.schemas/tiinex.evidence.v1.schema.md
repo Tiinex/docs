@@ -48,7 +48,10 @@ Rules
 Required Shape
 
 - first body heading after the continuity envelope
-- readable prose or lists that state the supported claim, provenance, and preserved material
+- `## Supported Claim` section
+- `## Provenance` section
+- `## Evidence Material` section
+- either `## Interpretation Limits` or `## Fidelity Notes` section
 
 Optional Sections
 
@@ -61,8 +64,14 @@ Optional Sections
 Rules
 
 - An evidence artifact should begin with a human-readable title.
+- An evidence artifact must expose the supported claim in a machine-detectable section named `Supported Claim`.
+- An evidence artifact must expose provenance in a machine-detectable section named `Provenance`.
+- An evidence artifact must expose the preserved supporting material in a machine-detectable section named `Evidence Material`.
+- An evidence artifact must expose at least one explicit limit surface through `Interpretation Limits` or `Fidelity Notes`.
 - An evidence artifact should contain enough body content that a later reader can identify the material being preserved.
 - The body should make the supported claim or question readable rather than hiding it in sparse metadata.
+- The required signal sections may contain prose, lists, or sub-items, but their section headings should remain recognizable.
+- `Current -> Summary` or other envelope metadata may support orientation, but they do not replace the required evidence signal surfaces.
 - Follow-up sections must not replace the preserved material itself.
 - If the artifact is mainly a raw runtime export rather than curated supporting material, another schema should own it instead.
 
@@ -81,7 +90,13 @@ Rules
 - An evidence artifact should make clear what the preserved material is.
 - An evidence artifact should make clear what the material supports, illustrates, or bears on.
 - An evidence artifact should make clear how directly it represents the underlying source.
+- `Provenance` should name the source and representation shape when that information is known.
+- `Evidence Material` should preserve the readable excerpt, summary, description, bundle items, transcript material, or explicit asset reference itself rather than only naming it.
+- `Interpretation Limits` or `Fidelity Notes` should state important transformation, redaction, excerpting, or scope limits when those limits are present.
 - When provenance is partial, transformed, or redacted, the artifact should say so explicitly.
+- When the grounded material is not a `.trace.md` artifact or plain markdown file, the evidence artifact may preserve it through a bounded description, excerpt, attachment reference, or other explicit non-traversable target description.
+- The normal Tiinex `Origin` shape remains valid for evidence artifacts even when the grounded material is not markdown.
+- When the grounded source may move, be renamed, or otherwise drift, a commit-pinned `browse + git` provenance target should be preferred when available so recovery remains durable.
 - When concrete files, traces, or other durable artifacts ground the evidence, the artifact should prefer explicit readable target references over vague mentions.
 
 ### Evidence Envelope Companions

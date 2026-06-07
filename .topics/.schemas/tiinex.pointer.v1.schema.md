@@ -80,12 +80,25 @@ Rules
 
 - A pointer artifact should begin with a human-readable title.
 - A pointer artifact should contain enough prose to explain why this pointer exists.
+- A pointer artifact must expose at least one machine-detectable target signal through `Parent -> Trace`, `Current -> Origin`, or a `Destinations` list.
+- A pointer artifact that lacks all declared target-signal surfaces is invalid.
 - Pointer artifacts should stay thinner than the artifacts they point toward.
 - Pointer artifacts should prefer naming the next hop over re-explaining the full target content.
+- A target signal may point to a trace artifact, another document, a binary asset, or another explicit external target; machine-detectable does not require deep traversal beyond the declared reference.
+- Multiple target signals may coexist when that improves navigation without blurring parent, origin, and destination roles.
 - Forward-looking sections must not replace the continuity envelope's parent relation.
 - If the artifact becomes a substantial standalone topic, evidence bundle, or decision record, another schema should own it instead.
 
 ### Destination List
+
+Allowed Shapes
+
+- markdown link entry
+- labeled markdown link entry
+- labeled relative path entry
+- labeled absolute URL entry
+- labeled attachment or asset reference
+- bounded plain-text target reference when the target cannot be expressed as a markdown link
 
 Optional Sections
 
@@ -103,6 +116,8 @@ Rules
 
 - Each destination entry should identify one readable target.
 - Each destination entry should include enough naming or linking information that the next hop can be found without guesswork.
+- Each destination entry should include at least one explicit target reference such as a markdown link, relative path, absolute URL, or attachment/asset reference.
+- Pure prose without an explicit target reference does not count as a machine-detectable destination signal.
 - Destination entries should stay concise.
 - Destination entries must not be used to smuggle alternate parent claims into the body.
 - When one destination is clearly the main current hop, the prose should say so rather than making every destination sound equally primary.
@@ -122,6 +137,8 @@ Rules
 - Pointer artifacts may carry light current-side metadata when it helps the reader orient quickly.
 - Pointer artifacts should declare parent signal when they continue an earlier local pointer or another local lineage artifact.
 - Pointer artifacts should declare current origin when provenance matters and the target is not fully recoverable from local parent continuity alone.
+- Pointer artifacts may use the normal Tiinex `Origin` shape even when the grounded target is not markdown or not deeply traversable.
+- When an origin target may move, be renamed, or otherwise drift, a commit-pinned `browse + git` origin candidate should be preferred when available so recovery remains durable.
 - If multiple current origin candidates are present, they should refer to the same grounded upstream target rather than mixing unrelated targets.
 - Pointer artifacts should avoid turning envelope metadata into the main body content.
 
@@ -153,7 +170,7 @@ Rules
 ```md
 # Continuity Context
 
-- Envelope Schema: tiinex.continuation.v1
+- Envelope Schema: tiinex.root.v1
 - Current
   - Current Schema: tiinex.pointer.v1
   - Created At: 2026-06-04 00:00:00
