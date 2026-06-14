@@ -7,6 +7,7 @@
   - Trace: [tiinex.runtime.v1.schema.md](tiinex.runtime.v1.schema.md)
   - Origin:
     - [relative](tiinex.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.machine.runtime.v1](tiinex.machine.runtime.v1.schema.md)
   - Created At: 2026-06-05 11:08:00
@@ -240,7 +241,6 @@ Rules
 ## Outcome
 
 - Interpretation: the machine process completed with one preserved result bundle
-```
 
 ## Validation-Friendly Shape
 
@@ -263,5 +263,5 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.runtime.v1.schema.md](tiinex.runtime.v1.schema.md)
-  - Value: Qi2K_568QbxVyUwuD_ljAUB1uwubNS8yFFnxwJqAfsw
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
+  - Value: EZxpiMk3z_FLLiUY_fZ3TV1ui4zgq34d-gu2TWHVI3g

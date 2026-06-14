@@ -3,7 +3,7 @@
 - Envelope Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
-  - Created At: 2026-06-04 13:47:57
+  - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
   - Origin:
     - [relative](tiinex.root.v1.schema.md)

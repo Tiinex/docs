@@ -7,7 +7,7 @@
   - Trace: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
   - Origin:
     - [relative](tiinex.machine.runtime.v1.schema.md)
-    - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.ai.runtime.v1](tiinex.ai.runtime.v1.schema.md)
   - Created At: 2026-06-05 05:40:00
@@ -248,7 +248,6 @@ treated as schema drift.
 ## Tool Use
 
 - Tool Activity: no external tools were required in this minimal example
-```
 
 ## Validation-Friendly Shape
 
@@ -271,5 +270,5 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
+  - Towards: [tiinex.machine.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
   - Value: DFUCZSAK4vEQcPYTSbGdnh7dSc0JOyt2f1RRP5cPkQY
