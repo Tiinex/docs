@@ -3,8 +3,8 @@
 - Envelope Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
-  - Created At: 2026-06-04 13:47:57
-  - Summary: Root schema for Tiinex lineage artifacts.
+  - Created At: 2026-06-14 00:00:00
+  - Summary: Root schema for Tiinex lineage artifacts with repair-note support.
 
 ---
 
@@ -30,6 +30,8 @@ If `Parent` exists, the artifact continues a declared parent artifact.
 If `Parent` is absent, the artifact is the root of its local lineage.
 
 Parent absence does not erase origin or provenance. It only means no parent edge is declared.
+
+If `Repairs` exists, the artifact declares known repair, correction, or trust-impacting context that should remain visible to later readers and tools.
 
 ## Contract Reading Model
 
@@ -343,6 +345,7 @@ Required Fields
 Optional Fields
 
 - Parent
+- Repairs
 
 Rules
 
@@ -352,6 +355,34 @@ Rules
 - Parent present means the artifact continues a declared parent.
 - Parent absent means the artifact is the root of its local lineage.
 - Parent absence does not erase origin or provenance.
+
+### Repairs
+
+Required When
+
+- Repairs exists
+
+Entry Shape
+
+- First-Level Hyphen List Item
+
+Optional Fields
+
+- Target
+- Note
+- Reason
+
+Rules
+
+- `Repairs` records known repairs, corrections, or trust-impacting changes to the artifact.
+- A repair entry should state what was repaired and why.
+- A repair entry may refer to lineage, parent, origin, current metadata, body claims, schema references, integrity, or another readable target.
+- Structured repair entries should expose `Target`, `Note`, and `Reason` as nested fields.
+- Free-text repair entries are allowed and must be preserved, but structured entries are preferred for tooling.
+- `Repairs` must not silently replace `Parent`, `Trace`, `Origin`, `Current`, or `Continuity Integrity` semantics.
+- `Repairs` does not automatically invalidate the artifact or lineage.
+- Validators may warn when a repair entry is too vague to support audit or update tooling.
+- Tools that update descendants because of a repair should preserve the repair note or point to the artifact that contains it.
 
 ### Parent
 
@@ -498,6 +529,7 @@ Allowed Target Blocks
 - Parent Origin
 - Current
 - Continuity Integrity
+- Repairs
 
 Rules
 
@@ -593,4 +625,4 @@ Rules
 
 - sha256-base64url-c14n-v1
   - Towards: self
-  - Value: r1gvU-1RDqYR6CZVsOnBO06ldS8cqhmKPxVp0pKhF2M
+  - Value: EZxpiMk3z_FLLiUY_fZ3TV1ui4zgq34d-gu2TWHVI3g
