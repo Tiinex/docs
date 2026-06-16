@@ -2,14 +2,14 @@
 
 - Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/0e6d169685d56c913cb890ba568a96b366ebd4bf/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.topic.v1.schema.md)
+  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/8d9c368b0e120b6168beb03ca7b270b6b67e8390/.topics/.schemas/tiinex.topic.v1.schema.md)
   - Created At: 2026-06-02 02:15:23
   - Trace: [001-2-1-1-3-1-2-1-1-1-lineage-integrity-review.trace.md](001-2-1-1-3-1-2-1-1-1-lineage-integrity-review.trace.md)
   - Origin:
     - [relative](001-2-1-1-3-1-2-1-1-1-lineage-integrity-review.trace.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-1-1-3-1-2-1-1-1-lineage-integrity-review.trace.md)
 - Current
-  - Current Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.task.v1.schema.md)
+  - Current Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/8d9c368b0e120b6168beb03ca7b270b6b67e8390/.topics/.schemas/tiinex.task.v1.schema.md)
   - Created At: 2026-06-02 02:26:10
   - Authors: Anchor
   - Why: Turns the lineage-integrity review into a concrete traversal task so a later evidence leaf can record actual audit findings from the same lineage slice.
@@ -68,4 +68,4 @@ Traverse the Reddit evidence lineage from the review report back toward its orig
 
 - sha256-base64url-c14n-v1
   - Towards: [001-2-1-1-3-1-2-1-1-1-lineage-integrity-review.trace.md](001-2-1-1-3-1-2-1-1-1-lineage-integrity-review.trace.md)
-  - Value: 1eobvmaL_4_x515dh3tB5tZf0hNz0HOHUK8IiVkYptI
+  - Value: SUrvwPxSDfu1wkok-NPy8EG-Pv7IWb-TQsIqnVCjfVY
