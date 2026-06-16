@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/1195674d3004c90cd1befb003da5fba0a08178df/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.feedback.v1.schema.md)
+  - Parent Schema: [tiinex.feedback.v1](https://github.com/Tiinex/docs/blob/1195674d3004c90cd1befb003da5fba0a08178df/.topics/.schemas/tiinex.feedback.v1.schema.md)
   - Created At: 2026-05-31 21:52:23
   - Trace: [001-2-1-1-3-reddit-feedback.trace.md](001-2-1-1-3-reddit-feedback.trace.md)
   - Origin:
     - [relative](001-2-1-1-3-reddit-feedback.trace.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-1-1-3-reddit-feedback.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/541269c8c77c84d6aef120355ef3f3b6ef63c57d/.topics/.schemas/tiinex.evidence.v1.schema.md)
+  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/1195674d3004c90cd1befb003da5fba0a08178df/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-05-31 21:52:23
   - Authors: Linus
   - Why: Preserves the concrete response image that turns the short Reddit signal into a new lineage-first meme slice.
@@ -54,4 +54,4 @@
 
 - sha256-base64url-c14n-v1
   - Towards: [001-2-1-1-3-reddit-feedback.trace.md](001-2-1-1-3-reddit-feedback.trace.md)
-  - Value: 51hyxgi_8Ljuy7Jspz63VcA9m8ni6g7CZ-H_A-x671A
+  - Value: ckn1V-tAEpduonqm1mODHBy9n2BHtB6upBxBr7ITHAE
