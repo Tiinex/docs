@@ -46,10 +46,11 @@ Good continuation in this line should usually prefer:
 - update the `chatgpt` target when that branch changes
 - keep the pointer thin and readable
 
+
 ---
 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-	- Towards: [001.trace.md](../001.trace.md)
-	- Value: J54WmE2NaXNUaimuYKrz6P3bJ0T5hEMvpT7frf_gLD0
+  - Towards: [001.trace.md](001.trace.md)
+  - Value: LBSfgUppTFhuXrbyy0W20VwqQObbcTbtfQlQmh2NWHM
