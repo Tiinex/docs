@@ -2,14 +2,14 @@
 
 - Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/0e6d169685d56c913cb890ba568a96b366ebd4bf/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
-  - Parent Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.task.v1.schema.md)
+  - Parent Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/866745d9edf4743adcc70d5011f1f293fb7fe9db/.topics/.schemas/tiinex.task.v1.schema.md)
   - Created At: 2026-06-02 02:26:10
   - Trace: [001-2-1-1-3-1-2-1-1-1-1-lineage-traversal-audit.trace.md](001-2-1-1-3-1-2-1-1-1-1-lineage-traversal-audit.trace.md)
   - Origin:
     - [relative](001-2-1-1-3-1-2-1-1-1-1-lineage-traversal-audit.trace.md)
     - [absolute](C:/Users/micro/Documents/Repos/Tiinex/docs/.topics/educational/memes/office/developer/001-2-1-1-3-1-2-1-1-1-1-lineage-traversal-audit.trace.md)
 - Current
-  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/f76e424f7e5e0628efe04226a5ed97425a1301cb/.topics/.schemas/tiinex.evidence.v1.schema.md)
+  - Current Schema: [tiinex.evidence.v1](https://github.com/Tiinex/docs/blob/866745d9edf4743adcc70d5011f1f293fb7fe9db/.topics/.schemas/tiinex.evidence.v1.schema.md)
   - Created At: 2026-06-02 02:27:12
   - Authors: Anchor
   - Why: Preserves the concrete findings from the lineage traversal audit so later repair or decision notes can attach to actual traversal results rather than only to the task packet.
@@ -54,4 +54,4 @@
 
 - sha256-base64url-c14n-v1
   - Towards: [001-2-1-1-3-1-2-1-1-1-1-lineage-traversal-audit.trace.md](001-2-1-1-3-1-2-1-1-1-1-lineage-traversal-audit.trace.md)
-  - Value: lyoT3QMWjuB16Fkrpnm97zF-0c7YEGi1DomBvkL5WqM
+  - Value: hBrnXeR6b9i3T57Wh0nDpQZmf4s9lrObrzsPTJ-t32A
