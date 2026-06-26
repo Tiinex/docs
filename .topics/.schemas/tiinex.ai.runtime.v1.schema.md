@@ -7,7 +7,7 @@
   - Trace: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
   - Origin:
     - [relative](tiinex.machine.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/83140a94978ec69a681b639b63807b45dc29b350/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.ai.runtime.v1](tiinex.ai.runtime.v1.schema.md)
   - Created At: 2026-06-05 05:40:00
@@ -228,14 +228,6 @@ treated as schema drift.
 - host-specific AI-runtime schemas should extend this note rather than using PoC traces to define the base contract
 - the schema should stay broad enough to support future runtimes that are not tied to ai-provenance
 
----
-
-# Continuity Integrity
-
-- sha256-base64url-c14n-v1
-  - Towards: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
-  - Value: PLACEHOLDER
-
 ## Request Contract Summary
 
 - User Input: inspect the preserved runtime slice
@@ -270,5 +262,5 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.machine.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
-  - Value: DFUCZSAK4vEQcPYTSbGdnh7dSc0JOyt2f1RRP5cPkQY
+  - Towards: [tiinex.machine.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/83140a94978ec69a681b639b63807b45dc29b350/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
+  - Value: RwaepTRnfDhWFWPEj5otR7N47aa6U0cb-msH9e-dtO4
