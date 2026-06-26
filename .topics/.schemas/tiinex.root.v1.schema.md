@@ -563,6 +563,11 @@ Entry Shape
 
 - First-Level Hyphen List Item
 
+Allowed Shapes
+
+- Plain Method Identifier
+- Markdown Link Method Label
+
 Required Fields
 
 - Towards
@@ -577,6 +582,9 @@ Rules
 
 - `Method Entry` is represented by a first-level hyphen list item under `Continuity Integrity`.
 - The `Method Entry` label names the integrity method.
+- The `Method Entry` label may be a plain canonical method identifier or a markdown link to a validation method artifact.
+- A markdown-link method label must use the canonical method identifier as link text.
+- When a maintained validation method artifact has an available commit-pinned `browse + git` permalink, the markdown-link method label must use that permalink as its link target.
 - `Towards` identifies the validated target.
 - `Value` carries the method output.
 - For hash-based continuity methods, the validated target is hashed without the `# Continuity Integrity` section and everything after it.
@@ -625,4 +633,4 @@ Rules
 
 - sha256-base64url-c14n-v1
   - Towards: self
-  - Value: EZxpiMk3z_FLLiUY_fZ3TV1ui4zgq34d-gu2TWHVI3g
+  - Value: 8_vbMzS4zeNhGS9iwekcrUb1-0xmzt1zpr6QGK_4pPc
