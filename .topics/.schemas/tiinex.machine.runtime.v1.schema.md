@@ -7,7 +7,7 @@
   - Trace: [tiinex.runtime.v1.schema.md](tiinex.runtime.v1.schema.md)
   - Origin:
     - [relative](tiinex.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/1c9c14d0892daa2aebf7aee17783355170068ee4/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.machine.runtime.v1](tiinex.machine.runtime.v1.schema.md)
   - Created At: 2026-06-05 11:08:00
@@ -160,15 +160,6 @@ treated as schema drift.
 - this schema is the machine-facing extension point above the broad runtime layer
 - AI-specific runtime families should extend this layer only when their semantics materially depend on machine-shaped runtime structure
 - host-specific or PoC-specific machine runtimes should extend this schema instead of redefining the generic machine-runtime base
-
----
-
-# Continuity Integrity
-
-- sha256-base64url-c14n-v1
-  - Towards: [tiinex.runtime.v1.schema.md](tiinex.runtime.v1.schema.md)
-  - Value: PLACEHOLDER
-
 - A machine-runtime artifact should make clear whether it preserves state in progress, final state, or a diagnostic slice.
 - When transport or protocol details materially affect interpretation, the artifact should expose them readably instead of hiding them behind opaque blobs.
 - Machine-runtime extensions may add stronger local structure for a particular runtime family as long as they preserve this broader machine-runtime reading model.
@@ -263,5 +254,5 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/6e5781faf24f0414c355e14eba764e39d964a919/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
-  - Value: EZxpiMk3z_FLLiUY_fZ3TV1ui4zgq34d-gu2TWHVI3g
+  - Towards: [tiinex.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/1c9c14d0892daa2aebf7aee17783355170068ee4/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
+  - Value: yN5ltn7H_yiEmOxA0ZfEdMs6LtExBsfGzOHEyun1urE
