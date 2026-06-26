@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
   - Origin:
     - [relative](tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/1d64d69a17f12089c4ed5f9a37f8fe01f597573c/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/622c8f9cf9774fbc4f21366752d04533e6d8ed82/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.validation.method.v1](tiinex.validation.method.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -180,13 +180,18 @@ Allowed Shapes
 - `<lineage>-validation-method.trace.md`
 - `<method-slug>.trace.md`
 - `<method-slug>-validation-method.trace.md`
+- `<method-slug>.validator.md`
+- `<method-slug>-validation-method.validator.md`
 
 Rules
 
 - Validation method artifacts should use a slug that identifies the method or method family.
-- Lineage-first names should be used when the method artifact is part of an ordinary local trace lineage.
+- Lineage-first `.trace.md` names should be used when the method artifact is part of an ordinary local trace lineage.
 - Canonical registry-like method artifacts may use a method slug without a lineage prefix when the artifact is intentionally maintained as a reusable method definition.
-- Validation method artifacts should keep the `.trace.md` suffix stable.
+- Canonical registry-like method definitions may use `.validator.md` when the artifact is intentionally maintained as a reusable validation method definition.
+- `.validator.md` files define validation method semantics; they are not executable validator implementations.
+- `.validator.md` files are not validation result artifacts.
+- Trace-lineage validation method artifacts should keep the `.trace.md` suffix stable.
 
 ### Interpretation Boundaries
 
@@ -258,14 +263,14 @@ treated as schema drift.
 - validation methods define what a method can and cannot prove
 - method-scoped verification language should replace generic trust language in future UI surfaces
 - integrity methods, attestations, and runtime reproducibility can all reference validation method artifacts
+- `.validator.md` method artifacts are reusable validation method definitions, not executable validators or validation result ledgers
 - this schema should stay method-semantics-oriented rather than becoming a result ledger
 - this support/governance schema intentionally omits `Artifact Creation Contract` until ordinary app creation behavior is explicitly declared
-
 
 ---
 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/1d64d69a17f12089c4ed5f9a37f8fe01f597573c/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/622c8f9cf9774fbc4f21366752d04533e6d8ed82/.topics/.schemas/tiinex.root.v1.schema.md)
   - Value: EZxpiMk3z_FLLiUY_fZ3TV1ui4zgq34d-gu2TWHVI3g
