@@ -3,70 +3,11 @@
 - Envelope Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: [tiinex.machine.runtime.v1](tiinex.machine.runtime.v1.schema.md)
-  - Created At: 2026-06-05 05:30:00
-  - Trace: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
-  - Origin:
-    - [relative](tiinex.machine.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/83140a94978ec69a681b639b63807b45dc29b350/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
-- Current
-  - Current Schema: [tiinex.ai.runtime.v1](tiinex.ai.runtime.v1.schema.md)
-  - Created At: 2026-06-05 05:40:00
-  - Summary: Schema for machine-runtime artifacts whose main semantics are AI-mediated runtime behavior, inference context, and model-shaped outcomes.
-
----
-
-# AI Runtime
-
-- Status: maintained schema note
-
-## Summary
-
-This schema narrows `tiinex.machine.runtime.v1` for artifacts whose main job is
-to preserve AI-mediated runtime behavior, inference context, model-shaped
-outcomes, and runtime surfaces that are specific to AI-assisted execution.
-
-It is intended as the extensibility parent for future AI-runtime families,
-without letting any one current PoC export shape define the base contract.
-
-## Schema Validation Contract
-
-### AI Runtime Scope
-
-Applies To
-
-- artifacts whose `Current -> Current Schema` is `tiinex.ai.runtime.v1`
-
-Rules
-
-- `tiinex.ai.runtime.v1` identifies machine-runtime artifacts centered on AI-mediated behavior or AI-shaped runtime outcomes.
-- The body should preserve enough signal that a later reader can tell what AI-shaped runtime slice occurred and what runtime outcome or current state followed from it.
-- This schema should stay broader than any one local PoC, provider workflow, or export layout.
-- Prose outside `Schema Validation Contract` may explain the schema, but it does not add required validation rules.
-
-### AI Runtime Body
-
-Required Shape
-
-- first body heading after the continuity envelope
-- readable prose or lists that identify the AI-runtime slice and its resulting state or outcome
-
-Optional Sections
-
-- Metadata
-- Request Context
-- Runtime Context
-- Inputs
-- Model Or Agent Surface
-- Outcome
-# Continuity Context
-
-- Envelope Schema: [tiinex.root.v1](tiinex.root.v1.schema.md)
-- Parent
-  - Parent Schema: [tiinex.machine.runtime.v1](tiinex.machine.runtime.v1.schema.md)
   - Created At: 2026-06-05 11:08:00
   - Trace: [tiinex.machine.runtime.v1.schema.md](tiinex.machine.runtime.v1.schema.md)
   - Origin:
     - [relative](tiinex.machine.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/c4db35cec07534a8f0fdc300df080409f75258c1/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.ai.runtime.v1](tiinex.ai.runtime.v1.schema.md)
   - Created At: 2026-06-05 11:16:00
@@ -100,6 +41,7 @@ Rules
 - `tiinex.ai.runtime.v1` identifies artifacts centered on AI-runtime execution or results.
 - The schema should be used when request framing, model or assistant behavior, tool use, or AI-runtime outcome interpretation materially shape the preserved artifact.
 - The schema should stay host-agnostic and should not assume one local runtime implementation.
+- Prose outside `Schema Validation Contract` may explain the schema, but it does not add required validation rules.
 
 ### AI Runtime Body
 
@@ -168,6 +110,7 @@ Rules
 - AI-runtime artifacts should keep the lineage label first.
 - The optional slug should identify the bounded AI-runtime slice or role family.
 - AI-runtime artifacts should prefer stable human-readable slugs over transport or vendor-only identifiers.
+- AI-runtime artifacts should keep the `.trace.md` suffix stable.
 
 ### Interpretation Boundaries
 
@@ -228,39 +171,11 @@ treated as schema drift.
 - host-specific AI-runtime schemas should extend this note rather than using PoC traces to define the base contract
 - the schema should stay broad enough to support future runtimes that are not tied to ai-provenance
 
-## Request Contract Summary
-
-- User Input: inspect the preserved runtime slice
-
-## Outcome
-
-- Completion Claim: partial
-- Final Summary: one bounded AI-runtime result was preserved
-
-## Tool Use
-
-- Tool Activity: no external tools were required in this minimal example
-
-## Validation-Friendly Shape
-
-Keep this maintained schema note in the exact section order already used here:
-`Summary`, `Schema Validation Contract`, `Minimal Example`,
-`Validation-Friendly Shape`, and `Interpretation Notes`.
-
-Maintain the section headings exactly in this schema note. Free markdown inside
-those sections is allowed, but adding undeclared new section headings should be
-treated as schema drift.
-
-## Interpretation Notes
-
-- this schema is the generic AI-runtime extension point above the machine-runtime layer
-- host-specific AI-runtime schemas should extend this note rather than using PoC traces to define the base contract
-- the schema should stay broad enough to support future runtimes that are not tied to ai-provenance
 
 ---
 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.machine.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/83140a94978ec69a681b639b63807b45dc29b350/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
-  - Value: RwaepTRnfDhWFWPEj5otR7N47aa6U0cb-msH9e-dtO4
+  - Towards: [tiinex.machine.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/c4db35cec07534a8f0fdc300df080409f75258c1/.topics/.schemas/tiinex.machine.runtime.v1.schema.md)
+  - Value: adPTC9S70e-V0W9V-_SRbo8IXfAAeQQgvTDYLjROTAg
