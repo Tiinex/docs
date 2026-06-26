@@ -15,8 +15,9 @@ The core idea is simple:
 - [.topics/README.md](.topics/README.md): topic-oriented trace artifacts and
   continuity roots
 - [.topics/.schemas/README.md](.topics/.schemas/README.md): human-readable
-  schema notes for Tiinex artifact types such as topic, task, evidence,
-  feedback, decision, pointer, and continuity envelope
+  schema notes for Tiinex artifact types, support surfaces, validation and
+  relation primitives, runtime families, privacy and disclosure boundaries, and
+  traversal-oriented runtime artifacts
 
 ## Why This Repo Exists
 
@@ -41,7 +42,8 @@ Tiinex explores a markdown-first alternative where a reader can still inspect:
 - `Continuity`: the envelope and integrity discipline that help later readers
   continue work without guessing
 - `Schema`: the artifact contract that tells a reader whether something is a
-  topic, task, evidence, feedback, decision, pointer, runtime artifact, or
+  topic, task, evidence, feedback, decision, pointer, runtime artifact, support
+  artifact, relation, validation method, privacy boundary, traversal result, or
   another Tiinex type
 
 ## Good Entry Points
@@ -56,6 +58,9 @@ here:
 - [.topics/.schemas/tiinex.decision.v1.schema.md](.topics/.schemas/tiinex.decision.v1.schema.md)
 - [.topics/.schemas/tiinex.feedback.v1.schema.md](.topics/.schemas/tiinex.feedback.v1.schema.md)
 - [.topics/.schemas/tiinex.pointer.v1.schema.md](.topics/.schemas/tiinex.pointer.v1.schema.md)
+- [.topics/.schemas/tiinex.relation.v1.schema.md](.topics/.schemas/tiinex.relation.v1.schema.md)
+- [.topics/.schemas/tiinex.validation.method.v1.schema.md](.topics/.schemas/tiinex.validation.method.v1.schema.md)
+- [.topics/.schemas/tiinex.traversal.runtime.v1.schema.md](.topics/.schemas/tiinex.traversal.runtime.v1.schema.md)
 
 ## Current Topic Spaces
 
