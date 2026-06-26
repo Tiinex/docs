@@ -161,7 +161,6 @@ treated as schema drift.
 - AI-specific runtime families should extend this layer only when their semantics materially depend on machine-shaped runtime structure
 - host-specific or PoC-specific machine runtimes should extend this schema instead of redefining the generic machine-runtime base
 
-
 ---
 
 # Continuity Integrity
