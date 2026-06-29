@@ -9,7 +9,7 @@
     - [relative](tiinex.root.v1.schema.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/e496dba5c0db58131cf6dbec758c65a361d01dd3/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.v1.tool](tiinex.v1.tool.schema.md)
+  - Current Schema: [tiinex.tool.v1](tiinex.tool.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
   - Summary: Schema for human-readable tool definitions that declare purpose, operating boundaries, action limits, interpretation limits, and portability.
 
