@@ -8,8 +8,8 @@ Adapters are not truth engines. They make crossings visible.
 
 ## Base Contracts
 
-- [tiinex.adapter.v1.md](tiinex.adapter.v1.md) defines the base adapter contract.
-- [tiinex.digital.adapter.v1.md](tiinex.digital.adapter.v1.md) defines the shared digital adapter contract for digital records, platforms, APIs, files, exports, sensors, media, archives, and runtime surfaces.
+- [tiinex.v1.adapter.md](tiinex.v1.adapter.md) defines the base adapter contract.
+- [tiinex.digital.v1.adapter.md](tiinex.digital.v1.adapter.md) defines the shared digital adapter contract for digital records, platforms, APIs, files, exports, sensors, media, archives, and runtime surfaces.
 
 ## Included Adapter Definitions
 

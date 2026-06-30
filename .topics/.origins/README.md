@@ -6,9 +6,9 @@ An origin is where material, signal, observation, context, or a claim may begin.
 
 ## Current Origin Contracts
 
-- [tiinex.origin.v1.md](tiinex.origin.v1.md) defines the base origin contract.
-- [tiinex.digital.origin.v1.md](tiinex.digital.origin.v1.md) defines digital-origin boundaries for platforms, archives, documents, datasets, runtimes, records, and digital records of physical or natural contexts.
-- [tiinex.natural.origin.v1.md](tiinex.natural.origin.v1.md) defines natural-origin boundaries for places, ecosystems, field sites, physical contexts, natural processes, observations, and samples.
+- [tiinex.v1.origin.md](tiinex.v1.origin.md) defines the base origin contract.
+- [tiinex.digital.v1.origin.md](tiinex.digital.v1.origin.md) defines digital-origin boundaries for platforms, archives, documents, datasets, runtimes, records, and digital records of physical or natural contexts.
+- [tiinex.natural.v1.origin.md](tiinex.natural.v1.origin.md) defines natural-origin boundaries for places, ecosystems, field sites, physical contexts, natural processes, observations, and samples.
 - [github.v1.origin.md](github.v1.origin.md) defines the current GitHub origin boundary used by GitHub issue and discussion discovery adapters.
 
 ## Relationship To Tools, Interfaces, And Adapters
