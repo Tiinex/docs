@@ -94,6 +94,6 @@ Rules
 
 # Continuity Integrity
 
-- sha256-base64url-c14n-v1
+- sha256-base64url-c14n-v2
   - Towards: self
-  - Value: kFrR8XyRdcOiVrVoWFUzAQJ-sc7FpnYhPEh-2NpSAws
+  - Value: 5VAKBpvh56FMvFbTGy9cIaMhGC7ikixKkuFmVDPWNS8

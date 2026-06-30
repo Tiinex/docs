@@ -257,3 +257,7 @@ treated as schema drift.
 - sha256-base64url-c14n-v1
   - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/5986f0e5d48273f135e8fe4ef33dda20cea052f4/.topics/.schemas/tiinex.root.v1.schema.md)
   - Value: 8_vbMzS4zeNhGS9iwekcrUb1-0xmzt1zpr6QGK_4pPc
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: 9uyPGm_u4DVpGau9F6sBRFwHkzqduTH5B4SfnhHfD1w

@@ -126,3 +126,7 @@ Rules
 - sha256-base64url-c14n-v1
   - Towards: [sha256-base64url-c14n-v1.validator.md](https://github.com/Tiinex/docs/blob/3466e50d739a9ba65319297cef79c6b09844b1d7/.topics/.validators/sha256-base64url-c14n-v1.validator.md)
   - Value: kFrR8XyRdcOiVrVoWFUzAQJ-sc7FpnYhPEh-2NpSAws
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: TFV8o9W1nwToWlr2pZFEwwtKFys2YHlbHsmWcbyssUg
