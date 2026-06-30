@@ -1,8 +1,8 @@
 # Tiinex Origins
 
-This directory contains reusable origin definitions.
+An origin is where material, signal, observation, context, or a claim may begin.
 
-An origin is where material, signal, observation, context, or a claim may begin. It is not automatically truth, evidence, consent, identity, authority, or preservation.
+Origin definitions are not proof. They define reusable boundaries so tools, adapters, humans, and LLM runtimes can approach origins without collapsing source, access, preservation, evidence, consent, identity, authority, or truth.
 
 ## Current Origin Contracts
 
@@ -11,32 +11,21 @@ An origin is where material, signal, observation, context, or a claim may begin.
 - [tiinex.natural.v1.origin.md](tiinex.natural.v1.origin.md) defines natural-origin boundaries for places, ecosystems, field sites, physical contexts, natural processes, observations, and samples.
 - [github.v1.origin.md](github.v1.origin.md) defines the current GitHub origin boundary used by GitHub issue and discussion discovery adapters.
 
-## Relationship To Tools, Interfaces, And Adapters
+## Relationship To Sources, Tools, Interfaces, And Adapters
 
-Origins are the source-side boundary. Tools, interfaces, and adapters approach origins.
+- Origin: where material may begin or be encountered.
+- Source: a chosen, configured, or declared source used by a piece of work.
+- Tool: something an actor can use to do work.
+- Interface: where contexts meet.
+- Adapter: an interface-tool that carries material, signal, meaning, or state across a boundary.
 
-```text
-Origin
-  ↕ approached through
-Tool
-└─ Interface
-   └─ Adapter
-      └─ Digital Adapter
-```
+## Reading Rules
 
-A tool can help. An interface is where contexts meet. An adapter carries material, signal, or meaning across a boundary. An origin is the place, platform, environment, archive, community, repository, dataset, runtime, instrument context, or natural world context being approached.
-
-## Core Origin Rules
-
-- An origin is not proof.
-- A digital record is not the represented subject.
-- A natural observation is not the whole natural system.
-- A public post is not consent, identity, intent, authority, or representative truth.
-- A URL is not preservation.
-- A platform response is not evidence by itself.
-- A missing, private, unsafe, deleted, partial, or policy-scoped origin state should remain visible as a gap.
-- Concrete adapters should reference origin definitions instead of hiding source assumptions in code.
-
-## Future Origin Examples
-
-Future origins may include Reddit, LinkedIn, other public web communities, document stores, local folders, chat exports, camera traps, sensor networks, field sites, lab benches, archives, institutions, or ecological observation sites.
+- Origin is not proof.
+- Origin is not consent.
+- Origin is not identity.
+- Origin is not preservation.
+- Origin is not the represented subject.
+- Digital record is not the person, place, community, ecosystem, or event it describes.
+- Natural observation is not the whole natural system.
+- Source, access, adapter result, discovery finding, evidence, and preservation require their own boundaries when those roles matter.
