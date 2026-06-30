@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
   - Origin:
     - [relative](tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/e496dba5c0db58131cf6dbec758c65a361d01dd3/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/8d7643a70f4dffcfdabefe5efc9da878e83e3833/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.tool.v1](tiinex.tool.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -453,5 +453,9 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/e496dba5c0db58131cf6dbec758c65a361d01dd3/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/8d7643a70f4dffcfdabefe5efc9da878e83e3833/.topics/.schemas/tiinex.root.v1.schema.md)
   - Value: 8_vbMzS4zeNhGS9iwekcrUb1-0xmzt1zpr6QGK_4pPc
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: vMfixvPEoEdu90R4EPUxvpQvWs7Aeoq4aqYz7_Mndb8
