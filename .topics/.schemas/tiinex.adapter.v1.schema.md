@@ -9,7 +9,7 @@
     - [relative](tiinex.interface.v1.schema.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/762d0a89c0f27b144d657bfb06e29767a3d2d759/.topics/.schemas/tiinex.interface.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.v1.adapter](tiinex.v1.adapter.schema.md)
+  - Current Schema: [tiinex.adapter.v1](tiinex.adapter.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
   - Summary: Schema for adapter definitions as specialized interfaces that carry material or meaning across source boundaries without hiding loss, preservation, or interpretation limits.
 
@@ -633,4 +633,4 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: L5XIViDJUP2BIGTGzPuMblx32Cyl_IWNwbBIl0wRcMc
+  - Value: SEPiTcsexL4em7eWr4YNUutTWBellbfqq-LrYKfgifY
