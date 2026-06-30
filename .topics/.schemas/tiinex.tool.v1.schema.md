@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
   - Origin:
     - [relative](tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/8d7643a70f4dffcfdabefe5efc9da878e83e3833/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/94702a8e2cc6359a764bcc63a89906b3729e5709/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.tool.v1](tiinex.tool.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -35,11 +35,11 @@ This schema exists so Tiinex tools can be described in a way that is useful to p
 
 Applies To
 
-- artifacts whose `Current -> Current Schema` is `tiinex.v1.tool`
+- artifacts whose `Current -> Current Schema` is `tiinex.tool.v1`
 
 Rules
 
-- `tiinex.v1.tool` identifies artifacts whose main job is to define a reusable tool, tool contract, or tool method.
+- `tiinex.tool.v1` identifies artifacts whose main job is to define a reusable tool, tool contract, or tool method.
 - A tool definition describes purpose and operating boundaries; it is not the tool run, the tool output, or proof that the tool was used correctly.
 - A tool may be physical, procedural, social, digital, runtime-based, or mixed.
 - Tool definitions must make purpose, operator boundary, input boundary, output boundary, action boundary, interpretation boundary, failure modes, and portability explicit.
@@ -298,7 +298,7 @@ Rules
 
 Allowed Shapes
 
-- `tiinex.v1.tool.md`
+- `tiinex.tool.v1.md`
 - `<tool-slug>.tool.md`
 - `<tool-slug>-tool.md`
 - `<lineage>-tool.trace.md`
@@ -306,7 +306,7 @@ Allowed Shapes
 
 Rules
 
-- `tiinex.v1.tool.md` is the reserved base tool contract filename for the `tiinex.v1.tool` tool family.
+- `tiinex.tool.v1.md` is the reserved base tool contract filename for the `tiinex.tool.v1` tool family.
 - Tool artifacts should use a slug that identifies the tool or tool family.
 - Lineage-first `.trace.md` names should be used when the tool artifact is part of an ordinary local trace lineage.
 - Canonical registry-like tool artifacts may use a tool slug without a lineage prefix when the artifact is intentionally maintained as a reusable tool definition.
@@ -317,7 +317,7 @@ Rules
 
 Rules
 
-- Use `tiinex.v1.tool` to define tool semantics, not to record one tool run.
+- Use `tiinex.tool.v1` to define tool semantics, not to record one tool run.
 - A specific tool run may reference a tool definition but should be owned by the schema that records that run.
 - Interface, adapter, validator, navigation, runtime helper, and viewer definitions may parent or reference broader tool definitions when that improves portable lineage.
 - Tool definitions should stay human-readable and should not become language-specific interface documentation.
@@ -369,7 +369,7 @@ Creation Rules
 
 - Envelope Schema: tiinex.root.v1
 - Current
-  - Current Schema: tiinex.v1.tool
+  - Current Schema: tiinex.tool.v1
   - Created At: 2026-06-29 00:00:00
   - Summary: Tool boundary for a human-readable checklist.
 
@@ -453,9 +453,9 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/8d7643a70f4dffcfdabefe5efc9da878e83e3833/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/94702a8e2cc6359a764bcc63a89906b3729e5709/.topics/.schemas/tiinex.root.v1.schema.md)
   - Value: 8_vbMzS4zeNhGS9iwekcrUb1-0xmzt1zpr6QGK_4pPc
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: vMfixvPEoEdu90R4EPUxvpQvWs7Aeoq4aqYz7_Mndb8
+  - Value: voO6TmCtmriF9Xvsbd8r-6Tc7HFnlW1iYLiesX47_Qk
