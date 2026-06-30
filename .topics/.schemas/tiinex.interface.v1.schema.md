@@ -7,9 +7,9 @@
   - Trace: [tiinex.tool.v1.schema.md](tiinex.tool.v1.schema.md)
   - Origin:
     - [relative](tiinex.tool.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.schemas/tiinex.tool.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/c5141a0cb90adce1caa71b5b46603b2eb7c9049e/.topics/.schemas/tiinex.tool.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.v1.interface](tiinex.v1.interface.schema.md)
+  - Current Schema: [tiinex.interface.v1](tiinex.interface.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
   - Summary: Schema for interface definitions that describe where actors, tools, materials, environments, or systems meet and what may cross that boundary.
 
@@ -35,11 +35,11 @@ This schema exists so Tiinex can describe boundary-crossing surfaces before spec
 
 Applies To
 
-- artifacts whose `Current -> Current Schema` is `tiinex.v1.interface`
+- artifacts whose `Current -> Current Schema` is `tiinex.interface.v1`
 
 Rules
 
-- `tiinex.v1.interface` identifies artifacts whose main job is to define a reusable interface, contact boundary, handoff surface, or mediation boundary.
+- `tiinex.interface.v1` identifies artifacts whose main job is to define a reusable interface, contact boundary, handoff surface, or mediation boundary.
 - An interface definition specializes the broader `tiinex.tool.v1` idea for contact points between contexts.
 - An interface definition describes a contract; it is not an interface run, a handoff result, a source of truth, an adapter result, or evidence by itself.
 - An interface may be physical, procedural, social, digital, runtime-based, or mixed.
@@ -323,7 +323,7 @@ Rules
 
 Allowed Shapes
 
-- `tiinex.v1.interface.md`
+- `tiinex.interface.v1.md`
 - `<interface-slug>.interface.md`
 - `<interface-slug>-interface.md`
 - `<lineage>-interface.trace.md`
@@ -331,7 +331,7 @@ Allowed Shapes
 
 Rules
 
-- `tiinex.v1.interface.md` is the reserved base interface contract filename for the `tiinex.v1.interface` interface family.
+- `tiinex.interface.v1.md` is the reserved base interface contract filename for the `tiinex.interface.v1` interface family.
 - Interface artifacts should use a slug that identifies the interface or interface family.
 - Lineage-first `.trace.md` names should be used when the interface artifact is part of an ordinary local trace lineage.
 - Canonical registry-like interface artifacts may use an interface slug without a lineage prefix when the artifact is intentionally maintained as a reusable interface definition.
@@ -342,7 +342,7 @@ Rules
 
 Rules
 
-- Use `tiinex.v1.interface` to define interface semantics, not to record one interface use or handoff result.
+- Use `tiinex.interface.v1` to define interface semantics, not to record one interface use or handoff result.
 - A specific interface use may reference an interface definition but should be owned by the schema that records that use.
 - Adapter, viewer, navigation, instrument, and runtime-interface definitions may parent or reference broader interface definitions when that improves portable lineage.
 - Interface definitions should stay human-readable and should not become language-specific interface documentation.
@@ -398,7 +398,7 @@ Creation Rules
 
 - Envelope Schema: tiinex.root.v1
 - Current
-  - Current Schema: tiinex.v1.interface
+  - Current Schema: tiinex.interface.v1
   - Created At: 2026-06-29 00:00:00
   - Summary: Interface boundary for a map used by a traveler.
 
@@ -486,9 +486,9 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.tool.v1.schema.md](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.schemas/tiinex.tool.v1.schema.md)
+  - Towards: [tiinex.tool.v1.schema.md](https://github.com/Tiinex/docs/blob/c5141a0cb90adce1caa71b5b46603b2eb7c9049e/.topics/.schemas/tiinex.tool.v1.schema.md)
   - Value: tml1HotbCdVgQTNlf4bYzZbfDYSmKUzNF8G1twk1JHo
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: I_SPWzrtKGTigCUN5J1lAuJaU3Tld6FmCxBdeLz9clA
+  - Value: ViHKFWteAek8HSw8QSBI3gxKW3NImxuBxU8QaKO6KZM
