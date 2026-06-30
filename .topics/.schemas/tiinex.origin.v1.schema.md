@@ -7,9 +7,9 @@
   - Trace: [tiinex.root.v1.schema.md](tiinex.root.v1.schema.md)
   - Origin:
     - [relative](tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/953de4222848732dc25117b74d1ccc0281569dd4/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.origin.v1](tiinex.origin.v1.schema.md)
+  - Current Schema: [tiinex.v1.origin](tiinex.v1.origin.schema.md)
   - Created At: 2026-06-29 00:00:00
   - Summary: Schema for origin definitions that declare where material, signal, observation, or context may come from without treating that origin as automatic truth, evidence, consent, identity, or preservation.
 
@@ -35,11 +35,11 @@ The human rule is simple: an origin is where the trail may begin, not what the t
 
 Applies To
 
-- artifacts whose `Current -> Current Schema` is `tiinex.origin.v1`
+- artifacts whose `Current -> Current Schema` is `tiinex.v1.origin`
 
 Rules
 
-- `tiinex.origin.v1` identifies origin definitions that declare a reusable source or starting context boundary.
+- `tiinex.v1.origin` identifies origin definitions that declare a reusable source or starting context boundary.
 - Origin definitions must keep origin identity, access boundary, material boundary, mutability, authority limits, privacy limits, and interpretation limits distinct.
 - Origin definitions may describe physical, natural, human, social, institutional, digital, procedural, archival, runtime, or mixed origins.
 - Origin definitions are not adapter definitions, validation methods, evidence artifacts, consent artifacts, or truth ledgers.
@@ -277,7 +277,7 @@ Rules
 
 Allowed Shapes
 
-- `tiinex.origin.v1.md`
+- `tiinex.v1.origin.md`
 - `<origin-slug>.origin.md`
 - `<origin-slug>-origin.md`
 - `<lineage>-origin.trace.md`
@@ -285,7 +285,7 @@ Allowed Shapes
 
 Rules
 
-- `tiinex.origin.v1.md` is the reserved base origin contract filename for the `tiinex.origin.v1` origin family.
+- `tiinex.v1.origin.md` is the reserved base origin contract filename for the `tiinex.v1.origin` origin family.
 - Origin artifacts should use a slug that identifies the origin family, platform, environment, place, institution, dataset, source surface, or origin boundary.
 - Canonical registry-like origin definitions may use `.origin.md` when the artifact is intentionally maintained as a reusable origin definition.
 - Trace-lineage origin artifacts should keep the `.trace.md` suffix stable.
@@ -294,7 +294,7 @@ Rules
 
 Rules
 
-- Use `tiinex.origin.v1` to define origin boundaries, not to prove a specific artifact's provenance.
+- Use `tiinex.v1.origin` to define origin boundaries, not to prove a specific artifact's provenance.
 - Root-envelope `Origin` entries may point to concrete locations, paths, URLs, or recovery surfaces; origin definition artifacts explain reusable origin semantics.
 - An adapter may reference an origin definition, but adapter output remains separate from origin truth.
 - An origin definition should not collapse source, adapter result, discovery finding, evidence, consent, validation, or preservation into one claim.
@@ -337,7 +337,7 @@ Not Recommended
 
 - Envelope Schema: tiinex.root.v1
 - Current
-  - Current Schema: tiinex.origin.v1
+  - Current Schema: tiinex.v1.origin
   - Created At: 2026-06-29 00:00:00
   - Summary: Origin boundary for a bounded public web community surface.
 
@@ -413,5 +413,9 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/953de4222848732dc25117b74d1ccc0281569dd4/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.schemas/tiinex.root.v1.schema.md)
   - Value: 8_vbMzS4zeNhGS9iwekcrUb1-0xmzt1zpr6QGK_4pPc
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: HtHxKROPVZMTmX5GVquDuiy3aQUt3N9Qx-bZmmb-H6s
