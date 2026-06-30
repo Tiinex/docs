@@ -9,7 +9,7 @@
     - [relative](tiinex.origin.v1.schema.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/3c8535716f8bed407cbc960eea6ead57064e9907/.topics/.schemas/tiinex.origin.v1.schema.md)
 - Current
-  - Current Schema: [tiinex.digital.v1.origin](tiinex.digital.origin.v1.schema.md)
+  - Current Schema: [tiinex.digital.origin.v1](tiinex.digital.origin.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
   - Summary: Schema for digital origin definitions such as repositories, public web surfaces, discussions, social platforms, document stores, digital archives, datasets, runtime logs, and digital records of natural or physical contexts.
 
@@ -443,4 +443,4 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: EisZEghls0ElrwAWXZjXbFSExLsIXOgsRvejWstkPXM
+  - Value: iqZ45ETuZAYYWNOF8AwwnT4BulxXf_Im5_NoUaqsiIw
