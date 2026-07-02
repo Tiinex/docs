@@ -1,69 +1,117 @@
-# Tiinex Docs
+# Tiinex Portal / Interaction / Module / Surface / Knowledge Provenance Schema Draft v8.3
 
-This repository is a public documentation surface for Tiinex continuity, provenance, lineage, and recoverable markdown workflows.
+Status: final-audit prechecksum draft bundle for Tiinex/docs review. Continuity Integrity footers are intentionally omitted so the maintainer can add canonical checksum footers once before final merge.
 
-The core idea is simple:
+## Files
 
-- preserve relationships between artifacts over time
-- keep those relationships readable without requiring one specialized runtime
-- separate `Parent Trace`, `Origin`, schema identity, relation targets, preservation, validation, and integrity instead of flattening them into one vague metadata layer
+```text
+README.md
+.topics/.schemas/tiinex.portal.v1.schema.md
+.topics/.schemas/tiinex.portal.time.v1.schema.md
+.topics/.schemas/tiinex.interaction.unit.v1.schema.md
+.topics/.schemas/tiinex.schema.module.v1.schema.md
+.topics/.schemas/tiinex.presentation.surface.v1.schema.md
+.topics/.schemas/tiinex.question.v1.schema.md
+.topics/.schemas/tiinex.condition.v1.schema.md
+.topics/.schemas/tiinex.claim.v1.schema.md
+.topics/.schemas/tiinex.derivation.v1.schema.md
+.topics/.schemas/tiinex.discovery.breakthrough.v1.schema.md
+```
 
-## Batch Application Note
+## Purpose
 
-This copy-paste bundle is intended to be applied on top of the existing Tiinex/docs baseline. It includes the new and revised schema notes plus README surfaces touched by this schema batch. Some linked baseline files, such as root, topic, task, tool, interface, origin, digital adapter, resource, instrument, runtime, privacy, validator, and existing concrete adapter definitions, are expected to already exist in the repository.
+This bundle closes provenance and implementation-boundary blind spots found while designing Tiinex/site support for dynamic schema-aware viewers, forms, audit reporting, portals, source traversal, and portable React/non-React implementations.
 
-## What You Can Find Here
+The bundle keeps these distinctions explicit:
 
-- [.topics/README.md](.topics/README.md): topic-oriented trace artifacts and continuity roots
-- [.topics/.schemas/README.md](.topics/.schemas/README.md): human-readable schema notes for Tiinex artifact types, support surfaces, and coordination semantics
-- [.topics/.tools/](.topics/.tools/): reusable tool-definition artifacts
-- [.topics/.interfaces/](.topics/.interfaces/): reusable interface-definition artifacts
-- [.topics/.origins/](.topics/.origins/): origin-definition artifacts
-- [.topics/.adapters/](.topics/.adapters/): adapter-definition artifacts
-- [.topics/.validators/](.topics/.validators/): validation method definitions
+```text
+source ≠ adapter ≠ portal ≠ finding ≠ evidence ≠ preservation
+interface ≠ presentation surface ≠ interaction unit ≠ schema module
+validation method ≠ validator implementation ≠ validation report
+question ≠ response ≠ evidence ≠ validation result ≠ decision
+condition ≠ executable code ≠ decision ≠ validation result
+claim ≠ evidence ≠ derivation ≠ validation ≠ truth
+derivation ≠ hidden chain-of-thought ≠ validation result ≠ proof of truth outside boundary
+breakthrough ≠ proof ≠ validation result ≠ decision ≠ implementation ≠ truth
+schema semantics ≠ app registry ≠ React component
+```
 
-## Why This Repo Exists
+## Schema Summary
 
-Many provenance problems appear when relationships between observations, sources, evidence, decisions, tasks, meetings, projects, resources, people, organizations, and later follow-up are preserved only inside one tool, one database, or one vendor-specific workflow.
+### tiinex.portal.v1
 
-Tiinex explores a markdown-first alternative where a reader can still inspect:
+Defines a bounded source-resolution doorway. Portal is not a generic UI view; it is the boundary for looking into a source under declared access, trigger, resolution, and result limits.
 
-- what an artifact currently is
-- which parent trace it directly continues
-- what external or upstream origin grounded it
-- which source, relation, party, resource, event, or project it references
-- which schema governs the current reading
-- what integrity relation has been checked
-- what has merely been observed, accessed, held, preserved, interpreted, validated, or attested
+### tiinex.portal.time.v1
 
-## Important Terms
+Child specialization of `tiinex.portal.v1` for as-of or time-windowed source resolution. It keeps artifact creation time separate from source-state time and prefers resolved source anchors over projection metadata.
 
-- `Parent Trace`: the direct continuity relation to the prior trace step
-- `Origin`: a bounded place, surface, environment, person-facing context, natural system, platform, archive, repository, dataset, conversation surface, or other starting point where material may be encountered
-- `Source`: a chosen, configured, or declared source used by a piece of work
-- `Adapter`: a boundary-crossing contract that makes intake, translation, holding, preservation, output, and user-action limits visible
-- `Lineage`: the readable chain formed by trace artifacts over time
-- `Continuity`: the envelope and integrity discipline that help later readers continue work without guessing
-- `Schema`: the artifact contract that tells a reader how to interpret the current artifact role
-- `Party`: a bounded person, role, organization, group, or other actor reference without treating the reference as identity proof
-- `Event`: something planned, occurring, occurred, missed, cancelled, deferred, or uncertain within a bounded time or context
+### tiinex.interaction.unit.v1
 
-## Good Entry Points
+Defines a portable semantic unit that can be asked, filled, shown, validated, audited, or implemented across environments. It is not a React field, UI component, CLI prompt, or database column, though those may implement it.
 
-If you are trying to understand Tiinex provenance or lineage thinking, start here:
+### tiinex.schema.module.v1
 
-- [.topics/.schemas/tiinex.root.v1.schema.md](.topics/.schemas/tiinex.root.v1.schema.md)
-- [.topics/.schemas/tiinex.topic.v1.schema.md](.topics/.schemas/tiinex.topic.v1.schema.md)
-- [.topics/.schemas/tiinex.task.v1.schema.md](.topics/.schemas/tiinex.task.v1.schema.md)
-- [.topics/.schemas/tiinex.preservation.v1.schema.md](.topics/.schemas/tiinex.preservation.v1.schema.md)
-- [.topics/.schemas/tiinex.evidence.v1.schema.md](.topics/.schemas/tiinex.evidence.v1.schema.md)
-- [.topics/.schemas/tiinex.source.v1.schema.md](.topics/.schemas/tiinex.source.v1.schema.md)
-- [.topics/.schemas/tiinex.event.v1.schema.md](.topics/.schemas/tiinex.event.v1.schema.md)
-- [.topics/.schemas/tiinex.project.v1.schema.md](.topics/.schemas/tiinex.project.v1.schema.md)
-- [.topics/.schemas/tiinex.party.v1.schema.md](.topics/.schemas/tiinex.party.v1.schema.md)
+Defines a human-readable capability bundle around a schema, schema family, or schema chain. It may expose validator implementations, interaction units, surfaces, viewers, forms, helpers, and source access modes, but it is not code/plugin by itself and does not own validation method semantics.
 
-## Reading Note
+### tiinex.presentation.surface.v1
 
-These files are intentionally optimized for both humans and language models.
+Defines a bounded implementation-neutral presentation surface inside or across interfaces. It clarifies the relationship between larger interfaces, surfaces, interaction units, and schema modules.
 
-They are not meant to hide provenance inside opaque metadata. They are meant to keep parent, origin, schema, source, party, resource, event, preservation, interpretation, validation, and continuity explicit enough that later readers can reconstruct what happened and why.
+### tiinex.question.v1
+
+Defines question provenance for bounded inquiries, prompts, review questions, validation questions, discovery questions, and decision-support questions. A question preserves what was asked and what would count as an in-scope response, but it does not itself answer the question or determine the response schema.
+
+### tiinex.condition.v1
+
+Defines condition provenance for if/when/unless boundaries, gates, prerequisites, fallback rules, and branch outcomes. A condition is human-readable branch semantics, not executable code, a decision, or a validation result by itself.
+
+### tiinex.claim.v1
+
+Defines claim provenance for bounded assertions, propositions, hypotheses, theorem-like statements, answer candidates, model claims, interpretation claims, and counterclaims. A claim preserves what is being asserted and under what boundary, but it does not prove itself or replace evidence, derivation, validation, attestation, or decision artifacts.
+
+### tiinex.derivation.v1
+
+Defines public reasoning provenance for derivations, proofs, proof sketches, arguments, calculations, reductions, transformations, inferences, explanations, and counterexamples. A derivation preserves reviewable reasoning, not private chain-of-thought or hidden deliberation, and does not establish truth outside its stated assumptions and review boundary.
+
+### tiinex.discovery.breakthrough.v1
+
+Defines breakthrough provenance for frame shifts, Eureka moments, convergences, architectural insights, research breakthroughs, method breakthroughs, and connected-solution discoveries. A breakthrough preserves what changed in understanding and what it unlocks, but it does not prove, validate, decide, implement, or establish truth by itself.
+
+## Source Access Modes
+
+The source access modes used by portal, portal.time, and schema.module are:
+
+```text
+web-surface
+local-working-tree
+local-git-archive
+browser-remote-git
+service-backed-git
+```
+
+These modes are source access capabilities. A Git ref, commit, tree, or blob may act as a source-state anchor, but it does not by itself become preservation, evidence, validation, claim proof, or truth. Local Git archive access is user-provided local access and must not imply hidden upload, telemetry, or network access. Browser remote Git must keep CORS, auth, browser storage, memory, and repository-size limits explicit.
+
+## Parent-Origin Note
+
+`tiinex.portal.time.v1` is intentionally a child of `tiinex.portal.v1`. This prechecksum draft includes both `relative` and `browse + git` parent-origin entries for `portal.v1`; the `browse + git` entry uses the repository branch path so the bundle can be reviewed before checksum finalization. A maintainer may replace it with a commit-pinned URL after `portal.v1` is committed if the final merge process requires commit-pinned parent origins.
+
+## Changelog
+
+### V8.3
+
+- Mechanical envelope fix: `Parent Created At` renamed to `Created At` in Parent blocks.
+- Mechanical envelope fix: Parent Origin entries now use markdown-link shape such as `[browse + git](...)` instead of `label: link`.
+- No Continuity Integrity footers are included; checksum footers remain intentionally external to this bundle.
+
+- v4: applied mechanical contract fixes, root-shaped parent origins, validation-friendly examples, and initial portal/interaction/module/surface contracts.
+- v5: added `tiinex.question.v1` and `tiinex.condition.v1` for question and branch/gate provenance.
+- v6: added `tiinex.claim.v1` and `tiinex.derivation.v1` for knowledge-provenance, mathematician/researcher, and conditional-form use cases.
+- v7: clarified source access modes without making Git a new semantic authority.
+- v8: added `tiinex.discovery.breakthrough.v1` as discovery-frame-shift / Eureka provenance.
+- v8.1: sanitized remaining Artifact Creation Contract labels in the first five schemas and consolidated README history under this changelog.
+- v8.3: added `browse + git` parent-origin entry for `tiinex.portal.time.v1` -> `tiinex.portal.v1` while keeping Continuity Integrity footers omitted for maintainer checksum finalization.
+
+## Review Boundary
+
+This bundle is intended for content, schema-shape, and Tiinex-anda validation. Canonical checksum / continuity integrity footers are intentionally omitted from this draft so they can be added once by the maintainer's checksum process before final merge.
