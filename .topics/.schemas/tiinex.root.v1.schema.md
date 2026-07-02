@@ -628,9 +628,3 @@ Rules
 - Absence of `Artifact Creation Contract` means artifact generation is not declared by this schema.
 
 ---
-
-# Continuity Integrity
-
-- sha256-base64url-c14n-v1
-  - Towards: self
-  - Value: 8_vbMzS4zeNhGS9iwekcrUb1-0xmzt1zpr6QGK_4pPc
