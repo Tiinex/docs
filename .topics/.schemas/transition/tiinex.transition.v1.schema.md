@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2091fa822ce5013cd9b9e463f4507d4f5556967d/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.transition.v1](tiinex.transition.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -507,3 +507,15 @@ Requires Separate Validation: yes
 - `annotation` owns attached target-bound extra information.
 - `validation.report` owns full validation run results.
 - `presentation.surface` may expose transitions as buttons, menu items, cards, badges, or overlays.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2091fa822ce5013cd9b9e463f4507d4f5556967d/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: KxL5TYiwLIFlaS6QQ6fHuUkTlrs7knqd2dLz-bRsa1Q
