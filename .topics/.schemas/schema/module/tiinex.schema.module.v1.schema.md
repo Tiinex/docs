@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3315351edc6fad7cc81e3fca9c68a3c02851b6f6/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.module.v1](tiinex.schema.module.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -451,3 +451,15 @@ Must Not Be Used To Claim: that the artifact is valid under its child schema or 
 - `validation.report` records the result of running module-provided validators.
 - `tool` and `interface` may describe concrete tools or user-facing surfaces that implement a module.
 - `portal` may provide source-state context for module capabilities that resolve external material.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3315351edc6fad7cc81e3fca9c68a3c02851b6f6/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: speVR2_eXOvFwG3H30oOgTJxdLH_MnVIP69LKCY8hCk

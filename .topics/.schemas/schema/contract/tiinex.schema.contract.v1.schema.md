@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3315351edc6fad7cc81e3fca9c68a3c02851b6f6/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.contract.v1](tiinex.schema.contract.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -363,3 +363,15 @@ Must Not Be Used To Claim: annotation truth, evidence status, or full semantic v
 - `schema.example` specializes machine-checkable examples.
 - `condition` may express reusable condition logic used by rules.
 - `schema.module` may bundle contracts with viewers, forms, helpers, and validators.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3315351edc6fad7cc81e3fca9c68a3c02851b6f6/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: BV0_HaSkph_PAYH1BWP_ucusznTqpAW6wttILzvOlWo
