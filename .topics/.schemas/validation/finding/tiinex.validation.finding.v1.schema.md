@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/78a3673444666f1145be4feca6e7eb1476a44281/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.validation.finding.v1](tiinex.validation.finding.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -297,3 +297,13 @@ The body headings required for artifacts using this schema are: `## Validation T
 - a finding may suggest repair but is not the repair itself
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/78a3673444666f1145be4feca6e7eb1476a44281/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: SaEuCTN9eOJFDouyHzUn8i9rRnSbtj_1uXOz4w1W29Y

@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/78a3673444666f1145be4feca6e7eb1476a44281/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.claim.v1](tiinex.claim.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -348,3 +348,15 @@ Challenge Boundary: could be narrowed by a stronger preservation or source-resol
 Does Not Prove: source truth, authorship, consent, or repository completeness
 Must Not Be Inferred: that all current web fallbacks are invalid or useless
 ```
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/78a3673444666f1145be4feca6e7eb1476a44281/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: ocv6EBAm4E1aHXW7OlMP2Eu5VvxVaKX3weiTukpFOGc
