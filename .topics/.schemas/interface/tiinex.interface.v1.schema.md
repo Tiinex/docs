@@ -7,7 +7,7 @@
   - Trace: [tiinex.tool.v1.schema.md](../tool/tiinex.tool.v1.schema.md)
   - Origin:
     - [relative](../tool/tiinex.tool.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tool/tiinex.tool.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/tool/tiinex.tool.v1.schema.md)
 - Current
   - Current Schema: [tiinex.interface.v1](tiinex.interface.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -485,3 +485,13 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 - this schema intentionally keeps the human idea of an interface broader than software UI or API interfaces
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.tool.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/tool/tiinex.tool.v1.schema.md)
+  - Value: RPO2ix1CuC0YqN-nHwraBkf4prt_8WM207uAREfPK0w
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: 8775xdn46EP8L5Es2NUPNK_zeHahvkrI0IrglP-uay0

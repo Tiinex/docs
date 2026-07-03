@@ -7,7 +7,7 @@
   - Trace: [tiinex.decision.v1.schema.md](../../../core/decision/tiinex.decision.v1.schema.md)
   - Origin:
     - [relative](../../../core/decision/tiinex.decision.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/core/decision/tiinex.decision.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/core/decision/tiinex.decision.v1.schema.md)
 - Current
   - Current Schema: [tiinex.lineage.upgrade.deferral.v1](tiinex.lineage.upgrade.deferral.v1.schema.md)
   - Created At: 2026-06-14 00:00:00
@@ -261,3 +261,13 @@ Rules
 - Tools should preserve the same generated body shape even when they use a maintained built-in template.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.decision.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/core/decision/tiinex.decision.v1.schema.md)
+  - Value: lfRNLNNoYAi5snDOf0XG65yXJ_-4C9wBp6SK203ZzME
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: wguvFkzhtaxcindbZOhG5GaAZmEStRnp6feOTMHlaiQ

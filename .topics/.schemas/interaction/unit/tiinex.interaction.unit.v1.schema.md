@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.interaction.unit.v1](tiinex.interaction.unit.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -471,3 +471,15 @@ Must Not Be Used To Claim: truth, authorship, consent, source completeness, pres
 - `interface` may describe a user-facing boundary that exposes units.
 - `tool` may describe a tool that reads, writes, validates, or renders units.
 - `portal` may provide bounded source context from which units are derived or resolved.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: WpscRdDhk2ExMntqslfDnxUaB5Vj7kJg9ObJkTlSvHI

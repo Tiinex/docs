@@ -7,7 +7,7 @@
   - Trace: [tiinex.party.v1.schema.md](../tiinex.party.v1.schema.md)
   - Origin:
     - [relative](../tiinex.party.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/party/tiinex.party.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/party/tiinex.party.v1.schema.md)
 - Current
   - Current Schema: [tiinex.party.organization.v1](tiinex.party.organization.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -278,3 +278,13 @@ The body headings required for artifacts using this schema are: `## Organization
 - representation and signing authority need separate support
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.party.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/party/tiinex.party.v1.schema.md)
+  - Value: m-C4EsPECe8ZZ4rJ_99MlV5ougMsI_gIDtCCDk1MLWY
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: c8LRSi6GueatKltEfsNUZ6i4kD3o5xdcUuovbZAe_fE

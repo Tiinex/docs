@@ -7,7 +7,7 @@
   - Trace: [tiinex.instrument.v1.schema.md](../tiinex.instrument.v1.schema.md)
   - Origin:
     - [relative](../tiinex.instrument.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
 - Current
   - Current Schema: [tiinex.instrument.consent.v1](tiinex.instrument.consent.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -349,3 +349,13 @@ Rules
 - Generated consent instrument artifacts should preserve the consent boundary without inferring permission from silence.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.instrument.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
+  - Value: 9xQV-XHI3xJPtg4i4jIzy-sYyHcAP1kaDe67ssinLD8
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: zY__wV6h34Z3Ckg4730ilkTOIHXNUVZcDVDU8R6aLtQ

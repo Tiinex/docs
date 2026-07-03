@@ -7,7 +7,7 @@
   - Trace: [tiinex.origin.v1.schema.md](../tiinex.origin.v1.schema.md)
   - Origin:
     - [relative](../tiinex.origin.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/origin/tiinex.origin.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/origin/tiinex.origin.v1.schema.md)
 - Current
   - Current Schema: [tiinex.natural.origin.v1](tiinex.natural.origin.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -434,3 +434,13 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 - the explorer needs both a map and humility: the map is not the terrain, and one observation is not the whole place
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.origin.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/origin/tiinex.origin.v1.schema.md)
+  - Value: nEt9xZzJai5nFzzcI7AB_9q9hHWzVt_8KSx6nTllHdA
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: _ZRH4a_EhdyvzQSQYn3dwA2ab9yr1nN7UMkF4c418aQ
