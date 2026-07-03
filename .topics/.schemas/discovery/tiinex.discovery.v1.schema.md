@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/df3260c77a7c14b2ece67456d1a9fe4b3e026a7c/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.discovery.v1](tiinex.discovery.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -282,3 +282,13 @@ Rules
 - `Interpretation Limits` should prevent overclaiming.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/df3260c77a7c14b2ece67456d1a9fe4b3e026a7c/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: Brkf2JAe-lUS5-vyMd5bwiMpNd2oIi2KcKbsErnfAnw

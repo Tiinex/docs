@@ -7,7 +7,7 @@
   - Trace: [tiinex.event.v1.schema.md](../tiinex.event.v1.schema.md)
   - Origin:
     - [relative](../tiinex.event.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/event/tiinex.event.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/df3260c77a7c14b2ece67456d1a9fe4b3e026a7c/.topics/.schemas/event/tiinex.event.v1.schema.md)
 - Current
   - Current Schema: [tiinex.event.incident.v1](tiinex.event.incident.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -315,3 +315,13 @@ The body headings required for artifacts using this schema are: `## Incident Ide
 - event child artifacts are not evidence, consent, authority, attendance, or task completion by themselves
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.event.v1.schema.md](https://github.com/Tiinex/docs/blob/df3260c77a7c14b2ece67456d1a9fe4b3e026a7c/.topics/.schemas/event/tiinex.event.v1.schema.md)
+  - Value: dsu97ve8UnEdhMmW7TaOjaiUfqQ-7zupmGGgMbOc3Mw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: RkK5HTJ_5j1uSkOZTuFC_06aeO7EEB8-wMFcoVQnUhM
