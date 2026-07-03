@@ -7,7 +7,7 @@
   - Trace: [tiinex.transition.v1.schema.md](../tiinex.transition.v1.schema.md)
   - Origin:
     - [relative](../tiinex.transition.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/transition/tiinex.transition.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/cc83cf92ce419761de7a412e0527b513a5dd930a/.topics/.schemas/transition/tiinex.transition.v1.schema.md)
 - Current
   - Current Schema: [tiinex.artifact.transition.v1](tiinex.artifact.transition.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -514,3 +514,15 @@ Requires Separate Validation: yes
 - `projection.annotation` may carry reference-frame details for project transitions.
 - `validation.report` owns full validation run results.
 - `schema.generation` may declare how artifact transitions generate skeletons, forms, or repair suggestions.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.transition.v1.schema.md](https://github.com/Tiinex/docs/blob/cc83cf92ce419761de7a412e0527b513a5dd930a/.topics/.schemas/transition/tiinex.transition.v1.schema.md)
+  - Value: IE3AFdZuVISBqJiHezck_el1QHEvRDsJV4d5dmu6WZE
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: K5lNkNbn4FlwHMmIvpVaJVE_lbm6jXboO3cQ2Jjd1PU
