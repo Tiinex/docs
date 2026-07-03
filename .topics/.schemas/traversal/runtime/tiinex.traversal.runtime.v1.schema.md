@@ -7,7 +7,7 @@
   - Trace: [tiinex.runtime.v1.schema.md](../../runtime/tiinex.runtime.v1.schema.md)
   - Origin:
     - [relative](../../runtime/tiinex.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/5b1b3db377b8bc95ba99d0a9ef1fe441cdab24cb/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/00adbcc5b0319410cf16752a54dcbf4813173040/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.traversal.runtime.v1](tiinex.traversal.runtime.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -352,9 +352,9 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/5b1b3db377b8bc95ba99d0a9ef1fe441cdab24cb/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
-  - Value: s6O-r1EbXQNPlc_aRFDuWqFn-Vu88QXSkUrgVt41jXA
+  - Towards: [tiinex.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/00adbcc5b0319410cf16752a54dcbf4813173040/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
+  - Value: 4983rs5sCipZYK0ogn-1-uvnDb5GMfW2QaQxPUWJtqY
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: f-aiyl1O-I6JJGA0dsYq44nbqEgNmQFXPsMgx5Ss-6c
+  - Value: 3THaYeVbEsgYtP90yJQ99flCQGCQ64pJi-Ny8rh_2po

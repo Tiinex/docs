@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/00adbcc5b0319410cf16752a54dcbf4813173040/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.preservation.v1](tiinex.preservation.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -300,3 +300,13 @@ The body headings required for artifacts using this schema are: `## Preserved Ma
 - evidence is a claim-bearing downstream use of preserved material
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/00adbcc5b0319410cf16752a54dcbf4813173040/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: -q95qSqFk3AJ0jyU4dsOsRkY5KVWIbsa7ubzqxa3hhE

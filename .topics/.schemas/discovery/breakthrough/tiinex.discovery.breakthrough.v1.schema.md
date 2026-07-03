@@ -6,7 +6,7 @@
   - Created At: 2026-06-29 00:00:00
   - Trace: [tiinex.discovery.finding.v1.schema.md](../finding/tiinex.discovery.finding.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/finding/tiinex.discovery.finding.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/00adbcc5b0319410cf16752a54dcbf4813173040/.topics/.schemas/discovery/finding/tiinex.discovery.finding.v1.schema.md)
 - Current
   - Current Schema: [tiinex.discovery.breakthrough.v1](tiinex.discovery.breakthrough.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -476,9 +476,9 @@ Must Not Be Inferred: that the breakthrough is a decision, validation report, pr
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.discovery.finding.v1.schema.md](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/finding/tiinex.discovery.finding.v1.schema.md)
-  - Value: RugLNifZB0rum7orHaH59iCC9ee5-Y8uF4jrStOEOE4
+  - Towards: [tiinex.discovery.finding.v1.schema.md](https://github.com/Tiinex/docs/blob/00adbcc5b0319410cf16752a54dcbf4813173040/.topics/.schemas/discovery/finding/tiinex.discovery.finding.v1.schema.md)
+  - Value: mwEgQdSolUjKs5l3BLclSIozGyPq4BRFvDlKmW6c7WQ
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: 2Yv5DF525eYP9-euHpzK8oH-oYJzNIvW7dCUjtZvXb8
+  - Value: D_78vBBSbyCxqoFVB9Rdv8d9d84MK5elmtchKnQe6xQ
