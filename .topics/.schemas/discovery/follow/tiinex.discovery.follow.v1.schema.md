@@ -7,7 +7,7 @@
   - Trace: [tiinex.discovery.v1.schema.md](../tiinex.discovery.v1.schema.md)
   - Origin:
     - [relative](../tiinex.discovery.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/discovery/tiinex.discovery.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/tiinex.discovery.v1.schema.md)
 - Current
   - Current Schema: [tiinex.discovery.follow.v1](tiinex.discovery.follow.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -229,3 +229,13 @@ Rules
 - `Interpretation Limits` should be preserved in generated artifacts.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.discovery.v1.schema.md](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/tiinex.discovery.v1.schema.md)
+  - Value: DOEm9XKixnIUzuGNZ06-NUbtKT-GNCJ2ktmfJnqgHvo
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: nWOL7I4w_m0rGqC7XlueEFPF9qEGzOSPj6R72aJmhw4

@@ -7,7 +7,7 @@
   - Trace: [tiinex.discovery.monitoring.v1.schema.md](../monitoring/tiinex.discovery.monitoring.v1.schema.md)
   - Origin:
     - [relative](../monitoring/tiinex.discovery.monitoring.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/discovery/monitoring/tiinex.discovery.monitoring.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/monitoring/tiinex.discovery.monitoring.v1.schema.md)
 - Current
   - Current Schema: [tiinex.discovery.surveillance.v1](tiinex.discovery.surveillance.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -299,3 +299,13 @@ Rules
 - `Interpretation Limits` should be preserved in generated artifacts.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.discovery.monitoring.v1.schema.md](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/monitoring/tiinex.discovery.monitoring.v1.schema.md)
+  - Value: PaiKL2qoq6hv7NVOf6CxFd8NlWo9KUFeXtGZOnb0WHw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: PxNBqugBKF-dHfZ-JD2-9KYThHiKbOwIy2UeWOtiQLE
