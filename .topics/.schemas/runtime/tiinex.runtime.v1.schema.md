@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.runtime.v1](tiinex.runtime.v1.schema.md)
   - Created At: 2026-06-05 11:00:00
@@ -167,3 +167,13 @@ treated as schema drift.
 - later runtime families may add stronger local structure when the generic runtime layer is too weak
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: hzROFN7xQRZUwU_5aLKLar8gKSHEKGFGUjiOhMEfH_A

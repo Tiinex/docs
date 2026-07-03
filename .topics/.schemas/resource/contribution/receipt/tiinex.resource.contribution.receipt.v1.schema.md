@@ -7,7 +7,7 @@
   - Trace: [tiinex.resource.contribution.v1.schema.md](../tiinex.resource.contribution.v1.schema.md)
   - Origin:
     - [relative](../tiinex.resource.contribution.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/resource/contribution/tiinex.resource.contribution.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/resource/contribution/tiinex.resource.contribution.v1.schema.md)
 - Current
   - Current Schema: [tiinex.resource.contribution.receipt.v1](tiinex.resource.contribution.receipt.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -277,3 +277,13 @@ Rules
 - Generated receipt artifacts should preserve receipt state without implying ownership, accounting correctness, or legal compliance.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.resource.contribution.v1.schema.md](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/resource/contribution/tiinex.resource.contribution.v1.schema.md)
+  - Value: UoiPjWITDlUj4F0YW7DZVgZVmHKDFoj1YqOhOfN3Y6g
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: 3ag4cikPkNWU9ehbtmBJDky7hgDVT64THj59egBQGZw

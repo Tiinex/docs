@@ -7,7 +7,7 @@
   - Trace: [tiinex.machine.runtime.v1.schema.md](../machine/tiinex.machine.runtime.v1.schema.md)
   - Origin:
     - [relative](../machine/tiinex.machine.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/runtime/machine/tiinex.machine.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/runtime/machine/tiinex.machine.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.ai.runtime.v1](tiinex.ai.runtime.v1.schema.md)
   - Created At: 2026-06-05 11:16:00
@@ -172,3 +172,13 @@ treated as schema drift.
 - the schema should stay broad enough to support future runtimes that are not tied to ai-provenance
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.machine.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/runtime/machine/tiinex.machine.runtime.v1.schema.md)
+  - Value: CpT0UmqgFwz7JfEcTm9WBEWDYm6v_0p32NsBLYkLN4U
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: _i69_q9UJF8ku0nO8LhEbv0FSbdT7cQ-MaIySe2Dry0

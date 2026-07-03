@@ -7,7 +7,7 @@
   - Trace: [tiinex.runtime.v1.schema.md](../tiinex.runtime.v1.schema.md)
   - Origin:
     - [relative](../tiinex.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.machine.runtime.v1](tiinex.machine.runtime.v1.schema.md)
   - Created At: 2026-06-05 11:08:00
@@ -162,3 +162,13 @@ treated as schema drift.
 - host-specific or PoC-specific machine runtimes should extend this schema instead of redefining the generic machine-runtime base
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/e739f7876950c3bdf08066886103690bddc7b706/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
+  - Value: s6O-r1EbXQNPlc_aRFDuWqFn-Vu88QXSkUrgVt41jXA
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: ztsCV74KeKOvbvBjh7siMEcXBhFCUfJ-2q_7s_n3ZMI
