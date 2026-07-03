@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.privacy.boundary.v1](tiinex.privacy.boundary.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -271,3 +271,13 @@ treated as schema drift.
 - this support schema intentionally omits `Artifact Creation Contract` until ordinary app creation behavior is explicitly declared
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: HXge72d5LxjFlbAKkQ30yj_RsTTn3SjIRieMQYNizwg

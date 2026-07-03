@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.reduction.v1](tiinex.reduction.v1.schema.md)
   - Created At: 2026-06-14 00:00:00
@@ -236,3 +236,13 @@ Rules
 - Tools should preserve the same generated body shape even when they use a maintained built-in template.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: gpIec0_nQnQxo_Cx6cLN-tMPaXr2Wiv12m7sW1mmjts

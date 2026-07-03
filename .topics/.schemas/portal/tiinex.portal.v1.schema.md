@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.portal.v1](tiinex.portal.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -501,3 +501,15 @@ Must Not Be Used To Claim: evidence status, authorship, consent, or full histori
 - `interface` may expose a portal to a user or tool.
 - `presentation.surface` may show a portal or portal result inside a bounded surface.
 - `schema.module` may declare portal capabilities for a schema family or tool workflow.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: fQKO3avSlTJmWmyUhnGB8-TSFQjFQgQtWxyHB9u_Wzg

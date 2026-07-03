@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.presentation.surface.v1](tiinex.presentation.surface.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -462,3 +462,15 @@ Must Not Be Used To Claim: that hidden material is absent or that summarized mat
 - `schema.module` may declare surface capabilities for a schema or schema family.
 - `tool` may describe a concrete tool that implements a surface.
 - `validation.report` may be shown through an audit-report surface but owns the validation result semantics.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: L4CTT05dut9-TNPHjHTz7ffLxbjkJXtCw-ZzNFwI8TI

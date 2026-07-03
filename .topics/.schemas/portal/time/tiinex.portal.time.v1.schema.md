@@ -7,7 +7,7 @@
   - Trace: [tiinex.portal.v1.schema.md](../tiinex.portal.v1.schema.md)
   - Origin:
     - [relative](../tiinex.portal.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/portal/tiinex.portal.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/portal/tiinex.portal.v1.schema.md)
 - Current
   - Current Schema: [tiinex.portal.time.v1](tiinex.portal.time.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -465,3 +465,15 @@ Must Not Be Used To Claim: historical completeness outside the resolved anchor, 
 ## Relationship to Portal Base
 
 `tiinex.portal.time.v1` inherits the portal distinction between source, adapter, portal, finding, evidence, preservation, and view. It adds explicit temporal intent and source-state resolution semantics.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.portal.v1.schema.md](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/portal/tiinex.portal.v1.schema.md)
+  - Value: nLFPkL5Bq-rsKiFpcmXFXvCnwMylUFgcpSMpaVJi8bk
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: VbsArNwVS2lJA0l4BrnaMBzCWKM6WJUgPGlbFAKnH84
