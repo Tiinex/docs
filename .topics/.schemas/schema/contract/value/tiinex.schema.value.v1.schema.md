@@ -7,7 +7,7 @@
   - Trace: [tiinex.schema.contract.v1.schema.md](../tiinex.schema.contract.v1.schema.md)
   - Origin:
     - [relative](../tiinex.schema.contract.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.value.v1](tiinex.schema.value.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -281,3 +281,15 @@ Must Not Be Used To Claim: verified location without a separate verification met
 - `schema.field` may reference value contracts.
 - `spatial.annotation` may use coordinate value contracts.
 - `schema.rule` may check value constraints.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+  - Value: yCGI18q-fxkGW38djBw3L0UVrAv3bRm1VKz-bRdNUwA
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: Z7TeTyz4Y85hDNREAOgCQmYAsI7uYug-vd_h2W9oO5Y

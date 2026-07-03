@@ -7,7 +7,7 @@
   - Trace: [tiinex.schema.contract.v1.schema.md](../tiinex.schema.contract.v1.schema.md)
   - Origin:
     - [relative](../tiinex.schema.contract.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.generation.v1](tiinex.schema.generation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -353,3 +353,15 @@ Must Not Be Used To Claim: target or value has been validated
 - `schema.rule` may produce repair flows.
 - `interaction.unit` may expose generation inputs as UI or human interaction units.
 - `validation.report` may record post-generation validation.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+  - Value: yCGI18q-fxkGW38djBw3L0UVrAv3bRm1VKz-bRdNUwA
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: Dd0R-D6CfyhdhLtgrjx4433OPCFJFnX0ANRUn1tIE5k
