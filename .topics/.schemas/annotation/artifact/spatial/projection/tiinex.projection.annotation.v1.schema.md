@@ -7,7 +7,7 @@
   - Trace: [tiinex.spatial.annotation.v1.schema.md](../tiinex.spatial.annotation.v1.schema.md)
   - Origin:
     - [relative](../tiinex.spatial.annotation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/annotation/artifact/spatial/tiinex.spatial.annotation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/spatial/tiinex.spatial.annotation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.projection.annotation.v1](tiinex.projection.annotation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -392,3 +392,15 @@ Must Not Be Used To Claim: geolocation truth, source completeness, preservation,
 ## Relationship to Spatial Annotation
 
 `tiinex.projection.annotation.v1` inherits spatial annotation semantics and adds reference-frame transform provenance.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.spatial.annotation.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/spatial/tiinex.spatial.annotation.v1.schema.md)
+  - Value: 02k-f5jiqqQS5xjKRzOwEPkv3qdLcNrUwPuI5U2QTOg
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: cPzr0_dz_NyqcJSZP2ext7YJgQqLXmFLJgt7vEuTTI8

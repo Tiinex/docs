@@ -7,7 +7,7 @@
   - Trace: [tiinex.artifact.annotation.v1.schema.md](../tiinex.artifact.annotation.v1.schema.md)
   - Origin:
     - [relative](../tiinex.artifact.annotation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.semantic.annotation.v1](tiinex.semantic.annotation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -278,3 +278,15 @@ Must Not Be Used To Claim: truth, validation, evidence status, or canonical taxo
 ## Relationship to Artifact Annotation
 
 `tiinex.semantic.annotation.v1` inherits artifact annotation semantics and adds semantic label and vocabulary boundaries.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.artifact.annotation.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
+  - Value: q3dvqudmEXHS7EXxioWlpGJtHxMkLP5mY8ZCOxDrBpo
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: sja8LEWS3kFVvyue2qw51ixPrqYswOKn2v1N0hfIvnM

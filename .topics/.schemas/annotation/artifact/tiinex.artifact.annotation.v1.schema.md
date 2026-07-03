@@ -7,7 +7,7 @@
   - Trace: [tiinex.annotation.v1.schema.md](../tiinex.annotation.v1.schema.md)
   - Origin:
     - [relative](../tiinex.annotation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/annotation/tiinex.annotation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/tiinex.annotation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.artifact.annotation.v1](tiinex.artifact.annotation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -357,3 +357,15 @@ Must Not Be Used To Claim: checksum failure, semantic failure, or rejection of t
 ## Relationship to Annotation Base
 
 `tiinex.artifact.annotation.v1` inherits target-bound annotation semantics from `tiinex.annotation.v1` and narrows the target to artifacts and artifact regions.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.annotation.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/tiinex.annotation.v1.schema.md)
+  - Value: 1q0G_ne5NGyJIAcfwI5mr-KQKxEOonOsHOA_-MVN-ac
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: hrtl5WsLvGWlWJoYGY7E4ROK8VVtMBYZ2eVHMTSU2XU

@@ -7,7 +7,7 @@
   - Trace: [tiinex.artifact.annotation.v1.schema.md](../tiinex.artifact.annotation.v1.schema.md)
   - Origin:
     - [relative](../tiinex.artifact.annotation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.style.annotation.v1](tiinex.style.annotation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -291,3 +291,15 @@ Must Not Be Used To Claim: semantic failure, checksum failure, evidence status, 
 ## Relationship to Artifact Annotation
 
 `tiinex.style.annotation.v1` inherits artifact annotation semantics and adds style rule, severity, and suggested handling boundaries.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.artifact.annotation.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
+  - Value: q3dvqudmEXHS7EXxioWlpGJtHxMkLP5mY8ZCOxDrBpo
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: Um7rjThhQlYEkPHoWcn83zo5UNbA6OJoTRTGtWjWncA

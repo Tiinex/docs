@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.milestone.v1](tiinex.milestone.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -297,3 +297,13 @@ The body headings required for artifacts using this schema are: `## Milestone Id
 - supporting artifacts should carry proof of whether a milestone was reached
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: QsmNmoQN_2kb4bCAZQNsABmajYBGFaLxtmmJHO_m2TM

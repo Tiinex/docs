@@ -7,7 +7,7 @@
   - Trace: [tiinex.adapter.v1.schema.md](../tiinex.adapter.v1.schema.md)
   - Origin:
     - [relative](../tiinex.adapter.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/adapter/tiinex.adapter.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/adapter/tiinex.adapter.v1.schema.md)
 - Current
   - Current Schema: [tiinex.digital.adapter.v1](tiinex.digital.adapter.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -529,3 +529,13 @@ treated as schema drift.
 - do not silently promote digital findings into feedback, tasks, evidence, consent, or truth
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.adapter.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/adapter/tiinex.adapter.v1.schema.md)
+  - Value: OvGT-7pGQju2wqKQrY56PgivAarT065N8Ik4ZGIVY68
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: a4JqJeIQVxF9pqhJ5MfM5n4Q0ei2eYO8eJN31CeGTns

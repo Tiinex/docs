@@ -7,7 +7,7 @@
   - Trace: [tiinex.interface.v1.schema.md](../interface/tiinex.interface.v1.schema.md)
   - Origin:
     - [relative](../interface/tiinex.interface.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/interface/tiinex.interface.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/interface/tiinex.interface.v1.schema.md)
 - Current
   - Current Schema: [tiinex.adapter.v1](tiinex.adapter.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -609,3 +609,13 @@ The body headings required for artifacts using this schema are: `## Adapter Iden
 - digital transport details belong in digital adapter specializations, not in the base adapter contract
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.interface.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/interface/tiinex.interface.v1.schema.md)
+  - Value: X2gjcH_wX5G4Z-aU_MmCYSiSBrs4kfGbYWqSCum-FEU
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: nUJVu2EQHYktjBJ-Sv39l02a1m2kPcoDI6pTC549lq8

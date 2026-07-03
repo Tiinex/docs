@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.annotation.v1](tiinex.annotation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -355,3 +355,15 @@ Must Not Be Used To Claim: schema semantics are wrong, checksum is wrong, or art
 - `claim` owns assertions.
 - `presentation.surface` may show annotations as chips, overlays, badges, markers, or warnings.
 - `schema.module` may declare annotation handlers for a schema family.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: l1F8SSMmgP3UklDpDvh-r4wzuWLaLPRUhIvpM0ykxBQ

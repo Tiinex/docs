@@ -7,7 +7,7 @@
   - Trace: [tiinex.artifact.annotation.v1.schema.md](../tiinex.artifact.annotation.v1.schema.md)
   - Origin:
     - [relative](../tiinex.artifact.annotation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.validation.annotation.v1](tiinex.validation.annotation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -297,3 +297,15 @@ Must Not Be Used To Claim: full validation, preservation, authorship, consent, o
 ## Relationship to Artifact Annotation
 
 `tiinex.validation.annotation.v1` inherits artifact annotation semantics and adds lightweight validation signal and result boundary semantics.
+
+---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.artifact.annotation.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/annotation/artifact/tiinex.artifact.annotation.v1.schema.md)
+  - Value: q3dvqudmEXHS7EXxioWlpGJtHxMkLP5mY8ZCOxDrBpo
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: AzThGWOcP-OfgW092F3S-Q4MhmTgyBCT4zWGTXVzBa8

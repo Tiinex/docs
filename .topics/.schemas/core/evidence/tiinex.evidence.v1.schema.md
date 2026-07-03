@@ -7,7 +7,7 @@
   - Trace: [tiinex.preservation.v1.schema.md](../preservation/tiinex.preservation.v1.schema.md)
   - Origin:
     - [relative](../preservation/tiinex.preservation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/core/preservation/tiinex.preservation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/core/preservation/tiinex.preservation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.evidence.v1](tiinex.evidence.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -296,3 +296,13 @@ The body headings required for artifacts using this schema are: `## Supported Cl
 - evidence remains bounded by provenance, preservation, fidelity, and interpretation limits
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.preservation.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/core/preservation/tiinex.preservation.v1.schema.md)
+  - Value: RbWNCNrr75j7UhGmcKFd-a6qJEGntHGR2EztvQXQGTQ
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: jUD3kCR-P8TIKnMDAm7rov1a6IPoyRHeGCGEC2zBO9k
