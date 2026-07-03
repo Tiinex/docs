@@ -7,7 +7,7 @@
   - Trace: [tiinex.runtime.v1.schema.md](../../runtime/tiinex.runtime.v1.schema.md)
   - Origin:
     - [relative](../../runtime/tiinex.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/5b1b3db377b8bc95ba99d0a9ef1fe441cdab24cb/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.traversal.runtime.v1](tiinex.traversal.runtime.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -348,3 +348,13 @@ treated as schema drift.
 - this support schema intentionally omits `Artifact Creation Contract` until ordinary app creation behavior is explicitly declared
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/5b1b3db377b8bc95ba99d0a9ef1fe441cdab24cb/.topics/.schemas/runtime/tiinex.runtime.v1.schema.md)
+  - Value: s6O-r1EbXQNPlc_aRFDuWqFn-Vu88QXSkUrgVt41jXA
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: f-aiyl1O-I6JJGA0dsYq44nbqEgNmQFXPsMgx5Ss-6c
