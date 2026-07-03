@@ -7,7 +7,7 @@
   - Trace: [tiinex.resource.allocation.v1.schema.md](../tiinex.resource.allocation.v1.schema.md)
   - Origin:
     - [relative](../tiinex.resource.allocation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/resource/allocation/tiinex.resource.allocation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/5fb5d130f93492a4e56df5d07397b9dcd5bb1a7c/.topics/.schemas/resource/allocation/tiinex.resource.allocation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.resource.allocation.usage.v1](tiinex.resource.allocation.usage.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -282,3 +282,13 @@ Rules
 - Generated usage artifacts should record bounded drawdown without claiming billing accuracy or accounting correctness by default.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.resource.allocation.v1.schema.md](https://github.com/Tiinex/docs/blob/5fb5d130f93492a4e56df5d07397b9dcd5bb1a7c/.topics/.schemas/resource/allocation/tiinex.resource.allocation.v1.schema.md)
+  - Value: UosqQMNn7zKDBL9r_v1VcCDZjTeQyZj1GJHk4xjfZIU
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: AsArvQyWEoa1_Jo1-MnV8fLUMc4NfZku-gzfsaINlyY
