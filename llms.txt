@@ -1,11 +1,16 @@
-Tiinex/docs LLM Guide
+# Tiinex/docs LLM Guide
 
 Start here before transient release notes.
+
+Project identity:
+Tiinex keeps provenance readable in Markdown artifacts you own.
+
+Provenance means the visible trail around material: where it came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
 
 Primary files:
 - README.md - repo-local human entrypoint for what Tiinex/docs is
 - tiinex.orientation.v1.md - stable Tiinex identity aligned with the org surface
-- tiinex.context.v1.md - self-contained LLM and handoff context
+- tiinex.context.v1.md - self-contained LLM and reader context
 - .topics/.schemas/README.md - schema tree orientation
 - LINEAGE_POLICY.md - consent and lineage-use boundary
 
@@ -13,8 +18,9 @@ Transient files:
 - releases/* - schema bundles, release notes, and status snapshots
 
 Boundary reminders:
-- Tiinex/docs is a documentation, schema, artifact, and policy repository.
+- Tiinex/docs is a documentation, schema, artifact, topic, and policy repository.
 - It is not the whole Tiinex project.
 - A schema describes artifact meaning; it is not the runtime.
 - Parent is declared continuity, not generic source.
 - Origin is grounding or provenance, not the same thing as parent.
+- AI and LLM workflows are use cases, not the identity boundary.

@@ -1,6 +1,8 @@
 # Tiinex/docs
 
-Tiinex/docs contains the Markdown schemas, examples, topics, trace artifacts, policies, and documentation used to describe Tiinex artifacts and lineages. Tiinex itself is the broader continuity system: a way to save AI-assisted work as readable files that preserve what happened, where it came from, and how to continue later.
+Tiinex/docs contains the schemas, examples, topics, trace artifacts, policies, and documentation used to describe Tiinex artifacts and lineages.
+
+Tiinex itself keeps provenance readable in Markdown artifacts you own: where material came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
 
 ## What This Repo Is
 
@@ -17,11 +19,13 @@ If you want the artifact and schema material itself, this repo is one of the mai
 
 ## What Tiinex Is, In Plain Terms
 
-Tiinex is a way to save AI-assisted work as readable files that people own.
-Those files can explain what happened, where the material came from, what the work follows from, what changed, and how another human or model could continue later.
+Tiinex keeps provenance readable in Markdown artifacts you own.
 
-The goal is not to hide work inside one app, one model, one chat history, or one platform.
-The goal is to keep work inspectable, recoverable, portable, and honest about its limits.
+Provenance means the visible trail around material: where it came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
+
+The goal is not to hide important context inside one app, one model, one chat history, one platform, or one private runtime.
+
+The goal is to keep work inspectable, recoverable, portable, and honest about its boundaries.
 
 ## What This Repo Contains
 
@@ -38,7 +42,7 @@ It should not be mistaken for the entire Tiinex ecosystem.
 
 ## How To Read A Tiinex Artifact
 
-Most Tiinex artifacts are ordinary Markdown files with explicit continuity structure.
+Most Tiinex artifacts are ordinary Markdown files with explicit provenance and continuity structure.
 
 When reading one, look for:
 
@@ -48,19 +52,22 @@ When reading one, look for:
 - what origin grounds its material
 - what changed, concluded, or remained uncertain
 - what the stated limits are
+- what policy or consent boundary applies
+- what should not be inferred from it
 
 Read the artifact itself before assuming the path tells the whole story.
 Directory layout helps navigation, but the artifact carries the actual declared meaning.
 
 ## Core Terms
 
-- Artifact: a readable Markdown record of some work, claim, decision, context, evidence, or continuation.
+- Artifact: a readable Markdown record of some work, claim, decision, source boundary, evidence, policy, or continuation state.
+- Provenance: the visible trail around material: where it came from, what changed, what supports it, and what limits apply.
 - Root: the starting authority or boundary for a lineage.
 - Parent: the declared continuity edge that says what an artifact follows from.
 - Origin: where the material came from or what grounds it.
 - Transition: how one artifact became the next.
+- Policy: explicit boundaries around use, consent, attribution, interpretation, or continuation.
 - Workspace: a view over artifacts and sources, not the whole project.
-- Handoff: enough context for another human or model to continue without guessing.
 
 These terms are separate on purpose.
 Parent is declared continuity, not generic source.
@@ -74,6 +81,7 @@ Origin is grounding or provenance, not the same thing as parent.
 - Evidence is not preservation.
 - Breakthrough is not proof.
 - Docs materials may be drafts. Status should be explicit.
+- AI and LLM workflows are use cases and pressure tests, not the identity boundary of Tiinex.
 
 The docs repo tries to preserve those distinctions instead of flattening them into one vague concept.
 
@@ -82,6 +90,7 @@ The docs repo tries to preserve those distinctions instead of flattening them in
 - `Tiinex/.github` is the org-level human entrypoint.
 - `Tiinex/docs` is the schema, artifact, topic, and documentation source.
 - `Tiinex/site` or other viewer surfaces are presentation layers, not the whole project identity.
+- `Tiinex/ai-provenance` is only partially current and should be verified before treating broad claims as authoritative.
 
 If you arrive here first, read this repo as a source library and artifact repository inside the broader Tiinex system.
 

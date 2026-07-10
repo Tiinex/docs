@@ -2,6 +2,7 @@
   "manifest": "tiinex.orientation.manifest.v1",
   "project": "Tiinex/docs",
   "description": "Machine-readable map of the docs repo entry, stable orientation files, transient release files, and policy/artifact surfaces.",
+  "identity": "Tiinex keeps provenance readable in Markdown artifacts you own.",
   "files": [
     {
       "path": "README.md",
@@ -19,8 +20,8 @@
     },
     {
       "path": "tiinex.context.v1.md",
-      "role": "llm-context-pack",
-      "audience": "machine-and-handoff",
+      "role": "reader-and-llm-context-pack",
+      "audience": "human-and-machine",
       "stability": "maintained",
       "authority": "self-contained repo and project context"
     },
@@ -47,18 +48,20 @@
     }
   ],
   "semantics": {
-    "artifact": "A readable Markdown record of some work, claim, decision, context, evidence, or continuation.",
+    "artifact": "A readable Markdown record of some work, claim, decision, source boundary, evidence, policy, or continuation state.",
+    "provenance": "The visible trail around material: where it came from, what changed, what supports it, and what limits apply.",
     "root": "The starting authority or boundary for a lineage.",
     "parent": "The declared continuity edge that says what an artifact follows from.",
     "origin": "Where the material came from or what grounds it.",
     "transition": "How one artifact became the next.",
-    "workspace": "A view over artifacts and sources, not the whole project.",
-    "handoff": "Enough context for another human or model to continue without guessing."
+    "policy": "Explicit boundaries around use, consent, attribution, interpretation, or continuation.",
+    "workspace": "A view over artifacts and sources, not the whole project."
   },
   "notes": [
     "The docs repo is subordinate to the broader Tiinex identity.",
     "A schema bundle is transient release material, not the stable repo identity.",
     "Parent means declared continuity, not generic source.",
-    "Origin means grounding or provenance, not the same thing as parent."
+    "Origin means grounding or provenance, not the same thing as parent.",
+    "AI and LLM workflows are use cases and pressure tests, not the identity boundary."
   ]
 }

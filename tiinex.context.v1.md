@@ -1,33 +1,35 @@
-# Tiinex Context v1
+# Tiinex/docs Context v1
 
-This file is a self-contained orientation pack for a human handoff or an LLM that does not follow links.
+This file is a self-contained orientation pack for a human reader or an LLM that does not follow links.
 
 ## Short Answer
 
-Tiinex saves the context of AI-assisted work as readable Markdown files you own.
-Each file can record where it came from, what it follows from, what changed, what it depends on, and how someone can continue later.
-The goal is to keep work inspectable, recoverable, portable, and honest about its limits instead of leaving the real context trapped inside one tool or chat history.
+Tiinex/docs is the repository that holds Tiinex schemas, trace artifacts, topics, examples, policy notes, and related documentation in readable Markdown form.
+
+Tiinex itself keeps provenance readable in Markdown artifacts you own: where material came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
 
 ## What Tiinex Is
 
-Tiinex is a filesystem-native way to preserve AI-assisted work as inspectable artifacts.
+Tiinex is a filesystem-native way to preserve provenance as inspectable artifacts.
 
-An artifact can be a note, trace, decision, evidence record, schema note, handoff pack, or another readable Markdown file that carries bounded work forward.
+An artifact can be a note, trace, decision, evidence record, schema note, policy note, source boundary, workspace entrypoint, or another readable Markdown file that carries bounded material forward.
 
 Tiinex cares about whether a later reader can answer practical questions:
 
 - What is this artifact for?
-- What did it come from?
+- Where did the material come from?
+- What does it depend on?
 - What does it follow from?
 - What changed here?
 - What are its limits?
-- What would another person or model need to continue from here?
+- What should not be inferred from it?
 
 ## What Tiinex/docs Is
 
 `Tiinex/docs` is the documentation and artifact repository inside the broader Tiinex ecosystem.
 
 It contains Markdown schemas, examples, topics, trace artifacts, policy notes, and related documentation.
+
 It is not the whole Tiinex project.
 It is not the org identity surface.
 It is not the only viewer or tool layer.
@@ -37,18 +39,28 @@ It is not the only viewer or tool layer.
 Tiinex is not only a public viewer.
 Tiinex is not only schema documentation.
 Tiinex is not an AI agent.
+Tiinex is not a general-purpose AI runtime.
 Tiinex is not a replacement for human judgment.
 Tiinex is not a hidden memory service that asks readers to trust invisible state.
 
+## AI / LLM Boundary
+
+AI and LLM workflows are important use cases and pressure tests.
+
+They are not the identity boundary of Tiinex.
+
+Do not summarize Tiinex as an AI runtime, agent framework, or LLM handoff product unless a specific current repo or artifact explicitly implements that behavior.
+
 ## Core Semantics
 
-- Artifact: a readable Markdown record of some work, claim, decision, context, evidence, or continuation.
+- Artifact: a readable Markdown record of some work, claim, decision, source boundary, evidence, policy, or continuation state.
+- Provenance: the visible trail around material: where it came from, what changed, what supports it, and what limits apply.
 - Root: the starting authority or boundary for a lineage.
 - Parent: the declared continuity edge that says what this artifact follows from.
 - Origin: where the material came from or what grounds it.
 - Transition: how one artifact became the next.
+- Policy: explicit boundaries around use, consent, attribution, interpretation, or continuation.
 - Workspace: a view over artifacts and sources, not the whole project.
-- Handoff: enough context for another human or model to continue without guessing.
 
 These terms are separate because they describe separate responsibilities.
 Parent is not generic source.
@@ -63,31 +75,17 @@ Origin is not the same thing as parent.
 - Breakthrough is not proof.
 - Docs materials may be drafts, and status should be explicit.
 
-## Why Tiinex Exists
-
-AI-assisted work is often hard to inspect later.
-Important context can disappear into chat history, private tool state, or one platform's memory of what happened.
-
-That creates practical problems:
-
-- work becomes hard to recover
-- claims become hard to ground
-- continuation depends on guessing
-- handoffs become lossy
-- platform changes can break continuity
-
-Tiinex tries to preserve enough visible context that continuation does not depend on blind trust.
-
 ## Practical Outcome
 
 When Tiinex is working well, a later reader should be able to inspect an artifact and understand:
 
-- the scope of the work
+- the scope of the material
 - the declared parent context
 - the material origin
 - what was changed or concluded
 - what is still uncertain
-- what should happen next
+- what limits or policies apply
+- what should not be inferred
 
 ## Docs Repo Reading Order
 
