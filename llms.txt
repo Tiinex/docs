@@ -1,0 +1,20 @@
+Tiinex/docs LLM Guide
+
+Start here before transient release notes.
+
+Primary files:
+- README.md - repo-local human entrypoint for what Tiinex/docs is
+- tiinex.orientation.v1.md - stable Tiinex identity aligned with the org surface
+- tiinex.context.v1.md - self-contained LLM and handoff context
+- .topics/.schemas/README.md - schema tree orientation
+- LINEAGE_POLICY.md - consent and lineage-use boundary
+
+Transient files:
+- releases/* - schema bundles, release notes, and status snapshots
+
+Boundary reminders:
+- Tiinex/docs is a documentation, schema, artifact, and policy repository.
+- It is not the whole Tiinex project.
+- A schema describes artifact meaning; it is not the runtime.
+- Parent is declared continuity, not generic source.
+- Origin is grounding or provenance, not the same thing as parent.

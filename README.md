@@ -1,117 +1,109 @@
-# Tiinex Portal / Interaction / Module / Surface / Knowledge Provenance Schema Draft v8.3
+# Tiinex/docs
 
-Status: final-audit prechecksum draft bundle for Tiinex/docs review. Continuity Integrity footers are intentionally omitted so the maintainer can add canonical checksum footers once before final merge.
+Tiinex/docs contains the Markdown schemas, examples, topics, trace artifacts, policies, and documentation used to describe Tiinex artifacts and lineages. Tiinex itself is the broader continuity system: a way to save AI-assisted work as readable files that preserve what happened, where it came from, and how to continue later.
 
-## Files
+## What This Repo Is
 
-```text
-README.md
-.topics/.schemas/tiinex.portal.v1.schema.md
-.topics/.schemas/tiinex.portal.time.v1.schema.md
-.topics/.schemas/tiinex.interaction.unit.v1.schema.md
-.topics/.schemas/tiinex.schema.module.v1.schema.md
-.topics/.schemas/tiinex.presentation.surface.v1.schema.md
-.topics/.schemas/tiinex.question.v1.schema.md
-.topics/.schemas/tiinex.condition.v1.schema.md
-.topics/.schemas/tiinex.claim.v1.schema.md
-.topics/.schemas/tiinex.derivation.v1.schema.md
-.topics/.schemas/tiinex.discovery.breakthrough.v1.schema.md
-```
+This repository is the documentation and artifact source for Tiinex.
 
-## Purpose
+It is where Tiinex schemas, trace artifacts, topic material, policy notes, and related documentation live in readable form.
 
-This bundle closes provenance and implementation-boundary blind spots found while designing Tiinex/site support for dynamic schema-aware viewers, forms, audit reporting, portals, source traversal, and portable React/non-React implementations.
+It is not the whole Tiinex project.
+It is not the public org identity.
+It is not the only viewer or tool surface.
 
-The bundle keeps these distinctions explicit:
+If you want the plain project-level introduction, start with the org profile repo.
+If you want the artifact and schema material itself, this repo is one of the main places to read it.
 
-```text
-source ≠ adapter ≠ portal ≠ finding ≠ evidence ≠ preservation
-interface ≠ presentation surface ≠ interaction unit ≠ schema module
-validation method ≠ validator implementation ≠ validation report
-question ≠ response ≠ evidence ≠ validation result ≠ decision
-condition ≠ executable code ≠ decision ≠ validation result
-claim ≠ evidence ≠ derivation ≠ validation ≠ truth
-derivation ≠ hidden chain-of-thought ≠ validation result ≠ proof of truth outside boundary
-breakthrough ≠ proof ≠ validation result ≠ decision ≠ implementation ≠ truth
-schema semantics ≠ app registry ≠ React component
-```
+## What Tiinex Is, In Plain Terms
 
-## Schema Summary
+Tiinex is a way to save AI-assisted work as readable files that people own.
+Those files can explain what happened, where the material came from, what the work follows from, what changed, and how another human or model could continue later.
 
-### tiinex.portal.v1
+The goal is not to hide work inside one app, one model, one chat history, or one platform.
+The goal is to keep work inspectable, recoverable, portable, and honest about its limits.
 
-Defines a bounded source-resolution doorway. Portal is not a generic UI view; it is the boundary for looking into a source under declared access, trigger, resolution, and result limits.
+## What This Repo Contains
 
-### tiinex.portal.time.v1
+This repo mainly contains:
 
-Child specialization of `tiinex.portal.v1` for as-of or time-windowed source resolution. It keeps artifact creation time separate from source-state time and prefers resolved source anchors over projection metadata.
+- `.topics/.schemas/**` for Markdown schema notes
+- `.topics/**` for trace artifacts, examples, ideas, educational material, and related documentation
+- `LINEAGE_POLICY.md` for policy and consent/use boundaries around lineage material
+- root-level orientation and context files for repo and LLM entry
+- transient release and status notes under `releases/`
 
-### tiinex.interaction.unit.v1
+The docs repo is a source of schemas, examples, topics, traces, policies, and documentation.
+It should not be mistaken for the entire Tiinex ecosystem.
 
-Defines a portable semantic unit that can be asked, filled, shown, validated, audited, or implemented across environments. It is not a React field, UI component, CLI prompt, or database column, though those may implement it.
+## How To Read A Tiinex Artifact
 
-### tiinex.schema.module.v1
+Most Tiinex artifacts are ordinary Markdown files with explicit continuity structure.
 
-Defines a human-readable capability bundle around a schema, schema family, or schema chain. It may expose validator implementations, interaction units, surfaces, viewers, forms, helpers, and source access modes, but it is not code/plugin by itself and does not own validation method semantics.
+When reading one, look for:
 
-### tiinex.presentation.surface.v1
+- what kind of artifact it says it is
+- what root boundary it declares
+- what parent it follows from
+- what origin grounds its material
+- what changed, concluded, or remained uncertain
+- what the stated limits are
 
-Defines a bounded implementation-neutral presentation surface inside or across interfaces. It clarifies the relationship between larger interfaces, surfaces, interaction units, and schema modules.
+Read the artifact itself before assuming the path tells the whole story.
+Directory layout helps navigation, but the artifact carries the actual declared meaning.
 
-### tiinex.question.v1
+## Core Terms
 
-Defines question provenance for bounded inquiries, prompts, review questions, validation questions, discovery questions, and decision-support questions. A question preserves what was asked and what would count as an in-scope response, but it does not itself answer the question or determine the response schema.
+- Artifact: a readable Markdown record of some work, claim, decision, context, evidence, or continuation.
+- Root: the starting authority or boundary for a lineage.
+- Parent: the declared continuity edge that says what an artifact follows from.
+- Origin: where the material came from or what grounds it.
+- Transition: how one artifact became the next.
+- Workspace: a view over artifacts and sources, not the whole project.
+- Handoff: enough context for another human or model to continue without guessing.
 
-### tiinex.condition.v1
+These terms are separate on purpose.
+Parent is declared continuity, not generic source.
+Origin is grounding or provenance, not the same thing as parent.
 
-Defines condition provenance for if/when/unless boundaries, gates, prerequisites, fallback rules, and branch outcomes. A condition is human-readable branch semantics, not executable code, a decision, or a validation result by itself.
+## Important Boundaries
 
-### tiinex.claim.v1
+- A schema describes artifact meaning. It is not the runtime.
+- A validation method is not automatically proof of truth.
+- A claim is not evidence.
+- Evidence is not preservation.
+- Breakthrough is not proof.
+- Docs materials may be drafts. Status should be explicit.
 
-Defines claim provenance for bounded assertions, propositions, hypotheses, theorem-like statements, answer candidates, model claims, interpretation claims, and counterclaims. A claim preserves what is being asserted and under what boundary, but it does not prove itself or replace evidence, derivation, validation, attestation, or decision artifacts.
+The docs repo tries to preserve those distinctions instead of flattening them into one vague concept.
 
-### tiinex.derivation.v1
+## Docs vs Site vs Org
 
-Defines public reasoning provenance for derivations, proofs, proof sketches, arguments, calculations, reductions, transformations, inferences, explanations, and counterexamples. A derivation preserves reviewable reasoning, not private chain-of-thought or hidden deliberation, and does not establish truth outside its stated assumptions and review boundary.
+- `Tiinex/.github` is the org-level human entrypoint.
+- `Tiinex/docs` is the schema, artifact, topic, and documentation source.
+- `Tiinex/site` or other viewer surfaces are presentation layers, not the whole project identity.
 
-### tiinex.discovery.breakthrough.v1
+If you arrive here first, read this repo as a source library and artifact repository inside the broader Tiinex system.
 
-Defines breakthrough provenance for frame shifts, Eureka moments, convergences, architectural insights, research breakthroughs, method breakthroughs, and connected-solution discoveries. A breakthrough preserves what changed in understanding and what it unlocks, but it does not prove, validate, decide, implement, or establish truth by itself.
+## Where Release And Status Notes Live
 
-## Source Access Modes
+Transient schema bundles, status snapshots, and release-shaped material belong under `releases/`.
 
-The source access modes used by portal, portal.time, and schema.module are:
+If you want the transient index first, start with:
 
-```text
-web-surface
-local-working-tree
-local-git-archive
-browser-remote-git
-service-backed-git
-```
+- `releases/README.md`
 
-These modes are source access capabilities. A Git ref, commit, tree, or blob may act as a source-state anchor, but it does not by itself become preservation, evidence, validation, claim proof, or truth. Local Git archive access is user-provided local access and must not imply hidden upload, telemetry, or network access. Browser remote Git must keep CORS, auth, browser storage, memory, and repository-size limits explicit.
+The previous root README schema-bundle content has been preserved at:
 
-## Parent-Origin Note
+- `releases/schema-draft-v8.3.md`
 
-`tiinex.portal.time.v1` is intentionally a child of `tiinex.portal.v1`. This prechecksum draft includes both `relative` and `browse + git` parent-origin entries for `portal.v1`; the `browse + git` entry uses the repository branch path so the bundle can be reviewed before checksum finalization. A maintainer may replace it with a commit-pinned URL after `portal.v1` is committed if the final merge process requires commit-pinned parent origins.
+That material may still be useful, but it should not define the stable first impression of `Tiinex/docs`.
 
-## Changelog
+## Canonical Next Reads
 
-### V8.3
-
-- Mechanical envelope fix: `Parent Created At` renamed to `Created At` in Parent blocks.
-- Mechanical envelope fix: Parent Origin entries now use markdown-link shape such as `[browse + git](...)` instead of `label: link`.
-- No Continuity Integrity footers are included; checksum footers remain intentionally external to this bundle.
-
-- v4: applied mechanical contract fixes, root-shaped parent origins, validation-friendly examples, and initial portal/interaction/module/surface contracts.
-- v5: added `tiinex.question.v1` and `tiinex.condition.v1` for question and branch/gate provenance.
-- v6: added `tiinex.claim.v1` and `tiinex.derivation.v1` for knowledge-provenance, mathematician/researcher, and conditional-form use cases.
-- v7: clarified source access modes without making Git a new semantic authority.
-- v8: added `tiinex.discovery.breakthrough.v1` as discovery-frame-shift / Eureka provenance.
-- v8.1: sanitized remaining Artifact Creation Contract labels in the first five schemas and consolidated README history under this changelog.
-- v8.3: added `browse + git` parent-origin entry for `tiinex.portal.time.v1` -> `tiinex.portal.v1` while keeping Continuity Integrity footers omitted for maintainer checksum finalization.
-
-## Review Boundary
-
-This bundle is intended for content, schema-shape, and Tiinex-anda validation. Canonical checksum / continuity integrity footers are intentionally omitted from this draft so they can be added once by the maintainer's checksum process before final merge.
+- `tiinex.orientation.v1.md`
+- `tiinex.context.v1.md`
+- `.topics/.schemas/README.md`
+- `LINEAGE_POLICY.md`
+- `releases/README.md`
+- `releases/schema-draft-v8.3.md` for the preserved schema-bundle note
