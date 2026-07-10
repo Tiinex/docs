@@ -4,7 +4,7 @@
 - Parent
   - Parent Schema: [tiinex.tool.v1](https://github.com/Tiinex/docs/blob/380ec9b41a1872e126c08b55c21007828dac9514/.topics/.schemas/tiinex.tool.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
-  - Trace: [tiinex.tool.v1.schema.md](../.schemas/tiinex.tool.v1.schema.md)
+  - Trace: [tiinex.tool.v1.schema.md](../.schemas/tool/tiinex.tool.v1.schema.md)
   - Origin:
     - [relative](../.schemas/tiinex.tool.v1.schema.md)
     - [browse + git](https://github.com/Tiinex/docs/blob/380ec9b41a1872e126c08b55c21007828dac9514/.topics/.schemas/tiinex.tool.v1.schema.md)
@@ -105,4 +105,4 @@ A spade can be a tool, but it does not prove what was found. A map can be a tool
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: I7j7FKMsCv9vs8owNJFVb-cdnMdgtZoljie_XL8NFyc
+  - Value: RzxwCPoJgImHeUXD4dAKTJrJerOEwwl-c3rezFAxAGU

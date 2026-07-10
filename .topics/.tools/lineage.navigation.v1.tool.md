@@ -1,13 +1,13 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/07554c6b37f5d8589c104e87a70bf7b0f61586ad/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: [tiinex.tool.v1](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.schemas/tiinex.tool.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
   - Trace: [tiinex.v1.tool.md](./tiinex.v1.tool.md)
   - Origin:
     - [relative](tiinex.tool.v1.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.tools/tiinex.v1.tool.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/07554c6b37f5d8589c104e87a70bf7b0f61586ad/.topics/.tools/tiinex.v1.tool.md)
 - Current
   - Current Schema: [tiinex.tool.v1](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.schemas/tiinex.tool.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -102,9 +102,9 @@ A GitHub issue finding can be navigated as a Tiinex artifact if it exists in the
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.v1.tool.md](https://github.com/Tiinex/docs/blob/3e6432421e72c45bd4ad713d2a6df32c88527074/.topics/.tools/tiinex.v1.tool.md)
-  - Value: Chuy11AaJ9aktiFvvnVLXsstUaJFdtw1pNMB_SZink4
+  - Towards: [tiinex.v1.tool.md](https://github.com/Tiinex/docs/blob/07554c6b37f5d8589c104e87a70bf7b0f61586ad/.topics/.tools/tiinex.v1.tool.md)
+  - Value: dcUgPFagZYQ8vuIK4Om0pd-YFCmVoHY2DUj3jPCexXg
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: D7kvSLRax6p_MLtcfLu0eVtrje1wogheXh8MCZ1J0Ek
+  - Value: xMaS_4qyJqbwlgKiIdK2s_DxfUX9YBHrWtIWWzEJRI8
