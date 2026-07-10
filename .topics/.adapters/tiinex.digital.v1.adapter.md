@@ -1,6 +1,6 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/5986f0e5d48273f135e8fe4ef33dda20cea052f4/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/f8b37239f17bc48180cfc8f93f812c6ffc6edc1f/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: [tiinex.adapter.v1](https://github.com/Tiinex/docs/blob/7d9fb6bd908ccd11b28e5c35e84c8f12b45f732b/.topics/.schemas/tiinex.adapter.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -136,4 +136,4 @@
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: k4ELHAw-nDq4q6MLIsWnMvP5TQgr7IqTSw4pjZqZx-0
+  - Value: WXUn1cX9l3DrtyLwmW6jJ7AVVf0nnPnsl9ykCae8HM8

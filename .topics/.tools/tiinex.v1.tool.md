@@ -1,6 +1,6 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/380ec9b41a1872e126c08b55c21007828dac9514/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/f8b37239f17bc48180cfc8f93f812c6ffc6edc1f/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: [tiinex.tool.v1](https://github.com/Tiinex/docs/blob/380ec9b41a1872e126c08b55c21007828dac9514/.topics/.schemas/tiinex.tool.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -105,4 +105,4 @@ A spade can be a tool, but it does not prove what was found. A map can be a tool
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: 4KPksr5ecYh5cywHDIIRrNCf0p26SY_NqCfFQfYUHe4
+  - Value: I7j7FKMsCv9vs8owNJFVb-cdnMdgtZoljie_XL8NFyc

@@ -1,6 +1,6 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/1b7514e9db81a46c319e9aff6ca4c4449bda7f0d/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/f8b37239f17bc48180cfc8f93f812c6ffc6edc1f/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
 	- Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/1b7514e9db81a46c319e9aff6ca4c4449bda7f0d/.topics/.schemas/tiinex.topic.v1.schema.md)
 	- Created At: 2026-06-01 03:15:00
@@ -46,7 +46,6 @@ Good continuation in this line should usually prefer:
 - update the `chatgpt` target when that branch changes
 - keep the pointer thin and readable
 
-
 ---
 
 # Continuity Integrity
@@ -54,3 +53,7 @@ Good continuation in this line should usually prefer:
 - sha256-base64url-c14n-v1
   - Towards: [001.trace.md](001.trace.md)
   - Value: LBSfgUppTFhuXrbyy0W20VwqQObbcTbtfQlQmh2NWHM
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: GmnZuevhjJ8j4-C96kDmGPH7mkfQSuFuYrBsokgM44g
