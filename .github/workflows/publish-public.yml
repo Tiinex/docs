@@ -4,6 +4,10 @@ on:
   push:
     branches-ignore:
       - public
+  issues:
+    types: [opened, edited, deleted, closed, reopened, transferred]
+  issue_comment:
+    types: [created, edited, deleted]
   workflow_dispatch:
     inputs:
       source_ref:
@@ -24,12 +28,11 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: publish-public
-  cancel-in-progress: true
-
 jobs:
   publish:
+    concurrency:
+      group: publish-public-${{ github.repository }}-public-branch
+      cancel-in-progress: false
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref_type == 'branch' && github.ref_name != 'public')
     runs-on: ubuntu-latest
     outputs:
@@ -62,6 +65,11 @@ jobs:
       TIINEX_PAGES_DEPLOY: ${{ vars.TIINEX_PAGES_DEPLOY || secrets.TIINEX_PAGES_DEPLOY || '' }}
       TIINEX_WORKFLOW_PAGES_DEPLOY: ${{ github.event.inputs.deploy_pages || '' }}
       TIINEX_PUBLISH_SOURCE_REF: ${{ vars.TIINEX_PUBLISH_SOURCE_REF || secrets.TIINEX_PUBLISH_SOURCE_REF || '' }}
+      TIINEX_ISSUE_SNAPSHOTS: ${{ vars.TIINEX_ISSUE_SNAPSHOTS || 'true' }}
+      TIINEX_ISSUE_SNAPSHOT_REPOSITORIES: ${{ vars.TIINEX_ISSUE_SNAPSHOT_REPOSITORIES || '' }}
+      TIINEX_ISSUE_SNAPSHOT_MAX_ISSUES: ${{ vars.TIINEX_ISSUE_SNAPSHOT_MAX_ISSUES || '' }}
+      TIINEX_ISSUE_SNAPSHOT_MAX_COMMENTS_PER_ISSUE: ${{ vars.TIINEX_ISSUE_SNAPSHOT_MAX_COMMENTS_PER_ISSUE || '' }}
+      TIINEX_ISSUE_PUBLISH_GRACE_SECONDS: ${{ vars.TIINEX_ISSUE_PUBLISH_GRACE_SECONDS || '120' }}
 
     steps:
       - name: Resolve source ref
@@ -161,6 +169,13 @@ jobs:
             echo "Publish disabled for this push; no public branch update will be attempted."
           fi
 
+      - name: Publish not required
+        if: steps.settings.outputs.publish_enabled != 'true'
+        shell: bash
+        run: |
+          echo "::notice title=Publish not required::${GITHUB_REF_NAME} is intentionally not a publish source for this repository configuration."
+          echo "No public branch or GitHub Pages deployment was attempted."
+
       - name: Check out source
         if: steps.settings.outputs.publish_enabled == 'true'
         uses: actions/checkout@v6
@@ -214,7 +229,7 @@ jobs:
           fi
 
       - name: Set up Node.js
-        if: steps.settings.outputs.publish_enabled == 'true' && steps.publish_mode.outputs.viewer_build == 'true'
+        if: steps.settings.outputs.publish_enabled == 'true'
         uses: actions/setup-node@v6
         with:
           node-version: 20
@@ -812,6 +827,16 @@ jobs:
             printf '%s\n'               "$mirror_root/$public_identity.json"               "$mirror_root/$public_identity.zip"
           done | sort
 
+      - name: Build hosted issue snapshots
+        if: steps.settings.outputs.publish_enabled == 'true'
+        env:
+          SOURCE_REF: ${{ steps.settings.outputs.source_ref }}
+        run: npm run issues:snapshot -- --out .site-publish
+
+      - name: Write issue publication state
+        if: steps.settings.outputs.publish_enabled == 'true'
+        run: npm run issues:state -- --out .site-publish --mode full-publish --cooldown ${TIINEX_ISSUE_PUBLISH_GRACE_SECONDS:-120}
+
       - name: Sanitize public deploy root
         if: steps.settings.outputs.publish_enabled == 'true'
         shell: bash
@@ -948,6 +973,151 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: .site-publish
+
+  sync-issues:
+    if: github.event_name == 'issues' || github.event_name == 'issue_comment'
+    concurrency:
+      group: publish-public-${{ github.repository }}-public-branch
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    outputs:
+      pages_deploy_enabled: ${{ steps.issue_settings.outputs.pages_deploy_enabled }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PAGES_CNAME: ${{ vars.PAGES_CNAME || '' }}
+      TIINEX_PAGES_DEPLOY: ${{ vars.TIINEX_PAGES_DEPLOY || secrets.TIINEX_PAGES_DEPLOY || '' }}
+      TIINEX_ISSUE_SNAPSHOTS: ${{ vars.TIINEX_ISSUE_SNAPSHOTS || 'true' }}
+      TIINEX_ISSUE_SNAPSHOT_REPOSITORIES: ${{ vars.TIINEX_ISSUE_SNAPSHOT_REPOSITORIES || '' }}
+      TIINEX_ISSUE_SNAPSHOT_MAX_ISSUES: ${{ vars.TIINEX_ISSUE_SNAPSHOT_MAX_ISSUES || '' }}
+      TIINEX_ISSUE_SNAPSHOT_MAX_COMMENTS_PER_ISSUE: ${{ vars.TIINEX_ISSUE_SNAPSHOT_MAX_COMMENTS_PER_ISSUE || '' }}
+      TIINEX_ISSUE_PUBLISH_GRACE_SECONDS: ${{ vars.TIINEX_ISSUE_PUBLISH_GRACE_SECONDS || '120' }}
+    steps:
+      - name: Issue snapshot settings
+        id: issue_settings
+        shell: bash
+        run: |
+          set -euo pipefail
+          pages_deploy="${TIINEX_PAGES_DEPLOY:-auto}"
+          case "${pages_deploy,,}" in
+            false|no|off|0|branch|branch-only) pages_deploy_enabled=false ;;
+            *) pages_deploy_enabled=true ;;
+          esac
+          echo "pages_deploy_enabled=$pages_deploy_enabled" >> "$GITHUB_OUTPUT"
+          echo "Issue snapshot publish is rate-limited/coalesced over ${TIINEX_ISSUE_PUBLISH_GRACE_SECONDS:-120}s; it publishes immediately when cooldown has elapsed."
+
+      - name: Check out source tooling
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          submodules: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+
+      - name: Restore current public branch artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .site-publish
+          mkdir -p .site-publish
+          if git fetch origin public:refs/remotes/origin/public; then
+            git archive --format=tar origin/public | tar -xf - -C .site-publish
+          else
+            echo "No public branch exists yet; creating a minimal issue snapshot artifact."
+            touch .site-publish/.nojekyll
+          fi
+
+      - name: Coalesce issue snapshot publish
+        id: issue_coalesce
+        shell: bash
+        run: |
+          set -euo pipefail
+          cooldown="${TIINEX_ISSUE_PUBLISH_GRACE_SECONDS:-120}"
+          case "$cooldown" in ''|*[!0-9]*) cooldown=120 ;; esac
+          if [ "$cooldown" -gt 600 ]; then cooldown=600; fi
+          state_file=".site-publish/.tiinex/issue-publish-state.json"
+          now_epoch="$(date -u +%s)"
+          last_published=""
+          last_epoch=0
+          if [ -f "$state_file" ]; then
+            last_published="$(node -e "const fs=require('fs'); const p=process.argv[1]; try { const s=JSON.parse(fs.readFileSync(p,'utf8')); process.stdout.write(String(s.last_published_at||'')); } catch (_) {}" "$state_file")"
+            if [ -n "$last_published" ]; then
+              last_epoch="$(node -e "const t=Date.parse(process.argv[1]||''); process.stdout.write(Number.isFinite(t) ? String(Math.floor(t/1000)) : '0');" "$last_published")"
+            fi
+          fi
+          elapsed=$(( now_epoch - last_epoch ))
+          if [ "$last_epoch" -eq 0 ]; then elapsed=$cooldown; fi
+          remaining=$(( cooldown - elapsed ))
+          if [ "$remaining" -lt 0 ]; then remaining=0; fi
+          generation="${GITHUB_RUN_ID:-manual}.${GITHUB_RUN_ATTEMPT:-1}"
+          echo "last_published=${last_published:-never}"
+          echo "cooldown_seconds=$cooldown"
+          echo "cooldown_remaining=$remaining"
+          echo "pending_generation=$generation"
+          echo "snapshot_generation=$generation"
+          echo "follow-up required: no; GitHub concurrency keeps the newest pending issue run queued if more events arrive while this one publishes."
+          echo "cooldown_remaining=$remaining" >> "$GITHUB_OUTPUT"
+          echo "pending_generation=$generation" >> "$GITHUB_OUTPUT"
+          if [ "$remaining" -gt 0 ]; then
+            echo "Waiting only the remaining cooldown (${remaining}s); newer events do not reset this timer."
+            sleep "$remaining"
+          else
+            echo "Cooldown elapsed; publishing issue snapshot immediately."
+          fi
+
+      - name: Build hosted issue snapshots
+        run: npm run issues:snapshot -- --out .site-publish
+
+      - name: Write public issue publish identity
+        run: npm run public:identity -- --out .site-publish --reason issue-sync
+
+      - name: Write issue publication state
+        env:
+          GITHUB_EVENT_ACTION: ${{ github.event.action || '' }}
+          TIINEX_ISSUE_EVENT_NUMBER: ${{ github.event.issue.number || '' }}
+          TIINEX_ISSUE_COMMENT_ID: ${{ github.event.comment.id || '' }}
+        run: npm run issues:state -- --out .site-publish --mode issue-sync --cooldown ${TIINEX_ISSUE_PUBLISH_GRACE_SECONDS:-120}
+
+      - name: Validate hosted issue snapshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .site-publish/issues/manifest.json
+          node --check tools/build-issue-snapshots.mjs
+
+      - name: Publish public branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .site-publish
+          publish_branch: public
+          force_orphan: true
+          commit_message: >-
+            Publish issue snapshots after ${{ github.event_name }} #${{ github.event.issue.number || '' }} @ ${{ github.sha }}
+
+      - name: Configure GitHub Pages
+        if: steps.issue_settings.outputs.pages_deploy_enabled == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: steps.issue_settings.outputs.pages_deploy_enabled == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .site-publish
+
+  deploy-issues-pages:
+    needs: sync-issues
+    if: needs.sync-issues.outputs.pages_deploy_enabled == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages_deployment.outputs.page_url }}
+    steps:
+      - name: Deploy issue snapshot update to GitHub Pages
+        id: pages_deployment
+        uses: actions/deploy-pages@v4
 
   deploy-pages:
     needs: publish
