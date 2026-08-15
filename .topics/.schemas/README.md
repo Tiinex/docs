@@ -15,9 +15,11 @@ This layout is intentionally directory-shaped. Each schema family may place a sc
 
 ## Identity Convention
 
-Durable artifact identity should come from Continuity Integrity fingerprints when available. Human labels, local anchors, and provisional handles may support authoring, forms, UI actions, migration, and prechecksum references, but they must not silently become global identity.
+Continuity Integrity fingerprints are durable references to the representations or continuity targets they verify. A content-derived fingerprint may change when the covered representation changes, so it is not automatically an immutable logical artifact identity across revisions or materializations.
 
-This matters for schema contracts, annotations, transitions, relations, and generated artifacts. Avoid durable sequential identifiers when a checksum/fingerprint can carry continuity identity.
+Human labels, local anchors, and provisional handles may support authoring, forms, UI actions, migration, and prechecksum references, but they must not silently become global identity. Avoid durable sequential identifiers when a checksum/fingerprint already provides the needed durable reference to a concrete representation.
+
+This distinction matters for schema contracts, annotations, transitions, relations, edits, and generated artifacts. Logical continuity across changing representations must not be inferred from fingerprint equality or difference alone.
 
 ## Why The Path Is Not The Authority
 
@@ -117,12 +119,18 @@ A folder is useful for humans and tooling, but Tiinex continuity must remain por
 
 ### Transition
 
-- [Transition](transition/tiinex.transition.v1.schema.md)
-- [Artifact Transition](transition/artifact/tiinex.artifact.transition.v1.schema.md)
+- [Transition Definition](transition/definition/tiinex.transition.definition.v1.schema.md) — active reusable semantic transformation definition
+- [Transition](transition/tiinex.transition.v1.schema.md) — legacy invocation/provenance-shaped transition contract retained for historical interpretation
+- [Artifact Transition](transition/artifact/tiinex.artifact.transition.v1.schema.md) — legacy artifact-specialized invocation/action contract retained for historical interpretation
+
+New reusable transition authoring should use `tiinex.transition.definition.v1`. The legacy transition schema IDs keep their historical meanings because published Tiinex material already references them. Invoking a Transition Definition does not normally create a Transition artifact; an Event, Report, Receipt, or another declared output may record an occurrence when that occurrence has independent artifact value.
 
 ### Relation, Validation, And Schema Governance
 
 - [Relation](relation/tiinex.relation.v1.schema.md)
+
+Ordinary artifacts and schema contracts may declare or project typed relation edges without creating a standalone Relation Artifact. Use a Relation Artifact when the relation instance itself carries independent semantic content, provenance, state, interpretation limits, or lifecycle worth preserving.
+
 - [Validation Method](validation/method/tiinex.validation.method.v1.schema.md)
 - [Validation Finding](validation/finding/tiinex.validation.finding.v1.schema.md)
 - [Validation Report](validation/report/tiinex.validation.report.v1.schema.md)

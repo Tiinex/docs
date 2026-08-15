@@ -454,12 +454,20 @@ Required Fields
 Optional Fields
 
 - Summary
+- Status
+- Why
 
 Rules
 
 - `Current Schema` identifies the schema governing the current artifact.
 - `Created At` records artifact creation time.
 - `Summary` is a compact fallback description.
+- `Status` records the artifact's current declared state under its active schema semantics.
+- `Status` is optional and root does not define a universal closed status vocabulary.
+- Descendant schemas may constrain `Status` when their domain requires it.
+- `Status` does not by itself prove validity, completeness, publication state, truth, execution success, approval, or readiness.
+- `Why` explains why the artifact exists.
+- `Why` is optional and does not by itself declare governing authority, evidence, validation, transition history, or revision rationale.
 
 ### Schema Reference Fields
 
@@ -587,6 +595,10 @@ Rules
 - When a maintained validation method artifact has an available commit-pinned `browse + git` permalink, the markdown-link method label must use that permalink as its link target.
 - `Towards` identifies the validated target.
 - `Value` carries the method output.
+- An integrity value identifies or verifies the representation or declared continuity target covered by the named method.
+- For content-derived self methods, changing covered content normally changes the integrity value.
+- An integrity value does not by itself prove immutable logical artifact identity across revisions or materializations.
+- Equal or different integrity values must not by themselves be treated as proof of equal or different logical artifact subjects unless another declared identity contract provides that authority.
 - For hash-based continuity methods, the validated target is hashed without the `# Continuity Integrity` section and everything after it.
 - When `Towards` is not `self`, `Value` must be computed from the validated target identified by `Towards`, not from the current artifact body.
 - `self` is allowed only when the method validates the current artifact itself.
@@ -628,3 +640,9 @@ Rules
 - Absence of `Artifact Creation Contract` means artifact generation is not declared by this schema.
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: ZiE8eirbL2pvocyarDjmfuO3wKii-wTl5xynwJNvtXo
