@@ -6,13 +6,18 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/2091fa822ce5013cd9b9e463f4507d4f5556967d/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.transition.v1](tiinex.transition.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
-  - Status: Draft schema proposal
+  - Status: Legacy schema proposal preserved for historical interpretation
   - Why: Defines bounded provenance-bearing transitions so actions such as continue, reference, use as, derive, annotate, validate, preserve, project, split, merge, and promote can be described without hidden app behavior or durable sequential identifiers.
   - Summary: General transition schema for source-to-result changes, uses, moves, and role shifts.
+- Repairs
+  - Legacy transition authority split
+    - Target: schema interpretation and new authoring
+    - Note: This schema ID preserves its historical invocation/provenance-shaped transition meaning. New reusable semantic transformation definitions use [tiinex.transition.definition.v1](definition/tiinex.transition.definition.v1.schema.md).
+    - Reason: Historical and public Tiinex material already references this schema family and must remain interpretable under the meaning it declared.
 
 ---
 
@@ -20,13 +25,15 @@
 
 ## Summary
 
-Defines a human-readable and machine-extractable transition artifact.
+Defines a human-readable and machine-extractable legacy transition artifact.
+
+This schema preserves the historical invocation/provenance-shaped transition meaning for artifacts that already declare `tiinex.transition.v1`. It is not the active authority for new reusable transformation definitions; use [`tiinex.transition.definition.v1`](definition/tiinex.transition.definition.v1.schema.md) for new reusable semantic transition authoring.
 
 A transition is a bounded change, move, use, or role shift from one source state, context, role, or artifact toward a result state, context, role, artifact, relation, annotation, report, projection, or view. It preserves what was acted on, what was intended, what method or actor was involved, what result was produced or expected, and what the transition must not be overread to mean.
 
 Transitions cover ordinary human and tooling actions such as continue, reference, use as, derive, annotate, validate, preserve, project, split, merge, promote, repair, refresh, and resolve source. A transition is not automatically proof, evidence, validation, preservation, approval, mutation, replacement, or truth.
 
-Durable transition identity should come from the artifact's Continuity Integrity fingerprint when available. Human labels and provisional handles are useful for authoring, forms, buttons, and local references, but they must not silently become global identity.
+Continuity Integrity fingerprints provide durable references to the concrete legacy transition representation or declared continuity target they cover. Human labels, provisional handles, and local anchors are useful for authoring and local reference, but they must not silently become global identity. A changed content-derived fingerprint does not by itself decide whether two revisions belong to the same logical transition artifact.
 
 ## Core Semantics
 
@@ -38,7 +45,7 @@ Durable transition identity should come from the artifact's Continuity Integrity
 - Transition may be initiated by a person, role, tool, adapter, runtime, validator, schema builder, LLM, import, or other bounded actor.
 - Transition may be proposed, applied, failed, skipped, partial, reversed, superseded, or needs-review.
 - Transition must preserve interpretation limits when the action could be overread.
-- Transition must not introduce durable sequential identifiers when a continuity fingerprint can serve as durable identity.
+- Transition must not introduce durable sequential identifiers merely to compensate for missing representation references or scoped local handles.
 
 ## Schema Validation Contract
 
@@ -127,7 +134,7 @@ Rules
 - `Continuity Fingerprint` should be used for durable reference when available.
 - `Provisional Handle` and `Local Anchor` may support authoring, forms, UI actions, and local references before checksum assignment.
 - Provisional handles must not silently become global identity.
-- Do not introduce durable sequential identifiers such as transition-001, rule-42, or field-7 when continuity fingerprints can serve as durable identity.
+- Do not introduce durable sequential identifiers such as transition-001, rule-42, or field-7 as a substitute for declared logical continuity, scoped handles, or representation references.
 
 ### Source Boundary
 
@@ -413,7 +420,7 @@ Rules
 
 - Missing source, intent, method, result, state, or mutation policy should be explicit.
 - If no continuity fingerprint exists yet, use a provisional handle only as an authoring aid.
-- After checksum assignment, durable references should prefer the continuity fingerprint.
+- After checksum assignment, references to a concrete representation should prefer the continuity fingerprint when available; that fingerprint does not automatically become immutable logical artifact identity.
 
 ### Generation Rules
 
@@ -513,9 +520,9 @@ Requires Separate Validation: yes
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2091fa822ce5013cd9b9e463f4507d4f5556967d/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: 3pgzWX3ICCeChCyP6dLAc6VCYBpVBHy7BtbVU-QU8PA
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: KxL5TYiwLIFlaS6QQ6fHuUkTlrs7knqd2dLz-bRsa1Q
+  - Value: yxWIDiJdRpeROPI1hCNrfTKupBWj7J5enbPBN2be8Zc
