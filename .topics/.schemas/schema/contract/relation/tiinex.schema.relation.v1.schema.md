@@ -7,7 +7,7 @@
   - Trace: [tiinex.schema.contract.v1.schema.md](../tiinex.schema.contract.v1.schema.md)
   - Origin:
     - [relative](../tiinex.schema.contract.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2fd6c18cba67d4848a96a82c631a890a21001ae1/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.relation.v1](tiinex.schema.relation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -113,7 +113,7 @@ Allowed Labels
 
 Rules
 
-- Relation Handle should be unique within the target contract and treated as provisional before checksum.
+- Relation Handle is scoped to the target contract and should remain unique there; it may remain stable across revisions while it denotes the same semantic contract relation, and checksum/fingerprint changes do not automatically supersede it.
 - Relation kind should describe the semantic relationship, not only the visual connection.
 
 ### Relation Endpoints
@@ -367,9 +367,9 @@ Must Not Be Used To Claim: evidence status, preservation status, or source autho
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
-  - Value: yCGI18q-fxkGW38djBw3L0UVrAv3bRm1VKz-bRdNUwA
+  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/2fd6c18cba67d4848a96a82c631a890a21001ae1/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+  - Value: WvQKn9T_BRdSDy-v361mz-ICJttKiIpHH349XYSa90A
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: usAAKdd5mCJg1gcrYGpVE-qeLTeMkvCax1j2dH39JKE
+  - Value: Qr46EPkwBevoiHj3moalAaoZXLmoZ7EmLwU3v-GS8ug

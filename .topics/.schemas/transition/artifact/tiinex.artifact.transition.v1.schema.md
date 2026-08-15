@@ -7,13 +7,18 @@
   - Trace: [tiinex.transition.v1.schema.md](../tiinex.transition.v1.schema.md)
   - Origin:
     - [relative](../tiinex.transition.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/cc83cf92ce419761de7a412e0527b513a5dd930a/.topics/.schemas/transition/tiinex.transition.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2fd6c18cba67d4848a96a82c631a890a21001ae1/.topics/.schemas/transition/tiinex.transition.v1.schema.md)
 - Current
   - Current Schema: [tiinex.artifact.transition.v1](tiinex.artifact.transition.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
-  - Status: Draft schema proposal
+  - Status: Legacy schema proposal preserved for historical interpretation
   - Why: Specializes transitions for artifact and artifact-region actions such as continue, reference, use as, derive, annotate, validate, preserve, project, split, merge, promote, repair, refresh, and source resolution.
   - Summary: Artifact-level transition schema for provenance-bearing transformations and actions.
+- Repairs
+  - Legacy artifact-transition authority split
+    - Target: schema interpretation and new authoring
+    - Note: This schema ID preserves historical artifact-bound Continue, Reference, Use as, and invocation/action semantics. New reusable artifact-bound transformations should use [tiinex.transition.definition.v1](../definition/tiinex.transition.definition.v1.schema.md) with artifact/schema/region role constraints.
+    - Reason: Historical and public Tiinex material already references this schema ID and must remain interpretable under the meaning it declared.
 
 ---
 
@@ -21,13 +26,15 @@
 
 ## Summary
 
-Defines a transition artifact for an artifact, artifact region, span, selection, material fragment, schema-guided node, or related artifact-bound target.
+Defines a legacy transition artifact for an artifact, artifact region, span, selection, material fragment, schema-guided node, or related artifact-bound target.
+
+This schema preserves historical artifact-specialized invocation/action semantics. It is not the active authority for new reusable artifact-bound transformation definitions; use [`tiinex.transition.definition.v1`](../definition/tiinex.transition.definition.v1.schema.md) and constrain its semantic roles instead.
 
 Artifact transitions make UI and tooling actions explicit. Actions such as Continue, Reference, Use as, Annotate, Validate, Preserve, Project, Split, Merge, Promote, Refresh, and Resolve Source should not be hardcoded as hidden semantic behavior. They should be describable as bounded transitions with source boundary, intent, method, result boundary, mutation policy, state, and interpretation limits.
 
 An artifact transition may create a new artifact, create a relation, attach an annotation, create a validation report, create an interpretation, produce a projection or view, or record that no output was produced. It must not silently claim that the source changed, the result is true, or the action is validated.
 
-Durable artifact-transition identity should come from the artifact's Continuity Integrity fingerprint when available. Local handles and UI labels support authoring and interaction, but they do not become global identity.
+Continuity Integrity fingerprints provide durable references to the concrete legacy artifact-transition representation or declared continuity target they cover. Local handles and UI labels support authoring and interaction, but they do not become global identity. A changed content-derived fingerprint does not by itself decide whether two revisions belong to the same logical artifact-transition artifact.
 
 ## Core Semantics
 
@@ -39,7 +46,7 @@ Durable artifact-transition identity should come from the artifact's Continuity 
 - Annotate is an artifact annotation transition.
 - Project is a reference-frame or presentation transition, not a claim that projection is truth.
 - Split and merge must preserve what was split or merged and what was not carried forward.
-- Artifact transition must not use durable sequential identifiers when checksums can serve as durable identity.
+- Artifact transition must not introduce durable sequential identifiers merely to compensate for missing representation references or scoped local handles.
 
 ## Schema Validation Contract
 
@@ -130,7 +137,7 @@ Rules
 - Durable references should prefer Continuity Integrity fingerprints when available.
 - Provisional handles may be used during authoring and UI construction before checksums exist.
 - Provisional handles must not silently become global identity.
-- Do not introduce durable sequential identifiers for transitions, fields, rules, annotations, or relations when continuity fingerprints can serve as durable identity.
+- Do not introduce durable sequential identifiers for transitions, fields, rules, annotations, or relations as a substitute for declared logical continuity, scoped handles, or representation references.
 
 ### Source Artifact Boundary
 
@@ -420,7 +427,7 @@ Rules
 
 - Missing source, intent, method, result, state, or mutation policy should be explicit.
 - If no continuity fingerprint exists yet, use a provisional handle only as an authoring aid.
-- After checksum assignment, durable references should prefer the continuity fingerprint.
+- After checksum assignment, references to a concrete representation should prefer the continuity fingerprint when available; that fingerprint does not automatically become immutable logical artifact identity.
 
 ### Generation Rules
 
@@ -520,9 +527,9 @@ Requires Separate Validation: yes
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.transition.v1.schema.md](https://github.com/Tiinex/docs/blob/cc83cf92ce419761de7a412e0527b513a5dd930a/.topics/.schemas/transition/tiinex.transition.v1.schema.md)
-  - Value: IE3AFdZuVISBqJiHezck_el1QHEvRDsJV4d5dmu6WZE
+  - Towards: [tiinex.transition.v1.schema.md](https://github.com/Tiinex/docs/blob/2fd6c18cba67d4848a96a82c631a890a21001ae1/.topics/.schemas/transition/tiinex.transition.v1.schema.md)
+  - Value: SKdeUCnRhjQPI93z5Xj3PrmLk2DfLPcQ7oUx1XPos-k
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: K5lNkNbn4FlwHMmIvpVaJVE_lbm6jXboO3cQ2Jjd1PU
+  - Value: kFKBs6ignNkTT9ycVYdPnsN_bHtIVgCVbk6IY_yKtWA

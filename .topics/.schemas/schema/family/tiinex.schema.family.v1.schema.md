@@ -68,7 +68,7 @@ Rules
 - A schema-family artifact should begin with a human-readable family name.
 - `Family Identity` must identify the family and its base schema.
 - `Inheritance Model` must describe extension direction and intended descendants.
-- `Creatability Policy` must state whether family members are directly creatable, advanced-only, or abstract support surfaces.
+- `Creatability Policy` provides advisory direct/manual authoring guidance; family abstractness is owned by `Family Identity -> Abstract Family`.
 - `Extension Guidance` must tell future maintainers where new descendants should be placed.
 - `Boundary Notes` must state what the family does not own.
 
@@ -118,8 +118,6 @@ Rules
 Required Fields
 
 - Manually Creatable
-- Creatable As Continuation
-- Creatable As Reference
 
 Allowed Shapes
 
@@ -129,6 +127,10 @@ Allowed Shapes
 
 Optional Fields
 
+- Available Transition Definitions
+- Recommended Transition Definitions
+- Creatable As Continuation
+- Creatable As Reference
 - Recommended Contexts
 - Available Contexts
 - Advanced Contexts
@@ -137,13 +139,18 @@ Optional Fields
 
 Rules
 
-- Creatability policy should guide UI and LLM generation without becoming hidden app-only logic.
+- Creatability policy is advisory discovery and authoring guidance; it must not become hidden execution authority.
 - Creatability fields must use the allowed shapes declared in this contract so UI, validators, and LLMs do not invent local values.
-- `Manually Creatable` should distinguish ordinary user-created artifacts from abstract base schemas or support surfaces.
+- `Manually Creatable: yes` does not by itself make a schema executable from a global Create surface.
+- Direct creation requires an applicable reusable Transition Definition whose required artifact-input roles can be satisfied without an existing artifact; a zero-artifact-input definition is the ordinary direct-creation case.
+- Absence of a zero-artifact-input Transition Definition does not by itself mean that the schema or family is abstract.
+- `Abstract Family` remains the canonical family-level abstractness signal.
+- `Manually Creatable: abstract` is retained only for legacy compatibility and should not be emitted by new schema-family authoring.
+- `Available Transition Definitions` and `Recommended Transition Definitions` may point to reusable transition definitions for discovery; their referenced definitions remain semantic authority for behavior.
+- `Creatable As Continuation` and `Creatable As Reference` are optional legacy compatibility or presentation guidance only. They must not determine Parent, relation, lifecycle, placement, or result semantics when a Transition Definition is available.
 - `Recommended Contexts` should identify where the schema is a good default.
 - `Advanced Contexts` should identify allowed but unusual or expert-facing use.
 - `Not Suitable Contexts` should explain when the schema should not be offered.
-- `abstract` means the schema or family is a support surface and should not be offered as ordinary user-created content.
 - `advanced` means the schema or family may be created by expert or explicit advanced flows but should not be the default recommendation.
 
 ### Extension Guidance
@@ -217,8 +224,6 @@ Rules
 ## Creatability Policy
 
 - Manually Creatable: advanced
-- Creatable As Continuation: yes
-- Creatable As Reference: yes
 - Recommended Contexts: preserving bounded runtime state or outcome
 - Advanced Contexts: traversal, quantum, simulator, or protocol-specific runtime packages
 
@@ -260,4 +265,4 @@ treated as schema drift.
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: GQTP1Y9tXS8AfyxGAK5ILC2eyNLXBPN5imyuGCbW4mU
+  - Value: fx0uKsbuJBDdwS35DPw1QR3WFlw2T3AOQJmd22v1DWw

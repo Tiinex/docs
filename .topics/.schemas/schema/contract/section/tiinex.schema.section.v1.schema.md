@@ -7,7 +7,7 @@
   - Trace: [tiinex.schema.contract.v1.schema.md](../tiinex.schema.contract.v1.schema.md)
   - Origin:
     - [relative](../tiinex.schema.contract.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2fd6c18cba67d4848a96a82c631a890a21001ae1/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.section.v1](tiinex.schema.section.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -75,7 +75,7 @@ Optional Sections
 Rules
 
 - Required sections should identify the section without relying on hidden app state.
-- Section contracts should use provisional handles and continuity fingerprints for deterministic tooling and human-readable headings for authors.
+- Section contracts should use scoped handles and continuity fingerprints for deterministic tooling while keeping logical section reference distinct from representation fingerprint and human-readable heading.
 
 ### Section Identity
 
@@ -105,7 +105,7 @@ Allowed Labels
 
 Rules
 
-- Section Handle should remain stable within an artifact unless a new continuity fingerprint supersedes it.
+- Section Handle is scoped to the owning schema/contract and may remain stable across revisions while it denotes the same semantic section; a changed representation fingerprint does not by itself supersede the Section Handle.
 - Section heading should be the human-facing heading expected in the artifact.
 - Deprecated headings should be accepted only when the contract says so.
 
@@ -337,9 +337,9 @@ Must Not Be Used To Claim: annotation value has been verified
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
-  - Value: yCGI18q-fxkGW38djBw3L0UVrAv3bRm1VKz-bRdNUwA
+  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/2fd6c18cba67d4848a96a82c631a890a21001ae1/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+  - Value: WvQKn9T_BRdSDy-v361mz-ICJttKiIpHH349XYSa90A
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: ksFlTCV48zoHHuvBokXlg1n_KAcCydnl_H3wJ0CPieM
+  - Value: g9ZhJRz1fgyLMmGaWn159oOVS_tqGRGCWIK81pNaPTE
