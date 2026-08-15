@@ -75,6 +75,7 @@ Required Shape
 
 Optional Sections
 
+- Materialization Operations
 - Adapter Inputs
 - Adapter Outputs
 - Permission Boundary
@@ -216,6 +217,55 @@ Rules
 - `Can Suggest Interpretation` must describe whether the adapter can propose stronger artifact types while requiring explicit user action.
 - `Can Write Back` must state whether the adapter can change the source environment.
 - `Permission Mode` must state whether permission, possession, custody, social authority, organizational authority, or user approval is none, optional, required, user-provided, inherited from runtime, physical possession, or explicit future work.
+
+### Materialization Operations
+
+Required When
+
+- `Can Write Back` declares that the adapter can create, revise, delete, move, tombstone, restore, or otherwise materialize changes in an external or origin-owned environment.
+
+Entry Shape
+
+- First-Level Hyphen List Item
+
+Required Fields
+
+- Support
+
+Optional Fields
+
+- Meaning
+- Target Boundary
+- Required Permission
+- Preconditions
+- History Behavior
+- Atomicity Boundary
+- Failure Boundary
+- Notes
+
+Allowed Labels
+
+- supported
+- unsupported
+- conditional
+- unknown
+- create
+- revise
+- delete
+- move
+- tombstone
+- restore
+
+Rules
+
+- Each first-level entry is one named materialization-operation declaration and declaration names must be unique within this section.
+- The declaration name is the operation identifier. Recognized S1 operation identifiers are `create`, `revise`, `delete`, `move`, `tombstone`, and `restore`.
+- Explicit extension operation identifiers are allowed when their meaning is declared; unknown extensions must remain visible and must not be guessed into a recognized operation.
+- `Support` must be one of `supported`, `unsupported`, `conditional`, or `unknown`.
+- `History Behavior` describes how the adapter or origin retains, exposes, or does not retain history while performing the declared operation; history support is not automatically a distinct `version` operation.
+- `Atomicity Boundary` may describe only guarantees inside this adapter's declared mechanism boundary and must not imply atomicity across other adapters or origins.
+- A planner may compare a Transition Definition's required materialization operation against these declarations, but capability support does not change the Transition Definition's semantic meaning.
+- An unsupported `revise` must not be silently substituted with `create` or another operation.
 
 ### Access And Intake Discipline
 
@@ -497,6 +547,10 @@ Required Fields
 - Environment Assumptions
 - Non-Portable Details
 
+Optional Sections
+
+- Materialization Operations
+
 ### Creation Rules
 
 Rules
@@ -506,6 +560,8 @@ Rules
 - Creation tools should require explicit action boundaries before suggesting any adapter that can write, send, publish, mutate, use permission, physically handle, socially affect, or preserve material.
 - Creation tools should default unknown authority, unknown preservation, unknown evidence, unknown consent, and unknown interpretation to unknown, not assumed.
 - Creation tools should keep `Finding ≠ Feedback/Task/Evidence unless explicitly used as that type` visible in adapter definitions that produce discovery findings.
+- When `Can Write Back` declares materialization support, creation tools should include structured `Materialization Operations` declarations rather than relying on `Write Actions` prose alone.
+
 ## Minimal Example
 
 ```md
@@ -600,6 +656,7 @@ Keep this schema note in the exact section order already used here: `Summary`, `
 Maintain the section headings exactly in this schema note. Free markdown inside those sections is allowed, but adding undeclared new section headings should be treated as schema drift.
 
 The body headings required for artifacts using this schema are: `## Adapter Identity`, `## Source Boundary`, `## Translation Boundary`, `## Capability Declaration`, `## Access And Intake Discipline`, `## Holding And Reuse Discipline`, `## Preservation Boundary`, `## Output Mapping`, `## User Action Boundary`, `## Failure And Gap Handling`, `## Portability Notes`.
+When `## Materialization Operations` is present, each first-level declaration name is the operation identifier and `Support` is explicit; planners must not infer operation support from prose alone.
 
 ## Interpretation Notes
 
@@ -618,4 +675,4 @@ The body headings required for artifacts using this schema are: `## Adapter Iden
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: nUJVu2EQHYktjBJ-Sv39l02a1m2kPcoDI6pTC549lq8
+  - Value: Qjmwy4Cbqbpgc3OJEdMqudiqohNUYn5uUifls80Mqb4

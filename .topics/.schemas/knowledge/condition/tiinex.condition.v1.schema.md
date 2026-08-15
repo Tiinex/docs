@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.condition.v1](tiinex.condition.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -22,13 +22,15 @@
 
 Defines a human-readable and machine-extractable condition artifact.
 
-A condition artifact preserves the boundary of an if, when, unless, gate, threshold, prerequisite, or branch. It is not executable code, a programming-language statement, a validator result, or a decision by itself. It records what would need to be true, false, unknown, unavailable, or not applicable before another interpretation, action, validation path, portal resolution, or artifact creation step should be considered.
+A condition artifact preserves the boundary of an if, when, unless, gate, threshold, prerequisite, or branch. It is not executable code, a programming-language statement, a validator result, or a decision by itself. Software and computation remain valid domains: a condition may describe a branch predicate, loop guard, state-machine gate, recursion boundary, function prerequisite, algorithmic condition, or another computational boundary while keeping the semantic statement readable independently of executable implementation. It records what would need to be true, false, unknown, unavailable, or not applicable before another interpretation, action, validation path, portal resolution, or artifact creation step should be considered.
 
 ## Core Semantics
 
 - A condition records a bounded test or prerequisite in human-readable form.
 - A condition may support validators, schema builders, form builders, portal resolution, audit workflows, decision support, prompts, checklists, and presentation surfaces.
-- A condition may be implemented by software, human review, LLM workflow, paper process, sensor reading, source lookup, or mixed method.
+- A condition may be implemented by software, human review, LLM workflow, paper process, sensor reading, source lookup, laboratory protocol, instrument process, or mixed method.
+- A condition may describe semantics inside software or computation, including branch predicates, loop guards, state-machine gates, recursion conditions, function or program prerequisites, and algorithmic boundaries.
+- Executable implementations may be referenced separately, but executable code must not become the only semantic authority for understanding the condition.
 - A condition does not by itself execute, decide, validate, prove, authorize, or allocate.
 - A condition should keep condition statement, evaluation boundary, branch outcomes, state, and interpretation limits distinct.
 
@@ -204,7 +206,8 @@ Rules
 
 - A condition must not imply that its evaluation has occurred unless `Evaluation State` says so.
 - A condition must not imply that a satisfied branch is true, authorized, consented, or complete without separate support.
-- A condition must not hide programming-language semantics, tool assumptions, or runtime requirements when those affect interpretation.
+- A condition must not hide programming-language semantics, tool assumptions, executable implementation references, or runtime requirements when those affect interpretation.
+- Describing a computational condition does not make the Condition artifact executable code, and the absence of executable code does not make software/computation an invalid domain.
 
 ## Artifact Creation Contract
 
@@ -325,9 +328,9 @@ Must Not Be Inferred: that current web state equals the source state at artifact
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: 3pgzWX3ICCeChCyP6dLAc6VCYBpVBHy7BtbVU-QU8PA
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: nfpvuJVOTEUnUg01dhUbzR-4pPREljfoUuIGXQ6qbYs
+  - Value: 0J1fB6mAcP4hRkTAepUuZoEJMrD6uBPhADuNlMOsYLw

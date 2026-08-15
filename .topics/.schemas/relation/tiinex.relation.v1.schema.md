@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.relation.v1](tiinex.relation.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -22,7 +22,8 @@
 ## Summary
 
 This schema defines typed relationship artifacts for Tiinex references that are
-not direct artifact-continuity parents.
+not direct artifact-continuity parents. Ordinary artifacts and schemas may also
+declare or project typed relation edges without creating a Relation Artifact.
 
 It exists to keep `Parent` narrow while still allowing descendant schemas and
 runtime surfaces to express domain relationships such as contributors, inputs,
@@ -39,6 +40,8 @@ Applies To
 Rules
 
 - `tiinex.relation.v1` identifies artifacts whose main job is to declare one or more typed non-parent relationships.
+- A typed relation does not require a standalone Relation Artifact merely to exist; ordinary artifacts or schema contracts may declare or project typed edges when another artifact owns the main semantics.
+- Use a Relation Artifact when the relation instance itself has independent semantic content, provenance, state, interpretation limits, or lifecycle worth preserving as an artifact.
 - A relation artifact must not reinterpret `Parent` as a generic graph edge.
 - A relation artifact may describe domain, runtime, validation, evidence, biological, legal, or data relationships without making those targets direct continuity parents.
 - Prose outside `Schema Validation Contract` may explain the schema, but it does not add required validation rules.
@@ -142,6 +145,8 @@ Rules
 Rules
 
 - Use `tiinex.relation.v1` when the main artifact value is an explicit typed non-parent relation.
+- Do not create a Relation Artifact as a mandatory intermediate node for every meaningful graph edge.
+- When another artifact owns the main semantics, that artifact may project a typed relation directly if its active contract preserves the predicate/target meaning.
 - Do not use `tiinex.relation.v1` to replace evidence, decision, feedback, task, topic, pointer, or runtime schemas when those schemas own the main artifact role.
 - Do not use `tiinex.relation.v1` for direct continuity ancestry; use the root `Parent` envelope when direct continuity is being declared.
 
@@ -227,9 +232,9 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3b0eec3ee450c31078e1c485a769e57d2ce43258/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: 3pgzWX3ICCeChCyP6dLAc6VCYBpVBHy7BtbVU-QU8PA
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: Uw697aY6Ni1c6vAjmIX7jIX3d5z0uqcNoYoG9VcZmYE
+  - Value: Xvbb4_ekLH_HFWU34MXmYLCIY_BYjpPIqynbSblTcNs

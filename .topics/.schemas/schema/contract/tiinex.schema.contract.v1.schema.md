@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/3315351edc6fad7cc81e3fca9c68a3c02851b6f6/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.contract.v1](tiinex.schema.contract.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -31,7 +31,7 @@ Schema contract does not replace root continuity, schema prose, human judgement,
 
 - Schema contract = explicit machine-facing agreement about how a schema artifact may be created, read, checked, generated, or extended.
 - Contract nodes must be separate from explanatory prose.
-- Contract nodes should use provisional handles and continuity fingerprints so validators and builders can reference them.
+- Contract nodes should use scoped handles and continuity fingerprints so validators and builders can reference logical contract nodes and concrete representations without conflating them.
 - Contract nodes may be implemented by humans, LLMs, scripts, CLIs, browser apps, forms, or other tools.
 - A schema contract must say what it covers and what it does not cover.
 - Missing contract nodes must not be silently invented from prose.
@@ -98,10 +98,11 @@ Optional Fields
 
 Rules
 
-- Durable identity for contract nodes should come from Continuity Integrity fingerprints when available.
+- Scoped contract-node handles may remain logically stable across revisions while they continue to denote the same semantic node inside the owning contract scope.
+- Continuity Integrity fingerprints provide durable references to the concrete representation or declared continuity target they verify; a changed content-derived fingerprint does not by itself create a new logical contract node or supersede its scoped handle.
 - Provisional handles may support authoring, local references, deterministic extraction, and prechecksum generation.
-- Provisional handles must not silently become global identity.
-- Do not introduce durable sequential identifiers for fields, sections, rules, examples, relations, generation steps, annotations, or transitions when continuity fingerprints can serve as durable identity.
+- Scoped or provisional handles must not silently become global artifact identity.
+- Do not introduce global sequential identifiers for fields, sections, rules, examples, relations, generation steps, annotations, or transitions merely to compensate for representation changes.
 
 ### Contract Identity
 
@@ -203,7 +204,7 @@ Allowed Labels
 
 Rules
 
-- Contract node handles should be unique within the target schema contract and treated as provisional before checksum.
+- Contract node handles should be unique within the target schema contract and may remain stable across revisions while they continue to denote the same semantic node; checksum/fingerprint changes do not automatically supersede the scoped handle.
 - Contract node labels should be human-readable.
 - Contract nodes should not rely on hidden application registries as semantic authority.
 - If a tool cannot understand a contract node type, it should report unknown, unavailable, skipped, or unconfirmed rather than treating it as pass.
@@ -369,9 +370,9 @@ Must Not Be Used To Claim: annotation truth, evidence status, or full semantic v
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/3315351edc6fad7cc81e3fca9c68a3c02851b6f6/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: 3pgzWX3ICCeChCyP6dLAc6VCYBpVBHy7BtbVU-QU8PA
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: BV0_HaSkph_PAYH1BWP_ucusznTqpAW6wttILzvOlWo
+  - Value: CCTJ3LBZbhyYxb88HUGIegGkesZvgCtqatQAtnoPb5A
