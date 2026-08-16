@@ -7,7 +7,7 @@
   - Trace: [tiinex.traversal.runtime.v1.schema.md](../tiinex.traversal.runtime.v1.schema.md)
   - Origin:
     - [relative](../tiinex.traversal.runtime.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/74c2e1effe4f37cf21608ee3a3757534d71c19a3/.topics/.schemas/traversal/runtime/tiinex.traversal.runtime.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/01fd6502b0339abdb545a3d49fbc663cedd4e626/.topics/.schemas/traversal/runtime/tiinex.traversal.runtime.v1.schema.md)
 - Current
   - Current Schema: [tiinex.quantum.traversal.runtime.v1](tiinex.quantum.traversal.runtime.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -293,14 +293,12 @@ Rules
 - Classical post-processing should be explicit when it materially determines the final outcome.
 - Post-processing must not expand the verified claim beyond the declared verifier and measurement boundary.
 
-### Outcome And Failure Modes
+### Outcome
 
 Required Fields
 
 - Outcome Status
 - Outcome Summary
-- Failure Modes
-- Claim Boundary
 
 Optional Fields
 
@@ -310,7 +308,6 @@ Optional Fields
 - Quantum Advantage Claim
 - Hardware Execution Claim
 - Cost Observed
-- Interpretation Limits
 
 Allowed Shapes
 
@@ -331,10 +328,24 @@ Rules
 
 - `Outcome Status` must use one of the declared shapes.
 - `Outcome Summary` must state what the quantum traversal produced or failed to produce.
-- `Failure Modes` must state known ways the quantum traversal can fail, mislead, overclaim, or be incomplete.
-- `Claim Boundary` must state what the artifact is allowed to claim and what it does not prove.
 - Quantum advantage must not be claimed unless `Quantum Advantage Claim: claimed` is present and supported by appropriate benchmark or validation context.
 - Hardware execution must not be claimed unless `Hardware Execution Claim: claimed` is present and supported by execution context.
+
+### Failure Modes
+
+Required Fields
+
+- Failure Modes
+- Claim Boundary
+
+Optional Fields
+
+- Interpretation Limits
+
+Rules
+
+- `Failure Modes` must state known ways the quantum traversal can fail, mislead, overclaim, or be incomplete.
+- `Claim Boundary` must state what the artifact is allowed to claim and what it does not prove.
 - Quantum traversal must not be read as provenance recovery, truth, authorship, consent, identity, or semantic correctness outside the declared search space, verifier, and companion artifacts.
 
 ### File Naming
@@ -476,9 +487,9 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.traversal.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/74c2e1effe4f37cf21608ee3a3757534d71c19a3/.topics/.schemas/traversal/runtime/tiinex.traversal.runtime.v1.schema.md)
-  - Value: PQvjjDlWcrw6OrMTEBAg6iiYvCR6o-8bMa2cpkn7BCk
+  - Towards: [tiinex.traversal.runtime.v1.schema.md](https://github.com/Tiinex/docs/blob/01fd6502b0339abdb545a3d49fbc663cedd4e626/.topics/.schemas/traversal/runtime/tiinex.traversal.runtime.v1.schema.md)
+  - Value: 9F8tFKNaSGUC8f9hX3nFngAutRA0LSRI1emq2bkzAas
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: cQe6mLBd7D-f-p0ZkkMtw3SsXZdUInK_Uu0_kQqSy0M
+  - Value: zRUHizjWVNGOZM9RP59aLw1-T_S7JzvUNtLaXD4Awis
