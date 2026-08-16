@@ -122,18 +122,31 @@ Rules
 - `Budget Status` must use one of the declared shapes.
 - Approval or active status should not be inferred from a plan unless the authority or attestation basis is stated.
 
-### Budgeted Resource And Limit Policy
+### Budgeted Resource
 
 Required Fields
 
 - Resource Kind
 - Limit Amount
 - Unit
-- Limit Policy
 
 Optional Fields
 
 - Time Window
+
+Rules
+
+- `Resource Kind` should use broad resource terms such as funds, tokens, API calls, compute, storage, personnel time, legal review, lab time, hardware access, or other.
+- `Limit Amount` and `Unit` should be specific enough that usage can later be compared to the budget.
+
+### Limit Policy
+
+Required Fields
+
+- Limit Policy
+
+Optional Fields
+
 - Alert Threshold
 - Stop Threshold
 - Renewal Rule
@@ -154,8 +167,6 @@ Allowed Shapes
 
 Rules
 
-- `Resource Kind` should use broad resource terms such as funds, tokens, API calls, compute, storage, personnel time, legal review, lab time, hardware access, or other.
-- `Limit Amount` and `Unit` should be specific enough that usage can later be compared to the budget.
 - `hard-cap` means ordinary tooling should stop or refuse use when the cap is reached.
 - `soft-cap` means ordinary tooling should warn or require review when the cap is reached.
 - `alert-only` means the budget is informational unless another artifact defines enforcement.
@@ -306,4 +317,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: Kjh32W1utzWl5RxD_Q2Rdrk4SYmzA6zqWDM-mDB6tQc
+  - Value: gu49yv_bPNv6CvELTg2Z378nN1wsAu0QmrBotm2CI08

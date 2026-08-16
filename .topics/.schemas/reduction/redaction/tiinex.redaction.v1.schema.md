@@ -7,7 +7,7 @@
   - Trace: [tiinex.reduction.v1.schema.md](../tiinex.reduction.v1.schema.md)
   - Origin:
     - [relative](../tiinex.reduction.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/master/.topics/.schemas/reduction/tiinex.reduction.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/02392a68bb70f9b1656a77c6c65c272582d05ab1/.topics/.schemas/reduction/tiinex.reduction.v1.schema.md)
 - Current
   - Current Schema: [tiinex.redaction.v1](tiinex.redaction.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -141,20 +141,34 @@ Rules
 - A redaction artifact must not present removed or uncertain material as retained fact.
 - If the redacted output cannot support the same interpretation as the source, the artifact must say so in `Carry-Forward Claim`, `Loss And Uncertainty`, or `Interpretation Limits`.
 
-### Loss And Residual Risk
+### Loss And Uncertainty
 
 Required Fields
 
 - Removed Or Transformed Material
 - Loss Description
+
+Optional Fields
+
+- Semantic Drift Risk
+- Known Gaps
+
+Rules
+
+- `Removed Or Transformed Material` must describe the removed, masked, generalized, omitted, or transformed material at a safe level of detail.
+- `Loss Description` must state the fidelity, context, or interpretation loss created by the redaction.
+- A redaction artifact should preserve known gaps rather than implying complete protection.
+
+### Residual Risk
+
+Required Fields
+
 - Residual Disclosure Risk
 
 Optional Fields
 
 - Reidentification Risk
 - Recovery Risk
-- Semantic Drift Risk
-- Known Gaps
 
 Allowed Shapes
 
@@ -169,11 +183,8 @@ Allowed Shapes
 
 Rules
 
-- `Removed Or Transformed Material` must describe the removed, masked, generalized, omitted, or transformed material at a safe level of detail.
-- `Loss Description` must state the fidelity, context, or interpretation loss created by the redaction.
 - `Residual Disclosure Risk` must use one of the declared shapes and should not be inferred as low from the presence of redaction alone.
 - `Reidentification Risk` should be explicit when summaries, partial identifiers, context, or linked artifacts could identify a subject.
-- A redaction artifact should preserve known gaps rather than implying complete protection.
 
 ### Validation
 
@@ -297,3 +308,13 @@ treated as schema drift.
 - this support schema intentionally omits `Artifact Creation Contract` until ordinary app creation behavior is explicitly declared
 
 ---
+
+# Continuity Integrity
+
+- sha256-base64url-c14n-v1
+  - Towards: [tiinex.reduction.v1.schema.md](https://github.com/Tiinex/docs/blob/02392a68bb70f9b1656a77c6c65c272582d05ab1/.topics/.schemas/reduction/tiinex.reduction.v1.schema.md)
+  - Value: kpMi8eu4V4wN3qcwlrH34hgMRy1g4-XR-wEcfeUceKc
+
+- sha256-base64url-c14n-v2
+  - Towards: self
+  - Value: mcLMv8UItqR5NQSRhegyIb2CScJ-rtX4es9nEauazME

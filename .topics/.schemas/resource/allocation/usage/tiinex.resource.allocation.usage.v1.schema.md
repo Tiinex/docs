@@ -7,7 +7,7 @@
   - Trace: [tiinex.resource.allocation.v1.schema.md](../tiinex.resource.allocation.v1.schema.md)
   - Origin:
     - [relative](../tiinex.resource.allocation.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/5fb5d130f93492a4e56df5d07397b9dcd5bb1a7c/.topics/.schemas/resource/allocation/tiinex.resource.allocation.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/02392a68bb70f9b1656a77c6c65c272582d05ab1/.topics/.schemas/resource/allocation/tiinex.resource.allocation.v1.schema.md)
 - Current
   - Current Schema: [tiinex.resource.allocation.usage.v1](tiinex.resource.allocation.usage.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -125,33 +125,44 @@ Rules
 - Estimated usage should preserve the estimate method or uncertainty.
 - Billed usage should preserve billing source or evidence when available.
 
-### Resource Used And Meter
+### Resource Used
 
 Required Fields
 
 - Resource Kind
 - Amount
 - Unit
-- Meter Or Source
 
 Optional Fields
 
 - Currency
-- Cost Estimate
-- Billing Reference
 - Token Count
 - Compute Time
 - Staff Time
 - Material Quantity
 - Measurement Window
-- Evidence Artifact
 
 Rules
 
 - `Resource Kind` should identify the resource class being consumed, spent, or reported.
 - `Amount` and `Unit` should state the reported measure and unit when known.
-- `Meter Or Source` should identify whether usage is measured by runtime logs, provider billing, estimate method, observation, invoice, manual report, or unknown source.
 - Token counts, model calls, API costs, compute hours, staff hours, and monetary costs may be recorded as resource usage when the usage boundary is explicit.
+
+### Meter Or Evidence
+
+Required Fields
+
+- Meter Or Source
+
+Optional Fields
+
+- Cost Estimate
+- Billing Reference
+- Evidence Artifact
+
+Rules
+
+- `Meter Or Source` should identify whether usage is measured by runtime logs, provider billing, estimate method, observation, invoice, manual report, or unknown source.
 
 ### File Naming
 
@@ -286,9 +297,9 @@ Rules
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.resource.allocation.v1.schema.md](https://github.com/Tiinex/docs/blob/5fb5d130f93492a4e56df5d07397b9dcd5bb1a7c/.topics/.schemas/resource/allocation/tiinex.resource.allocation.v1.schema.md)
-  - Value: UosqQMNn7zKDBL9r_v1VcCDZjTeQyZj1GJHk4xjfZIU
+  - Towards: [tiinex.resource.allocation.v1.schema.md](https://github.com/Tiinex/docs/blob/02392a68bb70f9b1656a77c6c65c272582d05ab1/.topics/.schemas/resource/allocation/tiinex.resource.allocation.v1.schema.md)
+  - Value: I3hcBDWe9EN2zLgKDdgiExuJH6nM7QDWeCHnZcaSm-k
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: AsArvQyWEoa1_Jo1-MnV8fLUMc4NfZku-gzfsaINlyY
+  - Value: TZCzX79HZUJPUFFwvYARAyRAngCiR8Jg61fcBwkby-w

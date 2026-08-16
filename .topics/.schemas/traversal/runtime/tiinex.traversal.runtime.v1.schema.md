@@ -219,13 +219,12 @@ Rules
 - Quantum backends should be represented as executor types or descendant runtime schemas; they should not redefine root continuity or parent semantics.
 - Runtime executor details should not replace search-space, candidate, transition, and verifier semantics.
 
-### Outcome And Failure Modes
+### Outcome
 
 Required Fields
 
 - Outcome Status
 - Outcome Summary
-- Failure Modes
 
 Optional Fields
 
@@ -234,7 +233,6 @@ Optional Fields
 - Inconclusive Areas
 - Cost Observed
 - Runtime Evidence
-- Interpretation Limits
 
 Allowed Shapes
 
@@ -249,6 +247,19 @@ Rules
 
 - `Outcome Status` must use one of the declared shapes.
 - `Outcome Summary` must state what the traversal produced or failed to produce.
+
+### Failure Modes
+
+Required Fields
+
+- Failure Modes
+
+Optional Fields
+
+- Interpretation Limits
+
+Rules
+
 - `Failure Modes` must state known ways the traversal can fail, mislead, overclaim, or be incomplete.
 - Traversal outcomes should not be read as truth, provenance recovery, authorship, consent, identity, or semantic correctness unless those are inside the declared verifier scope and supported by appropriate companion artifacts.
 
@@ -357,4 +368,4 @@ treated as schema drift.
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: 3THaYeVbEsgYtP90yJQ99flCQGCQ64pJi-Ny8rh_2po
+  - Value: NYOaH3Iv3QXQ4Z-zdu6unWjDkLE6-TRj1sx3CdxJtb8

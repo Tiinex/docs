@@ -7,7 +7,7 @@
   - Trace: [tiinex.schema.contract.v1.schema.md](../tiinex.schema.contract.v1.schema.md)
   - Origin:
     - [relative](../tiinex.schema.contract.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/1669696ea4f498adf8924476c9f3bc8313993689/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.generation.v1](tiinex.schema.generation.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -130,9 +130,12 @@ Rules
 
 ### Required Inputs
 
+Entry Shape
+
+- First-Level Hyphen List Item
+
 Required Fields
 
-- Required Input
 - Input Source Policy
 
 Optional Fields
@@ -157,14 +160,20 @@ Allowed Labels
 
 Rules
 
+- Each first-level entry is one required-input declaration.
+- The declaration name is the readable Required Input identity and must be unique within `## Required Inputs`.
+- Each input entry owns its own `Input Source Policy`; source policy must not be paired by list position or document-wide field order.
 - Input source policy must distinguish human input, adapter input, imported input, derived input, defaulted input, and LLM-suggested input.
 - LLM-suggested input must remain suggested unless reviewed or verified.
 
 ### Generation Steps
 
+Entry Shape
+
+- First-Level Hyphen List Item
+
 Required Fields
 
-- Step Handle
 - Step Action
 
 Optional Fields
@@ -193,6 +202,9 @@ Allowed Labels
 
 Rules
 
+- Each first-level entry is one generation-step declaration.
+- The declaration name is the existing readable `Step Handle` identity and must be unique within `## Generation Steps`.
+- Step-local fields belong to that declaration; validators must not pair repeated Step Action/Order values by document position.
 - Step order should be explicit when deterministic generation requires it.
 - Missing input handling must be explicit for required fields.
 - Generation steps must not silently create evidence, claims, validations, or preservation artifacts.
@@ -316,25 +328,25 @@ Target Output: full artifact skeleton
 
 ## Required Inputs
 
-Required Input: Target Identifier
-Input Source Policy: human-input
-Required Input: Annotation Kind
-Input Source Policy: human-input
-Required Input: Annotation Value
-Input Source Policy: human-input
+- Target Identifier
+  - Input Source Policy: human-input
+- Annotation Kind
+  - Input Source Policy: human-input
+- Annotation Value
+  - Input Source Policy: human-input
 
 ## Generation Steps
 
-Step Handle: create-annotation-target-section
-Step Action: create-section
-Step Order: 10
-Uses Section Contract: annotation-target
+- create-annotation-target-section
+  - Step Action: create-section
+  - Step Order: 10
+  - Uses Section Contract: annotation-target
 
-Step Handle: fill-target-identifier
-Step Action: ask-user
-Step Order: 20
-Uses Field Contract: target-identifier
-On Missing Input: mark-unknown
+- fill-target-identifier
+  - Step Action: ask-user
+  - Step Order: 20
+  - Uses Field Contract: target-identifier
+  - On Missing Input: mark-unknown
 
 ## Output Boundary
 
@@ -359,9 +371,9 @@ Must Not Be Used To Claim: target or value has been validated
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
-  - Value: yCGI18q-fxkGW38djBw3L0UVrAv3bRm1VKz-bRdNUwA
+  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/1669696ea4f498adf8924476c9f3bc8313993689/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+  - Value: N3HHx97V1jljnruVv5EpxBnQqgJiUUtul7yXWfSuJJ8
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: Dd0R-D6CfyhdhLtgrjx4433OPCFJFnX0ANRUn1tIE5k
+  - Value: IYfPs40EcSSOOeogvE6zvhdDcbUTf-p5En3dh-PM4NE

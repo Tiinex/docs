@@ -123,19 +123,31 @@ Rules
 - Pending or disputed receipts should preserve what remains unconfirmed.
 - Returned or reversed receipts should point to return, correction, or evidence artifacts when available.
 
-### Received Resource And Receipt Basis
+### Received Resource
 
 Required Fields
 
 - Resource Kind
 - Received Amount
 - Unit
-- Receipt Basis
 
 Optional Fields
 
 - Resource Form
 - Currency
+
+Rules
+
+- `Resource Kind` should use broad resource terms such as funds, hardware, software, compute credits, dataset, material, facility, access, permission, time, personnel, expertise, or other.
+
+### Receipt Basis
+
+Required Fields
+
+- Receipt Basis
+
+Optional Fields
+
 - Transaction Reference
 - Delivery Reference
 - Custody Boundary
@@ -145,7 +157,6 @@ Optional Fields
 
 Rules
 
-- `Resource Kind` should use broad resource terms such as funds, hardware, software, compute credits, dataset, material, facility, access, permission, time, personnel, expertise, or other.
 - `Receipt Basis` should identify the strongest available receipt support without overstating it.
 - A transaction reference, delivery note, screenshot, bank record descriptor, invoice, platform report, or provider statement may support receipt but does not by itself prove lawful ownership, permission, or accounting correctness.
 
@@ -286,4 +297,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: Hu_KnFdQgOEFRkYjeIJoejWprpd155ZH6IGx7VnihTI
+  - Value: _EGAJgI5NXdjAnyr-FVkEmA27n59CALIbIVOaYWsFZs

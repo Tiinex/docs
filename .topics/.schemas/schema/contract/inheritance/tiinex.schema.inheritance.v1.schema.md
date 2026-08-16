@@ -7,7 +7,7 @@
   - Trace: [tiinex.schema.contract.v1.schema.md](../tiinex.schema.contract.v1.schema.md)
   - Origin:
     - [relative](../tiinex.schema.contract.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/1669696ea4f498adf8924476c9f3bc8313993689/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.inheritance.v1](tiinex.schema.inheritance.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -145,6 +145,10 @@ Rules
 
 ### Merge Rules
 
+Entry Shape
+
+- First-Level Hyphen List Item
+
 Required Fields
 
 - Merge Operation
@@ -172,6 +176,9 @@ Allowed Labels
 
 Rules
 
+- Each first-level entry is one merge-rule declaration.
+- The declaration name must be unique within `## Merge Rules` and must be a readable local description composed from the rule's existing semantic material, such as merge operation plus applies-to scope; it is not a global identifier.
+- Merge operation and applies-to remain explicit nested fields and must not be inferred from declaration position.
 - Merge operation must be explicit.
 - `override` must identify the parent node being overridden.
 - `refine` should preserve parent intent while narrowing or clarifying it.
@@ -299,14 +306,16 @@ Child Resolution State: resolved
 
 ## Merge Rules
 
-Merge Operation: inherit
-Applies To: all parent required sections
-Effective Result: artifact.annotation keeps annotation target, value, provenance, state, and limits
+- inherit all parent required sections
+  - Merge Operation: inherit
+  - Applies To: all parent required sections
+  - Effective Result: artifact.annotation keeps annotation target, value, provenance, state, and limits
 
-Merge Operation: add
-Applies To: artifact binding fields
-Child Node: Artifact Binding
-Effective Result: artifact.annotation adds artifact-specific target fields
+- add artifact binding fields
+  - Merge Operation: add
+  - Applies To: artifact binding fields
+  - Child Node: Artifact Binding
+  - Effective Result: artifact.annotation adds artifact-specific target fields
 
 ## Conflict Handling
 
@@ -330,9 +339,9 @@ Must Not Be Used To Claim: child schema can ignore annotation boundaries
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/fb16e56aebd5afeb003a985ec44c8d8e98a6af3b/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
-  - Value: yCGI18q-fxkGW38djBw3L0UVrAv3bRm1VKz-bRdNUwA
+  - Towards: [tiinex.schema.contract.v1.schema.md](https://github.com/Tiinex/docs/blob/1669696ea4f498adf8924476c9f3bc8313993689/.topics/.schemas/schema/contract/tiinex.schema.contract.v1.schema.md)
+  - Value: N3HHx97V1jljnruVv5EpxBnQqgJiUUtul7yXWfSuJJ8
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: -_qn3HGeEBKvPBTUuSI6eLPeWwiZKrmyUCq9KUVkupo
+  - Value: xlNpgkev1PgiHph5Z1CViHb8rrNiQgr6ty-0PU6swd8
