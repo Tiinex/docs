@@ -130,6 +130,7 @@ Known Category Labels
 - Group Shape
 - Header Sections
 - Integrity Authority
+- Instance Target
 - Known Category Labels
 - List Marker
 - Non-Authoritative For Validation
@@ -251,6 +252,51 @@ Rules
 - Missing required groups are `error`.
 - Missing optional groups are valid.
 - Duplicate handling must not be silently guessed.
+
+### Ordinary Instance Field Targeting
+
+Applies To
+
+- descendant `Schema Validation Contract` groups that declare `Required Fields` and/or `Optional Fields`
+
+Rules
+
+- An ordinary instance-field group declares `Required Fields` and/or `Optional Fields`, does not declare `Entry Shape`, and uses ordinary unqualified field labels.
+- Root-owned envelope/footer groups, qualified envelope/path fields such as `Current -> Why`, named-declaration groups, and `Artifact Creation Contract` groups are outside this default.
+- Unless an ordinary instance-field group declares `Instance Target`, its Artifact instance target is the exact second-level heading whose text equals the contract group name.
+- The same-name correspondence is machine authority defined by Root; validators must not treat it as a heuristic or fall back to document-wide field matching.
+- Heading text follows Root exact, case-sensitive matching rules and heading depth is part of target identity.
+- `Instance Target` overrides only the default instance target for the declaring group.
+- An authorized target must resolve to at most one Artifact heading block. Multiple exact target matches are structural ambiguity and `error`; validators must not choose the first or last match.
+- If the authorized target block is absent, fields elsewhere in the document do not satisfy the group.
+- Target/block requiredness, field requiredness, and field ownership are separate truths.
+- When the authorized target is an optional section and that section is absent, `Required Fields` inside that group do not independently make the optional section required.
+- When an optional authorized target is present, its `Required Fields` are required inside that target.
+- Ordinary field occurrences are owned only by their authorized target block. Fields inside a nested heading or named-declaration-owned region are not claimed by an ancestor ordinary group merely because the label matches.
+- `Required Fields` and `Optional Fields` declare singular ordinary scalar occurrences by default within one instantiated target block.
+- Duplicate ordinary scalar occurrences must remain observable and are `error` unless another explicit contract owns repeated structured entries or explicitly defines repeat semantics.
+- Validators must retain field occurrence multiplicity long enough to validate it; collapsing ordinary occurrences into a Set before validation is not allowed.
+- Inherited and descendant contributions are additive by default, preserve contributing schema/contract provenance, and may share one physical authorized target without requiring duplicate headings.
+- A descendant contribution must not silently retarget or replace an inherited requirement without declared override semantics.
+
+### Instance Target
+
+Applies To
+
+- ordinary instance-field contract groups that intentionally target a heading other than Root's same-name default
+
+Required Shape
+
+- one literal Markdown heading token
+
+Rules
+
+- `Instance Target` contains exactly one literal Markdown heading token including heading depth, for example `## Deferral` or `### Nested Block`.
+- `Instance Target` is singular; it must not be used as a list of multiple Artifact targets.
+- Heading text is interpreted using Root exact, case-sensitive heading matching.
+- `Instance Target` changes field-ownership location only; it does not make an otherwise optional target section required.
+- Multi-block semantics should be expressed as locally owned contract groups rather than by pointing one ordinary group at multiple blocks.
+- Validators must not invent selector syntax, positional identity, AST paths, XPath, JSON pointers, or application-internal IDs when the declared heading authority is sufficient.
 
 ### Named Declaration
 
@@ -645,4 +691,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: ZiE8eirbL2pvocyarDjmfuO3wKii-wTl5xynwJNvtXo
+  - Value: RO-ElUHapXTMzReer1qsMRuOZ5-DAGar9H1xJ3yc_6Y

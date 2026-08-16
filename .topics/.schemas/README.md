@@ -34,6 +34,25 @@ A folder is useful for humans and tooling, but Tiinex continuity must remain por
 - schema.contract / section / field / rule / generation / inheritance nodes where present
 - Continuity Integrity when present
 
+## Ordinary Field Ownership
+
+For ordinary field groups inside a schema's `Schema Validation Contract`, Root normally maps contract group `G` to the exact same-name Artifact block `## G`.
+
+That same-name mapping is Root machine authority, not a Tooling or site convention. Schema authors therefore do not need to repeat obvious target metadata.
+
+Use `Instance Target` only for a real one-heading exception:
+
+```text
+### Deferral Surface
+
+Instance Target
+- `## Deferral`
+```
+
+If one contract idea spans several Artifact blocks, keep the machine contract local by splitting or re-aligning the groups to those readable blocks. Do not build multi-target lists merely to preserve an umbrella contract heading.
+
+Optional target blocks remain optional: their Required Fields become required when the block is present, not merely because the field group exists.
+
 ## Current Layout Families
 
 ### Continuity Envelope
