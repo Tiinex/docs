@@ -134,6 +134,7 @@ Known Category Labels
 - Instance Target
 - Known Category Labels
 - List Marker
+- Machine Shape Definitions
 - Non-Authoritative For Validation
 - Optional Fields
 - Optional Sections
@@ -337,6 +338,68 @@ Rules
 - Contradictory applicable constraints must be reported as a contract conflict and must not be silently unioned, source-ordered, or resolved by child-wins precedence.
 - Compiled field-value authority must retain source schema, contract group, exact target field, whether targeting is local or shared through `Applies To`, declared values and shapes, policy, and inherited contribution provenance.
 - Existing `Allowed Labels` semantics remain unchanged. `Allowed Labels` is group-level vocabulary/readability authority and is not field-domain closure.
+
+### Machine Shape Authority
+
+Entry Shape
+
+- Named Declaration
+
+Declaration Fields
+
+- Grammar Profile
+- Start Rule
+- Grammar Rule
+- Human Meaning
+
+Machine Shape Definitions
+
+- Markdown Link
+  - Grammar Profile: tiinex.lexical.shape.v1
+  - Start Rule: markdown-link
+  - Grammar Rule: markdown-link = "[" label "](" target ")"
+  - Grammar Rule: label = ANY-EXCEPT("]", TAB, CR, LF)+
+  - Grammar Rule: target = ANY-EXCEPT(")", SPACE, TAB, CR, LF)+
+  - Human Meaning: Exactly one complete inline Tiinex Markdown link with a non-empty single-line label and non-empty target. ASCII space is allowed in the label; ASCII space, tab, CR, and LF are forbidden in the target.
+
+Rules
+
+- `Machine Shape Definitions` declares exact machine-readable lexical shape authorities available to `Allowed Shape` and to any future contract surface that explicitly delegates to this authority.
+- Each first-level entry under `Machine Shape Definitions` is one named machine-shape declaration. The declaration name is the exact case-sensitive shape label.
+- Every machine-shape declaration must contain exactly one `Grammar Profile`, exactly one `Start Rule`, one or more `Grammar Rule` fields, and exactly one `Human Meaning`.
+- `Grammar Rule` may repeat and its ordering is not semantic. Other single-cardinality declaration fields must not repeat.
+- Machine-shape definitions are resolved by lineage prefix at the source point of the shape use: ancestor schema definitions and definitions from the same source schema are visible; definitions introduced only by later descendants are not visible to an ancestor contribution.
+- Source order inside one schema is not semantic. A same-schema definition may qualify a same-schema shape use regardless of whether the declaration text appears before or after the use.
+- A descendant may add a new distinct shape label. That definition is visible to uses in the descendant source and its later descendants, but not to ancestor or sibling-branch uses that do not inherit it.
+- For one exact shape label within the active lineage prefix, zero active definitions means shape authority is unresolved; exactly one valid definition is usable when its grammar profile is supported; more than one active definition is a contract/authority conflict and consumers of that label are unresolved.
+- Duplicate exact-label definitions are not deduplicated even when their text is identical. No source-order, descendant-wins, first-definition, or hidden-registry precedence exists.
+- This contract introduces no generic inherited machine-shape replacement operator. A future replacement authority may be defined only when it can explicitly identify the inherited definition being replaced.
+- Compiled machine-shape authority must preserve the exact shape label, source schema, source contract group, declaration source, lineage/source-point visibility, grammar profile, start rule, grammar rules, human meaning, and qualification-support state.
+- A consumer of machine-shape authority must retain the source schema, contract group, exact field/use, requested shape label, resolved definition provenance, and qualification result `match`, `no-match`, or `unresolved`.
+- `Human Meaning` is explanatory readability authority only. Machine lexical acceptance is owned by `Grammar Profile`, `Start Rule`, and `Grammar Rule`; validators must not infer a matcher from `Human Meaning`.
+- `tiinex.lexical.shape.v1` is the Root-owned generic lexical grammar profile defined by this group. It is interpreter semantics and is not itself resolved through another Machine Shape Definition.
+- Under `tiinex.lexical.shape.v1`, grammar-source meta-whitespace is exactly ASCII SPACE U+0020 and TAB U+0009. It may appear before the first grammar token, between grammar tokens where token boundaries permit, and after the last grammar token, and is ignored as grammar-source separation. It must not split an identifier or alter a quoted literal. CR, LF, and every non-ASCII whitespace character are not grammar-source meta-whitespace. Implementations must not derive grammar-source whitespace from a host-language class such as `\s`.
+- After ignoring permitted grammar-source meta-whitespace, each `Grammar Rule` has the form `identifier = expression`. Rule identifiers are case-sensitive, begin with an ASCII letter, and continue with ASCII letters, ASCII digits, or hyphen. Rule identifiers must be unique inside one shape declaration. `Start Rule` must name exactly one declared `Grammar Rule` identifier.
+- Reserved identifier tokens are exactly `SPACE`, `TAB`, `CR`, `LF`, `DIGIT`, `ASCII-LETTER`, `ANY`, and `ANY-EXCEPT`. Reserved punctuation/operator tokens are exactly `?`, `*`, `+`, `|`, `(`, `)`, `,`, and `=`. A declared Grammar Rule identifier must not use a reserved identifier token.
+- The normative expression productions are `grammar-rule = identifier "=" expression`, `expression = concatenation ("|" concatenation)*`, `concatenation = postfix-expression+`, `postfix-expression = atom ("?" | "*" | "+")?`, and `atom = quoted-literal | builtin | rule-reference | any-except | "(" expression ")"`. These productions, rather than host-language parser precedence, define `tiinex.lexical.shape.v1`.
+- The productions make postfix `?`, `*`, or `+` highest precedence and permit at most one postfix quantifier per postfix-expression; concatenation/adjacency binds next; alternation `|` binds lowest; parentheses explicitly group an expression. Concatenation is evaluated left-to-right. Alternation is a left-to-right list of alternatives whose acceptance is their union, so alternative ordering does not create precedence.
+- Under `tiinex.lexical.shape.v1`, postfix operators define accepted lexical languages rather than regex-engine execution strategy. For an atom or grouped expression `x`, `x?` accepts zero or one consecutive occurrence of a scalar sequence accepted by `x`; `x*` accepts the union of all finite concatenations of zero or more consecutive occurrences accepted by `x`; and `x+` accepts the union of all finite concatenations of one or more consecutive occurrences accepted by `x`.
+- Postfix repetition has no greedy, lazy, capture, or backtracking semantics. An implementation may use any evaluation strategy that preserves the same accepted language.
+- Repetition remains well-defined when `x` can accept the empty scalar. Such repetition is not a grammar error: its meaning remains the finite-concatenation language above, and implementations must avoid nontermination without inventing a different acceptance rule or enumerating infinitely many equivalent empty derivations.
+- Whole-value shape qualification succeeds when at least one finite derivation of the `Start Rule` consumes the complete extracted scalar. No particular derivation is preferred merely because another implementation would call it greedy, lazy, earlier, or later.
+- An expression, each side of `|`, and a parenthesized expression must be non-empty. Therefore an empty expression, an empty left or right alternative, empty parentheses, `"x"??`, `"x"*+`, and every other repeated postfix sequence are grammar errors. Parentheses may be used to group an expression before applying one postfix quantifier to that grouped atom.
+- A non-reserved identifier used as an expression atom is a same-definition `Grammar Rule` reference. It must resolve to exactly one declared rule identifier in the same machine-shape declaration. Undefined rule references are grammar errors under the known profile. Cross-shape rule references do not exist in `tiinex.lexical.shape.v1`.
+- A quoted literal denotes the exact Unicode scalar sequence between double quotes. The only quoted-literal escapes are `\"`, `\\`, `\t`, `\r`, and `\n`; any other escape is grammar error. Grammar-source meta-whitespace inside a quoted literal is literal content, not token separation.
+- Builtins are exact and case-sensitive: `SPACE` is U+0020, `TAB` is U+0009, `CR` is U+000D, `LF` is U+000A, `DIGIT` is ASCII `0` through `9`, `ASCII-LETTER` is ASCII `A` through `Z` or `a` through `z`, and `ANY` matches exactly one Unicode scalar value.
+- `ANY-EXCEPT(...)` matches exactly one Unicode scalar value not matched by its exclusions. It requires one or more exclusion terms separated by the reserved comma token. Permitted ASCII grammar-source meta-whitespace may appear around commas and exclusion terms. Each exclusion term must be a quoted literal containing exactly one Unicode scalar value or one of `SPACE`, `TAB`, `CR`, or `LF`.
+- Supported expression forms are quoted literal, same-definition rule reference, builtin, `ANY-EXCEPT(...)`, parenthesized expression, alternation `|`, adjacency/concatenation, and one optional postfix `?`, `*`, or `+` per postfix-expression. No other operator, builtin, import, capture, backreference, lookaround, implementation-language regex feature, or cross-shape rule reference exists in `tiinex.lexical.shape.v1`.
+- Matching consumes the complete extracted scalar. There is no implicit trimming, substring matching, case folding, Unicode normalization, URL decoding, Markdown escape processing, or target/reference resolution.
+- For a definition using the known `tiinex.lexical.shape.v1` profile, missing required declaration fields, duplicate single-cardinality declaration fields, zero `Grammar Rule` fields, duplicate grammar-rule identifiers, a missing `Start Rule` target, cyclic rule references, an unknown builtin or operator, malformed expression, invalid quoted escape, invalid `ANY-EXCEPT` exclusions, or another grammar violation is a schema contract `error`; a consumer depending on that invalid definition has unresolved machine-shape authority and must fail closed.
+- A structurally valid declaration naming an unknown or unsupported `Grammar Profile` is preserved as declared authority, but qualification support is unavailable and consumers of that definition remain unresolved. Validators must not reinterpret its grammar or infer a matcher from the profile name or `Human Meaning`.
+- Shape syntax qualification is distinct from existence, reference resolution, reachability, schema suitability, semantic suitability, truth, or authorization of any referenced target.
+- When a consuming contract explicitly offers multiple machine-shape alternatives, any resolved matching alternative is a shape match; if no resolved alternative matches and at least one requested shape authority is unresolved, the shape result is `unresolved`; only when every requested shape authority is resolved/evaluable and none matches is the shape result `no-match`.
+- Existing `Allowed Shapes`, `Required Shape`, `Entry Shape`, and `Towards Allowed Shapes` semantics remain unchanged; this category does not reinterpret those historical surfaces as a global registry.
+- The `Markdown Link` definition intentionally defines a bounded Tiinex lexical profile, not all CommonMark links. It accepts exactly one complete `[label](target)` scalar with non-empty label and target, permits ASCII space inside the label, forbids raw `]`, TAB, CR, and LF in the label, and forbids raw `)`, SPACE, TAB, CR, and LF in the target.
 
 ### Named Declaration
 
@@ -731,4 +794,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: XkE8ACN5tnxzUplugRQjKapOs_6D6avxlPW02XMZV3o
+  - Value: AQCVlV_IKLfvbUmvyqMZ89l2NUPrXfi7a6hGkK2mqAI
