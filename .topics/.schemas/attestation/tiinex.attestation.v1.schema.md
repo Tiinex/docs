@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.attestation.v1](tiinex.attestation.v1.schema.md)
   - Created At: 2026-06-26 00:00:00
@@ -31,7 +31,7 @@ schema validity, runtime reproducibility, or direct proof of truth.
 
 ## Schema Validation Contract
 
-### Attestation Scope
+### Attestation Schema Scope
 
 Applies To
 
@@ -130,29 +130,49 @@ Rules
 - When identity cannot be safely disclosed, the artifact should preserve a bounded role or authority descriptor instead of inventing identity.
 - Signature references may support an attestation, but an attestation artifact must not treat the existence of a signature as proof of the attested statement's truth unless a validation method declares that scope.
 
-### Attestation Scope And Boundary
+### Attestation Scope
 
 Required Fields
 
 - Scope
+
+Optional Fields
+
+- Expiry
+- Revocation
+
+Rules
+
+- `Scope` must state what domain, artifact, claim, process, time window, or authority context the attestation covers.
+- `Expiry` and `Revocation` should remain explicit when they materially bound the attestation.
+
+### Trust Boundary
+
+Required Fields
+
 - Trust Boundary
-- Interpretation Limits
 
 Optional Fields
 
 - Evidence Basis
 - Validation Method
-- Expiry
-- Revocation
 - Privacy Boundary
 
 Rules
 
-- `Scope` must state what domain, artifact, claim, process, time window, or authority context the attestation covers.
 - `Trust Boundary` must state what authority, process, witness context, institutional role, or external system the attestation relies on.
-- `Interpretation Limits` must state important claims the attestation does not prove.
 - An attestation may reference a validation method artifact when the attestation method has explicit verification semantics.
 - An attestation may reference evidence artifacts, relation artifacts, external payloads, or privacy boundary artifacts when those artifacts define the attestation context.
+
+### Interpretation Limits
+
+Required Fields
+
+- Interpretation Limits
+
+Rules
+
+- `Interpretation Limits` must state important claims the attestation does not prove.
 
 ### File Naming
 
@@ -240,9 +260,9 @@ treated as schema drift.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: pbLraIsPRv4uFdGKSd2WlLHd4vgEqOR2V_PdLDKc_S0
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: Oo9yOWx360geaBkon43WefnXuaqTgFndQYOPjL7QPXs
+  - Value: MUG4XbuVNEFhccyk65Qllz-ghGzeXAGWsQ54yq9vZgo

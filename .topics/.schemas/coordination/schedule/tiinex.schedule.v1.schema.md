@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schedule.v1](tiinex.schedule.v1.schema.md)
   - Created At: 2026-06-30 00:00:00
@@ -86,6 +86,10 @@ Rules
 - `Schedule Identity` may reference relation, evidence, attestation, validation, privacy, source, access, resource, party, event, project, or instrument artifacts when those artifacts own companion semantics.
 
 ### Schedule Scope Section
+
+Instance Target
+
+- `## Schedule Scope`
 
 Required Fields
 
@@ -301,9 +305,9 @@ The body headings required for artifacts using this schema are: `## Schedule Ide
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/089427470f04336dfcc100c4dcf6289d51bf0291/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: BFWYft1v0Ue0gUoO236DGScvnixS7_MIEwO6mhJhkNw
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: pbLraIsPRv4uFdGKSd2WlLHd4vgEqOR2V_PdLDKc_S0
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: q_WybEY7uchUEmofZYmsrNLPh45h6N62jNFYyqzkKFw
+  - Value: SAsmXNe1m4sfYDDuPPf8yT5-Ot36rz0WSmim6EfBt2s

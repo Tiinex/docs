@@ -7,7 +7,7 @@
   - Trace: [tiinex.discovery.monitoring.v1.schema.md](../monitoring/tiinex.discovery.monitoring.v1.schema.md)
   - Origin:
     - [relative](../monitoring/tiinex.discovery.monitoring.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/monitoring/tiinex.discovery.monitoring.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/discovery/monitoring/tiinex.discovery.monitoring.v1.schema.md)
 - Current
   - Current Schema: [tiinex.discovery.surveillance.v1](tiinex.discovery.surveillance.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -121,38 +121,128 @@ Rules
 - A surveillance artifact should be used when observation may affect rights, access, treatment, safety, reputation, freedom, opportunities, legal standing, or group vulnerability.
 - Surveillance may be required even when the source is public if the observation is systematic, power-asymmetric, or used for high-impact decisions.
 - The artifact should preserve uncertainty rather than invent lawful authority, consent, proportionality, or safety.
+- Safeguard fields should make the surveillance safer to audit, not easier to expand.
+- When subjects can be affected, redress, correction, human review, or appeal paths should be explicit when known.
+- `unknown` or missing safeguard information should be preserved as a risk, not treated as permission.
+- Surveillance artifacts may reference privacy boundary, consent, attestation, evidence, relation, external payload, validation method, or legal/policy artifacts when those artifacts define the authority or boundary.
 
-### Safeguard Semantics
+### Authority Or Permission Basis
 
 Required Fields
 
-- Authority Or Permission Basis
-- Collection Boundary
-- Minimization
-- Proportionality
-- Review Or Oversight
-- Retention
-- Stop Condition
+- Basis
 
 Optional Fields
 
-- Redress Or Correction
-- Appeal Path
-- Audit Path
-- Human Review
+- Status
+
+Rules
+
+- `Basis` must state the claimed mandate, consent, permission, policy, legal basis, research approval, role authority, or explicitly state that the basis is unknown or missing.
+- Missing or unknown authority must remain visible and must not be treated as permission.
+
+### Collection Boundary
+
+Required Fields
+
+- May Observe
+- Must Not Collect
+
+Optional Fields
+
 - Sensitive Categories
+
+Rules
+
+- `May Observe` and `Must Not Collect` must keep the collection boundary explicit and bounded.
+
+### Minimization And Proportionality
+
+Required Fields
+
+- Minimization
+- Proportionality
+
+Rules
+
+- `Minimization` must state how observation is limited.
+- `Proportionality` must state why the scope is proportionate, unknown, or still requires review.
+
+### Review And Oversight
+
+Required Fields
+
+- Oversight
+
+Optional Fields
+
+- Audit Path
+
+Rules
+
+- `Oversight` must state what human or organizational review is required or missing.
+- Surveillance findings must not become final decisions by themselves.
+
+### Retention And Stop Condition
+
+Required Fields
+
+- Retention
+- Stop Condition
+
+Rules
+
+- `Retention` must state a retention boundary or explicit unknown.
+- `Stop Condition` must state when surveillance should stop, expire, or require redesign/reauthorization.
+
+### Redress Or Correction
+
+Required Fields
+
+- Redress Or Correction
+
+Optional Fields
+
+- Appeal Path
+
+Rules
+
+- When this optional block is present, it must state the available redress/correction path or explicit unknown.
+
+### Human Review
+
+Required Fields
+
+- Human Review
+
+Rules
+
+- When this optional block is present, it must state the human-review boundary rather than imply automated decision authority.
+
+### Prohibited Uses
+
+Required Fields
+
 - Prohibited Uses
+
+Rules
+
+- When this optional block is present, it must state uses that are outside the surveillance authority or safety boundary.
+
+### Risk Boundary
+
+Required Fields
+
 - Harm Risks
+
+Optional Fields
+
 - False Positive Risks
 - Chilling Effect Risk
 
 Rules
 
-- Safeguard fields should make the surveillance safer to audit, not easier to expand.
-- Surveillance findings must not become final decisions by themselves.
-- When subjects can be affected, redress, correction, human review, or appeal paths should be explicit when known.
-- `unknown` or missing safeguard information should be preserved as a risk, not treated as permission.
-- Surveillance artifacts may reference privacy boundary, consent, attestation, evidence, relation, external payload, validation method, or legal/policy artifacts when those artifacts define the authority or boundary.
+- Risk fields must preserve known harms and uncertainty rather than treating missing safeguard information as permission.
 
 ### File Naming
 
@@ -303,9 +393,9 @@ Rules
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.discovery.monitoring.v1.schema.md](https://github.com/Tiinex/docs/blob/2bf1fbeddb1bad6c98fed68bd2abb15099e91a4d/.topics/.schemas/discovery/monitoring/tiinex.discovery.monitoring.v1.schema.md)
-  - Value: PaiKL2qoq6hv7NVOf6CxFd8NlWo9KUFeXtGZOnb0WHw
+  - Towards: [tiinex.discovery.monitoring.v1.schema.md](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/discovery/monitoring/tiinex.discovery.monitoring.v1.schema.md)
+  - Value: rEs6mzJ70vMgf3cS1_V2wEpc4n8rF9jUqMtLvjgFdl4
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: PxNBqugBKF-dHfZ-JD2-9KYThHiKbOwIy2UeWOtiQLE
+  - Value: hpWqTl44G4jezMt9rPrcjMNKbHNJbJPkNUhEqRWW9sk

@@ -7,7 +7,7 @@
   - Trace: [tiinex.instrument.v1.schema.md](../tiinex.instrument.v1.schema.md)
   - Origin:
     - [relative](../tiinex.instrument.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
 - Current
   - Current Schema: [tiinex.instrument.consent.v1](tiinex.instrument.consent.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -156,7 +156,7 @@ Rules
 - When identity cannot be safely disclosed, the artifact should preserve a bounded role or authority descriptor instead of exposing sensitive identity.
 - A consent instrument must not assume that a party has authority unless the artifact states the authority basis or declares the authority unknown.
 
-### Consent Scope And Use Boundary
+### Consent Scope
 
 Required Fields
 
@@ -164,15 +164,10 @@ Required Fields
 - Applies To
 - Allowed Uses
 - Prohibited Uses
-- Use Boundary
 
 Optional Fields
 
-- Sharing Boundary
-- Serialization Boundary
-- Retention Boundary
 - Jurisdiction Or Policy Context
-- Privacy Boundary
 
 Rules
 
@@ -180,6 +175,22 @@ Rules
 - `Applies To` must state the artifact, payload, sample, person descriptor, case, relation, claim, workspace, or other target in scope.
 - `Allowed Uses` must state permitted uses, or explicitly state that permitted uses are unknown.
 - `Prohibited Uses` must state known prohibited uses, or explicitly state that prohibited uses are unknown.
+
+### Use Boundary
+
+Required Fields
+
+- Use Boundary
+
+Optional Fields
+
+- Sharing Boundary
+- Serialization Boundary
+- Retention Boundary
+- Privacy Boundary
+
+Rules
+
 - `Use Boundary` must summarize the practical boundary a later tool or reader should respect.
 - Sharing, serialization, retention, and privacy boundaries should be explicit when they materially affect disclosure or use.
 
@@ -353,9 +364,9 @@ Rules
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.instrument.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
-  - Value: 9xQV-XHI3xJPtg4i4jIzy-sYyHcAP1kaDe67ssinLD8
+  - Towards: [tiinex.instrument.v1.schema.md](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
+  - Value: cTDOjKzeDs_d2I6qW-RbSs6KXWeONhVvDUDfH5uJ_uI
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: zY__wV6h34Z3Ckg4730ilkTOIHXNUVZcDVDU8R6aLtQ
+  - Value: IfPGUoceCJRio_hNcCTAUPyPGxUBW4svQGWsuJ54qw4

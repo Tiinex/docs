@@ -7,7 +7,7 @@
   - Trace: [tiinex.decision.v1.schema.md](../../../core/decision/tiinex.decision.v1.schema.md)
   - Origin:
     - [relative](../../../core/decision/tiinex.decision.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/core/decision/tiinex.decision.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/core/decision/tiinex.decision.v1.schema.md)
 - Current
   - Current Schema: [tiinex.lineage.upgrade.deferral.v1](tiinex.lineage.upgrade.deferral.v1.schema.md)
   - Created At: 2026-06-14 00:00:00
@@ -75,6 +75,10 @@ Rules
 - If the artifact repairs the upstream issue itself rather than deciding local non-adoption, a repair note or another artifact should own that repair.
 
 ### Deferral Surface
+
+Instance Target
+
+- `## Deferral`
 
 Required Fields
 
@@ -265,9 +269,9 @@ Rules
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.decision.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/core/decision/tiinex.decision.v1.schema.md)
-  - Value: lfRNLNNoYAi5snDOf0XG65yXJ_-4C9wBp6SK203ZzME
+  - Towards: [tiinex.decision.v1.schema.md](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/core/decision/tiinex.decision.v1.schema.md)
+  - Value: NC4HZt0foE58RRbxajb5_6dFDyBCNTLwT8R21lYlMAw
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: wguvFkzhtaxcindbZOhG5GaAZmEStRnp6feOTMHlaiQ
+  - Value: 2tNtcOqrm3FxtK8_e0GYMhCqPY79c7Jb1irPz80VyKc

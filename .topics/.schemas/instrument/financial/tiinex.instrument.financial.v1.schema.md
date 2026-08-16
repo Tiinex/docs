@@ -7,7 +7,7 @@
   - Trace: [tiinex.instrument.v1.schema.md](../tiinex.instrument.v1.schema.md)
   - Origin:
     - [relative](../tiinex.instrument.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
 - Current
   - Current Schema: [tiinex.instrument.financial.v1](tiinex.instrument.financial.v1.schema.md)
   - Created At: 2026-06-29 00:00:00
@@ -105,10 +105,6 @@ Optional Fields
 - Instrument Label
 - Effective Date
 - Expiry Date
-- Related Need
-- Related Contribution
-- Related Receipt
-- Related Budget
 
 Allowed Shapes
 
@@ -144,13 +140,12 @@ Rules
 - `Instrument Status` must use one of the declared shapes and should not be inferred from private agreement or intention alone.
 - The artifact should distinguish proposed, offered, accepted, signed, funded, received, fulfilled, and disputed states.
 
-### Economic Terms And Resource Links
+### Economic Terms
 
 Required Fields
 
 - Value Or Consideration
 - Use Boundary
-- Resource Links
 
 Optional Fields
 
@@ -170,8 +165,21 @@ Rules
 
 - `Value Or Consideration` should state the economic value, non-monetary consideration, or unknown value boundary.
 - `Use Boundary` should state what the instrument allows, restricts, or requires in relation to resource use.
-- `Resource Links` should point to need, contribution, receipt, budget, allocation, or usage artifacts when those artifacts exist.
 - Legal terms, securities implications, tax effects, accounting classification, ownership rights, and enforceability should be treated as interpretation limits unless supported by appropriate legal, accounting, evidence, or attestation artifacts.
+
+### Resource Links
+
+Optional Fields
+
+- Related Need
+- Related Contribution
+- Related Receipt
+- Related Budget
+
+Rules
+
+- Resource-link fields should point to need, contribution, receipt, budget, allocation, or usage artifacts when those artifacts exist.
+- Absence of a particular related-resource link must not be filled by guessing from path, title, or neighboring artifacts.
 
 ### File Naming
 
@@ -306,9 +314,9 @@ Rules
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.instrument.v1.schema.md](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
-  - Value: 9xQV-XHI3xJPtg4i4jIzy-sYyHcAP1kaDe67ssinLD8
+  - Towards: [tiinex.instrument.v1.schema.md](https://github.com/Tiinex/docs/blob/40aa94d7e52a348f9d9fa84754dedff422373689/.topics/.schemas/instrument/tiinex.instrument.v1.schema.md)
+  - Value: cTDOjKzeDs_d2I6qW-RbSs6KXWeONhVvDUDfH5uJ_uI
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: 7_jSw9ENRac1IhM21zflqZVqMK_cHjh27tfSpqfuU6E
+  - Value: tyoUJblttzXOmrkxJFa5XSRR9-oBTcD8sWHmwg13p0c
