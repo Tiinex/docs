@@ -124,6 +124,7 @@ Known Category Labels
 - Category Shape
 - Declaration Fields
 - Entry Shape
+- Field Value Constraints
 - Fields
 - Footer Sections
 - Generation Authority
@@ -297,6 +298,45 @@ Rules
 - `Instance Target` changes field-ownership location only; it does not make an otherwise optional target section required.
 - Multi-block semantics should be expressed as locally owned contract groups rather than by pointing one ordinary group at multiple blocks.
 - Validators must not invent selector syntax, positional identity, AST paths, XPath, JSON pointers, or application-internal IDs when the declared heading authority is sufficient.
+
+### Field Value Constraints
+
+Entry Shape
+
+- Named Declaration
+
+Declaration Fields
+
+- Allowed Value
+- Allowed Shape
+- Domain Policy
+
+Rules
+
+- A `Field Value Constraints` declaration binds value-domain authority to one exact contract field.
+- The declaration name is the exact case-sensitive field label being constrained.
+- When the declaring contract group declares that field under `Required Fields` or `Optional Fields`, the constraint targets that local field only, even when that group has an `Applies To` category for another semantic purpose.
+- When the declaring contract group does not declare that field, the group may share the constraint through `Applies To` only when every `Applies To` entry resolves unambiguously to a contract group that declares the exact field under `Required Fields` or `Optional Fields`; otherwise target authority is unresolved/error and validators must not choose a partial subset or guess a target.
+- This field-domain targeting rule does not reinterpret or broaden Root's generic `Fields` category.
+- `Allowed Value` and `Allowed Shape` may repeat inside one declaration; their order is not semantic.
+- Exactly one `Domain Policy` is required per declaration.
+- `Domain Policy` must be `closed` or `extension-authorized`.
+- Every declaration must contain at least one `Allowed Value` or `Allowed Shape`.
+- `Allowed Value` compares the extracted scalar value exactly and case-sensitively to the declared literal; validators must not normalize aliases, spelling, punctuation, case, separators, or typos.
+- `Allowed Shape` must name a machine-defined shape available under the active contract. This category does not create a new shape registry. An unknown, unavailable, or unresolved shape authority must remain unresolved and validators must not infer a matcher from the shape's English name.
+- A value satisfies one constraint contribution when it matches an `Allowed Value` exactly or satisfies one declared `Allowed Shape`.
+- Shape qualification and reference-target resolution are separate truths. Satisfying a reference shape does not by itself prove that the reference target resolves or is semantically suitable.
+- Under `closed`, a value that satisfies no declared value or shape is invalid for that contribution.
+- Under `extension-authorized`, a value that satisfies no declared value or shape is an unresolved extension candidate, not an accepted core value; separate authority must qualify the extension before a validator or runtime may treat it as an accepted extension.
+- The literal `unknown` is a Tiinex uncertainty sentinel, not an extension-name escape hatch. If `unknown` is not explicitly declared as an `Allowed Value`, it is invalid for that contribution and must not be reclassified as an extension candidate merely because `Domain Policy` is `extension-authorized`.
+- `unknown` has no global validity. It is permitted only when explicitly declared as an `Allowed Value` by every applicable constraint contribution.
+- Absence of `Field Value Constraints` for a field is valid and means no closed value domain or shape is inferred for that field from `Allowed Labels`, prose, field name, list position, neighboring fields, or UI/runtime behavior.
+- Multiple applicable field-value constraint contributions are additive obligations. A concrete value must satisfy every applicable contribution unless separately defined explicit override authority validly replaces an inherited obligation.
+- A descendant may narrow an inherited field domain by adding a stricter compatible contribution.
+- A wider descendant contribution does not widen inherited acceptance. This contract introduces no generic field-value-constraint override selector or widening operator; validators must not guess one. Any future replacement/widening authority must separately identify the inherited obligation being replaced.
+- Contradictory applicable constraints must be reported as a contract conflict and must not be silently unioned, source-ordered, or resolved by child-wins precedence.
+- Compiled field-value authority must retain source schema, contract group, exact target field, whether targeting is local or shared through `Applies To`, declared values and shapes, policy, and inherited contribution provenance.
+- Existing `Allowed Labels` semantics remain unchanged. `Allowed Labels` is group-level vocabulary/readability authority and is not field-domain closure.
 
 ### Named Declaration
 
@@ -691,4 +731,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: RO-ElUHapXTMzReer1qsMRuOZ5-DAGar9H1xJ3yc_6Y
+  - Value: XkE8ACN5tnxzUplugRQjKapOs_6D6avxlPW02XMZV3o
