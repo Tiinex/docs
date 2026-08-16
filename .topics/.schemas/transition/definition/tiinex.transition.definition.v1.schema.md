@@ -7,7 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../../tiinex.root.v1.schema.md)
-    - [browse + git](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/0709fe80947de6b5b503f7d5202feb0e7fe94430/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.transition.definition.v1](tiinex.transition.definition.v1.schema.md)
   - Created At: 2026-08-15 00:00:00
@@ -165,6 +165,17 @@ Allowed Labels
 - unknown
 - unbounded
 
+Field Value Constraints
+
+- Acquisition Policy
+  - Allowed Value: existing-only
+  - Allowed Value: existing-or-create
+  - Allowed Value: create-only
+  - Allowed Value: invocation-provided
+  - Allowed Value: derived
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
 Rules
 
 - Entries under `## Input Roles` are repeated named declarations using this shape.
@@ -217,6 +228,13 @@ Allowed Labels
 - none
 - unknown
 
+Field Value Constraints
+
+- Generation Binding
+  - Allowed Value: target-schema
+  - Allowed Shape: Markdown Link
+  - Domain Policy: closed
+
 Rules
 
 - Entries under `## Output Roles` are repeated named declarations using this shape.
@@ -248,6 +266,14 @@ Allowed Labels
 - artifact
 - non-artifact
 - unknown
+
+Field Value Constraints
+
+- Target Kind
+  - Allowed Value: artifact
+  - Allowed Value: non-artifact
+  - Allowed Value: unknown
+  - Domain Policy: closed
 
 Rules
 
@@ -318,6 +344,42 @@ Allowed Labels
 - all-to-all
 - by-key
 - explicit-at-invocation
+
+Field Value Constraints
+
+- Effect
+  - Allowed Value: create-new
+  - Allowed Value: revise-current
+  - Allowed Value: preserve
+  - Allowed Value: supersede
+  - Allowed Value: retire
+  - Allowed Value: domain-consume
+  - Allowed Value: remove-materialization
+  - Allowed Value: custom
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
+- Logical Continuity
+  - Allowed Value: new-subject
+  - Allowed Value: preserve-subject
+  - Allowed Value: no-subject-effect
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
+- Required Materialization Operation
+  - Allowed Value: create
+  - Allowed Value: revise
+  - Allowed Value: delete
+  - Allowed Value: move
+  - Allowed Value: tombstone
+  - Allowed Value: restore
+  - Domain Policy: extension-authorized
+
+- Preserve Why
+  - Allowed Value: yes
+  - Allowed Value: no
+  - Allowed Value: unknown
+  - Domain Policy: closed
 
 Rules
 
@@ -393,6 +455,26 @@ Allowed Labels
 - explicit-at-invocation
 - custom
 
+Field Value Constraints
+
+- Effect
+  - Allowed Value: set
+  - Allowed Value: preserve
+  - Allowed Value: clear
+  - Allowed Value: replace
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
+- Member Mapping
+  - Allowed Value: single
+  - Allowed Value: broadcast
+  - Allowed Value: pairwise
+  - Allowed Value: by-key
+  - Allowed Value: explicit-at-invocation
+  - Allowed Value: custom
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
 Rules
 
 - Entries under `### Parent Effects` are repeated Parent Effect declarations using this shape.
@@ -453,6 +535,21 @@ Allowed Labels
 - explicit-at-invocation
 - custom
 
+Field Value Constraints
+
+- Effect
+  - Allowed Value: declare
+  - Allowed Value: remove
+  - Allowed Value: preserve
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
+- Directionality
+  - Allowed Value: directed
+  - Allowed Value: undirected
+  - Allowed Value: bidirectional
+  - Domain Policy: closed
+
 Rules
 
 - Entries under `## Relation Effects` are repeated named declarations using this shape.
@@ -482,6 +579,12 @@ Rules
 
 ### Member Mapping Semantics
 
+Applies To
+
+- Lifecycle Effect Declaration
+- Parent Effect Declaration
+- Relation Effect Declaration
+
 Allowed Labels
 
 - single
@@ -492,6 +595,19 @@ Allowed Labels
 - explicit-at-invocation
 - custom
 - unknown
+
+Field Value Constraints
+
+- Member Mapping
+  - Allowed Value: single
+  - Allowed Value: broadcast
+  - Allowed Value: pairwise
+  - Allowed Value: all-to-all
+  - Allowed Value: by-key
+  - Allowed Value: explicit-at-invocation
+  - Allowed Value: custom
+  - Allowed Value: unknown
+  - Domain Policy: closed
 
 Rules
 
@@ -583,6 +699,14 @@ Optional Fields
 - Capability Requirement
 - Notes
 
+Field Value Constraints
+
+- Required
+  - Allowed Value: yes
+  - Allowed Value: no
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
 Rules
 
 - Entries under `### Destination Bindings` are named reusable destination slots using this shape.
@@ -624,6 +748,28 @@ Allowed Labels
 - target-schema
 - explicit-binding
 - external-authority
+
+Field Value Constraints
+
+- Placement Intent
+  - Allowed Value: preserve-current
+  - Allowed Value: new-materialization
+  - Allowed Value: no-materialization
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
+- Naming Authority
+  - Allowed Value: target-schema
+  - Allowed Value: explicit-binding
+  - Allowed Value: external-authority
+  - Allowed Value: unknown
+  - Domain Policy: closed
+
+- Explicit Override Allowed
+  - Allowed Value: yes
+  - Allowed Value: no
+  - Allowed Value: unknown
+  - Domain Policy: closed
 
 Rules
 
@@ -908,9 +1054,9 @@ The example is intentionally singular so member-mapping fields are not required.
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: 3pgzWX3ICCeChCyP6dLAc6VCYBpVBHy7BtbVU-QU8PA
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/0709fe80947de6b5b503f7d5202feb0e7fe94430/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: xF-jdUHgcYa6UnvXE9ueLSvbBi8fEKi6rsk5oAtD0f0
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: GQqKNMpbpJURYkkkzIIzUglk8zvNyC7p7OX2aXdzWik
+  - Value: h-pbRkCFmqafIz3NBcrAmfw9BHUbypex643l8-_EUVM
