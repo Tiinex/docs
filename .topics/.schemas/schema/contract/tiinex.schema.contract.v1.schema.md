@@ -6,7 +6,7 @@
   - Created At: 2026-06-14 00:00:00
   - Trace: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
   - Origin:
-    - [browse + git](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/02392a68bb70f9b1656a77c6c65c272582d05ab1/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.schema.contract.v1](tiinex.schema.contract.v1.schema.md)
   - Created At: 2026-07-02 00:00:00
@@ -57,6 +57,7 @@ Rules
 Required Shape
 
 - first body heading after the continuity envelope
+- `## Contract Identity Model` section
 - `## Contract Identity` section
 - `## Contract Target` section
 - `## Contract Nodes` section
@@ -165,10 +166,13 @@ Rules
 
 ### Contract Nodes
 
+Entry Shape
+
+- First-Level Hyphen List Item
+
 Required Fields
 
 - Contract Node Type
-- Contract Node Handle
 - Contract Node Label
 
 Optional Fields
@@ -204,7 +208,10 @@ Allowed Labels
 
 Rules
 
-- Contract node handles should be unique within the target schema contract and may remain stable across revisions while they continue to denote the same semantic node; checksum/fingerprint changes do not automatically supersede the scoped handle.
+- Each first-level entry is one Contract Node declaration.
+- The declaration name is the existing `Contract Node Handle` identity and must be unique within `## Contract Nodes`.
+- Node-local fields belong to that declaration; repeated Node Type/Label/Applies To values must not be paired by document position.
+- Contract node handles are scoped to the target schema contract and may remain stable across revisions while they continue to denote the same semantic node; checksum/fingerprint changes do not automatically supersede the scoped handle.
 - Contract node labels should be human-readable.
 - Contract nodes should not rely on hidden application registries as semantic authority.
 - If a tool cannot understand a contract node type, it should report unknown, unavailable, skipped, or unconfirmed rather than treating it as pass.
@@ -309,6 +316,11 @@ Rules
 ```text
 # Schema Contract: Annotation base
 
+## Contract Identity Model
+
+Durable Identity Policy: scoped contract-node handles preserve logical node reference within the owning contract while Continuity Integrity fingerprints identify concrete representations
+Provisional Handle Policy: readable local handles may be used before checksum without becoming global artifact identity
+
 ## Contract Identity
 
 Contract Name: Annotation base contract
@@ -322,24 +334,25 @@ Target Scope: whole-schema
 
 ## Contract Nodes
 
-Contract Node Type: section
-Contract Node Handle: annotation-target
-Contract Node Label: Annotation Target
-Required: true
+- annotation-target
+  - Contract Node Type: section
+  - Contract Node Label: Annotation Target
+  - Required: true
 
-Contract Node Type: field
-Contract Node Handle: target-identifier
-Contract Node Label: Target Identifier
-Applies To: annotation-target
-Required: true
-Value Type: artifact-or-source-reference
+- target-identifier
+  - Contract Node Type: field
+  - Contract Node Label: Target Identifier
+  - Applies To: annotation-target
+  - Required: true
+  - Value Type: artifact-or-source-reference
 
-Contract Node Type: rule
-Contract Node Handle: target-identifier-required
-Applies To: target-identifier
-Operator: required
-Severity: fail
-Message: Annotation must identify what is annotated.
+- target-identifier-required
+  - Contract Node Type: rule
+  - Contract Node Label: Target Identifier Required
+  - Applies To: target-identifier
+  - Operator: required
+  - Severity: fail
+  - Message: Annotation must identify what is annotated.
 
 ## Contract Boundary
 
@@ -370,9 +383,9 @@ Must Not Be Used To Claim: annotation truth, evidence status, or full semantic v
 # Continuity Integrity
 
 - sha256-base64url-c14n-v1
-  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/2f5c1eea03aad31a0209f0484e17d2cc37d92dab/.topics/.schemas/tiinex.root.v1.schema.md)
-  - Value: 3pgzWX3ICCeChCyP6dLAc6VCYBpVBHy7BtbVU-QU8PA
+  - Towards: [tiinex.root.v1.schema.md](https://github.com/Tiinex/docs/blob/02392a68bb70f9b1656a77c6c65c272582d05ab1/.topics/.schemas/tiinex.root.v1.schema.md)
+  - Value: pbLraIsPRv4uFdGKSd2WlLHd4vgEqOR2V_PdLDKc_S0
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: CCTJ3LBZbhyYxb88HUGIegGkesZvgCtqatQAtnoPb5A
+  - Value: bNNxvR_nNZnW0mtZGI63VGjC7oOFECNd-9O9gscjds4
