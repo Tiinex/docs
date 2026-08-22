@@ -30,7 +30,8 @@ A Handoff is not a ZIP, export bundle, package builder, resolver, transport rece
 ## Core Semantics
 
 - Handoff = explicit bounded work/responsibility transfer declaration.
-- `From` and `To` are handoff endpoints and are not inferred from `Authors`, path, filename, directory, package membership, upload recipient, or transport destination.
+- `From` and `To` are handoff endpoint declarations and are not inferred from `Authors`, path, filename, directory, package membership, upload recipient, or transport destination.
+- Endpoint identity and endpoint capacity are separate truths: a Handoff may target a Role directly, or may identify a concrete Party and separately state the bounded Role/capacity in which that Party is intended to participate.
 - `Authors` remains authorship only.
 - Only declarations under `## Transfers` move work or responsibility within the semantic scope of the Handoff.
 - Required context and reference-only context support interpretation; they do not transfer responsibility merely because they are linked, copied, or packaged.
@@ -91,7 +92,11 @@ Required Fields
 Optional Fields
 
 - From Reference
+- From Capacity
+- From Capacity Reference
 - To Reference
+- To Capacity
+- To Capacity Reference
 - Notes
 
 Field Value Constraints
@@ -116,16 +121,31 @@ Field Value Constraints
   - Allowed Shape: Markdown Link
   - Domain Policy: closed
 
+- From Capacity Reference
+  - Allowed Shape: Markdown Link
+  - Domain Policy: closed
+
+- To Capacity Reference
+  - Allowed Shape: Markdown Link
+  - Domain Policy: closed
+
 Rules
 
 - `Purpose` states why this bounded handoff exists.
 - `From` identifies the party or role from which the declared transfer originates.
 - `To` identifies the intended recipient party or role.
-- `From Kind` and `To Kind` classify each endpoint as `party`, `role`, or explicitly `unknown`; the classification does not prove identity, authority, or current holder state.
+- `From Kind` and `To Kind` classify each endpoint as `party`, `role`, or explicitly `unknown`; the classification does not prove identity, authority, current holder state, or acceptance.
 - `From` and `To` may be precise human-readable descriptors even when no Tiinex Party or Role artifact exists.
 - `From Reference` and `To Reference`, when present, are optional resolution aids and must not override contradictory readable endpoint identity.
-- An unresolved optional endpoint reference must remain unresolved; validators and tools must not replace it by guessing from path, filename, `Authors`, repository actor, transport recipient, or application session.
-- `Authors` in the Continuity Context remains authorship and must not be treated as `From`, `To`, current responsibility, ownership, or transfer authority.
+- `From Capacity` and `To Capacity`, when present, state the bounded collaboration Role/capacity in which an endpoint is intended to participate in this Handoff; they do not replace endpoint identity.
+- `From Capacity Reference` and `To Capacity Reference`, when present, should resolve to the durable Role artifact that owns the referenced collaboration capacity. A readable corresponding `From Capacity` or `To Capacity` is required when its Capacity Reference is present.
+- When an endpoint `Kind` is `party`, the corresponding Capacity fields may preserve a distinct Role/capacity without claiming that the Party generally or currently holds that Role outside this Handoff.
+- When an endpoint `Kind` is `role`, the endpoint itself already denotes the required Role/capacity; the corresponding Capacity and Capacity Reference fields must be absent rather than duplicating role authority.
+- When an endpoint `Kind` is `unknown`, a separately known Capacity may be preserved while concrete endpoint identity remains unresolved; tools must not promote that capacity into proof of which Party will receive the Handoff.
+- A Capacity Reference does not prove holder/assignment state, delegation authority, endpoint acceptance, employment, model identity, or permanent responsibility. Use Role holder/Relation/Decision/Instrument/Evidence or another separately owned authority when those claims matter.
+- If readable Capacity and resolved Capacity Reference materially contradict one another, the endpoint capacity is ambiguous; neither silently overrides the other.
+- An unresolved optional endpoint or capacity reference must remain unresolved; validators and tools must not replace it by guessing from path, filename, `Authors`, repository actor, transport recipient, application session, or Role holder heuristics.
+- `Authors` in the Continuity Context remains authorship and must not be treated as `From`, `To`, endpoint Capacity, current responsibility, ownership, holder assignment, or transfer authority.
 - The entity that physically sends or receives a ZIP, message, upload, or repository checkout is not a Handoff endpoint unless the Handoff declares it.
 
 ### Transfers
@@ -416,7 +436,7 @@ Rules
 - Use `tiinex.invitation.v1` when the main value is requesting or offering participation rather than declaring a bounded handoff.
 - Use `tiinex.relation.v1` when the main value is a typed non-parent relation rather than a responsibility/work transfer.
 - Use `tiinex.external.payload.v1` when the main value is preserving or locating an external payload rather than declaring transfer semantics.
-- Party and Role artifacts may describe handoff endpoints but do not themselves create a Handoff.
+- Party and Role artifacts may describe handoff endpoints or endpoint capacities but do not themselves create a Handoff; a Party named with a Capacity is not thereby proven to hold that Role generally or to have accepted the Handoff.
 - A Handoff must not become a generic package manifest, dependency resolver, ZIP schema, delivery receipt, workflow engine, or state-machine protocol.
 
 ## Artifact Creation Contract
@@ -454,6 +474,8 @@ Required Fields
 Rules
 
 - Creation must identify the transfer endpoints and at least one explicit transfer declaration.
+- When a concrete Party endpoint and a distinct required Role/capacity both materially affect the transfer, creation should preserve the Party as endpoint identity and the Role/capacity through the corresponding Capacity fields rather than collapsing one truth into the other.
+- When only a Role/capacity is intentionally targeted and no concrete Party is asserted, use the existing `Kind: role` endpoint form rather than inventing a Party holder.
 - Creation must classify supporting material as required context or reference-only context rather than leaving package membership to imply its role.
 - Creation must make relevant retained responsibility explicit or intentionally use `none`.
 - Creation must preserve exclusions, unresolved dependencies, and unavailable required material where those facts matter.
@@ -463,7 +485,7 @@ Rules
 
 Rules
 
-- Write `From` and `To` from declared handoff intent, never from `Authors`, file path, repository actor, current chat participant, upload target, or ZIP recipient.
+- Write `From` and `To` from declared handoff intent, never from `Authors`, file path, repository actor, current chat participant, upload target, or ZIP recipient. When Party identity and Role/capacity are both material, preserve them separately instead of rewriting the Party as the Role or inferring holder state.
 - Put only transferred work/responsibility under `## Transfers`.
 - Put material needed to understand or perform the handoff under `## Required Context`; use `Availability` rather than silently replacing missing material.
 - Put useful but non-required supporting material under `## Reference Context`.
@@ -476,15 +498,17 @@ Rules
 ## Minimal Example
 
 ```md
-# Service Recovery Role Handoff
+# Service Recovery Handoff To A Concrete Party In A Role
 
 ## Handoff Parties
 
-Purpose: transfer bounded service-recovery execution while keeping external communications responsibility with the incident coordinator
+Purpose: transfer bounded service-recovery execution to one concrete operator in the recovery-lead capacity while keeping external communications responsibility with the incident coordinator
 From: incident coordinator role
 From Kind: role
-To: recovery lead role
-To Kind: role
+To: Morgan Lee
+To Kind: party
+To Capacity: recovery lead
+To Capacity Reference: [Recovery lead role](001-recovery-lead-party-role.trace.md)
 
 ## Transfers
 
@@ -542,6 +566,19 @@ Does Not Mean: the recovery lead accepted the handoff, has vendor access, or may
 Must Not Be Used To Claim: service recovery succeeded, incident closure, delegation authority beyond the declared recovery boundary, or completion before a result exists
 ```
 
+When no concrete recipient Party is asserted and the intended target is the capacity itself, the existing role-only form remains valid:
+
+```md
+## Handoff Parties
+
+Purpose: transfer bounded schema reconciliation to whichever explicit worker/session is assigned the Schemer capacity
+From: Architect
+From Kind: role
+To: Schemer
+To Kind: role
+To Reference: [Schemer Role](001-schemer-role.trace.md)
+```
+
 ## Validation-Friendly Shape
 
 Keep this maintained schema note in the exact section order used here:
@@ -561,7 +598,8 @@ and `## Interpretation Limits`.
 
 - Handoff owns explicit transfer semantics, not transport mechanics.
 - Task owns bounded work definition; Handoff may reference a Task as controlling work without replacing Task semantics.
-- Party and Role artifacts may resolve endpoints without making authorship or holder state equivalent to transfer authority.
+- Party and Role artifacts may resolve endpoints or endpoint capacities without making authorship, holder state, acceptance, or delegation authority equivalent to transfer truth.
+- A concrete Party endpoint plus `To Capacity` / `From Capacity` preserves recipient/sender identity separately from the collaboration Role used for this Handoff; a role-only endpoint remains valid when no concrete Party is asserted.
 - Required context, reference context, transferred work/responsibility, and retained responsibility are intentionally separate authorities.
 - A package, ZIP, workspace, or message can carry a Handoff but inclusion or delivery does not itself move responsibility.
 - Completion-facing expectations are declarative and do not create an implicit workflow state machine.
@@ -573,4 +611,4 @@ and `## Interpretation Limits`.
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: LE04zSJN813k0cYi3vt0Z_g9U8-y-Uh3ojrW2_6lRvI
+  - Value: ftgf8F2H5Y5YW2cjVk3eVOBufzAkGc6tclL972CEfHw

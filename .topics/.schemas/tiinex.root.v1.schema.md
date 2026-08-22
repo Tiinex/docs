@@ -633,8 +633,20 @@ Allowed Shapes
 
 Rules
 
-- Markdown Link is preferred when a schema artifact target is available.
-- Plain Schema Id is allowed when no useful target is available or when local context already resolves the schema id.
+- Schema semantic identity and schema representation location are separate truths.
+- In Markdown Link form, the link label is the semantic schema identifier/key and the link target is a representation locator or traversal route.
+- Tools must preserve the declared schema identifier separately from locator-resolution state and must not derive schema identity from a path, filename, host, repository, branch name, or other locator shape.
+- A locator that resolves successfully does not by itself prove that the resolved bytes are the exact intended schema representation; exact-representation qualification depends on the locator's own stability/identity semantics and any applicable integrity or source authority.
+- Markdown Link is preferred when a truthful useful schema representation locator is available.
+- For a published artifact that references a different already-published canonical schema representation, an immutable canonical locator should be preferred when one is available.
+- `commit-pinned browse + git` is one current example of an immutable canonical locator; GitHub and commit hashes are not the semantic definition of immutable schema location.
+- A mutable branch/latest locator may be useful for discovery or current-material traversal, but it must not be treated as equivalent to an immutable exact-representation locator.
+- A relative self-link is valid for a schema's self-reference when it continues to resolve to that same representation as the file moves together with itself.
+- Relative or local locators are valid for local/unpublished schema material when they are the truthful available route; authors and tools must not fabricate a published immutable locator that does not yet exist.
+- A relative locator to another schema may remain useful inside one copied workspace or package, but publication tooling should prefer a stronger immutable canonical locator for a different already-published schema when that stronger route is available.
+- Plain Schema Id is allowed when no useful locator is available or when local context already resolves the schema id.
+- Plain Schema Id preserves schema-identifier truth only; consumers must not infer one exact schema representation from the identifier alone when exact representation material matters.
+- When a Markdown Link target is resolved, a mismatch between the declared link-label schema identifier and the resolved schema representation's declared semantic identity must remain a contradiction/unresolved reference rather than being repaired from filename, path, or locator text.
 
 ### Trace Field
 
@@ -794,4 +806,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: AQCVlV_IKLfvbUmvyqMZ89l2NUPrXfi7a6hGkK2mqAI
+  - Value: ytxP-n3eCw5pq3_frFj_VtlnQ5SCelN9mm06fso16uk
