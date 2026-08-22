@@ -108,6 +108,7 @@ Optional target blocks remain optional: their Required Fields become required wh
 - [Schedule](coordination/schedule/tiinex.schedule.v1.schema.md)
 - [Invitation](coordination/invitation/tiinex.invitation.v1.schema.md)
 - [Availability](coordination/availability/tiinex.availability.v1.schema.md)
+- [Handoff](coordination/handoff/tiinex.handoff.v1.schema.md)
 
 ### Discovery
 
