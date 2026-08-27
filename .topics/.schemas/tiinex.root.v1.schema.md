@@ -564,7 +564,7 @@ Required When
 
 Required Fields
 
-- browse + git
+- relative
 
 Allowed Labels
 
@@ -584,13 +584,17 @@ Ordering
 
 Rules
 
-- `Origin` supports recovery.
+- `Origin` supports recovery and must remain truthful to the Parent representation actually available.
 - `Origin` must not replace `Trace`.
+- Every Parent must include one truthful `relative` recovery locator for the directly recoverable Parent representation in the current qualified workspace or materialization.
+- A directly recoverable local or unpublished Parent does not require a `browse + git` entry merely to satisfy continuity.
+- When a qualified published Git representation is available for the Parent and is used as publication recovery authority, `browse + git` must identify that exact published Parent representation in addition to `relative`.
+- `browse + git` must not be invented, guessed, or synthesized when no qualified published Git representation is available.
+- Package or transport closure may prove exact carried Parent bytes but does not by itself create publication or forge provenance.
 - Every origin candidate should identify the same parent artifact.
 - Origin candidates must not mix alternate parents.
-- `browse + git` gives the portable archive permalink for the parent artifact.
-- `browse + git` should be commit-pinned when available.
-- `absolute` paths are local recovery hints, not portable authority.
+- `browse + git` gives a portable Git/forge recovery permalink for a published parent representation and should be commit-pinned when used.
+- `absolute` paths are supplemental local recovery hints, not portable authority and not a replacement for the required `relative` locator.
 - Additional origin labels may be introduced by descendant schemas as envelope extensions.
 
 ### Current
@@ -806,4 +810,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: ytxP-n3eCw5pq3_frFj_VtlnQ5SCelN9mm06fso16uk
+  - Value: nOBWpnN-Nqn3r9yJcAg2pGx_SenALuBtE1cIqcNfIkk
