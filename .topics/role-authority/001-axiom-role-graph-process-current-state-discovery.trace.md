@@ -4,9 +4,9 @@
 - Parent
   - Parent Schema: [tiinex.task.v1](https://github.com/Tiinex/docs/blob/053d46ce082d4ec261b82abc44ecca403d61e240/.topics/.schemas/core/task/tiinex.task.v1.schema.md)
   - Created At: 2026-08-26 22:30:00
-  - Trace: [Portable Handoff, Cold-Start And LLM Ingress](https://github.com/Tiinex/business/blob/master/.topics/initiatives/001-2-2-portable-handoff-cold-start-ingress-task.trace.md)
+  - Trace: [Portable Handoff, Cold-Start And LLM Ingress](https://github.com/Tiinex/business/blob/3dac3b7ad41f307b1a3dcb70f0933f9e44a4fcd0/.topics/initiatives/001-2-2-portable-handoff-cold-start-ingress-task.trace.md)
   - Origin:
-    - [relative](../../.tiinex/continuity/parents/tiinex-business/.topics/initiatives/001-2-2-portable-handoff-cold-start-ingress-task.trace.md)
+    - [browse + git](https://github.com/Tiinex/business/blob/3dac3b7ad41f307b1a3dcb70f0933f9e44a4fcd0/.topics/initiatives/001-2-2-portable-handoff-cold-start-ingress-task.trace.md)
 - Current
   - Current Schema: [tiinex.discovery.v1](../.schemas/discovery/tiinex.discovery.v1.schema.md)
   - Created At: 2026-08-30 17:03:00
@@ -89,7 +89,7 @@
 
 - Placement: this completed specialist Discovery is retained in `Tiinex/docs` because its primary durable value is the semantic-authority boundary around Role, Parent, Relation, schema inheritance, Handoff/Transition meaning, and the graph projection those semantics constrain.
 - Organizational Context: the originating Business controlling work is `Tiinex/business::.topics/initiatives/001-2-2-portable-handoff-cold-start-ingress-task.trace.md`. The package-local Axiom Handoff records the session transfer only.
-- Parent Boundary: this durable Docs copy declares the Business cold-start/ingress Task as its direct semantic Parent. `Trace` identifies the external Business source and the required relative Origin resolves to an exact recovery representation stored outside `.topics/`; that recovery material is not a new semantic node. Viewer/Tooling may recover the canonical Business Parent from the external `Trace` into the same loaded workspace so the edge is shown as a real source-scope transition rather than a Docs-local root.
+- Parent Boundary: this durable Docs copy declares the Business cold-start/ingress Task as its direct semantic Parent. `Trace` and `browse + git` identify the exact commit-pinned external Business representation. No duplicate local Parent material is required. Viewer/Tooling may recover that Parent as a distinct source so the edge is shown as a real source-scope transition rather than a Docs-local root.
 - Follow-On Boundary: semantic clarification or schema-authority work belongs here in Docs; Viewer/runtime implementation belongs in Site; Business retains product meaning, sequencing, and acceptance.
 
 ## Interpretation Limits
@@ -99,9 +99,9 @@
 # Continuity Integrity
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
-  - Towards: [Portable Handoff, Cold-Start And LLM Ingress](https://github.com/Tiinex/business/blob/master/.topics/initiatives/001-2-2-portable-handoff-cold-start-ingress-task.trace.md)
+  - Towards: [Portable Handoff, Cold-Start And LLM Ingress](https://github.com/Tiinex/business/blob/3dac3b7ad41f307b1a3dcb70f0933f9e44a4fcd0/.topics/initiatives/001-2-2-portable-handoff-cold-start-ingress-task.trace.md)
   - Value: XCQt4Ikn6uuZQy3_dJ3IQRqWG_xxaU3BCh8mDWeboh8
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value:QD9ozBPHWRBQKd4w03Re05OoUVclQjIRCORDT15euQk
+  - Value:nKkk6Mlh77CceNV2lOHD4fRXf-DdPpaaEkIqg3dNUPo
