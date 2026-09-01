@@ -10,6 +10,10 @@
     - Target: Schema Validation Contract / Parent Origin and Schema Reference Fields
     - Note: Parent recovery no longer requires fabricated relative locality. Local recovery uses truthful relative paths; external or historical recovery uses a qualified version-stable locator when local relative recovery is unavailable. Published schema references use immutable canonical locators when available. Transport closure may augment recovery for an already-truthful Parent edge but does not create missing source Origin authority; bounded export must preserve a usable recovery route or fail closed.
     - Reason: Cross-repository lineage exposed that a universal relative requirement forced duplicate Parent material and weakened bounded transport and exact source recovery.
+  - Human-first shared semantic surface clarification
+    - Target: Root Semantics
+    - Note: Human-readable declared artifact meaning is the primary shared semantic surface; LLM recovery and machine validation/generation must preserve that same non-contradictory declared meaning within their explicit authority surfaces.
+    - Reason: Anchor accepted the bounded Axiom finding that this cross-schema invariant was strongly distributed in current authority but not stated once canonically at Root.
 
 ---
 
@@ -37,6 +41,8 @@ If `Parent` is absent, the artifact is the root of its local lineage.
 Parent absence does not erase origin or provenance. It only means no parent edge is declared.
 
 If `Repairs` exists, the artifact declares known repair, correction, or trust-impacting context that should remain visible to later readers and tools.
+
+Human-readable declared artifact meaning is the primary shared semantic surface. LLMs may recover or explain that same declared meaning without inventing missing authority. Machines may validate or generate only the explicit machine contract surfaces. Machine validation may be stricter about acceptance shape, but it must not create a contradictory semantic meaning. LLM or runtime-private state must not silently override or invent artifact semantic authority.
 
 ## Contract Reading Model
 
@@ -816,4 +822,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: opA3uerTJ6TK8hyt1wbI-cZZZDgE_Z0aaFCmbAbwB4A
+  - Value: oET0h7Lf2sCZbmLfh9j73zYvGAzEdct3Ek6Nkr1WsXU
