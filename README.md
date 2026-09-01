@@ -4,6 +4,8 @@ Tiinex/docs contains the schemas, examples, topics, trace artifacts, policies, a
 
 Tiinex itself keeps provenance readable in Markdown artifacts you own: where material came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
 
+For LLM/machine first contact, read [`llms.txt`](llms.txt) before deeper repository archaeology.
+
 ## What This Repo Is
 
 This repository is the documentation and artifact source for Tiinex.

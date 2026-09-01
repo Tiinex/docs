@@ -4,9 +4,9 @@
 - Parent
   - Parent Schema: [tiinex.handoff.v1](../.schemas/coordination/handoff/tiinex.handoff.v1.schema.md)
   - Created At: 2026-09-01 20:13:00
-  - Trace: [Composable Operational Grounding — Axiom To Anchor Return](001-1-1-1-1-1-1-1-1-1-1-axiom-to-anchor-composable-operational-grounding-return-handoff.trace.md)
+  - Trace: [Composable Operational Grounding — Axiom To Anchor Return](https://github.com/Tiinex/docs/blob/8435cd46a3773a38301659da716785dc6465072c/.topics/role-authority/001-1-1-1-1-1-1-1-1-1-1-axiom-to-anchor-composable-operational-grounding-return-handoff.trace.md)
   - Origin:
-    - [relative](001-1-1-1-1-1-1-1-1-1-1-axiom-to-anchor-composable-operational-grounding-return-handoff.trace.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/8435cd46a3773a38301659da716785dc6465072c/.topics/role-authority/001-1-1-1-1-1-1-1-1-1-1-axiom-to-anchor-composable-operational-grounding-return-handoff.trace.md)
 - Current
   - Current Schema: [tiinex.decision.v1](../.schemas/core/decision/tiinex.decision.v1.schema.md)
   - Created At: 2026-09-01 20:25:00
@@ -49,9 +49,9 @@
 # Continuity Integrity
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
-  - Towards: [Composable Operational Grounding — Axiom To Anchor Return](001-1-1-1-1-1-1-1-1-1-1-axiom-to-anchor-composable-operational-grounding-return-handoff.trace.md)
+  - Towards: [Composable Operational Grounding — Axiom To Anchor Return](https://github.com/Tiinex/docs/blob/8435cd46a3773a38301659da716785dc6465072c/.topics/role-authority/001-1-1-1-1-1-1-1-1-1-1-axiom-to-anchor-composable-operational-grounding-return-handoff.trace.md)
   - Value: _2xe4C2z7TheJMd6P8yvvWLQ5chjbOifhErpTxqklA8
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: KPPWLUhpRMZqoye_Ci0mcoes_QNWbsYZVN2L6fkZDXA
+  - Value: BfWA_lvYlkIyRgSK5b6jmSOPrOsEhsGMmNl6fmQ6vHo
