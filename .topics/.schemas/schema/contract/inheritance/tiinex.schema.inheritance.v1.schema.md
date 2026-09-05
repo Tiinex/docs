@@ -240,8 +240,9 @@ Required Fields
 
 Rules
 
-- Create an inheritance contract when parent-child schema behavior affects validation, generation, schema building, migration, or conflict handling.
-- Do not create an inheritance contract just to restate that a parent exists if no merge behavior needs to be made explicit.
+- Create a standalone inheritance contract when the parent-child merge relationship itself needs independent provenance, lifecycle, review, migration, audit, or conflict-handling semantics.
+- Schema-local compilation authority for explicit inherited replacement comes from the child schema's Root-owned `Inheritance Overrides` declaration; a standalone inheritance artifact is not required merely to make that override executable.
+- Do not create an inheritance contract just to restate that a parent exists or to duplicate schema-local override authority when no independent inheritance-record semantics are needed.
 
 ### Required Inputs
 
@@ -344,4 +345,4 @@ Must Not Be Used To Claim: child schema can ignore annotation boundaries
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: xlNpgkev1PgiHph5Z1CViHb8rrNiQgr6ty-0PU6swd8
+  - Value: tX1lPHPl7d55EuPM39wjz5-sbNx6rxVw6Zf_flroCnA

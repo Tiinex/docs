@@ -142,6 +142,7 @@ Known Category Labels
 - Group Shape
 - Header Sections
 - Integrity Authority
+- Inheritance Overrides
 - Instance Target
 - Known Category Labels
 - List Marker
@@ -244,6 +245,45 @@ Rules
 - Override semantics must identify which inherited requirement is being replaced and how the replacement is interpreted.
 - Validators must not guess override behavior when a descendant schema does not define it.
 - A descendant extension must not silently redeclare an inherited contract category label as if it were new.
+
+### Inheritance Overrides
+
+Entry Shape
+
+- Named Declaration
+
+Required Fields
+
+- Merge Operation
+- Parent Schema
+- Parent Node
+- Child Node
+
+Optional Fields
+
+- Reason
+- Effective Result
+
+Field Value Constraints
+
+- Merge Operation
+  - Allowed Value: override
+  - Domain Policy: closed
+
+Rules
+
+- `Inheritance Overrides` is the canonical schema-local machine category for explicit inherited contract replacement.
+- The declaration name identifies one override declaration within the declaring child schema.
+- `Merge Operation` must be exactly `override`; unsupported operations are unresolved and must not be guessed.
+- `Parent Schema` must resolve to an actual ancestor of the declaring child schema in the active lineage.
+- `Parent Node` and `Child Node` each use the exact path shape `Schema Validation Contract / <third-level group> / <category label>` and must resolve exactly once.
+- The declaring child schema is the child schema identity; no duplicate `Child Schema` field is part of the inline declaration.
+- A qualified override deactivates only the exact addressed parent contribution and activates the exact addressed child replacement contribution while retaining declaration and contributor provenance.
+- Competing declarations for the same exact parent contribution, malformed declarations, unresolved lineage, missing or ambiguous nodes, or non-ancestor parents are unresolved/error.
+- Source order, filename order, directory adjacency, prose wording, and schema identity must not choose a winner.
+- When both addressed nodes are `Required Shape`, parent ordinary instance-field groups whose Root-authorized exact second-level target heading is required by the parent shape but absent from the child replacement shape become inactive; groups targeting surviving headings remain additive.
+- If Required Shape heading identity or ordinary target ownership cannot be resolved exactly, the override is unresolved rather than guessed.
+- Standalone `tiinex.schema.inheritance.v1` artifacts may document, propose, test, audit, or migrate an inheritance relationship, but they do not silently add or change schema-local compilation authority.
 
 ### Contract Cardinality
 
@@ -822,4 +862,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: oET0h7Lf2sCZbmLfh9j73zYvGAzEdct3Ek6Nkr1WsXU
+  - Value: i4ajpsCBpiv6VAseG7dNjrSxIXGegW0QwA2vabx0E28
