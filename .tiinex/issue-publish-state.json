@@ -1,0 +1,32 @@
+{
+  "type": "tiinex.issue.publication.state.v1",
+  "version": 1,
+  "mode": "full-publish",
+  "last_published_at": "2026-09-06T11:00:29.025Z",
+  "cooldown_seconds": 120,
+  "pending_generation": "34028968995.1",
+  "published_generation": "34028968995.1",
+  "snapshot_generation": "2026-09-06T11:00:28.928Z",
+  "snapshot_source_updated_at": "",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repo": "Tiinex/docs",
+      "sourceUpdatedAt": "",
+      "issueCount": 0,
+      "commentCount": 0
+    }
+  ],
+  "event": {
+    "name": "push",
+    "action": "",
+    "issue": "",
+    "comment": ""
+  },
+  "previous": {
+    "last_published_at": "",
+    "published_generation": "",
+    "snapshot_source_updated_at": ""
+  },
+  "follow_up_required": false
+}
