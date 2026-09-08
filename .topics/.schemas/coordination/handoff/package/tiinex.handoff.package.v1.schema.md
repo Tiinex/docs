@@ -11,7 +11,7 @@
   - Current Schema: [tiinex.handoff.package.v1](tiinex.handoff.package.v1.schema.md)
   - Created At: 2026-09-01 14:19:00
   - Authors: Axiom
-  - Summary: Narrow receiver-facing Handoff carrier schema for package identity, Start/bootstrap exposure, package-local complete Workspace snapshot bindings, route discovery, and carrier continuity without owning Handoff transfer semantics or generic Workspace representation semantics.
+  - Summary: Narrow receiver-facing carrier schema for package identity, Start/bootstrap exposure, package-local complete Workspace snapshot bindings, explicit Handoff-route or pointerless Workspace-carrier mode, and carrier continuity without owning Handoff transfer semantics or generic Workspace representation semantics.
 
 ---
 
@@ -21,16 +21,17 @@
 
 ## Summary
 
-Defines one receiver-facing Handoff carrier identity and discovery contract.
+Defines one receiver-facing carrier identity and discovery contract with two explicit Package Roles: an exact Handoff-route carrier and a pointerless complete-Workspace carrier.
 
-`tiinex.handoff.package.v1` owns only the semantic facts that belong to the carrier itself: how a recipient enters the carrier, how complete package-local Workspace snapshots are bound to explicit Workspace artifacts, how the selected Handoff route is discovered, and how carrier convenience lineage is represented.
+`tiinex.handoff.package.v1` owns only the semantic facts that belong to the carrier itself: how a recipient enters the carrier, how complete package-local Workspace snapshots are bound to explicit Workspace artifacts, which carrier mode is declared, how Handoff route discovery is expressed when that mode selects a Handoff, and how carrier convenience lineage is represented.
 
 Despite its namespace, this schema is not a specialization of `tiinex.handoff.v1`. It does not transfer work or responsibility. It is also not a specialization of `tiinex.semantic.package.v1`, whose maintained job is portable schema and Transition discovery.
 
 ## Core Semantics
 
-- Handoff Package = one recipient-facing carrier identity/discovery boundary.
-- The authoritative Handoff remains a `tiinex.handoff.v1` artifact in its owning Workspace; carrying or pointing to it does not duplicate or replace Handoff semantics.
+- Handoff Package = one recipient-facing carrier identity/discovery boundary with one explicit carrier role: exact Handoff-route transport or pointerless complete-Workspace transport.
+- In `recipient-facing-handoff-carrier` mode, the authoritative Handoff remains a `tiinex.handoff.v1` artifact in its owning Workspace; carrying or pointing to it does not duplicate or replace Handoff semantics.
+- In `recipient-facing-workspace-carrier` mode, the package selects no Handoff route and creates no Handoff transfer, endpoint, recipient-capacity, current-work, acceptance, completion, or continuation semantics.
 - The authoritative Workspace remains a `tiinex.workspace.v1` artifact. A package-local snapshot is a representation of that Workspace's source bytes, not the Workspace artifact itself.
 - A Handoff Package may directly bind a carried Workspace artifact to one exact package-local complete Workspace snapshot when the relation exists only for this carrier and the package schema owns all qualification rules needed to re-establish that binding from the package bytes.
 - That package-specific binding is not a `tiinex.workspace.representation.v1` artifact and does not activate generic Workspace Representation authority outside this carrier.
@@ -38,8 +39,9 @@ Despite its namespace, this schema is not a specialization of `tiinex.handoff.v1
 - A standalone `tiinex.workspace.representation.v1` artifact is not required for the same package-local complete snapshot when no independently selectable representation relation, bounded scope, multiple-representation choice, external provider contract, or separate representation lifecycle needs to survive apart from the package binding.
 - Generic External Payload and Workspace Representation schemas remain authoritative wherever those independent semantic jobs exist.
 - Package-local `Parent` lineage among carrier artifacts may be intentionally manufactured as recipient continuity/navigation. Its semantic subject is the carrier artifact sequence only; it does not rewrite source-artifact Parent, Origin, ownership, authority, Role hierarchy, Handoff endpoints, or participation.
-- Package-local Role Pointers are discovery/grounding aids only. Handoff endpoint and participation meaning remains owned by the authoritative Handoff and any separately authoritative typed Relation.
-- Workspace placement of a Handoff Pointer is route-resolution navigation: it identifies the Workspace from which the authoritative Handoff is to be resolved, not ownership or authority beyond that resolution fact.
+- Package-local Role Pointers, when Handoff-carrier mode exposes them on the selected route closure, are discovery/grounding aids only. Handoff endpoint and participation meaning remains owned by the authoritative Handoff and any separately authoritative typed Relation.
+- In Handoff-carrier mode, Workspace placement of a Handoff Pointer is route-resolution navigation: it identifies the Workspace from which the authoritative Handoff is to be resolved, not ownership or authority beyond that resolution fact.
+- In Workspace-carrier mode, authoritative Handoff artifacts may exist incidentally inside a carried complete Workspace snapshot, but package membership does not select, activate, or imply any such Handoff.
 - Package membership, path, filename, adjacency, archive entry order, digest equality, or successful transport do not by themselves create semantic authority.
 
 ## Schema Validation Contract
@@ -52,7 +54,7 @@ Applies To
 
 Rules
 
-- `tiinex.handoff.package.v1` identifies artifacts whose main job is to declare one recipient-facing Handoff carrier and its bounded discovery/binding contract.
+- `tiinex.handoff.package.v1` identifies artifacts whose main job is to declare one recipient-facing carrier and its bounded Workspace binding plus explicit Handoff-route-or-pointerless discovery contract.
 - The package artifact must remain human-readable without a hidden compatibility manifest, application-local state, repository search, or manual archive archaeology.
 - The package artifact must not become an exhaustive file inventory, verification receipt, Handoff duplicate, Workspace duplicate, generic workflow engine, or general transport ontology.
 - Prose outside `Schema Validation Contract` may explain the package but does not add machine requirements.
@@ -93,6 +95,7 @@ Field Value Constraints
 
 - Package Role
   - Allowed Value: recipient-facing-handoff-carrier
+  - Allowed Value: recipient-facing-workspace-carrier
   - Domain Policy: closed
 - Carrier Kind
   - Allowed Value: self-contained
@@ -100,8 +103,10 @@ Field Value Constraints
 
 Rules
 
-- `Package Role` states that the artifact describes the recipient-facing Handoff carrier.
-- `Carrier Kind: self-contained` means every material source byte required by the selected qualified route is carried by the package according to the package's explicit bindings and closure rules.
+- `Package Role: recipient-facing-handoff-carrier` means the package exposes one explicit selected Handoff route and retains exact Handoff-route semantics.
+- `Package Role: recipient-facing-workspace-carrier` means the package carries one or more qualified complete Workspace snapshots for recipient inspection or landing without selecting any Handoff route.
+- `Carrier Kind: self-contained` means every material source byte required by the declared carrier mode is carried by the package according to the package's explicit bindings and, in Handoff-carrier mode, selected-route closure rules.
+- Package Role is carrier semantics only. Neither role creates Handoff transfer, endpoint, acceptance, completion, Workspace identity, current-work, or Role-holder authority.
 - Package identity does not create identity for contained Workspace, Handoff, Role, Pointer, or other source artifacts.
 
 ### Bootstrap Exposure
@@ -208,22 +213,30 @@ Field Value Constraints
 
 - Route Placement Rule
   - Allowed Value: authoritative-workspace-descended
+  - Allowed Value: none
   - Domain Policy: closed
 - Continue-From Rule
   - Allowed Value: exact-package-local-handoff-pointer
+  - Allowed Value: none
   - Domain Policy: closed
 - Pre-Handoff Closure Rule
   - Allowed Value: selected-pointer-carrier-ancestors
+  - Allowed Value: none
   - Domain Policy: closed
 
 Rules
 
-- `Route Placement Rule: authoritative-workspace-descended` means a package-local Handoff Pointer route is placed below the packaged Workspace whose source snapshot contains the authoritative Handoff target.
-- `Continue-From Rule: exact-package-local-handoff-pointer` means the recipient is given one exact package-local Handoff Pointer path or an explicit qualified selection among such pointers.
-- `Pre-Handoff Closure Rule: selected-pointer-carrier-ancestors` means route-specific material required before following the authoritative Handoff must be discoverable on the selected pointer's carrier-local ancestor closure.
+- `Package Role: recipient-facing-handoff-carrier` requires the exact triplet `Route Placement Rule: authoritative-workspace-descended`, `Continue-From Rule: exact-package-local-handoff-pointer`, and `Pre-Handoff Closure Rule: selected-pointer-carrier-ancestors`.
+- `Package Role: recipient-facing-workspace-carrier` requires the exact triplet `Route Placement Rule: none`, `Continue-From Rule: none`, and `Pre-Handoff Closure Rule: none`.
+- Mixed Route Discovery triplets are invalid and fail closed.
+- In Handoff-carrier mode, `Route Placement Rule: authoritative-workspace-descended` means a package-local Handoff Pointer route is placed below the packaged Workspace whose source snapshot contains the authoritative Handoff target.
+- In Handoff-carrier mode, `Continue-From Rule: exact-package-local-handoff-pointer` means the recipient is given one exact package-local Handoff Pointer path or an explicit qualified selection among such pointers.
+- In Handoff-carrier mode, `Pre-Handoff Closure Rule: selected-pointer-carrier-ancestors` means route-specific material required before following the authoritative Handoff must be discoverable on the selected pointer's carrier-local ancestor closure.
 - Carrier-local ancestor closure is a recipient discovery plan. It does not make ancestor placement semantic participation, delegation, authority precedence, source Parent truth, Required Context meaning, or Handoff endpoint identity.
 - Package-local Role Pointers included on that closure remain `tiinex.pointer.v1` artifacts. Their placement permits pre-Handoff grounding only and must not be used to infer participation.
-- The authoritative Handoff target remains the sole owner of Handoff transfer semantics.
+- In Handoff-carrier mode, all existing selected-route qualification and Handoff Pointer rules remain unchanged, and the authoritative Handoff target remains the sole owner of Handoff transfer semantics.
+- In Workspace-carrier mode, no package-local selected Handoff Pointer route may be exposed. Authoritative Handoff artifacts may exist incidentally inside a carried complete Workspace snapshot, but package membership does not select or activate them.
+- `none` means absence of package-level Handoff route semantics. It must not be interpreted as an unknown Handoff, empty Handoff, implicit current Handoff, deferred route selection, or permission to infer a route later.
 
 ### Carrier Continuity
 
@@ -274,7 +287,7 @@ Field Value Constraints
 
 Rules
 
-- `Receiver Qualification: reverify-carried-authority-and-bytes` requires the recipient to validate the visible package artifacts, selected route, exact bound payload bytes, and required source correlation rather than trusting placement or a sender-side receipt.
+- `Receiver Qualification: reverify-carried-authority-and-bytes` requires the recipient to validate the visible package artifacts, exact bound payload bytes, required source correlation, and, in Handoff-carrier mode, the selected route rather than trusting placement or a sender-side receipt.
 - `Failure Policy: fail-closed` means missing, ambiguous, stale, unsafe, mismatched, or unqualified required material blocks a qualified carrier instead of being repaired by filename guessing, repository-global search, hidden network access, or compatibility metadata.
 - `Derived Inventory Authority: none` means generated manifests, indexes, checksums, compatibility JSON, file maps, and archive listings may support mechanical verification but do not override the visible semantic artifacts and exact bytes unless another explicit schema grants them authority.
 - A checksum match does not prove semantic correctness, provenance, authorship, acceptance, participation, or source identity beyond the exact qualified binding facts.
@@ -295,6 +308,10 @@ Rules
 - `Generic Payload Boundary` must preserve `tiinex.external.payload.v1` for payload identity/location/integrity/access/recovery semantics that have independent value outside this package-local binding.
 - `Generic Representation Boundary` must preserve `tiinex.workspace.representation.v1` for independently meaningful Workspace representation relations, including bounded scope, multiple selectable representations, generic provider activation, or separate relation lifecycle.
 - A Handoff Package must not be used as a Handoff, Workspace, Role, Relation, External Payload, Workspace Representation, preservation record, delivery receipt, acceptance record, provenance record, or generic semantic package.
+- Workspace-carrier mode is not a Handoff and does not transfer work or responsibility.
+- Workspace-carrier mode does not establish `From`, `To`, recipient capacity, Role holder, acceptance, completion, current Task, current Workspace, or continuation target.
+- Package creator, transport sender or receiver, repository actor, selected Workspace, UI account, package membership, Workspace identity, file placement, and surrounding context must not be promoted into Handoff endpoint, Role, current-work, transfer, acceptance, or participation semantics.
+- If bounded work or responsibility transfer, Handoff Required Context, recipient Role grounding, or a completion-facing continuation is needed, the operator must create or select a qualified `tiinex.handoff.v1` artifact and use Handoff-carrier mode.
 - Package membership and discovery do not prove authority over contained source artifacts.
 
 ### File Naming
@@ -312,7 +329,7 @@ Rules
 
 ### Creation Scope
 
-Create `tiinex.handoff.package.v1` only when one self-contained recipient-facing Handoff carrier needs a durable carrier identity/discovery contract that cannot be reconstructed more appropriately from the authoritative Handoff and Workspace artifacts alone.
+Create `tiinex.handoff.package.v1` only when one self-contained recipient-facing carrier needs a durable carrier identity/discovery contract for qualified complete Workspace snapshots and either one exact Handoff route or an explicit pointerless Workspace-carrier mode.
 
 Do not create this schema merely because a ZIP exists.
 
@@ -343,7 +360,9 @@ Do not create this schema merely because a ZIP exists.
 - Keep bootstrap/cache payload descriptors under their own owning schemas.
 - Do not duplicate Handoff parties, transfers, Required Context, Role participation, or Workspace body content.
 - Do not materialize receipt/checksum/index artifacts merely because Tooling can compute them.
-- Fail closed when a required binding or selected route cannot be qualified.
+- In Handoff-carrier mode, fail closed when the selected route cannot be qualified.
+- In Workspace-carrier mode, fail closed if a selected Handoff route or package-local Handoff Pointer route is supplied.
+- Do not silently switch Package Role because route qualification fails; the declared Package Role controls the intended carrier mode and inconsistent route fields are an error.
 
 ## Minimal Example
 
@@ -400,10 +419,24 @@ Do not create this schema merely because a ZIP exists.
 - Generic Representation Boundary: use Workspace Representation when the Workspace representation relation needs independent, bounded, selectable, or generic provider semantics
 ```
 
+Pointerless Workspace-carrier mode uses the same required body shape and Workspace Snapshot Binding rules, with these exact mode fields:
+
+```md
+- Package Role: recipient-facing-workspace-carrier
+
+## Route Discovery
+
+- Route Placement Rule: none
+- Continue-From Rule: none
+- Pre-Handoff Closure Rule: none
+```
+
+That mode exposes no selected package-local Handoff Pointer route and must not infer Handoff endpoints, Role participation, current work, transfer, acceptance, or continuation from package or Workspace context.
+
 ---
 
 # Continuity Integrity
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: EhpcG3P3id741U92Hx_Ti97Od552gAMo3ikSQPBictc
+  - Value: tr5ADY1mEj9kHBsEUr51lf50m2F6_bpPvae8YY21r4c
