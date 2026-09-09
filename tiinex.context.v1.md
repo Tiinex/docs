@@ -28,6 +28,13 @@ Tiinex cares about whether a later reader can answer practical questions:
 
 `Tiinex/docs` is the documentation and artifact repository inside the broader Tiinex ecosystem.
 
+## Repository Responsibility Map
+
+The current first-contact split is: Docs owns canonical semantic/schema material; Core implements shared host-neutral mechanics; App owns reusable Viewer/application infrastructure; Site is a thin official web deployment; Playthings is a separately owned Verse consumer. CLI, Interop, Chrome and VS Code are separate host/frontier boundaries and must be qualified from their own Workspaces before their implementation is called current.
+
+See `REPOSITORY_BOUNDARIES.md` for the exact bootstrap and dependency boundaries.
+
+
 It contains Markdown schemas, examples, topics, trace artifacts, policy notes, and related documentation.
 
 It is not the whole Tiinex project.
@@ -93,9 +100,10 @@ For a first pass inside this repo, prefer this order:
 
 1. `README.md`
 2. `tiinex.orientation.v1.md`
-3. `.topics/.schemas/README.md`
-4. `LINEAGE_POLICY.md`
-5. `releases/*` only when you need transient schema/status context
+3. `REPOSITORY_BOUNDARIES.md`
+4. `.topics/.schemas/README.md`
+5. `LINEAGE_POLICY.md`
+6. `releases/*` only when you need transient schema/status context
 
 ## Bounded Answer To "What Is Tiinex/docs?"
 

@@ -108,13 +108,11 @@ It should not be mistaken for the whole Tiinex project or for the only public pr
 
 ## Current Public Grounding
 
-The public surfaces that should currently be treated as grounded are:
+The repository responsibility map is maintained in `REPOSITORY_BOUNDARIES.md`. At this frontier the grounded split is Docs semantic authority, Core shared host-neutral implementation, App reusable Viewer/application infrastructure, Site thin web deployment, and Playthings as a separately owned Verse consumer.
 
-- `docs` for schemas, artifacts, policy material, topics, and semantics
-- `site` for the current public viewer and reference implementation
-- `ai-provenance` only for validator, linting, and provenance pieces that are still current, and only with local verification of the specific part
+CLI, Interop, Chrome and VS Code are distinct host/frontier boundaries. Do not call their implementation current merely from their names or historical references; qualify their own Workspace/source first.
 
-Other repositories may be historical, experimental, private-in-practice, or stale and should not be treated as current without revalidation.
+Repository location never upgrades implementation bytes into semantic authority.
 
 ## Stable Reading
 

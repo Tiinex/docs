@@ -11,6 +11,7 @@ Primary files:
 - README.md - repo-local human entrypoint for what Tiinex/docs is
 - tiinex.orientation.v1.md - stable Tiinex identity aligned with the org surface
 - tiinex.context.v1.md - self-contained LLM and reader context
+- REPOSITORY_BOUNDARIES.md - current repository/package and bootstrap responsibility map
 - .topics/.schemas/README.md - schema tree orientation
 - LINEAGE_POLICY.md - consent and lineage-use boundary
 
@@ -27,7 +28,7 @@ Boundary reminders:
 
 Optional operational bootstrap:
 - Semantic reading of this repository must work without Tooling.
-- If Tooling is needed, use the last Sigma-accepted stable Foundation bootstrap pointer from Tiinex/site at exact commit `56ba75025b7a8fd44b5318d2560d2ec63eb0106f`:
-  `src/tooling/portable/bootstrap/tiinex.llm.bootstrap.pointer.json`
-- The bootstrap is a routing/Tooling aid, not schema or artifact semantic authority.
-- If that exact ref cannot be retrieved, continue from readable Docs material and disclose the operational limitation rather than silently substituting a moving branch.
+- Current portable Tooling mechanics are implemented by `@tiinex/core`; a routed Handoff package should be cold-started from its own embedded/pinned bootstrap rather than by repository archaeology.
+- Core carrier/tooling bootstrap mechanics are distinct from external-assistant bootstrap experiences, which belong to the Interop frontier when that Workspace is established.
+- Carried schema material remains Docs-governed semantic material; transport/runtime location does not transfer authority.
+- If the required exact Tooling/bootstrap material is unavailable, continue from readable Docs material and disclose the operational limitation rather than silently substituting a moving source.

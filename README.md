@@ -87,14 +87,17 @@ Origin is grounding or provenance, not the same thing as parent.
 
 The docs repo tries to preserve those distinctions instead of flattening them into one vague concept.
 
-## Docs vs Site vs Org
+## Docs And The Current Repository Map
 
 - `Tiinex/.github` is the org-level human entrypoint.
-- `Tiinex/docs` is the schema, artifact, topic, and documentation source.
-- `Tiinex/site` or other viewer surfaces are presentation layers, not the whole project identity.
-- `Tiinex/ai-provenance` is only partially current and should be verified before treating broad claims as authoritative.
+- `Tiinex/docs` is canonical schema/semantic/documentation authority.
+- `Tiinex/core` implements shared host-neutral mechanics; repository/package placement does not make it semantic authority.
+- `Tiinex/app` owns the reusable Viewer/application layer above Core.
+- `Tiinex/site` is the official thin web deployment over App/Core.
+- `Tiinex/verse-playthings` is a separately owned Verse package consuming App/Core contracts.
+- CLI, Interop, Chrome and VS Code are host/frontier repositories whose currentness must be qualified from their own Workspaces.
 
-If you arrive here first, read this repo as a source library and artifact repository inside the broader Tiinex system.
+See [`REPOSITORY_BOUNDARIES.md`](REPOSITORY_BOUNDARIES.md) for the maintained first-contact responsibility and bootstrap map.
 
 ## Where Release And Status Notes Live
 
@@ -114,6 +117,7 @@ That material may still be useful, but it should not define the stable first imp
 
 - `tiinex.orientation.v1.md`
 - `tiinex.context.v1.md`
+- `REPOSITORY_BOUNDARIES.md`
 - `.topics/.schemas/README.md`
 - `LINEAGE_POLICY.md`
 - `releases/README.md`

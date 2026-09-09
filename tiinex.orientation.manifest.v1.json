@@ -26,6 +26,13 @@
       "authority": "self-contained repo and project context"
     },
     {
+      "path": "REPOSITORY_BOUNDARIES.md",
+      "role": "repository-responsibility-map",
+      "audience": "human-and-machine",
+      "stability": "maintained",
+      "authority": "implementation and host responsibility routing; does not transfer schema semantic authority"
+    },
+    {
       "path": "releases/*",
       "role": "transient-schema-and-status-bundles",
       "audience": "human-and-machine",
@@ -62,6 +69,7 @@
     "A schema bundle is transient release material, not the stable repo identity.",
     "Parent means declared continuity, not generic source.",
     "Origin means grounding or provenance, not the same thing as parent.",
-    "AI and LLM workflows are use cases and pressure tests, not the identity boundary."
+    "AI and LLM workflows are use cases and pressure tests, not the identity boundary.",
+    "Repository/package placement is implementation topology and does not transfer Docs semantic authority."
   ]
 }
