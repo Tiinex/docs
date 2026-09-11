@@ -10,8 +10,13 @@
 - Current
   - Current Schema: [tiinex.handoff.package.v1](tiinex.handoff.package.v1.schema.md)
   - Created At: 2026-09-01 14:19:00
-  - Authors: Axiom
-  - Summary: Narrow receiver-facing carrier schema for package identity, Start/bootstrap exposure, package-local complete Workspace snapshot bindings, explicit Handoff-route or pointerless Workspace-carrier mode, and carrier continuity without owning Handoff transfer semantics or generic Workspace representation semantics.
+  - Authors: Axiom, Anchor
+  - Repairs:
+    - Password-sealed Workspace carriage
+      - Target: Core Semantics / Workspace Snapshot Bindings / Route Discovery / Qualification Boundary
+      - Note: Adds one sealed binding mode that composes External Payload and Transport Envelope authority, keeps protected Workspace internals opaque to the carrier, and requires the authoritative selected Handoff route Workspace to remain clear in V1.
+      - Reason: Accepted secure-transport V1 semantics require independently protected Workspaces without moving cryptographic profile or recipient-slot meaning into Handoff Package.
+  - Summary: Narrow receiver-facing carrier schema for package identity, Start/bootstrap exposure, clear verified or password-sealed complete Workspace carriage, explicit Handoff-route or pointerless Workspace-carrier mode, and carrier continuity without owning Handoff transfer, cryptographic profile, or generic Workspace representation semantics.
 
 ---
 
@@ -21,9 +26,9 @@
 
 ## Summary
 
-Defines one receiver-facing carrier identity and discovery contract with two explicit Package Roles: an exact Handoff-route carrier and a pointerless complete-Workspace carrier.
+Defines one receiver-facing carrier identity and discovery contract with two explicit Package Roles: an exact Handoff-route carrier and a pointerless complete-Workspace carrier. A carried Workspace may use either the existing clear verified complete-snapshot shortcut or a password-sealed complete representation whose ciphertext and open semantics remain under separate owners.
 
-`tiinex.handoff.package.v1` owns only the semantic facts that belong to the carrier itself: how a recipient enters the carrier, how complete package-local Workspace snapshots are bound to explicit Workspace artifacts, which carrier mode is declared, how Handoff route discovery is expressed when that mode selects a Handoff, and how carrier convenience lineage is represented.
+`tiinex.handoff.package.v1` owns only the semantic facts that belong to the carrier itself: how a recipient enters the carrier, how carried Workspace representations are bound to explicit Workspace artifacts at the carrier boundary, which carrier mode is declared, how Handoff route discovery is expressed when that mode selects a Handoff, and how carrier convenience lineage is represented. It does not own protected payload bytes, cryptographic profile metadata, recipient slots, password recovery, or post-open Workspace semantic qualification.
 
 Despite its namespace, this schema is not a specialization of `tiinex.handoff.v1`. It does not transfer work or responsibility. It is also not a specialization of `tiinex.semantic.package.v1`, whose maintained job is portable schema and Transition discovery.
 
@@ -38,6 +43,10 @@ Despite its namespace, this schema is not a specialization of `tiinex.handoff.v1
 - A standalone `tiinex.external.payload.v1` artifact is not required for the same package-local Workspace snapshot when no independent payload identity, location, access, retention, or recovery semantics need to survive apart from the package binding.
 - A standalone `tiinex.workspace.representation.v1` artifact is not required for the same package-local complete snapshot when no independently selectable representation relation, bounded scope, multiple-representation choice, external provider contract, or separate representation lifecycle needs to survive apart from the package binding.
 - Generic External Payload and Workspace Representation schemas remain authoritative wherever those independent semantic jobs exist.
+- A password-sealed Workspace binding always has independent payload access/recovery and cryptographic open semantics. Its ciphertext bytes therefore remain under `tiinex.external.payload.v1`, while deterministic non-secret profile, password-recipient-slot, open/recovery, and authentication semantics remain under `tiinex.transport.envelope.v1`.
+- A sealed carrier binding may qualify as a carrier-level statement that one protected complete Workspace representation is present, but it never qualifies or activates the protected Workspace source provider while locked.
+- Multiple protected Workspaces in one carrier remain independently protected: each has its own Transport Envelope, content key, protected payload, and recipient-slot set.
+- In V1 Handoff-carrier mode, the Workspace containing the authoritative selected Handoff route remains clear and verified. The package must not expose or infer a selected route through protected Workspace bytes.
 - Package-local `Parent` lineage among carrier artifacts may be intentionally manufactured as recipient continuity/navigation. Its semantic subject is the carrier artifact sequence only; it does not rewrite source-artifact Parent, Origin, ownership, authority, Role hierarchy, Handoff endpoints, or participation.
 - Package-local Role Pointers, when Handoff-carrier mode exposes them on the selected route closure, are discovery/grounding aids only. Handoff endpoint and participation meaning remains owned by the authoritative Handoff and any separately authoritative typed Relation.
 - In Handoff-carrier mode, Workspace placement of a Handoff Pointer is route-resolution navigation: it identifies the Workspace from which the authoritative Handoff is to be resolved, not ownership or authority beyond that resolution fact.
@@ -142,17 +151,27 @@ Declaration Shape
 
 - First-Level Hyphen List Item
 
-Required Fields
+Common Required Fields
 
 - Workspace Id
 - Workspace Artifact
-- Snapshot Path
-- Workspace Artifact Inner Path
 - Snapshot Kind
 - Coverage
 - Binding State
+
+Clear-Snapshot Required Fields
+
+- Snapshot Path
+- Workspace Artifact Inner Path
 - Integrity Method
 - Integrity Value
+
+Sealed-Snapshot Required Fields
+
+- Protected Payload Descriptor
+- Transport Envelope
+- Protection State
+- Post-Open Correlation Rule
 
 Optional Fields
 
@@ -167,39 +186,60 @@ Field Value Constraints
 - Snapshot Path
   - Allowed Shape: Markdown Link
   - Domain Policy: closed
+- Protected Payload Descriptor
+  - Allowed Shape: Markdown Link
+  - Domain Policy: closed
+- Transport Envelope
+  - Allowed Shape: Markdown Link
+  - Domain Policy: closed
 - Snapshot Kind
   - Allowed Value: exact-workspace-byte-tree-archive
+  - Allowed Value: password-sealed-workspace-byte-tree
   - Domain Policy: closed
 - Coverage
   - Allowed Value: complete
   - Domain Policy: closed
 - Binding State
   - Allowed Value: verified
+  - Allowed Value: sealed
   - Allowed Value: declared
   - Allowed Value: unresolved
   - Domain Policy: closed
 - Integrity Method
   - Allowed Value: sha256
   - Domain Policy: closed
+- Protection State
+  - Allowed Value: password-sealed
+  - Domain Policy: closed
+- Post-Open Correlation Rule
+  - Allowed Value: unique-exact-workspace-artifact-byte-match
+  - Domain Policy: closed
 
 Rules
 
 - `Workspace Id` is a package-local readability/routing handle. It does not replace the Workspace artifact as semantic Workspace identity.
 - `Workspace Artifact` must resolve to exactly one carried artifact whose Current Schema is `tiinex.workspace.v1`.
-- `Snapshot Path` must resolve to one package-local payload entry containing the exact complete Workspace byte-tree snapshot for this binding. External URLs and inferred filenames are not allowed.
-- `Workspace Artifact Inner Path` is the exact normalized Workspace-relative path at which the bound Workspace artifact must occur inside the snapshot.
-- `Snapshot Kind: exact-workspace-byte-tree-archive` fixes this v1 relation to a path-addressable complete Workspace source-byte archive. It does not create or imply a generic Archive or ZIP schema.
-- `Coverage: complete` is required. `bounded`, `partial`, and `unknown` are not allowed in this package-local shortcut. If bounded or independently selectable representation semantics are needed, use the generic Workspace Representation contract instead of weakening this binding.
-- `Integrity Method: sha256` and `Integrity Value` identify the exact package-member bytes at `Snapshot Path`. `Integrity Value` must be a lowercase 64-character hexadecimal SHA-256 digest.
-- `Binding State: verified` is valid only when exact snapshot bytes, safe decoding, normalized path mapping, complete coverage, and exact Workspace-artifact inner-byte correlation have qualified. A receiver must requalify these facts from the carried bytes; the state is not a transport receipt or acceptance proof.
-- `declared` and `unresolved` preserve prequalification states but do not satisfy a qualified Handoff carrier.
-- `Byte Size`, when present, is a mechanical consistency aid only and does not replace exact byte integrity.
-- The archive root is fixed at `.`, Workspace-relative paths map by normalized identity-relative paths, and unsafe, absolute, traversal, duplicate-normalized, or ambiguous entries must fail qualification.
-- Exact equality between the carried `Workspace Artifact` bytes and the entry at `Workspace Artifact Inner Path` is required for a verified binding.
-- A verified package-local complete binding may activate only the package recipient's complete Workspace source provider for this exact carrier snapshot.
-- The binding must not be exported, cached, or re-described as a generic `tiinex.workspace.representation.v1` relation unless that generic relation is separately materialized and qualified.
-- If the snapshot needs independent payload identity/location/access/recovery semantics outside the package, materialize `tiinex.external.payload.v1`.
-- If the Workspace-to-representation relation needs independent lifecycle, selection, bounded scope, multiple-representation choice, or generic provider authority outside the package, materialize `tiinex.workspace.representation.v1` and its required payload authority.
+- `Coverage: complete` is required in both binding modes. `bounded`, `partial`, and `unknown` are not allowed in this package-local carrier contract.
+- `Snapshot Kind: exact-workspace-byte-tree-archive` preserves the existing clear direct-binding shortcut. It requires `Snapshot Path`, `Workspace Artifact Inner Path`, `Integrity Method`, and `Integrity Value`; it forbids the sealed-only fields.
+- In clear mode, `Snapshot Path` must resolve to one package-local payload entry containing the exact complete Workspace byte-tree snapshot for this binding. External URLs and inferred filenames are not allowed.
+- In clear mode, `Workspace Artifact Inner Path` is the exact normalized Workspace-relative path at which the bound Workspace artifact must occur inside the snapshot.
+- In clear mode, `Integrity Method: sha256` and `Integrity Value` identify the exact package-member bytes at `Snapshot Path`. `Integrity Value` must be a lowercase 64-character hexadecimal SHA-256 digest.
+- In clear mode, `Binding State: verified` is valid only when exact snapshot bytes, safe decoding, normalized path mapping, complete coverage, and exact Workspace-artifact inner-byte correlation have qualified. A receiver must requalify these facts from the carried bytes; the state is not a transport receipt or acceptance proof.
+- In clear mode, the archive root is fixed at `.`, Workspace-relative paths map by normalized identity-relative paths, and unsafe, absolute, traversal, duplicate-normalized, or ambiguous entries must fail qualification. Exact equality between the carried `Workspace Artifact` bytes and the entry at `Workspace Artifact Inner Path` is required.
+- A verified clear package-local complete binding may activate only the package recipient's complete Workspace source provider for this exact carrier snapshot.
+- `Snapshot Kind: password-sealed-workspace-byte-tree` declares a protected complete Workspace representation. It requires `Protected Payload Descriptor`, `Transport Envelope`, `Protection State`, and `Post-Open Correlation Rule`; it forbids `Snapshot Path`, `Workspace Artifact Inner Path`, `Integrity Method`, and `Integrity Value` so the package neither leaks protected internal paths nor duplicates ciphertext location/integrity authority.
+- In sealed mode, `Protected Payload Descriptor` must resolve to exactly one carried artifact whose Current Schema is `tiinex.external.payload.v1`. That artifact remains the owner of protected payload identity, location, exact stored bytes, integrity, access, and recovery facts.
+- In sealed mode, `Transport Envelope` must resolve to exactly one carried artifact whose Current Schema is `tiinex.transport.envelope.v1`. The envelope must reference the same `Workspace Artifact` and the same protected External Payload and its Workspace Binding Value must requalify against the exact visible Workspace Artifact bytes.
+- `Protection State: password-sealed` and `Binding State: sealed` qualify only the carrier-level fact that one protected complete-intent representation and its opening contract are present. They do not qualify decrypted Workspace bytes and must leave the Workspace source provider inactive while locked.
+- `Coverage: complete` on a sealed binding is the declared scope of the protected plaintext representation. It is not receiver verification of the hidden tree before authorized open.
+- A sealed binding must expose no protected Workspace filename, directory, inner artifact path, path mapping, tree inventory, or plaintext byte facts in the outer carrier.
+- `Post-Open Correlation Rule: unique-exact-workspace-artifact-byte-match` requires an authorized receiver, after successful authenticated open, to locate exactly one decrypted archive entry whose bytes exactly equal the visible `Workspace Artifact` bytes. Zero matches and multiple matches fail closed. Only after that unique match may its internal path be derived.
+- After the unique post-open correlation succeeds, safe decoding, normalized path rules, complete coverage, ordinary Workspace representation/source qualification, schema validation, and integrity checks still apply before the Workspace provider becomes ready. Successful decryption alone is insufficient.
+- `Binding State: verified` is invalid for sealed mode and `Binding State: sealed` is invalid for clear mode. `declared` and `unresolved` preserve prequalification states but do not satisfy a qualified Handoff carrier.
+- `Byte Size`, when present, is a mechanical consistency aid only and does not replace exact byte integrity. For sealed mode, exact protected-payload size belongs to the External Payload unless the package repeats size only as a non-authoritative consistency aid.
+- Each sealed Workspace binding is independent. One Transport Envelope, content key, password slot, or successful open must not grant or imply access to another protected Workspace binding.
+- The clear direct-binding shortcut must not be exported, cached, or re-described as a generic `tiinex.workspace.representation.v1` relation unless that generic relation is separately materialized and qualified.
+- Generic External Payload and Workspace Representation authority remains unchanged outside this carrier. If the Workspace-to-representation relation needs independent lifecycle, selection, bounded scope, multiple-representation choice, or generic provider authority beyond this package, materialize and qualify `tiinex.workspace.representation.v1` in addition to any required payload authority.
 
 ### Route Discovery
 
@@ -229,13 +269,16 @@ Rules
 - `Package Role: recipient-facing-handoff-carrier` requires the exact triplet `Route Placement Rule: authoritative-workspace-descended`, `Continue-From Rule: exact-package-local-handoff-pointer`, and `Pre-Handoff Closure Rule: selected-pointer-carrier-ancestors`.
 - `Package Role: recipient-facing-workspace-carrier` requires the exact triplet `Route Placement Rule: none`, `Continue-From Rule: none`, and `Pre-Handoff Closure Rule: none`.
 - Mixed Route Discovery triplets are invalid and fail closed.
-- In Handoff-carrier mode, `Route Placement Rule: authoritative-workspace-descended` means a package-local Handoff Pointer route is placed below the packaged Workspace whose source snapshot contains the authoritative Handoff target.
-- In Handoff-carrier mode, `Continue-From Rule: exact-package-local-handoff-pointer` means the recipient is given one exact package-local Handoff Pointer path or an explicit qualified selection among such pointers.
+- In Handoff-carrier mode, `Route Placement Rule: authoritative-workspace-descended` means a package-local Handoff Pointer route is placed below the packaged Workspace whose clear verified source snapshot contains the authoritative Handoff target.
+- In Handoff-carrier mode, the Workspace containing the authoritative selected Handoff target must use `Snapshot Kind: exact-workspace-byte-tree-archive` with `Binding State: verified`. A password-sealed Workspace must not satisfy route placement or Continue-From discovery in V1.
+- In Handoff-carrier mode, `Continue-From Rule: exact-package-local-handoff-pointer` means the recipient is given one exact package-local Handoff Pointer path or an explicit qualified selection among such pointers. The route must not name, expose, guess, or defer an internal path inside protected payload bytes.
 - In Handoff-carrier mode, `Pre-Handoff Closure Rule: selected-pointer-carrier-ancestors` means route-specific material required before following the authoritative Handoff must be discoverable on the selected pointer's carrier-local ancestor closure.
 - Carrier-local ancestor closure is a recipient discovery plan. It does not make ancestor placement semantic participation, delegation, authority precedence, source Parent truth, Required Context meaning, or Handoff endpoint identity.
 - Package-local Role Pointers included on that closure remain `tiinex.pointer.v1` artifacts. Their placement permits pre-Handoff grounding only and must not be used to infer participation.
-- In Handoff-carrier mode, all existing selected-route qualification and Handoff Pointer rules remain unchanged, and the authoritative Handoff target remains the sole owner of Handoff transfer semantics.
-- In Workspace-carrier mode, no package-local selected Handoff Pointer route may be exposed. Authoritative Handoff artifacts may exist incidentally inside a carried complete Workspace snapshot, but package membership does not select or activate them.
+- Required Context may reference another carried Workspace whose package binding is sealed. That dependency remains locked/unresolved until an authorized open succeeds and ordinary post-open qualification completes; the clear authoritative Handoff route itself remains resolvable.
+- Carrier-sealed routing, encrypted selected Handoff-route discovery, hidden route manifests, and route inference after decryption are outside V1.
+- In Handoff-carrier mode, all other selected-route qualification and Handoff Pointer rules remain unchanged, and the authoritative Handoff target remains the sole owner of Handoff transfer semantics.
+- In Workspace-carrier mode, no package-local selected Handoff Pointer route may be exposed. Authoritative Handoff artifacts may exist incidentally inside a carried clear or sealed complete Workspace representation, but package membership does not select or activate them.
 - `none` means absence of package-level Handoff route semantics. It must not be interpreted as an unknown Handoff, empty Handoff, implicit current Handoff, deferred route selection, or permission to infer a route later.
 
 ### Carrier Continuity
@@ -287,10 +330,15 @@ Field Value Constraints
 
 Rules
 
-- `Receiver Qualification: reverify-carried-authority-and-bytes` requires the recipient to validate the visible package artifacts, exact bound payload bytes, required source correlation, and, in Handoff-carrier mode, the selected route rather than trusting placement or a sender-side receipt.
-- `Failure Policy: fail-closed` means missing, ambiguous, stale, unsafe, mismatched, or unqualified required material blocks a qualified carrier instead of being repaired by filename guessing, repository-global search, hidden network access, or compatibility metadata.
+- `Receiver Qualification: reverify-carried-authority-and-bytes` requires the recipient to validate the visible package artifacts, every binding's owning byte authority, required source correlation appropriate to that binding mode, and, in Handoff-carrier mode, the selected clear route rather than trusting placement or a sender-side receipt.
+- For a clear binding, receiver qualification includes exact snapshot bytes, digest, safe decode, complete coverage, and exact `Workspace Artifact Inner Path` byte correlation as before.
+- For a sealed binding, receiver qualification while locked includes the visible Workspace Artifact, External Payload descriptor, exact protected payload bytes and integrity under that descriptor, Transport Envelope metadata, envelope-to-payload/workspace consistency, and Workspace Binding Value. Carrier qualification while locked must not be reported as qualification of the hidden Workspace bytes or source provider.
+- After authorized authenticated open of a sealed binding, the receiver must apply the declared unique exact Workspace-artifact byte correlation rule and then ordinary complete Workspace representation, safe-path, schema, and integrity qualification before provider activation.
+- Wrong password, unavailable/unsupported declared profile, malformed slot or profile metadata, missing protected bytes, payload-integrity mismatch, authentication failure, truncation, zero/multiple post-open Workspace-artifact matches, unsafe path recovery, or incomplete recovered coverage fails closed.
+- A sealed Required Context Workspace that has not completed authorized open and post-open qualification remains unresolved for work that depends on it.
+- `Failure Policy: fail-closed` means missing, ambiguous, stale, unsafe, mismatched, locked-required, or unqualified required material blocks the dependent qualification instead of being repaired by filename guessing, repository-global search, hidden network access, compatibility metadata, or secret fallback.
 - `Derived Inventory Authority: none` means generated manifests, indexes, checksums, compatibility JSON, file maps, and archive listings may support mechanical verification but do not override the visible semantic artifacts and exact bytes unless another explicit schema grants them authority.
-- A checksum match does not prove semantic correctness, provenance, authorship, acceptance, participation, or source identity beyond the exact qualified binding facts.
+- A checksum match or successful cryptographic authentication does not prove semantic correctness, provenance, authorship, acceptance, participation, or source identity beyond the exact qualified binding facts.
 
 ### Interpretation Limits
 
@@ -307,6 +355,8 @@ Rules
 - `Must Not Be Used To Claim` must name claims requiring separate authority.
 - `Generic Payload Boundary` must preserve `tiinex.external.payload.v1` for payload identity/location/integrity/access/recovery semantics that have independent value outside this package-local binding.
 - `Generic Representation Boundary` must preserve `tiinex.workspace.representation.v1` for independently meaningful Workspace representation relations, including bounded scope, multiple selectable representations, generic provider activation, or separate relation lifecycle.
+- Password-sealed binding semantics must preserve `tiinex.transport.envelope.v1` as the owner of deterministic non-secret cryptographic profile, recipient-slot, open/recovery, and authentication metadata. Handoff Package must not absorb those semantics merely because it carries the envelope and ciphertext.
+- Protected ciphertext identity, location, exact stored-byte integrity, access, and recovery facts remain under the referenced `tiinex.external.payload.v1`.
 - A Handoff Package must not be used as a Handoff, Workspace, Role, Relation, External Payload, Workspace Representation, preservation record, delivery receipt, acceptance record, provenance record, or generic semantic package.
 - Workspace-carrier mode is not a Handoff and does not transfer work or responsibility.
 - Workspace-carrier mode does not establish `From`, `To`, recipient capacity, Role holder, acceptance, completion, current Task, current Workspace, or continuation target.
@@ -329,7 +379,7 @@ Rules
 
 ### Creation Scope
 
-Create `tiinex.handoff.package.v1` only when one self-contained recipient-facing carrier needs a durable carrier identity/discovery contract for qualified complete Workspace snapshots and either one exact Handoff route or an explicit pointerless Workspace-carrier mode.
+Create `tiinex.handoff.package.v1` only when one self-contained recipient-facing carrier needs a durable carrier identity/discovery contract for complete Workspace carriage, using clear verified snapshots and/or password-sealed complete representations, plus either one exact Handoff route or an explicit pointerless Workspace-carrier mode.
 
 Do not create this schema merely because a ZIP exists.
 
@@ -340,7 +390,7 @@ Do not create this schema merely because a ZIP exists.
 - Start Artifact
 - Tooling Bootstrap Descriptor
 - Bootstrap Rule
-- one or more qualified Workspace Snapshot Bindings
+- one or more qualified clear or sealed Workspace Snapshot Bindings
 - Route Placement Rule
 - Continue-From Rule
 - Pre-Handoff Closure Rule
@@ -354,17 +404,22 @@ Do not create this schema merely because a ZIP exists.
 ### Generation Rules
 
 - Keep the package artifact narrow and human-readable.
-- Bind only package-local complete Workspace snapshots through this v1 shortcut.
+- Bind only complete Workspace carriage in this v1 contract: either a clear exact complete snapshot or a password-sealed complete-intent representation.
 - Preserve the Workspace artifact as semantic Workspace identity.
-- Reuse External Payload and Workspace Representation schemas when their independent semantics are needed.
+- For clear direct bindings, preserve the existing package-local snapshot path, inner Workspace-artifact path, and exact snapshot digest shortcut.
+- For sealed bindings, require one explicit External Payload descriptor and one `tiinex.transport.envelope.v1` artifact; do not duplicate ciphertext path/integrity or cryptographic profile/recipient-slot fields into Handoff Package.
+- Do not expose a protected Workspace's internal path/tree inventory in the outer package. Post-open correlation derives the Workspace artifact's internal path only after a unique exact-byte match succeeds.
+- Preserve generic Workspace Representation authority when the relation needs independent lifecycle, selection, bounded scope, multiple representations, or generic provider activation beyond this package.
 - Keep bootstrap/cache payload descriptors under their own owning schemas.
 - Do not duplicate Handoff parties, transfers, Required Context, Role participation, or Workspace body content.
 - Do not materialize receipt/checksum/index artifacts merely because Tooling can compute them.
-- In Handoff-carrier mode, fail closed when the selected route cannot be qualified.
+- In Handoff-carrier mode, require the selected authoritative Handoff route Workspace to remain clear and verified; fail closed when that route cannot be qualified.
 - In Workspace-carrier mode, fail closed if a selected Handoff route or package-local Handoff Pointer route is supplied.
 - Do not silently switch Package Role because route qualification fails; the declared Package Role controls the intended carrier mode and inconsistent route fields are an error.
 
 ## Minimal Example
+
+Mixed clear-route plus sealed Required Context carriage may use this shape:
 
 ```md
 # Handoff Package
@@ -392,6 +447,16 @@ Do not create this schema merely because a ZIP exists.
   - Binding State: verified
   - Integrity Method: sha256
   - Integrity Value: <64 lowercase hexadecimal characters>
+- core
+  - Workspace Id: core
+  - Workspace Artifact: [Core Workspace](001-2-4-core.workspace.md)
+  - Snapshot Kind: password-sealed-workspace-byte-tree
+  - Coverage: complete
+  - Binding State: sealed
+  - Protected Payload Descriptor: [Core Protected Payload](001-2-5-core-protected-payload.trace.md)
+  - Transport Envelope: [Core Transport Envelope](001-2-6-core-transport-envelope.trace.md)
+  - Protection State: password-sealed
+  - Post-Open Correlation Rule: unique-exact-workspace-artifact-byte-match
 
 ## Route Discovery
 
@@ -413,13 +478,15 @@ Do not create this schema merely because a ZIP exists.
 
 ## Interpretation Limits
 
-- Does Not Mean: package membership is semantic ownership or Handoff participation
-- Must Not Be Used To Claim: recipient acceptance, Handoff completion, source provenance, or Role authority
-- Generic Payload Boundary: use External Payload when package-local snapshot bytes need independent payload semantics
+- Does Not Mean: package membership, successful encrypted open, or carrier qualification is semantic ownership or Handoff participation
+- Must Not Be Used To Claim: recipient acceptance, Handoff completion, source provenance, Role authority, or hidden Workspace qualification while locked
+- Generic Payload Boundary: protected ciphertext always uses External Payload; clear package-local snapshot bytes need External Payload only when independent payload semantics exist
 - Generic Representation Boundary: use Workspace Representation when the Workspace representation relation needs independent, bounded, selectable, or generic provider semantics
 ```
 
-Pointerless Workspace-carrier mode uses the same required body shape and Workspace Snapshot Binding rules, with these exact mode fields:
+The selected Handoff route in this example must descend from the clear verified `docs` binding. The sealed `core` binding may satisfy carriage of Required Context only after authorized open and ordinary post-open qualification; its protected internal route/path tree is not visible in the outer carrier.
+
+Pointerless Workspace-carrier mode uses the same required body shape and may mix clear and sealed Workspace bindings, with these exact mode fields:
 
 ```md
 - Package Role: recipient-facing-workspace-carrier
@@ -439,4 +506,4 @@ That mode exposes no selected package-local Handoff Pointer route and must not i
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: tr5ADY1mEj9kHBsEUr51lf50m2F6_bpPvae8YY21r4c
+  - Value: CDnzR0BAKF-cEdyC_a9cYguz95-6nTZLf3JgpbHRX6Q

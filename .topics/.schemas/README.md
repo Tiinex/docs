@@ -163,6 +163,10 @@ Ordinary artifacts and schema contracts may declare or project typed relation ed
 - [AI Runtime](runtime/ai/tiinex.ai.runtime.v1.schema.md)
 - [Machine Runtime](runtime/machine/tiinex.machine.runtime.v1.schema.md)
 
+### Transport
+
+- [Transport Envelope](transport/envelope/tiinex.transport.envelope.v1.schema.md) — deterministic non-secret password-sealed Workspace transport profile, recipient-slot, open/recovery, and fail-closed qualification metadata
+
 ### Reduction, Disclosure, And Privacy
 
 - [Reduction](reduction/tiinex.reduction.v1.schema.md)
