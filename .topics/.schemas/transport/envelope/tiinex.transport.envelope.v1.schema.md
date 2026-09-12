@@ -533,8 +533,8 @@ The body headings required for artifacts using this schema are: `## Envelope Bin
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [tiinex.root.v1.schema.md](../../tiinex.root.v1.schema.md)
-  - Value: i4ajpsCBpiv6VAseG7dNjrSxIXGegW0QwA2vabx0E28
+  - Value: QXbg7uxlhO1ou4PukRaub3fSJ_Ef32mSubsI2ib1LH0
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: s0-XgyNFRR1afj4LGat3D3hBQdF9fSx9w_TP72rlFNU
+  - Value: GbwZGMEaMolnbIg_heiJQ4famJpffaWz2E1xuU_PEII

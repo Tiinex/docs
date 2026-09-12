@@ -14,6 +14,10 @@
     - Target: Root Semantics
     - Note: Human-readable declared artifact meaning is the primary shared semantic surface; LLM recovery and machine validation/generation must preserve that same non-contradictory declared meaning within their explicit authority surfaces.
     - Reason: Anchor accepted the bounded Axiom finding that this cross-schema invariant was strongly distributed in current authority but not stated once canonically at Root.
+  - Per-field exact schema-reference authority integration
+    - Target: Schema Validation Contract / Schema Reference Fields
+    - Note: New persisted candidates evaluate Envelope Schema, Parent Schema, and Current Schema independently and must use an exact qualified immutable canonical locator when that authority exists for the exact governing schema representation; plain schema ids remain valid when no such exact locator is qualified, and existing or historical artifact bytes are preserved.
+    - Reason: Major 004 established that mixed reference shapes are not independently a validity class and that stale, mismatched, or fabricated targets must never be emitted merely to strengthen presentation.
 
 ---
 
@@ -690,18 +694,25 @@ Allowed Shapes
 Rules
 
 - Schema semantic identity and schema representation location are separate truths.
+- `Envelope Schema`, `Parent Schema`, and `Current Schema` are evaluated independently against qualified authority for the exact governing schema representation of that field.
+- Mixed Markdown Link and Plain Schema Id shapes across those fields are not independently a validity, degradation, publication, or canonical-authority class.
 - In Markdown Link form, the link label is the semantic schema identifier/key and the link target is a representation locator or traversal route.
 - Tools must preserve the declared schema identifier separately from locator-resolution state and must not derive schema identity from a path, filename, host, repository, branch name, or other locator shape.
 - A locator that resolves successfully does not by itself prove that the resolved bytes are the exact intended schema representation; exact-representation qualification depends on the locator's own stability/identity semantics and any applicable integrity or source authority.
-- Markdown Link is preferred when a truthful useful schema representation locator is available.
+- For a newly authored ordinary persisted candidate in active authoring, staging, acceptance, or manufacture, when a qualified immutable canonical locator exists for the exact governing schema representation of a field, that field must use Markdown Link form with that exact qualified target.
+- For such a new candidate, knowingly leaving that field as Plain Schema Id is `error`; the candidate must not be sealed, accepted, or manufactured unchanged.
+- Qualified exact reference authority for one field does not upgrade another field. Schema-id equality, repository or path presence, a historical or stale permalink, a mutable branch/latest locator, or an adjacent field's stronger shape does not prove qualified exact authority for the field being evaluated.
+- An immutable locator whose represented bytes or material identity do not match the exact governing schema representation must not be emitted merely to strengthen presentation; such a stale or mismatched target remains contradiction/unresolved reference authority.
+- Markdown Link remains preferred when a truthful useful schema representation locator is available but exact immutable canonical authority is not required by the prospective-candidate rule above.
 - For a published artifact that references a different already-published canonical schema representation, an immutable canonical locator must be used when one is available.
 - `commit-pinned browse + git` is one current example of an immutable canonical locator; GitHub and commit hashes are not the semantic definition of immutable schema location.
 - A mutable branch/latest locator may be useful for discovery or current-material traversal, but it must not be treated as equivalent to an immutable exact-representation locator.
 - A relative self-link is valid for a schema's self-reference when it continues to resolve to that same representation as the file moves together with itself.
 - Relative or local locators are valid for local/unpublished schema material when they are the truthful available route; authors and tools must not fabricate a published immutable locator that does not yet exist.
 - A relative locator to another schema may remain useful inside one copied workspace or package, but publication tooling must use a stronger immutable canonical locator for a different already-published schema when that stronger route is available.
-- Plain Schema Id is allowed when no useful locator is available or when local context already resolves the schema id.
+- Plain Schema Id is allowed when no qualified exact locator exists for the governing schema representation; local context resolving semantic schema identity does not authorize invention of an exact representation target.
 - Plain Schema Id preserves schema-identifier truth only; consumers must not infer one exact schema representation from the identifier alone when exact representation material matters.
+- Existing, received, or historical artifact bytes must be preserved when later qualification discovers a stronger exact schema locator. Audit or editor assistance may report the weaker reference as `warning` or degraded reference quality when useful, but must not rewrite the artifact in place or manufacture an authoring-time authority claim.
 - When a Markdown Link target is resolved, a mismatch between the declared link-label schema identifier and the resolved schema representation's declared semantic identity must remain a contradiction/unresolved reference rather than being repaired from filename, path, or locator text.
 
 ### Trace Field
@@ -862,4 +873,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: i4ajpsCBpiv6VAseG7dNjrSxIXGegW0QwA2vabx0E28
+  - Value: QXbg7uxlhO1ou4PukRaub3fSJ_Ef32mSubsI2ib1LH0
