@@ -1,0 +1,13 @@
+{
+  "type": "tiinex.github.issues.snapshot.index.v1",
+  "generatedAt": "2026-09-12T15:39:16.692Z",
+  "repositories": [
+    {
+      "repo": "Tiinex/docs",
+      "metadata": "github.com/Tiinex/docs.json",
+      "issueCount": 0,
+      "commentCount": 0,
+      "sourceUpdatedAt": ""
+    }
+  ]
+}

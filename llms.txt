@@ -1,0 +1,34 @@
+# Tiinex/docs LLM Guide
+
+Start here before transient release notes.
+
+Project identity:
+Tiinex keeps provenance readable in Markdown artifacts you own.
+
+Provenance means the visible trail around material: where it came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
+
+Primary files:
+- README.md - repo-local human entrypoint for what Tiinex/docs is
+- tiinex.orientation.v1.md - stable Tiinex identity aligned with the org surface
+- tiinex.context.v1.md - self-contained LLM and reader context
+- REPOSITORY_BOUNDARIES.md - current repository/package and bootstrap responsibility map
+- .topics/.schemas/README.md - schema tree orientation
+- LINEAGE_POLICY.md - consent and lineage-use boundary
+
+Transient files:
+- releases/* - schema bundles, release notes, and status snapshots
+
+Boundary reminders:
+- Tiinex/docs is a documentation, schema, artifact, topic, and policy repository.
+- It is not the whole Tiinex project.
+- A schema describes artifact meaning; it is not the runtime.
+- Parent is declared continuity, not generic source.
+- Origin is grounding or provenance, not the same thing as parent.
+- AI and LLM workflows are use cases, not the identity boundary.
+
+Optional operational bootstrap:
+- Semantic reading of this repository must work without Tooling.
+- Current portable Tooling mechanics are implemented by `@tiinex/core`; a routed Handoff package should be cold-started from its own embedded/pinned bootstrap rather than by repository archaeology.
+- Core carrier/tooling bootstrap mechanics are distinct from external-assistant bootstrap experiences, which belong to the Interop frontier when that Workspace is established.
+- Carried schema material remains Docs-governed semantic material; transport/runtime location does not transfer authority.
+- If the required exact Tooling/bootstrap material is unavailable, continue from readable Docs material and disclose the operational limitation rather than silently substituting a moving source.
