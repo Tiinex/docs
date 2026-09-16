@@ -148,6 +148,7 @@ Rules
 Required Fields
 
 - Holder State
+- Assignment Modes
 
 Optional Fields
 
@@ -159,6 +160,14 @@ Optional Fields
 Rules
 
 - `Holder Relationship` must remain human-readable and bounded.
+- `Holder State` is the human-readable bounded holder summary. It must not be used as positive machine authority for holder assignment.
+- `Assignment Modes` is the canonical machine-readable holder-assignment authorization field for artifacts qualified against this current schema revision.
+- Canonical `Assignment Modes` values are: `explicit-session`, `explicit-user-session`, `explicit-role-invocation`, `handoff`, `explicit-participation`.
+- The canonical serialized field value is a comma-separated list of plain canonical tokens, using `, ` as the separator and the canonical token order shown above when more than one mode is present. Aliases, prose, code-span quoting, duplicate values, unknown tokens, and lexical near-matches are not canonical values.
+- A current operational Role that is intended to authorize bounded holder assignment must declare at least one canonical mode. Missing or empty `Assignment Modes` cannot positively authorize a holder binding.
+- `Assignment Modes` authorizes only the named bounded assignment mechanisms. It does not assert a current holder, establish durable holder identity, create participation, make a process applicable, delegate work, authorize source mutation, prove Handoff acceptance, or widen `Possible Holder` and Role-boundary constraints.
+- `handoff` as an assignment mode does not make a Handoff endpoint or package recipient a holder by itself; separately qualified Handoff-bounded assignment evidence is still required.
+- `explicit-user-session` must not be widened to `explicit-session`; `explicit-participation` must not be converted into session or invocation authorization; `explicit-session` and `explicit-role-invocation` remain separate modes.
 - `Holder Relationship` must state what is known, what is unknown, and what must not be inferred when those limits matter.
 - `Holder Relationship` may reference relation, evidence, attestation, validation, privacy, source, access, resource, party, event, project, or instrument artifacts when those artifacts own companion semantics.
 
@@ -233,6 +242,7 @@ Required Fields
 - May Do
 - Does Not Authorize
 - Holder State
+- Assignment Modes
 - Does Not Prove
 - Must Not Be Treated As
 
@@ -241,7 +251,9 @@ Required Fields
 Rules
 
 - Creation tools should keep the artifact human-readable and bounded.
-- Creation tools should preserve unknown, partial, contested, private, unsafe, unavailable, or ambiguous state instead of inventing certainty.
+- Creation tools creating or revising a current `tiinex.party.role.v1` artifact must emit `Assignment Modes` directly in `Holder Relationship`; they must not substitute `Holder State` prose, a Decision-side legacy mapping, filename identity, or Tooling-local compatibility data.
+- Creation tools should serialize multiple Assignment Modes as plain canonical tokens separated by `, ` in canonical token order and should reject aliases, duplicate tokens, unknown tokens, code-span quoting, and arbitrary prose in that field.
+- Creation tools should preserve unknown, partial, contested, private, unsafe, unavailable, or ambiguous state instead of inventing certainty. When holder-assignment authorization is unresolved, the artifact must not be treated as authorizing a bounded holder merely because `Holder State` prose appears familiar.
 ## Minimal Example
 
 ```md
@@ -265,6 +277,7 @@ Rules
 ## Holder Relationship
 
 - Holder State: bounded example for tiinex.party.role.v1
+- Assignment Modes: explicit-session, handoff
 
 ## Interpretation Limits
 
@@ -284,6 +297,8 @@ The body headings required for artifacts using this schema are: `## Role Identit
 
 - role is not the person holding it
 - role does not prove authority unless authority is separately supported
+- `Assignment Modes` is the only current machine-authoritative holder-assignment representation in this schema revision; `Holder State` remains human-readable context
+- historical artifacts may remain auditable against the exact schema/source revision they originally declared, but historical compatibility does not create current holder-assignment authorization
 
 ---
 
@@ -295,4 +310,4 @@ The body headings required for artifacts using this schema are: `## Role Identit
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: 7MPpGEU856hbgLogGREj4UM_PQDXe_3XA9wZ2Pm1btI
+  - Value: rA6BGI_Af8Ggy74sZGxtBXH9U9we0Q8f4GH19QsmT2U
