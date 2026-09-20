@@ -1,0 +1,12 @@
+{
+  "type": "tiinex.repository.snapshot",
+  "version": 1,
+  "repository": "https://github.com/Tiinex/docs.git",
+  "ref": "master",
+  "commit": "3e37b0c3498b840ffc69572492636046baff0911",
+  "directory": "docs/",
+  "archive": "docs.zip",
+  "sha256": "ac6404d46c69e2aecb90bc34ad73f23e8f702b3260c5f86223f19a6ee078d53a",
+  "selection": "source-ref",
+  "generatedAt": "2026-09-20T01:37:35Z"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "tiinex.github.issues.snapshot.manifest.v1",
+  "repository": "Tiinex/docs",
+  "generatedAt": "2026-09-20T01:37:35.511Z",
+  "sourceUpdatedAt": "2026-09-18T10:08:45Z",
+  "issueCount": 1,
+  "commentCount": 0,
+  "truncatedIssues": false,
+  "issues": [
+    {
+      "number": 15,
+      "title": "(public) submission to bounty on reddit",
+      "state": "open",
+      "updated_at": "2026-09-18T10:08:45Z",
+      "issue": "issues/15/issue.json",
+      "body": "issues/15/issue.md",
+      "comment_count": 0,
+      "truncated_comments": false
+    }
+  ]
+}
