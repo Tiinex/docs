@@ -22,7 +22,7 @@
 
 This schema specializes `tiinex.entry.v1` for reusable ways of entering a bounded session.
 
-A Session Entry describes how a session should become sufficiently grounded to proceed. The session may involve one actor or many actors and may be conversational, physical, organizational, creative, scientific, operational, digital, or mixed. Session Entry semantics do not assume software, an LLM, a meeting, or a particular runtime.
+A Session Entry describes how a session should begin, resume, or become sufficiently oriented to proceed. The session may involve one actor or many actors and may be conversational, physical, organizational, creative, scientific, operational, digital, or mixed. Session Entry semantics do not assume software, an LLM, a meeting, or a particular runtime.
 
 A Session Entry is not the session occurrence itself. A domain that needs to preserve a planned, active, or completed bounded activity pass should use an occurrence-owning schema such as `tiinex.event.session.v1` when that meaning fits. A meeting is likewise distinct: `tiinex.event.meeting.v1` preserves a gathering occurrence, while a Session Entry preserves a reusable way of entering a session.
 
@@ -37,7 +37,7 @@ Applies To
 Rules
 
 - `tiinex.entry.session.v1` identifies Entry definitions whose target is a bounded session.
-- Session Entry inherits the reusable Entry identity, purpose, preparation, method, readiness, presentation, interpretation-limit, and portability semantics of `tiinex.entry.v1`.
+- Session Entry inherits the reusable identity, purpose, context, method, optional preparation, presentation, interpretation-limit, and portability semantics of `tiinex.entry.v1`.
 - Session Entry does not prove that a session exists, started, resumed, completed, or involved any particular actor.
 - Session Entry must not silently become a meeting, event, process, task, route, authority, acceptance, transfer, or occurrence record.
 - Prose outside `Schema Validation Contract` may explain the schema, but it does not add required validation rules.
@@ -50,7 +50,7 @@ Rules
 - Grounding Material is schema-agnostic. A reference may target any qualified artifact or other bounded material whose own semantics remain independently authoritative.
 - A referenced Process, Role, Evidence artifact, Context artifact, source, implementation artifact, specification, policy, previous occurrence, or other material does not gain special authority merely because the Session Entry references it.
 - Every declared Grounding Material item is a grounding obligation for this Entry: it must be qualified and read according to its own semantics before the Session Entry is treated as fully grounded.
-- `Purpose` on a Grounding Material declaration explains why that referenced material matters to this session and how it contributes to the entry picture. It must not overwrite, reinterpret, strengthen, weaken, or replace the referenced material's own schema semantics or authority.
+- `Purpose` on a Grounding Material declaration explains why that referenced material matters to this session and what part of the session grounding it informs. It must not overwrite, reinterpret, strengthen, weaken, or replace the referenced material's own schema semantics or authority.
 - When a declared reference cannot be qualified, cannot be accessed, is stale, conflicts with another grounded source, or leaves currentness unresolved, that condition must remain explicit rather than being silently omitted or resolved by convenience.
 - Grounding obligations do not require exhaustive reading of unrelated material. They require sufficient qualification and interpretation of each explicitly declared reference to satisfy its stated Purpose without violating the referenced material's own boundaries.
 
@@ -62,11 +62,11 @@ Optional Sections
 
 Rules
 
-- `## Grounding Material`, when present, contains repeated named declarations using the Grounding Material Declaration shape below.
-- Absence of `## Grounding Material` means this Session Entry declares no additional explicit material references beyond the inherited Entry context and preparation requirements.
-- Grounding Material declarations supplement inherited Entry grounding; they do not replace inherited Required Context, Preparation Method, Readiness Boundary, or Interpretation Limits.
+- `## Grounding Material`, when present, contains repeated named declarations using the Grounding Material shape below.
+- Absence of `## Grounding Material` means this Session Entry declares no additional explicit material references beyond inherited Entry semantics.
+- Grounding Material declarations supplement inherited Entry semantics; they do not replace the Entry's declared Purpose, Entry Target, Method, or other applicable inherited fields.
 
-### Grounding Material Declaration
+### Grounding Material
 
 Entry Shape
 
@@ -87,7 +87,7 @@ Rules
 - Entries under `## Grounding Material` are repeated named declarations using this shape.
 - Declaration names must be unique within `## Grounding Material` and should be short human-readable descriptions of the material's role in the session.
 - `Reference` must identify one explicit recoverable target. Prefer a stable qualified reference or permalink where the environment can provide one; do not invent immutability or source authority when it is unavailable.
-- `Purpose` must state why the referenced material is needed for this Session Entry and what part of the session grounding it informs.
+- `Purpose` must state why the referenced material is needed for this Session Entry and what part of session grounding it informs.
 - `Label`, when present, is presentation only and does not replace target identity.
 - `Qualification Notes`, when present, may state bounded access, currentness, provenance, or representation expectations without claiming that qualification has already succeeded.
 - A Grounding Material declaration must not encode schema-specific authority by implication. The target's own schema and qualified source own its meaning.
@@ -137,29 +137,24 @@ Required Fields
 - Version
 - Canonical Identifier
 - Purpose
-- In Scope
-- Out Of Scope
 - Entry Target
-- Required Context
-- Preparation Method
 - Method
-- Readiness Boundary
-- Does Not Establish
-- Must Not Be Inferred
-- Portable Semantics
-- Environment Assumptions
-- Non-Portable Details
 
 Optional Fields
 
 - Entry Family
 - Human Label
+- In Scope
+- Out Of Scope
+- Required Context
 - Relevant Context
 - Context Exclusions
+- Preparation Method
 - Reconciliation Policy
 - Discovery Breadth
 - Currentness Policy
 - Uncertainty Policy
+- Readiness Boundary
 - Stop Conditions
 - Escalation Conditions
 - Intended Audience
@@ -167,6 +162,11 @@ Optional Fields
 - Preference Sources
 - Interaction Guidance
 - Diagnostic Detail Policy
+- Does Not Establish
+- Must Not Be Inferred
+- Portable Semantics
+- Environment Assumptions
+- Non-Portable Details
 - Grounding Material
 
 ### Creation Rules
@@ -192,21 +192,14 @@ Rules
 ## Purpose And Scope
 
 - Purpose: Establish the relevant research context before a bounded research pass begins.
-- In Scope: initial grounding, material reconciliation, and participant-facing orientation
-- Out Of Scope: proving research conclusions, participant authority, or completed research work
 
 ## Entry Context
 
 - Entry Target: bounded research session
-- Required Context: declared research scope and available qualified material
-
-## Preparation
-
-- Preparation Method: ground the declared Grounding Material and reconcile material conflicts that can alter the initial research picture
 
 ## Entry Method
 
-- Method: present the current research picture and unresolved seams before substantive investigation begins
+- Method: ground the declared material, preserve unresolved seams, and present the current research picture before substantive investigation begins
 - Readiness Boundary: every declared Grounding Material reference has been qualified and interpreted for its stated Purpose, with unresolved conflicts preserved
 
 ## Grounding Material
@@ -218,17 +211,6 @@ Rules
 - Prior evidence
   - Reference: <qualified-reference-to-prior-evidence>
   - Purpose: Establish what supporting or challenging material already exists without treating that evidence as truth by itself.
-
-## Interpretation Limits
-
-- Does Not Establish: truth, acceptance, participant authority, completed research, or a session occurrence
-- Must Not Be Inferred: that referenced material is current or controlling merely because this Entry names it
-
-## Portability Notes
-
-- Portable Semantics: establish explicit session grounding before substantive activity begins
-- Environment Assumptions: access to each declared Grounding Material target or an explicit unresolved state when a target is unavailable
-- Non-Portable Details: software, model provider, repository host, room, communication channel, or storage mechanism
 ```
 
 The inherited `# Continuity Integrity` footer is intentionally omitted from the example for readability; the example must not be read as a complete root-valid artifact without that inherited footer.
@@ -239,8 +221,8 @@ The inherited `# Continuity Integrity` footer is intentionally omitted from the 
 
 - sha256-base64url-c14n-v2
   - Towards: [tiinex.entry.v1](../tiinex.entry.v1.schema.md)
-  - Value:I9383Ok4t9TfjZjPQqrrMRot52pUw6hJR83BasBHmX8
+  - Value: ea5SJQIbqVXy7rAFmyZ6L7xkAWQszRI2AWDC0tf5-dA
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value:mBAyRkHS_JYppSW9I1pvJvxJMd42yHRcH7rQ8rjTWPs
+  - Value:PhbU7EuNpabreeR_C5QtROjPwxL4JxpaLmmJnU9Gqws
