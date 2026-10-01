@@ -1,14 +1,14 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: tiinex.root.v1
 - Parent
-  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/core/topic/tiinex.topic.v1.schema.md)
+  - Parent Schema: tiinex.topic.v1
   - Created At: 2026-10-01 18:06:50
   - Trace: [001-processes.trace.md](../001-processes.trace.md)
   - Origin:
     - [relative](../001-processes.trace.md)
 - Current
-  - Current Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/core/topic/tiinex.topic.v1.schema.md)
+  - Current Schema: tiinex.topic.v1
   - Created At: 2026-10-01 18:06:52
   - Authors: Anchor; Sigma
   - Why: Establish a durable Tiinex schema-development discipline close to Docs authority so new schemas are produced audibly rather than through session-local improvisation.
@@ -58,8 +58,8 @@ Human acceptance is conditional rather than universal. If a qualified actor can 
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-processes.trace.md](../001-processes.trace.md)
-  - Value: 9CpO0-zmfFixJZ30SgXe-bdu5qdPux5ZN0suLmXx4k0
+  - Value: bRcyRdEvnEeBhiYuCy2nhPKhlajNLgxkW2vNE45gO2g
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: iGP8_P82hlYssSFMv7dyA69nUSQPzHjH7leJLx1QqRo
+  - Value: pfh1yaCAQKGFn2iSKml7YZ2Q22SUTVd7yl0LbiKeSyY

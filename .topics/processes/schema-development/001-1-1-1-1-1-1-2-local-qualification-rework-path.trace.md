@@ -1,14 +1,14 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: tiinex.root.v1
 - Parent
-  - Parent Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
+  - Parent Schema: tiinex.transition.definition.v1
   - Created At: 2026-10-01 18:07:01
   - Trace: [001-1-1-1-1-1-1-qualify-local-schema.trace.md](001-1-1-1-1-1-1-qualify-local-schema.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-1-qualify-local-schema.trace.md)
 - Current
-  - Current Schema: [tiinex.relation.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/relation/tiinex.relation.v1.schema.md)
+  - Current Schema: tiinex.relation.v1
   - Created At: 2026-10-01 18:07:03
   - Authors: Anchor; Sigma
   - Why: Keep qualification rework explicit without creating cyclic Parent continuity.
@@ -52,8 +52,8 @@ Each relation target is not Parent and is not the Tiinex continuity Parent. Thes
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-qualify-local-schema.trace.md](001-1-1-1-1-1-1-qualify-local-schema.trace.md)
-  - Value: inAfBDf-mjtcS2EZQEZOK6ux3mgVy8g0wu7Foq0IWNM
+  - Value: 7p4uvLz0LTLQ7pcbt8iRKGW1BcwOs1ymvk7Q-m1anNs
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 7jzvVGBSM0LdoMpcCgpN0Y7jmvZsGTcCnuL_z59yQTU
+  - Value: wxPhKVlRA8nCqbUzqTGTNk_7x2clQHNMSvnOqNsqJdU

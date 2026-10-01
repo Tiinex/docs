@@ -1,14 +1,14 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: tiinex.root.v1
 - Parent
-  - Parent Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
+  - Parent Schema: tiinex.transition.definition.v1
   - Created At: 2026-10-01 18:06:59
   - Trace: [001-1-1-1-1-1-author-complete-schema-surface.trace.md](001-1-1-1-1-1-author-complete-schema-surface.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-author-complete-schema-surface.trace.md)
 - Current
-  - Current Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
+  - Current Schema: tiinex.transition.definition.v1
   - Created At: 2026-10-01 18:07:01
   - Authors: Anchor; Sigma
   - Why: Make integrity, exact validation, companion availability, and repairability explicit gates before dependent artifacts.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-author-complete-schema-surface.trace.md](001-1-1-1-1-1-author-complete-schema-surface.trace.md)
-  - Value: 0T4jiOcMA3mcrITfIVM7EMJNxNRffdhjBe4M43L2v3g
+  - Value: pBdI6lI3rZMNGZGqrWa-OV-UmvKFA89MnqUl5VHcW5A
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: inAfBDf-mjtcS2EZQEZOK6ux3mgVy8g0wu7Foq0IWNM
+  - Value: 7p4uvLz0LTLQ7pcbt8iRKGW1BcwOs1ymvk7Q-m1anNs

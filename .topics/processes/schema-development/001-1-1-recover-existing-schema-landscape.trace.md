@@ -1,14 +1,14 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: tiinex.root.v1
 - Parent
-  - Parent Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
+  - Parent Schema: tiinex.transition.definition.v1
   - Created At: 2026-10-01 18:06:54
   - Trace: [001-1-establish-schema-need-and-scope.trace.md](001-1-establish-schema-need-and-scope.trace.md)
   - Origin:
     - [relative](001-1-establish-schema-need-and-scope.trace.md)
 - Current
-  - Current Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
+  - Current Schema: tiinex.transition.definition.v1
   - Created At: 2026-10-01 18:06:56
   - Authors: Anchor; Sigma
   - Why: Make recover-before-invent a durable schema-development gate.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-establish-schema-need-and-scope.trace.md](001-1-establish-schema-need-and-scope.trace.md)
-  - Value: C_9y4EnUH-aIwxdoEqmvB6emlQ8M7WnhQ6CgtMlTo9U
+  - Value: 4prYUcid64ZqDcilt6ht9DILFyPYjsxL15YJjwzvC8g
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: Ifl2MXwXO5ZwXq54NVaHBT_eSKyY6ZaU-CtObyppkpo
+  - Value: -5fBBeBqMmoq5Xjy3zkAthnmUzjYQBwuDMOpiZ7vt8w

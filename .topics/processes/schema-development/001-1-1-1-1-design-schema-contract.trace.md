@@ -1,14 +1,14 @@
 # Continuity Context
 
-- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
+- Envelope Schema: tiinex.root.v1
 - Parent
-  - Parent Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
+  - Parent Schema: tiinex.transition.definition.v1
   - Created At: 2026-10-01 18:06:57
   - Trace: [001-1-1-1-select-semantic-placement.trace.md](001-1-1-1-select-semantic-placement.trace.md)
   - Origin:
     - [relative](001-1-1-1-select-semantic-placement.trace.md)
 - Current
-  - Current Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
+  - Current Schema: tiinex.transition.definition.v1
   - Created At: 2026-10-01 18:06:58
   - Authors: Anchor; Sigma
   - Why: Require the semantic contract to be explicit before source and companions are produced.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-select-semantic-placement.trace.md](001-1-1-1-select-semantic-placement.trace.md)
-  - Value: noxC0lqKX2pBunmG2TtxrO9L3NjE4hwv6NwN3HEwklA
+  - Value: EEYsu0lCbsBDa_V08r-vqvPRiOQVJCdaDYghzYm_iFw
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: JTlvUsGHc3xqU-urZLxZbLI_0fSRYLYJ6fjarDLGN0A
+  - Value: gnokWDhXmdBUKDgqqLdmHEAMt3r1T9zHf2416GomxPc
