@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:05
+  - Created At: 2026-10-01 20:53:14
   - Trace: [001-1-1-1-1-1-1-1-1-audit-schema-semantics-and-boundaries.trace.md](001-1-1-1-1-1-1-1-1-audit-schema-semantics-and-boundaries.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-1-1-1-audit-schema-semantics-and-boundaries.trace.md)
 - Current
-  - Current Schema: tiinex.relation.v1
-  - Created At: 2026-10-01 18:07:07
+  - Current Schema: [tiinex.relation.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/relation/tiinex.relation.v1.schema.md)
+  - Created At: 2026-10-01 20:53:16
   - Authors: Anchor; Sigma
   - Why: Keep audit-driven rework visible without rewriting lineage ancestry.
   - Summary: Process-definition return options when semantic audit identifies placement or contract defects.
@@ -52,8 +52,8 @@ Each relation target is not Parent and is not the Tiinex continuity Parent. Thes
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-1-1-audit-schema-semantics-and-boundaries.trace.md](001-1-1-1-1-1-1-1-1-audit-schema-semantics-and-boundaries.trace.md)
-  - Value: L-pcd73L_5NRJHWV8zQjHYZVIGX2BtE0HGni5RD_XHM
+  - Value: iWy9KHtKObS0Db7TqhMjNTZ6eUe8_34lejLMjXTejUQ
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 5rYD_Vb1KaMUp5zEUZfz_psNeWYl91RdFFy_ZG9J-Fk
+  - Value: ZpQLP0_VRMceTUQxYdZHcJghKS5tk6q3sDO2pfOoj-E

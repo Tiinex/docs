@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:06:59
+  - Created At: 2026-10-01 20:53:10
   - Trace: [001-1-1-1-1-1-author-complete-schema-surface.trace.md](001-1-1-1-1-1-author-complete-schema-surface.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-author-complete-schema-surface.trace.md)
 - Current
   - Current Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:01
+  - Created At: 2026-10-01 20:53:11
   - Authors: Anchor; Sigma
   - Why: Make integrity, exact validation, companion availability, and repairability explicit gates before dependent artifacts.
   - Summary: Qualify the local-unpublished schema surface before representative use.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-author-complete-schema-surface.trace.md](001-1-1-1-1-1-author-complete-schema-surface.trace.md)
-  - Value: pBdI6lI3rZMNGZGqrWa-OV-UmvKFA89MnqUl5VHcW5A
+  - Value: nWc5Qa8TGIUIYglpi-0x-33BffRWYJ0EMFRsoPtK0Kc
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 7p4uvLz0LTLQ7pcbt8iRKGW1BcwOs1ymvk7Q-m1anNs
+  - Value: 2MhRK2rxa0Q-7Q7gBenjWtHTJo6dsSyASLVGXe6Ny3Q

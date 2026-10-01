@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:09
+  - Created At: 2026-10-01 20:53:16
   - Trace: [001-1-1-1-1-1-1-1-1-1-1-publish-and-synchronize-accepted-schema.trace.md](001-1-1-1-1-1-1-1-1-1-1-publish-and-synchronize-accepted-schema.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-1-1-1-1-1-publish-and-synchronize-accepted-schema.trace.md)
 - Current
   - Current Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:12
+  - Created At: 2026-10-01 20:53:18
   - Authors: Anchor; Sigma
   - Why: Prevent local pre-publication success from being mistaken for post-publication readiness.
   - Summary: Verify exact published source and synchronized Core support before dependent artifact families rely on the schema.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-1-1-1-1-publish-and-synchronize-accepted-schema.trace.md](001-1-1-1-1-1-1-1-1-1-1-publish-and-synchronize-accepted-schema.trace.md)
-  - Value: 8wKIwinW2M7vukE4uobl3BVJvvdddSnzh3hytgJVOdg
+  - Value: 2oSG4x0KQleLP18O9kLwMdd-GyvDHtEllLUFUZca2a8
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: u6L7ieoQAbunskKxWrSqzShyPaF7-2hjY4p4ZKIyfEA
+  - Value: 3S53JZBlDbfBhf5mLCuZY-6e6CC6_oo_V1XQNZj5Jt8

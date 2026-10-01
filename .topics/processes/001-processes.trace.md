@@ -1,6 +1,6 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/911d4cf990e35ce25a56e8f376d296e327c48260/.topics/.schemas/core/topic/tiinex.topic.v1.schema.md)
   - Created At: 2026-08-29 16:07:00
@@ -8,8 +8,8 @@
   - Origin:
     - [browse + git](https://github.com/Tiinex/business/blob/5e6aa0a49b220e1296c02d9f6ab65b494683b478/.topics/processes/001-processes.trace.md)
 - Current
-  - Current Schema: tiinex.topic.v1
-  - Created At: 2026-10-01 18:06:50
+  - Current Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/core/topic/tiinex.topic.v1.schema.md)
+  - Created At: 2026-10-01 20:53:04
   - Authors: Anchor; Sigma
   - Why: Keep local process authority close to Docs while preserving real Tiinex organizational ancestry without pointer-only bridge artifacts.
   - Summary: Docs-local process root preserving Tiinex organizational process ancestry through the Business Processes topic.
@@ -41,4 +41,4 @@ The first local process under this topic is Tiinex Schema Development, because s
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: bRcyRdEvnEeBhiYuCy2nhPKhlajNLgxkW2vNE45gO2g
+  - Value: Ya0-lLhrW1K4K6S3xSlTUKqJiamLPmslG-GRxLswloc

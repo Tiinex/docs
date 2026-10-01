@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
-  - Parent Schema: tiinex.topic.v1
-  - Created At: 2026-10-01 18:06:52
+  - Parent Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/core/topic/tiinex.topic.v1.schema.md)
+  - Created At: 2026-10-01 20:53:06
   - Trace: [001-tiinex-schema-development-process.trace.md](001-tiinex-schema-development-process.trace.md)
   - Origin:
     - [relative](001-tiinex-schema-development-process.trace.md)
 - Current
   - Current Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:06:54
+  - Created At: 2026-10-01 20:53:07
   - Authors: Anchor; Sigma
   - Why: Prevent convenience-driven schema creation and make the problem boundary auditable before design.
   - Summary: Bound the semantic need and acceptance intent before schema invention begins.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-tiinex-schema-development-process.trace.md](001-tiinex-schema-development-process.trace.md)
-  - Value: pfh1yaCAQKGFn2iSKml7YZ2Q22SUTVd7yl0LbiKeSyY
+  - Value: 0ofIhYn_YYCcBJqCgZytjZqTWEA0vSXe5ZCy839yP_M
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 4prYUcid64ZqDcilt6ht9DILFyPYjsxL15YJjwzvC8g
+  - Value: gBCSxzFE10b9V_wW4K54OpCV2c9OFXvCTDumR2xMn2c

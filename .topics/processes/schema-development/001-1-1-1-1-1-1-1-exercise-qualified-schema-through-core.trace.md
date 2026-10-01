@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:01
+  - Created At: 2026-10-01 20:53:11
   - Trace: [001-1-1-1-1-1-1-qualify-local-schema.trace.md](001-1-1-1-1-1-1-qualify-local-schema.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-1-qualify-local-schema.trace.md)
 - Current
   - Current Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:02
+  - Created At: 2026-10-01 20:53:12
   - Authors: Anchor; Sigma
   - Why: Detect host-only semantics and incomplete schema capability before acceptance.
   - Summary: Exercise representative schema use through Core-owned authoring, validation, discovery, projection, and repair paths.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-qualify-local-schema.trace.md](001-1-1-1-1-1-1-qualify-local-schema.trace.md)
-  - Value: 7p4uvLz0LTLQ7pcbt8iRKGW1BcwOs1ymvk7Q-m1anNs
+  - Value: 2MhRK2rxa0Q-7Q7gBenjWtHTJo6dsSyASLVGXe6Ny3Q
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: ssTLiNfPKyHGqu9KK2wQTSOM0qHWUde3qqW4kSNVJug
+  - Value: m3IlirAyUxsFjUok8ifISt21zt0WWpOsDREYsgAN5To

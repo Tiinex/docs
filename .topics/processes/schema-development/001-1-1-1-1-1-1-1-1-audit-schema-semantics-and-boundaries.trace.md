@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:02
+  - Created At: 2026-10-01 20:53:12
   - Trace: [001-1-1-1-1-1-1-1-exercise-qualified-schema-through-core.trace.md](001-1-1-1-1-1-1-1-exercise-qualified-schema-through-core.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-1-1-exercise-qualified-schema-through-core.trace.md)
 - Current
   - Current Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:05
+  - Created At: 2026-10-01 20:53:14
   - Authors: Anchor; Sigma
   - Why: Separate schema-specialist semantic/architectural audit from machine qualification and from universal human approval.
   - Summary: Audit semantic placement, duplication, ownership, and companion behavior after Core exercise.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-1-exercise-qualified-schema-through-core.trace.md](001-1-1-1-1-1-1-1-exercise-qualified-schema-through-core.trace.md)
-  - Value: ssTLiNfPKyHGqu9KK2wQTSOM0qHWUde3qqW4kSNVJug
+  - Value: m3IlirAyUxsFjUok8ifISt21zt0WWpOsDREYsgAN5To
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: L-pcd73L_5NRJHWV8zQjHYZVIGX2BtE0HGni5RD_XHM
+  - Value: iWy9KHtKObS0Db7TqhMjNTZ6eUe8_34lejLMjXTejUQ

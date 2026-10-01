@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:07:06
+  - Created At: 2026-10-01 20:53:15
   - Trace: [001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md](001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md)
 - Current
-  - Current Schema: tiinex.relation.v1
-  - Created At: 2026-10-01 18:07:10
+  - Current Schema: [tiinex.relation.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/relation/tiinex.relation.v1.schema.md)
+  - Created At: 2026-10-01 20:53:17
   - Authors: Anchor; Sigma
   - Why: Make acceptance rework explicit and require affected gates to be regained without assuming a universal human gate.
   - Summary: Process-definition return options when the qualified acceptance boundary identifies unresolved work.
@@ -56,8 +56,8 @@ Each relation target is not Parent and is not the Tiinex continuity Parent. Thes
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md](001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md)
-  - Value: 0bYH2MWrZGa394OO42kxEh3GTB8zWwok7gLA8X5HWxk
+  - Value: lcL4Lb5xlvfyDFkx5bNYDfQ16E5ZXZeLCNtmOhdVfA8
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: XLjXd9U9IXWdZRHqKIoENI4n7WplBjGWz_1ZfphAdAk
+  - Value: EFMwhy3vhDSJGHtIwhFc-L1MCR93VmKFkrfcLfylo4g

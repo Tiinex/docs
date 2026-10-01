@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:06:58
+  - Created At: 2026-10-01 20:53:10
   - Trace: [001-1-1-1-1-design-schema-contract.trace.md](001-1-1-1-1-design-schema-contract.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-design-schema-contract.trace.md)
 - Current
   - Current Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:06:59
+  - Created At: 2026-10-01 20:53:10
   - Authors: Anchor; Sigma
   - Why: Prevent schema Markdown from being mistaken for the complete schema capability.
   - Summary: Produce source plus required Tiinex companion/runtime surfaces through the appropriate authoring/tooling boundary.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-design-schema-contract.trace.md](001-1-1-1-1-design-schema-contract.trace.md)
-  - Value: gnokWDhXmdBUKDgqqLdmHEAMt3r1T9zHf2416GomxPc
+  - Value: Su3p2jiM4ulrcp3QY-IPz4J46VhfKtZrElOqRZae5QY
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: pBdI6lI3rZMNGZGqrWa-OV-UmvKFA89MnqUl5VHcW5A
+  - Value: nWc5Qa8TGIUIYglpi-0x-33BffRWYJ0EMFRsoPtK0Kc

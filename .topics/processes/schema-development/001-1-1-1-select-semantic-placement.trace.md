@@ -1,15 +1,15 @@
 # Continuity Context
 
-- Envelope Schema: tiinex.root.v1
+- Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
   - Parent Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:06:56
+  - Created At: 2026-10-01 20:53:08
   - Trace: [001-1-1-recover-existing-schema-landscape.trace.md](001-1-1-recover-existing-schema-landscape.trace.md)
   - Origin:
     - [relative](001-1-1-recover-existing-schema-landscape.trace.md)
 - Current
   - Current Schema: tiinex.transition.definition.v1
-  - Created At: 2026-10-01 18:06:57
+  - Created At: 2026-10-01 20:53:09
   - Authors: Anchor; Sigma
   - Why: Keep inheritance and semantic ownership decisions separate from implementation convenience.
   - Summary: Choose the narrowest coherent schema family and Parent based on recovered semantics.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-recover-existing-schema-landscape.trace.md](001-1-1-recover-existing-schema-landscape.trace.md)
-  - Value: -5fBBeBqMmoq5Xjy3zkAthnmUzjYQBwuDMOpiZ7vt8w
+  - Value: Ln35gdttgLWVMieW3-p4CIf434B3el5kKzQDMo2FMlk
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: EEYsu0lCbsBDa_V08r-vqvPRiOQVJCdaDYghzYm_iFw
+  - Value: mx6q-DK5ocU-X4B-bXkqd5QOqjITSGzuuxnf37cY7FI
