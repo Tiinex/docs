@@ -7,6 +7,7 @@
   - Trace: [tiinex.root.v1.schema.md](../tiinex.root.v1.schema.md)
   - Origin:
     - [relative](../tiinex.root.v1.schema.md)
+    - [browse + git](https://github.com/Tiinex/docs/blob/2a40646640f7468bcd250df6988b69e9f047f1bb/.topics/.schemas/tiinex.root.v1.schema.md)
 - Current
   - Current Schema: [tiinex.entry.v1](tiinex.entry.v1.schema.md)
   - Created At: 2026-10-01 00:00:00
@@ -336,7 +337,7 @@ The inherited `# Continuity Integrity` footer is intentionally omitted from the 
 
 - sha256-base64url-c14n-v2
   - Towards: [tiinex.root.v1](../tiinex.root.v1.schema.md)
-  - Value:
+  - Value: QXbg7uxlhO1ou4PukRaub3fSJ_Ef32mSubsI2ib1LH0
 
 - sha256-base64url-c14n-v2
   - Towards: self
