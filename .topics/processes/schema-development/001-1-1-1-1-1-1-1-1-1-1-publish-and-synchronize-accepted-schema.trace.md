@@ -2,13 +2,13 @@
 
 - Envelope Schema: [tiinex.root.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/tiinex.root.v1.schema.md)
 - Parent
-  - Parent Schema: tiinex.transition.definition.v1
+  - Parent Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/302506f90537dc23d6f88ad0bd0bb9c97c6cf9f6/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
   - Created At: 2026-10-01 20:53:15
   - Trace: [001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md](001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md)
   - Origin:
     - [relative](001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md)
 - Current
-  - Current Schema: tiinex.transition.definition.v1
+  - Current Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/302506f90537dc23d6f88ad0bd0bb9c97c6cf9f6/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
   - Created At: 2026-10-01 20:53:16
   - Authors: Anchor; Sigma
   - Why: Keep semantic publication authority and generated/runtime support coherent after qualified acceptance.
@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md](001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md)
-  - Value: lcL4Lb5xlvfyDFkx5bNYDfQ16E5ZXZeLCNtmOhdVfA8
+  - Value: q5c_oS0vCMj88cgtJ9y0e7uzdANgVs8_Mhte3DcN8OY
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 2oSG4x0KQleLP18O9kLwMdd-GyvDHtEllLUFUZca2a8
+  - Value: 950j4SyCH4TlOUWWXCIiI9SekTm-TIsb0XZcDT2R4ZI

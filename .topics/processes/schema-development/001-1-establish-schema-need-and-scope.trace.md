@@ -8,7 +8,7 @@
   - Origin:
     - [relative](001-tiinex-schema-development-process.trace.md)
 - Current
-  - Current Schema: tiinex.transition.definition.v1
+  - Current Schema: [tiinex.transition.definition.v1](https://github.com/Tiinex/docs/blob/302506f90537dc23d6f88ad0bd0bb9c97c6cf9f6/.topics/.schemas/transition/definition/tiinex.transition.definition.v1.schema.md)
   - Created At: 2026-10-01 20:53:07
   - Authors: Anchor; Sigma
   - Why: Prevent convenience-driven schema creation and make the problem boundary auditable before design.
@@ -105,4 +105,4 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: gBCSxzFE10b9V_wW4K54OpCV2c9OFXvCTDumR2xMn2c
+  - Value: TfWG2NwUsURJNgTtrZ-3gmBQCn_jFJCGesr8OfeEpfA
