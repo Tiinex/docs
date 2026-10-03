@@ -4,9 +4,9 @@
 - Parent
   - Parent Schema: [tiinex.handoff.v1](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.schemas/coordination/handoff/tiinex.handoff.v1.schema.md)
   - Created At: 2026-09-11 17:31:36
-  - Trace: [001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md](../../role-lineage/001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md)
+  - Trace: [001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md](../../work/role-lineage/001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md)
   - Origin:
-    - [relative](../../role-lineage/001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md)
+    - [relative](../../work/role-lineage/001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md)
 - Current
   - Current Schema: [tiinex.reduction.v1](https://github.com/Tiinex/docs/blob/302506f90537dc23d6f88ad0bd0bb9c97c6cf9f6/.topics/.schemas/reduction/tiinex.reduction.v1.schema.md)
   - Created At: 2026-10-03 10:26:53
@@ -59,9 +59,9 @@
 # Continuity Integrity
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
-  - Towards: [001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md](../../role-lineage/001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md)
+  - Towards: [001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md](../../work/role-lineage/001-1-anchor-to-axiom-role-lineage-and-repository-boundary-reconciliation-handoff.trace.md)
   - Value: Pfjr5xbZMeamSz7Y9IOYndNOV8Q1IRbhUi-KUSzDgd8
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 3nByx-KFWUg3ga-soj-1hbuDL9AeFZ-6-_KSfGcFltI
+  - Value: TDmebDG3ikH7Vc2wx72j4W6y2ZFWGgEaivpu-ZKWraw
