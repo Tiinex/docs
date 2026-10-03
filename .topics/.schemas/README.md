@@ -59,6 +59,10 @@ Optional target blocks remain optional: their Required Fields become required wh
 
 - [Root](tiinex.root.v1.schema.md)
 
+### Workspace
+
+- [Workspace](workspace/tiinex.workspace.v1.schema.md)
+
 ### Core Artifact Schemas
 
 - [Topic](core/topic/tiinex.topic.v1.schema.md)
@@ -91,6 +95,11 @@ Optional target blocks remain optional: their Required Fields become required wh
 - [Role](party/role/tiinex.party.role.v1.schema.md)
 - [Organization](party/organization/tiinex.party.organization.v1.schema.md)
 - [Group](party/group/tiinex.party.group.v1.schema.md)
+
+### Entry
+
+- [Entry](entry/tiinex.entry.v1.schema.md)
+- [Session Entry](entry/session/tiinex.entry.session.v1.schema.md)
 
 ### Event
 
@@ -149,6 +158,7 @@ New reusable transition authoring should use `tiinex.transition.definition.v1`. 
 ### Relation, Validation, And Schema Governance
 
 - [Relation](relation/tiinex.relation.v1.schema.md)
+- [Workspace Representation](relation/workspace/representation/tiinex.workspace.representation.v1.schema.md)
 
 Ordinary artifacts and schema contracts may declare or project typed relation edges without creating a standalone Relation Artifact. Use a Relation Artifact when the relation instance itself carries independent semantic content, provenance, state, interpretation limits, or lifecycle worth preserving.
 
@@ -156,6 +166,12 @@ Ordinary artifacts and schema contracts may declare or project typed relation ed
 - [Validation Finding](validation/finding/tiinex.validation.finding.v1.schema.md)
 - [Validation Report](validation/report/tiinex.validation.report.v1.schema.md)
 - [Schema Family](schema/family/tiinex.schema.family.v1.schema.md)
+- [Schema Transition Companion](schema/transition/companion/tiinex.schema.transition.companion.v1.schema.md)
+
+### Package And Scaffold
+
+- [Semantic Package](package/semantic/tiinex.semantic.package.v1.schema.md)
+- [Scaffold](scaffold/tiinex.scaffold.v1.schema.md)
 
 ### Runtime
 
