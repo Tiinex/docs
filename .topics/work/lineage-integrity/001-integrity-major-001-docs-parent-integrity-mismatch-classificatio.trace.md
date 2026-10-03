@@ -69,8 +69,8 @@ Return one qualified Axiom-to-Anchor carrier with per-mismatch classification, e
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-axiom-to-anchor-docs-major-007-minimal-carrier-material-recipient-semantics-return.trace.md](../handoff-package/handoffs/001-1-1-1-1-1-axiom-to-anchor-docs-major-007-minimal-carrier-material-recipient-semantics-return.trace.md)
-  - Value: _ITabOqU5vuKP7Bf4D7mQDOKab_2vrCFy1e2Y-W27hc
+  - Value: PXuxMsxzts9KkpgRZ7buTkAyIqCVlnspyiNrdoBQpNY
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 0Y4O9OyhaR7FpTz5fdBY_Yj_8YHTtv1I2goGs4kl6-Q
+  - Value: s6WD-IO-Z5pfAPQVlbPF-CW6hFU6_A2LPi_PhG9F0v0

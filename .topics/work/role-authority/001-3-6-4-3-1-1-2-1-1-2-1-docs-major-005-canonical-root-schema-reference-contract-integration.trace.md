@@ -56,8 +56,8 @@ The Major is complete only when the Root contract and directly owned dependent D
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-3-6-4-3-1-1-2-1-1-2-axiom-to-anchor-docs-major-004-canonical-continuity-schema-refer.trace.md](001-3-6-4-3-1-1-2-1-1-2-axiom-to-anchor-docs-major-004-canonical-continuity-schema-refer.trace.md)
-  - Value: DiBSIOCQVoj7hVC7Q8OfVgcdIYm4azsio5UU8QKScXU
+  - Value: rdAe8ZDN6yYHRuiN1dzsUg-RTroKaAjeBIsjHtngvro
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: O6fiWKMfiIOS85E5d5_jOqlFtaVR1reXcS9c5j3pEq8
+  - Value: odO4IQ5v_qODdiYObAA0x-yQ56JsjwOUiuoWoR_YuHk

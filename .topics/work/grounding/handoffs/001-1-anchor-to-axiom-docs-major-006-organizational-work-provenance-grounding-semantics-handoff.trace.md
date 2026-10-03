@@ -100,8 +100,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-docs-major-006-organizational-work-provenance-grounding-semantics-task.trace.md](../001-docs-major-006-organizational-work-provenance-grounding-semantics-task.trace.md)
-  - Value: V6ir-XvzFqUYdhV8l_X-hrPFAR_ukT-yxx3rVTaYNBY
+  - Value: gOzuSvG6ctkPuH4f9q_sbJ0un2neQ_VpGz282OOqRnI
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: _4MLweATl_rFyZlMYsT0KJC-YfhHEPz1kRQle8MDYO0
+  - Value: pvf7RiuCbsHQcrX0fKXQKUxxj69zFFNqFj-T84oMPlc

@@ -117,8 +117,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-integrity-major-001-docs-parent-integrity-mismatch-classificatio.trace.md](../001-integrity-major-001-docs-parent-integrity-mismatch-classificatio.trace.md)
-  - Value: 0Y4O9OyhaR7FpTz5fdBY_Yj_8YHTtv1I2goGs4kl6-Q
+  - Value: s6WD-IO-Z5pfAPQVlbPF-CW6hFU6_A2LPi_PhG9F0v0
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: MtaGM8UOlLzM7wo1OtaIpt-HgHLRYPDtL6pklgkp3I4
+  - Value: kuqnBSBZw0mkyI-6qder0ibCdPowvZ0k9MUB1BNYdBA

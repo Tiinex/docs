@@ -86,8 +86,8 @@ Success means Anchor has one canonical, human-first semantic disposition that Co
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-axiom-to-anchor-docs-major-006-organizational-work-provenance-se.trace.md](../grounding/handoffs/001-1-1-axiom-to-anchor-docs-major-006-organizational-work-provenance-se.trace.md)
-  - Value: PjJG0s4aqZlHcrzhKyHcp6xH1tcOhplTJrguywFwZDY
+  - Value: q6CsVXccHx5S7gbiC4-G7Cif1Pxk85uvHkzCAeYON4g
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: PN3Mm27k-CVNf-BdDjXXVz35SzI59H0ItMrZ_wi_VMM
+  - Value: QMVesymKz2KRVqG8UgBfyfxizsz2wmWhD7FhkIeSFY4

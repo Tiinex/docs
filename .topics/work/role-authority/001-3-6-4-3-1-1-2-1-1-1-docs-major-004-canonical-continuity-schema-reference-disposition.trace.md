@@ -43,7 +43,7 @@ This Decision closes the canonical semantic question raised by the Major 005 mix
 ### Concrete Major 005 Classification
 
 - **Core Major 005 Evidence** (`core::.topics/work/refactor/orchestration/evidence/004-core-major-005-reconciliation-manufacture-proof-gate-qualificati.trace.md`): its Root and Parent schema references are exact links while `Current Schema: tiinex.evidence.v1` is a plain id. Under the carried authority this Current field is **not a defect merely because it is plain**. The current carried Docs Evidence schema hashes to `68c675c0958899b4deaeb615aab58089e15a9c45422d062a715d5855fc2c1977`, while Core's older Evidence binding records checksum `b6c06684af1d5fa181ebf37f04ffb0c226ef5b4f46fccd53b5ec12676ab8c551` at commit `e713557f8be630967571d11a73f9ecd05ae329ce` and marks the representation `accepted-local-unpublished`. That older permalink is not qualified authority for the exact current carried Evidence bytes. Emitting it would be a false strengthening.
-- **Site Major 005 Evidence** (`site::.topics/refactor/qualification/002-kodax-site-major-005-self-contained-playthings-local-source-browser-harness-evidence.trace.md`): `Envelope Schema: tiinex.root.v1` is avoidably weaker because qualified exact Root reference authority is available. As an already-authored carried artifact, preserve its bytes and surface it as warning/degraded reference debt rather than rewrite it. Its plain Evidence `Current Schema` has the same disposition as the Core example unless and until exact current Evidence reference authority is separately qualified.
+- **Site Major 005 Evidence** (`site::.topics/work/refactor/qualification/002-kodax-site-major-005-self-contained-playthings-local-source-browser-harness-evidence.trace.md`): `Envelope Schema: tiinex.root.v1` is avoidably weaker because qualified exact Root reference authority is available. As an already-authored carried artifact, preserve its bytes and surface it as warning/degraded reference debt rather than rewrite it. Its plain Evidence `Current Schema` has the same disposition as the Core example unless and until exact current Evidence reference authority is separately qualified.
 - Therefore the reported Major 005 symptom is narrower than “bare Current Schema is invalid”: the real canonical defect is **omitting a qualified exact target for the specific field that has one**.
 
 ### Exact Canonical Docs Delta
@@ -100,4 +100,4 @@ No historical mass rewrite is authorized. This Decision does not declare the exi
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: yOt88haMsZDA3lIesaiPP2ljllUu5CGoM-S3Aj1JeQ4
+  - Value: UefFQNhGI42qMA4klQoy2YGCICO0UWBFc-eU06BbKS4

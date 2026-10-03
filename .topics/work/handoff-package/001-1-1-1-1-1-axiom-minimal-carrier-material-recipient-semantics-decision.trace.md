@@ -64,8 +64,8 @@ The canonical carrier contract now separates bootstrap capability, source-materi
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-anchor-to-axiom-docs-major-007-minimal-carrier-material-recipient-semantics-handoff.trace.md](handoffs/001-1-1-1-1-anchor-to-axiom-docs-major-007-minimal-carrier-material-recipient-semantics-handoff.trace.md)
-  - Value: aWT-LK5-vYfn8nyU7J5oKYLrHoAxzL6Dt2SZtuyXSCg
+  - Value: TtLnJ7PcZE4OhKVbepeRlyKtVQhdGsxT0SODOfiK3Po
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: su9EGaxWtWzlmnoW6nMxmCGRbEajrQye0qCr2Toy_M4
+  - Value: xO1pCzlYSLIr1sC0j-XLP0L23SsENVg0c-FWVY29atQ

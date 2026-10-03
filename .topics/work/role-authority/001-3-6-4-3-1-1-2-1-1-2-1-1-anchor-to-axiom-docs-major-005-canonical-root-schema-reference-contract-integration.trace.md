@@ -65,7 +65,7 @@
 
 - site-major-005-evidence
   - Material: historical Site example with avoidably bare Root at authoring time.
-  - Material Reference: [Site Major 005 Evidence](site::.topics/refactor/qualification/002-kodax-site-major-005-self-contained-playthings-local-source-browser-harness-evidence.trace.md)
+  - Material Reference: [Site Major 005 Evidence](site::.topics/work/refactor/qualification/002-kodax-site-major-005-self-contained-playthings-local-source-browser-harness-evidence.trace.md)
   - Purpose: concrete historical-preservation example.
   - Availability: available
 
@@ -106,8 +106,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-3-6-4-3-1-1-2-1-1-2-1-docs-major-005-canonical-root-schema-reference-contract-integration.trace.md](001-3-6-4-3-1-1-2-1-1-2-1-docs-major-005-canonical-root-schema-reference-contract-integration.trace.md)
-  - Value: O6fiWKMfiIOS85E5d5_jOqlFtaVR1reXcS9c5j3pEq8
+  - Value: odO4IQ5v_qODdiYObAA0x-yQ56JsjwOUiuoWoR_YuHk
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: SPgL2ZoDfIU6WJhbJuGhpgfgARefztsUNDZLQv9L-r0
+  - Value: WCe3QMUjp4Q12OIZu6NM0oaO7KLqj7uUTPNd0nG293M

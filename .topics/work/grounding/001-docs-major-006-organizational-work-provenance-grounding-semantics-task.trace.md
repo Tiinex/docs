@@ -59,8 +59,8 @@ Success means Anchor knows whether the repeated grounding slot should be resolve
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-3-6-4-3-1-1-2-1-1-2-1-1-2-axiom-to-anchor-docs-major-005-canonical-root-schema-reference-contract-integration-return.trace.md](../role-authority/001-3-6-4-3-1-1-2-1-1-2-1-1-2-axiom-to-anchor-docs-major-005-canonical-root-schema-reference-contract-integration-return.trace.md)
-  - Value: k5eXCztgAM1N2Mdt_gicatGHEcrQRJwYmR21F-54wlA
+  - Value: _SFP0FPl3QuCSZIG_tvIjaZNeY04pXxlR-yXVUaJhD8
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: V6ir-XvzFqUYdhV8l_X-hrPFAR_ukT-yxx3rVTaYNBY
+  - Value: gOzuSvG6ctkPuH4f9q_sbJ0un2neQ_VpGz282OOqRnI

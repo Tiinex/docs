@@ -20,7 +20,7 @@
 ## Source Field
 
 - In Scope: the qualified Anchor-to-Axiom package-lock Handoff, the carried Anchor package-lock decision, the corrected Site Handoff Package lock candidate, current carried Docs `tiinex.root.v1`, `tiinex.workspace.v1`, `tiinex.handoff.v1`, `tiinex.pointer.v1`, `tiinex.external.payload.v1`, `tiinex.workspace.representation.v1`, `tiinex.semantic.package.v1`, the prior Axiom bounded Workspace Representation result, and the exact carried Business/Docs/Site Workspace source snapshots.
-- Exact Incoming Handoff: `site::.topics/tooling/002-1-1-1-1-1-1-1-1-1-1-1-2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-anchor-to-axiom-package-lock-reconciliation-handoff.trace.md`.
+- Exact Incoming Handoff: `site::.topics/work/tooling/002-1-1-1-1-1-1-1-1-1-1-1-2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-anchor-to-axiom-package-lock-reconciliation-handoff.trace.md`.
 - Out Of Scope: Loom Tooling implementation, participant semantics, Role inheritance or holder state, broad transport ontology, remote publication, repository mutation, unrelated Core expansion, and Anchor's final cross-role package-lock disposition.
 - Source Boundary: all semantic conclusions below come from the qualified carried source and Required Context. Package placement is not treated as provenance or authority.
 
@@ -72,4 +72,4 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: gBTpHKtIZNisLEW-VFe0_-uoMxyjg6HskU9Eg_F3WU8
+  - Value: BsQA94wFwTxOyvRy8m6naT6YE_uvxaNVSSDF0RZ4bXM

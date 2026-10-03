@@ -33,7 +33,7 @@ The repeated `organizational-work-provenance-unresolved` result is a truthful op
 
 - `tiinex.relation.v1` exists for typed non-Parent relationships and explicitly preserves exact relation type, direction, scope, target, provenance, and interpretation limits without broadening `Parent`.
 - `tiinex.project.v1`, `tiinex.party.organization.v1`, `tiinex.party.role.v1`, `tiinex.task.v1`, and `tiinex.workspace.v1` do not authorize repository, Workspace, Role, Parent, package, filename, or conversation adjacency to become work membership or organizational provenance.
-- The qualified Site relation `site::.topics/tooling/020-3-1-anchor-cold-start-grounding-work-provenance-relation.trace.md` demonstrates the intended shape: source work `advances` a qualified controlling Business work artifact at `work-level provenance`, while reverse discovery is only a projection of that same edge.
+- The qualified Site relation `site::.topics/work/tooling/020-3-1-anchor-cold-start-grounding-work-provenance-relation.trace.md` demonstrates the intended shape: source work `advances` a qualified controlling Business work artifact at `work-level provenance`, while reverse discovery is only a projection of that same edge.
 - The two accepted fresh-Anchor probes correctly left the slot unresolved instead of manufacturing an edge. No material decision depended on the missing optional context.
 - The current portable grounding projection already keeps the condition fail-visible and non-blocking, so the observed Core behavior is semantically compatible with this disposition.
 
@@ -57,8 +57,8 @@ The repeated `organizational-work-provenance-unresolved` result is a truthful op
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-anchor-to-axiom-docs-major-006-organizational-work-provenance-grounding-semantics-handoff.trace.md](handoffs/001-1-anchor-to-axiom-docs-major-006-organizational-work-provenance-grounding-semantics-handoff.trace.md)
-  - Value: _4MLweATl_rFyZlMYsT0KJC-YfhHEPz1kRQle8MDYO0
+  - Value: pvf7RiuCbsHQcrX0fKXQKUxxj69zFFNqFj-T84oMPlc
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: ura37Fdd8rt2an-RepWnF5-sn6ur0gm9I3iVM_ZYvA4
+  - Value: WG5f0jEQj6yhrtKWu-QZytwkhR0qkTY33n_KbJBGrlE

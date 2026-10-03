@@ -73,7 +73,7 @@
 
 - existing-work-provenance-example
   - Material: qualified Site relation showing the existing explicit source-work to controlling Business-work shape.
-  - Material Reference: [Cold-Start Grounding Work Provenance](site::.topics/tooling/020-3-1-anchor-cold-start-grounding-work-provenance-relation.trace.md)
+  - Material Reference: [Cold-Start Grounding Work Provenance](site::.topics/work/tooling/020-3-1-anchor-cold-start-grounding-work-provenance-relation.trace.md)
   - Purpose: concrete evidence that existing Relation semantics can carry the intended provenance without broadening Parent.
   - Availability: available
 
@@ -123,8 +123,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-anchor-to-axiom-docs-major-006-organizational-work-provenance-grounding-semantics-handoff.trace.md](001-1-anchor-to-axiom-docs-major-006-organizational-work-provenance-grounding-semantics-handoff.trace.md)
-  - Value: _4MLweATl_rFyZlMYsT0KJC-YfhHEPz1kRQle8MDYO0
+  - Value: pvf7RiuCbsHQcrX0fKXQKUxxj69zFFNqFj-T84oMPlc
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: PjJG0s4aqZlHcrzhKyHcp6xH1tcOhplTJrguywFwZDY
+  - Value: q6CsVXccHx5S7gbiC4-G7Cif1Pxk85uvHkzCAeYON4g

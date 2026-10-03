@@ -56,8 +56,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-3-6-4-3-1-1-2-1-1-2-1-1-anchor-to-axiom-docs-major-005-canonical-root-schema-reference-contract-integration.trace.md](001-3-6-4-3-1-1-2-1-1-2-1-1-anchor-to-axiom-docs-major-005-canonical-root-schema-reference-contract-integration.trace.md)
-  - Value: SPgL2ZoDfIU6WJhbJuGhpgfgARefztsUNDZLQv9L-r0
+  - Value: WCe3QMUjp4Q12OIZu6NM0oaO7KLqj7uUTPNd0nG293M
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: RI8qaD6RaONTEvHXJq52QEUjuKZ-kGKgev4XramvwoE
+  - Value: JasSztnqShl98mQYVnBrQkKbAED1rNkwID0GN3K3_2I

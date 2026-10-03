@@ -119,8 +119,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-anchor-to-axiom-integrity-major-001-docs-parent-integrity-mismat.trace.md](001-anchor-to-axiom-integrity-major-001-docs-parent-integrity-mismat.trace.md)
-  - Value: MtaGM8UOlLzM7wo1OtaIpt-HgHLRYPDtL6pklgkp3I4
+  - Value: kuqnBSBZw0mkyI-6qder0ibCdPowvZ0k9MUB1BNYdBA
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 9Arp5jCli4D-ZQ04kzXg3WMbwoeytLsJkClQjkZVcGE
+  - Value: xzSNWGlOl4beOsh988a8jM-6nK9R0-1n3t3QmAqNknI
