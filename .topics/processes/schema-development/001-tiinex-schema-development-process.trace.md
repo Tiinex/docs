@@ -8,7 +8,7 @@
   - Origin:
     - [relative](../001-processes.trace.md)
 - Current
-  - Current Schema: [tiinex.topic.v1](https://github.com/Tiinex/docs/blob/668753e47a281db060cb74ef957683f4f773b3a4/.topics/.schemas/core/topic/tiinex.topic.v1.schema.md)
+  - Current Schema: [tiinex.process.v1](https://github.com/Tiinex/docs/blob/2262a1c4b35e887d116d0d01a864074a9f1641c2/.topics/.schemas/process/tiinex.process.v1.schema.md)
   - Created At: 2026-10-01 20:53:06
   - Authors: Anchor; Sigma
   - Why: Establish a durable Tiinex schema-development discipline close to Docs authority so new schemas are produced audibly rather than through session-local improvisation.
@@ -19,9 +19,45 @@
 
 # Tiinex Schema Development
 
+## Process Identity
+
+- Name: Tiinex Schema Development
+- Version: 1
+- Canonical Identifier: tiinex.process.schema-development.v1
+- Human Label: Tiinex Schema Development
+
+## Purpose And Scope
+
+- Purpose: A schema is not ready merely because schema Markdown exists. Tiinex schema development must reconcile semantic placement, schema contract, source authority, companion/runtime representation, integrity, validation, authoring behavior, discovery behavior, and publication state before dependent artifact families rely on it.
+- Semantic Boundary: Defines reusable Tiinex Schema Development process semantics; it does not prove invocation, execution, authority, acceptance, current work, or completion.
+- Intended Domains: qualified Tiinex work for the Tiinex Schema Development process
+- Not Intended For: inferring applicability from carriage, directory placement, filename order, Role presence, or host presentation
+
+## Applicability And Conditions
+
+- Applicability Meaning: applicable only when a qualified Entry, Handoff, controlling work artifact, relation, invocation, or other owning authority selects this reusable Process for the bounded work.
+- Unknown Meaning: if applicability, authority, entry, or governing work is unresolved, Process applicability remains unresolved rather than being inferred from discovery or proximity.
+
+## Process Topology
+
+- Topology Meaning: typed Transition Definitions and qualified Relations in this Process lineage define reusable positions and durable non-parent topology where represented.
+- Entry Meaning: Process entry is established by qualified invocation/context and typed topology; semantic Parent and filename order do not independently select an executable entry.
+- Outcome Meaning: outcomes are established by qualified topology plus real execution/return/evidence artifacts; Process definition presence does not establish an outcome.
+- Transition Family: schema-development
+
+## Interpretation Limits
+
+- Does Not Prove: that this Process ran, is current, was accepted for a particular context, or grants mutation authority.
+- Must Not Be Inferred: that semantic Parent, filename lineage, directory position, carrier presence, or apparent chronology is executable Process topology or current-work authority.
+- Execution Boundary: typed Process topology defines reusable semantics; real work lineage, qualified invocation/context, Handoffs, Returns/Reductions, Evidence, and accepting authority remain the truth about what actually happened.
+
+## Related Artifacts
+
+### Preserved Legacy Definition Notes
+
 This process defines Tiinex's current human-plus-LLM discipline for developing new or materially revised schemas in the Docs authority without requiring a dedicated Schema Builder.
 
-## Current Read
+### Current Read
 
 A schema is not ready merely because schema Markdown exists. Tiinex schema development must reconcile semantic placement, schema contract, source authority, companion/runtime representation, integrity, validation, authoring behavior, discovery behavior, and publication state before dependent artifact families rely on it.
 
@@ -38,7 +74,7 @@ Recommended Tiinex responsibility boundaries:
 
 These are role-boundary expectations, not Role-holder assignments. Real transfer between Roles is expressed through the normal qualified Handoff/work lineage when transfer is actually needed; this process does not manufacture transfer from participation or carriage.
 
-## Design Direction
+### Design Direction
 
 Use lineage topology as the primary process map. Descendants represent forward progression. Sibling relation artifacts represent bounded return paths without creating cyclic `Parent` continuity. Real schema work keeps its own work lineage, Handoffs, Evidence, Decisions, and acceptance artifacts; this reusable process definition does not become execution truth.
 
@@ -48,7 +84,7 @@ No dependent artifact family should be treated as production-ready against a new
 
 Human acceptance is conditional rather than universal. If a qualified actor can accept the candidate within an established delegated boundary, the process may advance without a separate Sigma gate. If human intent, acceptance criteria, policy, or reserved authority is implicated, the acceptance step must obtain that bounded human disposition before publication.
 
-## Next Artifacts
+### Next Artifacts
 
 - [Establish Schema Need And Scope](001-1-establish-schema-need-and-scope.trace.md)
 
@@ -62,4 +98,4 @@ Human acceptance is conditional rather than universal. If a qualified actor can 
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 0ofIhYn_YYCcBJqCgZytjZqTWEA0vSXe5ZCy839yP_M
+  - Value:JasPz3Lnmt4Iy5YgfJjYdRd50Gb5pbHNDuxtobzovjY

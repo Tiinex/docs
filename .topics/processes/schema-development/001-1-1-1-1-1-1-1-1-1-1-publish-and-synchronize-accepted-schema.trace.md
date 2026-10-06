@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md](001-1-1-1-1-1-1-1-1-1-acceptance-review.trace.md)
-  - Value: q5c_oS0vCMj88cgtJ9y0e7uzdANgVs8_Mhte3DcN8OY
+  - Value: cabEM3vXdu5zD9Y7HREAfr9DB5ODJvdVdeWVYJszDXc
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: 950j4SyCH4TlOUWWXCIiI9SekTm-TIsb0XZcDT2R4ZI
+  - Value:RQsqgiZoQKiccdO40yp9SdwKNSKa_6DKsvbvrqzBbxE

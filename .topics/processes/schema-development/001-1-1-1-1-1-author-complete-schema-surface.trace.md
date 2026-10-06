@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-1-1-design-schema-contract.trace.md](001-1-1-1-1-design-schema-contract.trace.md)
-  - Value: ZNNktsEaRVKW-lbMfVrm-_QmpOfFs7Ip15wYzdauY8o
+  - Value: sVHn3DyRm1INMiV--gUQaj4m3wpgFepw-Igd-mnpV84
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: pt0Pg4i4O1om_59jtifqHc-oImXvWynfALJm3uwBC3c
+  - Value:qOSb4_TUqc972s05OnoIm5xI7OJ79M28mHuGu5v3vgA

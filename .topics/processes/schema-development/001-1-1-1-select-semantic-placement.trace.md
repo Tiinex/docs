@@ -101,8 +101,8 @@
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: [001-1-1-recover-existing-schema-landscape.trace.md](001-1-1-recover-existing-schema-landscape.trace.md)
-  - Value: gUlN8yen0mCOsyeLRULKVkAgHcZxdJx8UQ90-iwxBw8
+  - Value: xGnuLZSDCQlVcYcIUGSh4zJCDoFQfk9nuTAJxWrC2-Y
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: SsKbTezGa1K_JbzvMI0FztKXn14pRO2NOO0SGd7gWsA
+  - Value:cnw-kQBomxFa242vZ8D383Ctr_K4jxwowHIAdJP3ACY
