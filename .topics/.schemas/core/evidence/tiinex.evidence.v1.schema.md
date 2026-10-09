@@ -141,27 +141,32 @@ Rules
 
 ### Evidence Material
 
+Entry Shape
+
+- First-Level Hyphen List Item
+
 Required Fields
 
 - Material
 - Material Kind
+- Description
 
 Optional Fields
 
-- Excerpt
-- Description
-- Attachment Reference
-- External Payload
-- Preservation Artifact
-- Transcript Extract
-- Screenshot Description
-- Sample Reference
+- Material Provenance
+- Material Limits
+- Representation
 
 Rules
 
-- `Material` must preserve the readable excerpt, summary, description, bundle items, transcript material, explicit asset reference, or preservation artifact reference itself rather than only naming it.
-- `Material Kind` should state whether the material is quote, excerpt, scan, photo, transcript, sample, export, attachment, snapshot, external payload, or another precise shape.
-- If the material is too large, binary, private, or machine-shaped to embed, the artifact should use a bounded preservation or external payload reference.
+- Entries under `## Evidence Material` are repeated named material declarations.
+- The first-level declaration name identifies one material entry inside this Evidence; it is a local stable handle, not a global asset identity, proof, hash, or second Evidence claim.
+- Every entry preserves one coherent observation/source bundle: `Material` contains a readable excerpt, explicit link, attached source or bounded preservation reference; `Material Kind` describes the actual form; `Description` tells a later human why this entry matters.
+- One entry may cite multiple complementary representations of the same coherent material (for example a video and its transcript); different observations, independent sources or separately interpreted screenshots should be separate entries.
+- `Material Provenance` and `Material Limits` can narrow the shared Evidence-level provenance and interpretation boundaries for this entry. They never silently replace global `Known Source`, `Provenance Limits`, `Fidelity Notes` or `Does Not Prove`.
+- Entries cannot assert truth, acceptance, identity, source validity or asset custody merely because a file/URL is included.
+- If material is binary, private, very large or external, use a bounded reference with an explicit preservation basis; field values alone do not copy or relocate files.
+- Every declaration name must be unique in this Evidence; a shared URL may appear in distinct entries if their separate interpretation is preserved.
 
 ### Preservation And Fidelity
 
@@ -243,8 +248,7 @@ Required Fields
 - Known Source
 - Preservation Basis
 - Provenance Limits
-- Material
-- Material Kind
+- Evidence Material
 - Preservation State
 - Fidelity Notes
 - Known Losses
@@ -276,8 +280,12 @@ Rules
 
 ## Evidence Material
 
-- Material Kind: excerpt
-- Material: user reported that mobile Use-as options overflowed outside the screen
+- user-comment-excerpt
+  - Material: user reported that mobile Use-as options overflowed outside the screen
+  - Material Kind: excerpt
+  - Description: A preserved excerpt of the user's report of mobile overflow
+  - Material Provenance: quoted from the preserved feedback comment
+  - Material Limits: does not establish device or reproduction details
 
 ## Preservation And Fidelity
 
@@ -299,6 +307,8 @@ Maintain the section headings exactly in this schema note. Free markdown inside 
 
 The body headings required for artifacts using this schema are: `## Supported Claim Or Question`, `## Provenance`, `## Evidence Material`, `## Preservation And Fidelity`, `## Interpretation Limits`.
 
+Within `## Evidence Material`, use one or more first-level named declarations with the qualified per-entry fields; do not flatten independently described references into a semicolon-delimited `Material` string.
+
 ## Interpretation Notes
 
 - evidence is preservation with claim-bearing use
@@ -315,4 +325,4 @@ The body headings required for artifacts using this schema are: `## Supported Cl
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: EmJmZf-yYQ8Io4eZqsI25pwfJJ9BhhkJaPrxeNf6ark
+  - Value: Lif5Pj09hJrLj4-qDUOaTEnu_MCXM4ZtXQxq53TOXiA
