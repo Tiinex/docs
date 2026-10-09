@@ -1,0 +1,7 @@
+# Tiinex/docs LLM Bootstrap
+
+This repository uses Tiinex. `.topics/**` and qualified source material are semantic/provenance authority; this file is only a bootstrap hint.
+
+Use Tiinex Tooling to discover and qualify the Workspace entrypoint under `.topics/.workspaces`, then follow only the qualified artifacts and processes applicable to the current task.
+
+Do not use `llms.txt` or `README.md` as an artifact index, current-work declaration, or substitute for Tiinex discovery/grounding.
