@@ -257,11 +257,10 @@ Rules
 
 Required Fields
 
-- Target
-- Annotation Kind
+- Annotation Identity
+- Annotation Target
 - Annotation Value
-- Annotation Source
-- Annotation Method
+- Annotation Provenance
 - Annotation State
 - Interpretation Limits
 
