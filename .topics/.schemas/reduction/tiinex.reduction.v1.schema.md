@@ -90,7 +90,11 @@ Rules
 - `Loss And Uncertainty` should state what was omitted, compressed, degraded, or left uncertain. In hierarchical composition it should preserve every upstream unresolved/material loss that can still affect the downstream claimed state and separately identify new loss introduced by the current layer.
 - `Validation` should state how the reduction was checked, accepted, corrected, or limited. Validation is layer-scoped: a qualified downstream Reduction does not silently validate an unqualified immediate source or erase that source's validation boundary.
 - The body should make the reduction readable without requiring access to the entire source context.
-- When a source artifact, transcript, evidence slice, or runtime export grounds the reduction, the artifact should prefer explicit readable target references.
+- When the reduced source consists of individually addressable Tiinex trace artifacts with qualified published immutable locations, `Source Context` should use the compact navigable source list format demonstrated in `Minimal Example`: group by Workspace, one clickable commit-pinned source link per item, and its declared qualified integrity method/value on the next indented line. Do not replace these references with path-only prose, raw path/hash ledgers, or an unspecified archive.
+- For source material without such a published location (including carrier-only, unpublished, binary, or non-artifact material), disclose the *actual* qualified locator and integrity method without fabricating a Git URL or a c14n text digest. If no exact source locator is available, declare that unresolved under `Loss And Uncertainty`; do not claim source recovery.
+- The supported new-authoring `Source Context` syntax is a top-level `- workspace-id` group containing `  - [file](https://github.com/Tiinex/<workspace-id>/blob/<40-hex-commit>/.topics/...)` and an indented `sha256-base64url-c14n-v2` value for `.trace.md` or `sha256` for binary material. For an **unpublished exact carrier source**, use the `- carrier-only` group, `  - Source: `PACKAGE.handoff-package.zip::WORKSPACE::.topics/PATH`` and an indented `sha256` value; its byte availability and digest must be checked independently. For a bounded exact runtime snapshot, use `- runtime`, `  - Source: `runtime::EXACT-RUN/SESSION-ID`` and an indented `sha256` value; never invent a runtime identity merely to satisfy syntax. Git repository `Tiinex/extension-vscode` maps to Workspace `vscode`. The Source Context syntax check does not itself verify remote or carried source bytes.
+- Keep `Carry-Forward State`, `Loss And Uncertainty`, and `Validation` short and specific to the reduction event. Place optional detailed implementation/move manifests in a distinct qualified Evidence or exact recovery material rather than making the Reduction body its only decoder.
+- For **newly authored** Reductions, creator Tooling must fail closed in `author` and `--preflight` when `Source Context` replaces individual published trace links and qualified integrity references with narrative, a path/hash/bytes ledger or an unpinned URL. This rule does not reinterpret historical Reductions authored to older exact schema revisions. This syntactic preflight alone does not prove source bytes or enable destructive apply.
 - Follow-up sections must not replace the carry-forward state itself.
 - If the artifact is mainly preserving raw supporting material, an evidence or runtime schema should own it instead.
 - If the artifact mainly lands a governing choice rather than a reduced carry-forward state, a decision schema should own it instead.
@@ -198,7 +202,9 @@ Rules
 
 ## Source Context
 
-- Source: discussion thread and prior working notes about context compaction
+- business
+  - [002-fresh-start-executive-grounding.trace.md](https://github.com/Tiinex/business/blob/b32b926678aaf8861bcfb756eb65a8df5e49ea71/.topics/executive/002-fresh-start-executive-grounding.trace.md)
+    - sha256-base64url-c14n-v2: `_qvqmcRgAqpV_pKo0yn9iPJCPGw9MQiANazqewuWoJU`
 
 ## Carry-Forward State
 
@@ -270,7 +276,7 @@ Required Shape
 Rules
 
 - Generated reduction artifacts should begin with the reduction title as the first body heading.
-- `Source Context` should identify what is being reduced.
+- `Source Context` should use Workspace-grouped, clickable commit-pinned source references with one qualified digest per text artifact when exact published sources exist; prefer the `Minimal Example` shape, not a free-form source paragraph or verbose raw manifest. For unpublished/carrier-only sources, require a truthful qualified recovery locator or explicit unresolved state.
 - `Carry-Forward State` should state what later work may rely on.
 - `Loss And Uncertainty` should state omissions, degradation, or uncertainty.
 - `Validation` should state human review, runtime validation, source checks, or explicit limits.
@@ -286,4 +292,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: IqhXRv_qclxEPJPTpGtVHYAjQvQPyA8d2oZFxO7XhEs
+  - Value: kgZKxHQ6nqfFMGErvdx20BgeKBO0-vXOfTeW3Dq53q0
