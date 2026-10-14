@@ -11,7 +11,7 @@
 - Current
   - Current Schema: [tiinex.topic.v1](tiinex.topic.v1.schema.md)
   - Created At: 2026-05-28 18:11:47
-  - Summary: Schema for bounded topic-oriented lineage artifacts.
+  - Summary: Schema for bounded, maintained topic and knowledge lineages.
 
 ---
 
@@ -21,11 +21,13 @@
 
 ## Summary
 
-This schema defines artifacts whose main job is to carry one bounded working
-topic forward.
+This schema defines artifacts that develop or maintain one bounded subject over time.
 
-It is for live design and implementation threads where the reader should be
-able to tell what question, direction, or work slice is currently in motion.
+A subject may be active design or implementation work, or an owned body of
+knowledge such as a maintained introduction, how-to guide, or documentation
+area. The reader should understand its purpose, present state, and limits
+without knowing Tiinex tooling. A maintained knowledge subject must contribute
+substantive guidance or accountable stewardship, not merely list file links.
 
 ## Schema Validation Contract
 
@@ -37,9 +39,11 @@ Applies To
 
 Rules
 
-- `tiinex.topic.v1` identifies artifacts centered on one active topic thread.
+- `tiinex.topic.v1` identifies artifacts centered on one bounded, maintained subject; an active work thread and a living knowledge topic are both valid.
+- The Topic should identify its purpose, intended reader or scope, and the substantive state or guidance being carried forward.
 - The body should make the current topic legible without requiring special tooling.
-- The topic should stay bounded enough that a reader can tell what is being advanced.
+- The topic should stay bounded enough that a reader can tell what is being advanced or responsibly maintained.
+- A navigational landing Topic is appropriate only when it also owns a coherent documentation purpose, meaningful explanations, and its maintenance boundaries. A links-only index remains insufficient.
 - Prose outside `Schema Validation Contract` may explain the schema, but it does not add required validation rules.
 
 ### Topic Body
@@ -47,7 +51,7 @@ Rules
 Required Shape
 
 - first body heading after the continuity envelope
-- readable prose that advances one bounded topic thread
+- readable prose that advances or maintains one bounded subject with a meaningful present state
 
 Optional Sections
 
@@ -97,8 +101,9 @@ Rules
 
 Rules
 
-- Use `tiinex.topic.v1` when the artifact is mainly preserving or advancing a working topic.
-- Do not use `tiinex.topic.v1` for schema notes, opaque dumps, or generic holding files.
+- Use `tiinex.topic.v1` when the artifact preserves or advances a bounded working subject or living knowledge subject with a meaningful stewardship boundary.
+- A how-to or documentation landing Topic may teach and link to sources, but cannot redefine another schema, imply permissions, or become a generic catalog of artifact types.
+- Do not use `tiinex.topic.v1` for schema notes, opaque dumps, links-only indices, or generic holding files.
 - If the artifact's main job is to make a decision rather than hold a topic thread, another schema should own it.
 
 ## Minimal Example
@@ -137,7 +142,7 @@ treated as schema drift.
 ## Interpretation Notes
 
 - topic artifacts should remain readable to humans without special tooling
-- the envelope still carries continuity and integrity metadata
+- the envelope still carries continuity and integrity metadata; instructional prose is not a separate source of normative schema authority
 - free markdown inside owned sections is fine when the thread remains legible
 - the validator should own the maintained schema shape rather than relying on convention alone
 
@@ -179,7 +184,8 @@ Rules
 
 - Generated topic artifacts should begin with the topic title as the first body heading.
 - The generated body should include one orienting sentence before the first named section.
-- `Current Read` should explain the present topic state.
+- `Current Read` should explain the present state of the active work or maintained knowledge.
+- For a maintained guide, `Design Direction` may explain how the guidance is applied or improved, without claiming an unrelated design or implementation task.
 - `Design Direction` should state where the topic should move next.
 - `Next Artifacts` should leave room for concrete follow-up artifacts.
 - Tools should preserve the same generated body shape even when they use a maintained built-in template.
@@ -194,4 +200,4 @@ Rules
 
 - sha256-base64url-c14n-v2
   - Towards: self
-  - Value: NXenBNGbXjmQid1IzVP7DbcNt0iweaEz8k9yq0aVXII
+  - Value: y22R-0VjCYZOH_5xgQABnHvpvRsqJTlox7m1tGOuGBg

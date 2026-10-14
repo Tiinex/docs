@@ -5,3 +5,5 @@ This repository uses Tiinex. `.topics/**` and qualified source material are sema
 Use Tiinex Tooling to discover and qualify the Workspace entrypoint under `.topics/.workspaces`, then follow only the qualified artifacts and processes applicable to the current task.
 
 Do not use `llms.txt` or `README.md` as an artifact index, current-work declaration, or substitute for Tiinex discovery/grounding.
+
+For human-first learning after qualified entry/orientation, the Docs Workspace carries `.topics/documentation/getting-started/001-getting-started.trace.md` and its guides. Read them as explanatory material, not as current-work authority or a substitute for schema/companion qualification.

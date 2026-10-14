@@ -6,6 +6,8 @@ Tiinex itself keeps provenance readable in Markdown artifacts you own: where mat
 
 For LLM/machine first contact, read [`llms.txt`](llms.txt) before deeper repository archaeology.
 
+**New to Tiinex? Start in a chat.** Tell your assistant what you want to make or organize. You do not need to know a CLI command or a schema name. [Getting Started](.topics/documentation/getting-started/001-getting-started.trace.md) explains the first steps in everyday language; the [Guides](.topics/documentation/guides/001-guides.trace.md) help when you have a deeper question. They are explanations, not replacements for qualified schemas and companions.
+
 ## What This Repo Is
 
 This repository is the documentation and artifact source for Tiinex.
