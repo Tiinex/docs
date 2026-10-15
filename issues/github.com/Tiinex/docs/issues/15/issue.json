@@ -1,0 +1,26 @@
+{
+  "type": "tiinex.github.issue.snapshot.issue.v1",
+  "repository": "Tiinex/docs",
+  "number": 15,
+  "id": 5498341766,
+  "node_id": "I_kwDOSUxuYM8AAAABR7oJhg",
+  "html_url": "https://github.com/Tiinex/docs/issues/15",
+  "title": "(public) submission to bounty on reddit",
+  "state": "open",
+  "state_reason": "",
+  "locked": false,
+  "author_association": "NONE",
+  "user": {
+    "login": "maxronner",
+    "id": 56877921,
+    "html_url": "https://github.com/maxronner"
+  },
+  "labels": [],
+  "assignees": [],
+  "created_at": "2026-09-18T10:08:45Z",
+  "updated_at": "2026-09-18T10:08:45Z",
+  "closed_at": "",
+  "comments": [],
+  "truncated_comments": false,
+  "body_path": "issue.md"
+}
