@@ -29,7 +29,9 @@ An assistant with qualified Tiinex access can find which record types and reusab
 
 ## For assistants and integrations
 
-Discover available capabilities from the selected qualified Tiinex composition, not from this manual or a remembered list. Inspect the relevant current schema and companion guidance before planning or creating an artifact. Check applicability and authority, then use the host-supported validation and authoring interface to verify content and lineage. Keep internal commands, runtime paths, and diagnostics out of first-use instructions unless a person specifically asks for them.
+Choose each artifact by the work it must preserve, not by whichever type was used previously: a Topic keeps evolving context and decisions; a Task specifies bounded requested work and completion criteria; a Handoff declares explicit work or responsibility transfer to an identified recipient. Discover their current qualified schemas before using them. A Workspace checkpoint preserves material but does not itself transfer responsibility.
+
+Discover available capabilities from the selected qualified Tiinex composition, not from this manual or a remembered list. When reusable structure could help, discover qualified Scaffolds through the available Tooling catalog and read each relevant candidate's declared purpose, target boundary and limits before deciding whether to use it; a listed Scaffold is not an instruction to apply it. Inspect the relevant current schema and companion guidance before planning or creating an artifact. Check applicability and authority, then use the host-supported validation and authoring interface to verify content and lineage. Keep internal commands, runtime paths, and diagnostics out of first-use instructions unless a person specifically asks for them.
 
 - **Available** means the capability is present in the selected environment.
 - **Appropriate** depends on the person's goal and what they are authorized to do.
@@ -49,4 +51,4 @@ Deeper explanation: [Discovering schemas and capabilities](../guides/001-1-disco
 
 - [sha256-base64url-c14n-v2](https://github.com/Tiinex/docs/blob/3988951208eb9a8926e84ab42625d4b42fa00c2d/.topics/.validators/sha256-base64url-c14n-v2.validator.md)
   - Towards: self
-  - Value: OSihCMrygnS9KSsONJTV2dmAHZDitdVxEHz3hY7LYrk
+  - Value: iYvvvaRISvi96k_6Yu6mfJSyu0LVLrAFeN-CjL61Dls
